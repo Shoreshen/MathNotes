@@ -7,3 +7,6 @@
 # Unignore markdown and org files anywhere
 !*.md
 !*.org
+# do not ignore makefile
+!Makefile
+!makefile
