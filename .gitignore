@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+# But do not ignore gitignore itself
+!.gitignore
+# Allow directories so we can unignore files in subdirs
+!*/
+# Unignore markdown and org files anywhere
+!*.md
+!*.org
