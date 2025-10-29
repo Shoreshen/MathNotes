@@ -2,7 +2,7 @@
 
 #+TITLE: 矩阵运算
 
-current mark: 82
+current mark: 85
 
 * 矩阵基础
 
@@ -235,6 +235,182 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 显然对于任意 $E(k)$ 由于 $k\in K$ 故存在 $k^{-1}\in K$ 使得 $\mathfrak{g}(f_\times)(k,k^{-1})=\mathfrak{g}(c_1)$
 
 则根据[[MK5][矩阵乘法]]易证 $E(k)E(k^{-1})=I_E(c_1)$ 即根据[[~/文档/note/抽象代数/cxds.org::MK356][性质4]]有 $\mathcal{M}_E\vDash(\forall x_1((\lnot(x_1\hat{=}c_0))\to(\exists x_2(f_\times(x_1,x_2)\hat{ =}c_1))))$
+
+** 零化多项式<<MK83>>
+
+任意 $A=[a_{ij}]_{n\times n}$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的方阵，[[MK76][单位域]]为 $\mathcal{M}_E=\left<M_1,I_E\right>$ ，其上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]为 $\mathcal{M}_E[x]=\left<M_E[x],I_E[x]\right>$
+
+任意 $f(x)\in M_E[x]$ 满足[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $f(A)=I_A(c_0)$ ，则称 $f(x)$ 是 $A$ 的零化多项式。
+
+若 $f(x)$ 为所有 $A$ 的零化多项式中满足：
+
+（1） [[~/文档/note/抽象代数/cxds.org::MK378][次]]数最低
+
+（2） 首项系数为 $I_E(c_1)$
+
+则称 $f(x)$ 为 $A$ 的最小零化多项式
+
+*** 性质
+
+**** 性质1<<MK84>>
+
+任意 $A=[a_{ij}]_{n\times n}$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的方阵，则其[[MK83][最小零化多项式]]唯一
+
+***** 证明
+
+任取 $\{f_1(x),f_2(x)\}\subset M_E[x]$ 均为[[MK83][最小零化多项式]]，显然若[[~/文档/note/抽象代数/cxds.org::MK378][次]]数不相等，不可能同为[[MK83][最小零化多项式]]
+
+故可得 $f_1(x),f_2(x)$ [[~/文档/note/抽象代数/cxds.org::MK378][次]]数相等。又则根据[[~/文档/note/抽象代数/cxds.org::MK383][性质7]]可得存在唯一 $\left\{h(x),r(x)\right\}\subset M_1[x]$ 满足：
+
+（1） $f_1(x)=h(x)f_2(x)+r(x)$
+
+（2） $r(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数小于 $f_2(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数
+
+进一步根据为[[MK83][最小零化多项式]]可得[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $f_1(A)=I_A(c_0)=f_2(A)$ 则显然有 $r(A)=I_A(c_0)$
+
+由于 $r(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数小于 $f_2(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数且 $f_2(x)$ 为[[MK83][最小零化多项式]]故可得 $r(x)=I_E(c_0)$ 否则 $r(x)$ 才是[[MK83][最小零化多项式]]
+
+即有 $f_1(x)=h(x)f_2(x)$ 由于 $f_1(x),f_2(x)$ 均非零且[[~/文档/note/抽象代数/cxds.org::MK378][次]]数相等，则根据[[~/文档/note/抽象代数/cxds.org::MK387][性质1]]可得 $h(x)$ [[~/文档/note/抽象代数/cxds.org::MK378][次]]数必为 $1$
+
+即 $h(x)=a,a\in M_E$ 进一步由于 $f_1(x),f_2(x)$ 首项系数均为 $I_E(c_1)$
+
+假设 $h(x)\ne I_E(c_1)$ 则显然 $h(x)f_2(x)$ 的首相系数为 $a\ne I_E(c_1)$ 显然 $f_1(x),h(x)f_2(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK446][最简式]]不[[~/文档/note/抽象代数/cxds.org::MK447][相等]]
+
+根据[[~/文档/note/抽象代数/cxds.org::MK439][多项式环]]可得 $f_1(x)\ne h(x)f_2(x)$ 矛盾，则假设不成离开，即 $h(x)= I_E(c_1)$
+
+最终有 $f_1(x)=h(x)f_2(x)=I_E(c_1)f_2(x)=f_2(x)$
+
+**** 性质2<<MK85>>
+
+任意 $A=[a_{ij}]_{n\times n}$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的方阵 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 为 $\mathcal{K}$ 上任意 $n$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维]]的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]
+
+任取 $B=\{b_1,...,b_n\}$ 为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，则根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK34][定理1]]可得必存在 $\sigma:\text{Hom}(\mathcal{V},\mathcal{V}')\to M_{n\times n}(K)$
+
+满足 $\sigma(\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right])=\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right]A$ 则定义：
+
+（1） 矩阵[[MK76][单位域]]为 $\mathcal{M}_E=\left<M_E,I_E\right>$
+
+（2） $A$ 的[[MK75][方阵环]]为 $\mathcal{M}_A=\left<M_A,I_A\right>$
+
+（3） 映射[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK65][单位结构]] $\mathcal{M}_1=\left<M_1,I_1\right>$ 根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK66][定理1]]是[[~/文档/note/抽象代数/cxds.org::MK338][域]]
+
+（4） 定义 $\mathcal{M}_{1}[x]=\left<M_1[x],I_{|M_1}[x]\right>$ 为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
+
+（5） 定义 $\mathcal{M}_\sigma=\left<M_\sigma,I_\sigma\right>$ 为 $\sigma$ 的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK65][一元结构]]根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK66][定理1]]是满足交换律的[[~/文档/note/抽象代数/cxds.org::MK362][非零幺环]]
+
+（6） 根据的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK112][定理2]]可得 $\mathcal{M}_1$ 与 $\mathcal{M}_E$ [[~/文档/note/数理逻辑/sllj.org::MK274][同构]]，且[[~/文档/note/数理逻辑/sllj.org::MK274][同构映射]]为 $e\left(k\cdot\sigma_1\right)=k\odot I_n$ 其中 $\cdot$ 为[[MK6][映射数乘]] $\odot$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK3][矩阵数乘]]
+
+则 $\sigma$ 的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK108][最小零化多项式]]为 $f(x)=\left(I_1(\sum)\right)_{i=1}^n(k_i\sigma_1)x^i$ 的充要条件是 $e(f(x))=\left(I_E(\sum)\right)_{i=1}^nE(k_i)x^i$ 是 $A$ 的[[MK83][最小零化多项式]]
+
+***** 证明
+
+假设 $g(x)=\left(I_E(\sum)\right)_{i=1}^{n'}E(k_i)x^i\in M_E[x]$ 是 $A$ 的[[MK83][最小零化多项式]]，根据定义[[~/文档/note/抽象代数/cxds.org::MK441][带入值]]分别为：
+
+（1） $f(\sigma)=\left(I_\sigma(\sum)\right)_{i=1}^nI_\sigma(f_\times)(k_i\sigma_1,\sigma^i)=I_\sigma(c_0)$
+
+（2） $g(A)=\left(I_A(\sum)\right)_{i=1}^{n'}I_A(f_\times)(E(k'_i),A^i)=I_A(c_0)$
+
+根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK110][定理3]]可得 $\mathcal{M}_\sigma$ 与 $\mathcal{M}_A$ [[~/文档/note/数理逻辑/sllj.org::MK274][同构]]，设[[~/文档/note/数理逻辑/sllj.org::MK274][同构映射]]为 $e':M_\sigma\to M_A$ 则根据[[~/文档/note/数理逻辑/sllj.org::MK275][引理]]有：
+
+（1） 根据 $\sigma(\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right])=\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right]A$ 可得 $e'(\sigma)=A$
+
+（2） $e'(f(\sigma))=e'\left(\left(I_\sigma(\sum)\right)_{i=1}^nI_\sigma(f_\times)(k_i\sigma_1,\sigma^i)\right)=\left(I_\sigma(\sum)\right)_{i=1}^nI_\sigma(f_\times)(e'(k_i\sigma_1),e'(A)^i)=\left(I_\sigma(\sum)\right)_{i=1}^nI_\sigma(f_\times)(E(k_i),\sigma^i)$
+
+     以及 $e'(I_\sigma(c_0))=I_A(c_0)$
+
+（3） $e'^{-1}(g(A))=e'^{-1}\left(\left(I_A(\sum)\right)_{i=1}^{n'}I_A(f_\times)(E(k'_i),A^i)\right)=\left(I_\sigma(\sum)\right)_{i=1}^{n'}I_\sigma(f_\times)(e'^{-1}(E(k_i)),e'^{-1}(A)^i)=\left(I_\sigma(\sum)\right)_{i=1}^{n'}I_\sigma(f_\times)(k_i\sigma_1,\sigma^i)$
+
+     以及 $=e'^{-1}(I_A(c_0))=I_\sigma(c_0)$
+
+假设 $g(x)\ne e(f(x))$ 则若 $e(f(x))$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数小于 $g(x)$ 则 $g(x)$ 不是 $A$ 的[[MK83][最小零化多项式]]
+
+若 $e(f(x))$ 与 $g(x)$ [[~/文档/note/抽象代数/cxds.org::MK378][次]]数相等且首一，则均满足是 $A$ 的[[MK83][最小零化多项式]]，与[[MK84][性质1]]矛盾
+
+综上所述 $g(x)=e(f(x))$ 或者 $e(f(x))$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数大于 $g(x)$ 。由于 $g(x)\ne e(f(x))$ 即有 $e(f(x))$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数大于 $g(x)$ 
+
+根据[[~/文档/note/数理逻辑/sllj.org::MK275][引理]]类似 $e^{-1}(g(x))$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数大于 $f(x)$ ，即 $g(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK378][次]]数大于 $e(f(x))$ 矛盾
+
+故假设不成立，即有 $g(x)=e(f(x))$ 
+
+*** 定理
+
+设 $A=[a_{ij}]_{n\times n}\in M_{n\times n}(K)$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，定义 $f(x)=|Ix-A|$ 为 $A$ 的[[MK67][特征多项式]]，进一步定义：
+
+（1） [[MK76][单位域]]为 $\mathcal{M}_E=\left<M_1,I_E\right>$
+
+（2） $A$ 的[[MK75][方阵环]]为 $\mathcal{M}_A=\left<M_A,I_A\right>$
+
+（3） 定义 $\mathcal{M}_E[x]=\left<M_E[x],I_E[x]\right>$ 为 $\mathcal{M}_E$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
+
+若 $A$ 为 $N=\{n_1,...,n_m\}$ 的[[MK72][分块对角矩阵]] $A=[a_{ij}]^N_{n\times n}$ 且有 $A_i=[a_{ij}]_{n_i\times n_i},1\leq i\leq m$ 个分块方阵构成，并定义：
+
+（4） $A$ 的[[MK83][最小零化多项式]]为 $f(x)$ ， $A_i$ 的[[MK83][最小零化多项式]]为 $f_i(x)$ 
+
+（5） $P_0=\left\{f(x)\big|f(A)=I_A(c_0)\land f(x)\in M_E[x]\right\}$ 为 $A$ 的[[MK83][零化多项式]]
+
+（6） $P=\left\{p(x)\big|\left(\forall 1\leq i\leq n\left(\exists h_i(x)\in M_E[x](p(x)=h_i(x)\cdot f_i(x))\right)\right)\land p(x)\in M_E[x]\right\}$
+
+则有 $P=P_0$
+
+**** 证明
+
+任取[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维]]欧几里得[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $\mathcal{V}=\left<V,K,+,\cdot\right>$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK40][定理1]]可得必存在 $B=\{b_1,...,b_n\}$ 为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK34][定理1]]可得必存在 $\sigma:\text{Hom}(\mathcal{V},\mathcal{V}')\to M_{n\times n}(K)$ 满足 $\sigma(\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right])=\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right]A$
+
+又根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK73][定理1]]可得存在[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK44][子空间]] $\mathcal{V}_i=\left<\text{span}(b_{n_i},...,b_{n_{i+1}-1}),K,+,\cdot\right>$ 满足 $\mathcal{V}=\mathcal{V}_1\oplus...\oplus\mathcal{V}_m$ 其中 $\oplus$ 为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][直和]]，设：
+
+（7） 矩阵[[MK76][单位域]]为 $\mathcal{M}_E=\left<M_E,I_E\right>$
+
+（8） $A$ 的[[MK75][方阵环]]为 $\mathcal{M}_A=\left<M_A,I_A\right>$
+
+（9） 映射[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK65][单位结构]] $\mathcal{M}_1=\left<M_1,I_1\right>$ 根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK66][定理1]]是[[~/文档/note/抽象代数/cxds.org::MK338][域]]
+
+（10） 定义 $\mathcal{M}_{1}[x]=\left<M_1[x],I_{|M_1}[x]\right>$ 为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
+
+（11） 定义 $\mathcal{M}_\sigma=\left<M_\sigma,I_\sigma\right>$ 为 $\sigma$ 的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK65][一元结构]]根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK66][定理1]]是满足交换律的[[~/文档/note/抽象代数/cxds.org::MK362][非零幺环]]
+
+（12） 根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK110][定理3]]可得 $\mathcal{M}_\sigma$ 与 $\mathcal{M}_A$ [[~/文档/note/数理逻辑/sllj.org::MK274][同构]]，且[[~/文档/note/数理逻辑/sllj.org::MK274][同构映射]]为 $e:M_\sigma\to M_A$
+
+（13） 根据的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK112][定理2]]可得 $\mathcal{M}_1$ 与 $\mathcal{M}_E$ [[~/文档/note/数理逻辑/sllj.org::MK274][同构]]，且[[~/文档/note/数理逻辑/sllj.org::MK274][同构映射]]仍为 $e$
+
+根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK5][矩阵乘法]]易证 $\sigma\left(\left[\begin{matrix}b_{n_i}&...&b_{n_{i+1}-1}\end{matrix}\right]\right)=\left[\begin{matrix}b_{n_i}&...&b_{n_{i+1}-1}\end{matrix}\right]\left[\begin{matrix}a_{n_in_i}&...&a_{n_i(n_{i+1}-1)}\\...&...&...\\a_{(n_{i+1}-1)n_i}&...&a_{(n_{i+1}-1)(n_{i+1}-1)}\end{matrix}\right]=\left[\begin{matrix}b_{n_i}&...&b_{n_{i+1}-1}\end{matrix}\right]A_i$
+
+则设：
+
+（14） 任意 $1\leq i\leq m$ 均有 $A_i$ 的[[MK83][最小零化多项式]]为 $f_i(x)=(I_E(\sum))_{j=1}^{u_i}E(k_{i,j})x^j$
+
+（15） $A$ 的[[MK83][最小零化多项式]]为 $f(x)=(I_E(\sum))_{i=1}^uE(k_{i})x^i$
+
+则根据[[MK85][性质2]]可得任意 $1\leq i\leq m$ 均有：
+
+（16） $\sigma$ 在 $\mathcal{V}_i$ 上关于 $B$ 的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK108][最小零化多项式]]为 $f^\sigma_i(x)=\left(I_1(\sum)\right)_{j=1}^{u_i}(k_{i,j}\sigma_1)x^j$
+
+（17） $\sigma$ 在 $\mathcal{V}_i$ 上关于 $B$ 的[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK108][最小零化多项式]]为 $f^\sigma(x)=\left(I_1(\sum)\right)_{i=1}^u(k_{i}\sigma_1)x^i$
+
+进一步定义：
+
+（18） 所有 $f^\sigma_i(x)$ 公倍式集合 $P^\sigma=\left\{p(x)\big|\left(\forall 1\leq i\leq m\left(\exists h_i(x)\in M_1[x](p(x)=h_i(x)\cdot f^\sigma_i(x))\right)\right)\land p(x)\in M_1[x]\right\}$
+
+（19） 所有 $\sigma$ 的[[MK108][零化多项式]]集合为 $P^\sigma_0\subset M_1[x]$
+
+对于任意 $h(x)=\left(I_A(\sum)\right)_{i=1}^vE(p_i)x^i\in P_0$ 有 $h(A)=I_A(c_0)$
+
+根据（12）易证 $e(h(A))=e\left(\left(I_A(\sum)\right)_{i=1}^vI_A(f_\times)(E(p_i),A^i)\right)=\left(I_\sigma(\sum)\right)_{i=1}^vI_\sigma(f_\times)(e(E(p_i)),e(A)^i)=\left(I_\sigma(\sum)\right)_{i=1}^vI_\sigma(f_\times)(p_i\sigma_1,\sigma^i)$
+
+且有 $e(h(A))=e(I_A(c_0))=I_\sigma(c_0)$ 。根据（13）易证 $e(h(x))=\left(I_1(\sum)\right)_{i=1}^v(p_i\sigma_1)x^i$
+
+则显然[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $e(h(x))(\sigma)=\left(I_\sigma(\sum)\right)_{i=1}^vI_\sigma(f_\times)(p_i\sigma_1,\sigma^i)=e(h(A))=I_\sigma(c_0)$ 即有 $e(h(x))\in P^\sigma_0$
+
+根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK109][定理5]]可得 $P^\sigma_0=P^\sigma$ 即有 $e(h(x))\in P^\sigma$ 即对于任意 $1\leq i\leq m$ 均有 $g(x)\in M_1[x]$ 满足 $e(h(x))=I_1[x](f_\times)(g(x),f^\sigma_i(x))$
+
+则根据[[~/文档/note/数理逻辑/sllj.org::MK275][引理]]有 $e^{-1}$ 满足 $h(x)=e^{-1}(e(h(x)))=e^{-1}(I_1[x](f_\times)(g(x),f^\sigma_i(x)))=I_E(f_\times)(e^{-1}(g(x)),e^{-1}(f^\sigma_i(x)))$
+
+显然根据（14）、（16）以及（13）易证 $e^{-1}(f^\sigma_i(x))=f_i(x)$ 即 $h(x)=I_E(f_\times)(e^{-1}(g(x)),f^\sigma_i(x))$
+
+即有 $h(x)\in P$ 综上所述，对于任意 $h(x)\in P_0$ 均有 $h(x)\in P$ 故 $P_0\subset P$
+
+同理可证 $P\subset P_0$ 则根据[[~/文档/note/离散数学/lssx.org::MK16][自反性]]可得 $P=P_0$
 
 * 特殊矩阵
 
@@ -1453,6 +1629,24 @@ f(B)I=&\sum_{z=0}^nB^*_zB^z=\sum_{z=1}^nB^*_zP^{-1}A^zP\\
 根据[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK26][拉普拉斯定理]]有 $b_{ij}=|M(A,i,j)|=\sum_{z=2}^nE(M(A,i,j),1,z)\cdot\det\left(M(M(A,i,j),1,z)\right)$
 
 根据上一步以及归纳假设类似可证其最高[[~/文档/note/抽象代数/cxds.org::MK519][次]]均小于 $n-1$
+
+*** 定理5
+
+设 $A=[a_{ij}]_{n\times n}\in M_{n\times n}(K)$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，定义 $f(x)=|Ix-A|$ 为 $A$ 的[[MK67][特征多项式]]，进一步定义：
+
+（1） [[MK76][单位域]]为 $\mathcal{M}_E=\left<M_1,I_E\right>$
+
+（2） $A$ 的[[MK75][方阵环]]为 $\mathcal{M}_A=\left<M_A,I_A\right>$
+
+（3） 定义 $\mathcal{M}_E[x]=\left<M_E[x],I_E[x]\right>$ 为 $\mathcal{M}_E$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
+
+若 $A$ 为[[MK72][分块对角矩阵]]，且有 $A_i=[a_{ij}]_{n_i\times n_i},1\leq i\leq m$ 个分块方阵构成，并定义：
+
+（1） $P_0=\left\{f(x)\big|f(A)=I_A(c_0)\land f(x)\in M_E[x]\right\}$
+
+（2） $P=\left\{p(x)\big|\left(\forall 1\leq i\leq n\left(\exists h_i(x)\in M_1[x](p(x)=h_i(x)\cdot f_i(x))\right)\right)\land p(x)\in M_1[x]\right\}$
+
+
 
 ** 性质
 

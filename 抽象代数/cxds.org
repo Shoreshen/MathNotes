@@ -2,7 +2,7 @@
 
 #+TITLE: 抽象代数
 
-currnet mark: 522
+currnet mark: 523
 
 free mark:
 
@@ -3683,9 +3683,9 @@ f(s_1,...,s_{n-1},a)&=\sum_{z\in K}\left(\left(\sum_{i\in P_z}a_i\left(\prod_{j\
 
 （1） $\mathcal{M}[x]\vDash T_{\mathcal{R}_e}$ 是[[MK362][非零幺环]]
 
-（2） $\mathcal{M}_{[\vec{x}]}\vDash(\forall x_1(\forall x_2(f_\times(x_1,x_2)\hat{=}f_\times(x_2,x_1))))$ 乘法交换
+（2） $\mathcal{M}[x]\vDash(\forall x_1(\forall x_2(f_\times(x_1,x_2)\hat{=}f_\times(x_2,x_1))))$ 乘法交换
 
-（3） $\mathcal{M}_{[\vec{x}]}\vDash(\forall x_1(\forall x_2((f_\times(x_1,x_2)\hat{=}c_0)\to((x_1\hat{=}c_0)\lor(x_2\hat{=}c_0)))))$ 
+（3） $\mathcal{M}[x]\vDash(\forall x_1(\forall x_2((f_\times(x_1,x_2)\hat{=}c_0)\to((x_1\hat{=}c_0)\lor(x_2\hat{=}c_0)))))$ 
 
 ******* 次<<MK378>>
 
@@ -4252,6 +4252,32 @@ r_{n+2}(x)=&r_n(x)+(-h_{n+2}(x))r_{n+1}(x)\\
 又由于 $I[x](f_\times)(q(x),s(x))\in N[x]$ 故可得 $I[x](c_1)\in N'[x]$ ，即根据[[MK359][定理1]]可得 $N'[x]=M[x]$
 
 即任意 $N'[x]$ 满足 $N[x]\subset N'[x]$ 以及 $N'[x]\ne N[x]$ 均有 $N'[x]=M[x]$
+
+******** 性质10<<MK523>>
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]] $\mathcal{M}[x]=\left<M[x],I[x]\right>$ 是其[[MK374][多项式环]]，对于任意 $\{f(x),g_1(x),g_2(x),h_1(x),h_2(x)\}\subset M[x]$ 若满足：
+
+（1） $f(x)=h_1(x)g_1(x),f(x)=h_2(x)g_2(x)$
+
+（2） 不存在 $\{u(x),v_1(x),v_2(x)\}\subset M[x]$ 使得 $g_1(x)=v_1(x)u(x),g_2(x)=v_2(x)u(x)$
+
+则存在 $h'(x)\in M[x]$ 满足 $h_1(x)=h'(x)g_2(x)$ 。所有加法为 $I[x](f_+)$ 乘法为 $I[x](f_\times)$
+
+********* 证明
+
+根据条件（2）以及[[MK384][性质8]]可得存在 $\{u(x),v(x)\}\subset M[x]$ 使得 $u(x)g_1(x)+v(x)g_2(x)=I[x](c_1)$
+
+两边同乘以 $f(x)$ 可得 $f(x)u(x)g_1(x)+f(x)v(x)g_2(x)=I[x](c_1)f(x)=f(x)$ 带入条件（1）
+
+可得 $f(x)=u(x)h_2(x)g_1(x)g_2(x)+v(x)h_1(x)g_1(x)g_2(x)=(u(x)h_2(x)+v(x)h_1(x))g_1(x)g_2(x)$
+
+即有 $f(x)=((u(x)h_2(x)+v(x)h_1(x))g_2(x))g_1(x)$ 定义 $h^*(x)=(u(x)h_2(x)+v(x)h_1(x))g_2(x)$ 即 $f(x)=h^*(x)g_1(x)$
+
+即可得 $f(x)=h^*(x)g_1(x)+I[x](c_0)$ 以及 $f(x)=h_1(x)g_1(x)+I[x](c_0)$ 
+
+又根据[[MK383][性质7]]的唯一性可得 $h_1(x)=h^*(x)=(u(x)h_2(x)+v(x)h_1(x))g_2(x)$ 定义 $h'(x)=u(x)h_2(x)+v(x)h_1(x)$
+
+即有 $h_1(x)=h'(x)g_2(x)$
 
 *** 性质
 
