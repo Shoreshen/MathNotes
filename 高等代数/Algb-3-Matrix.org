@@ -2,7 +2,7 @@
 
 #+TITLE: 矩阵运算
 
-current mark: 85
+current mark: 86
 
 * 矩阵基础
 
@@ -476,9 +476,9 @@ I_nA_{n\times s}&= A_{s\times n}\\
 
 ** 分块对角矩阵<<MK72>>
 
-定义分块对角矩阵为 $A_n=[D(i,j)]_{n\times n}$ 满足存在 $1\leq n_1<...<n_k\leq n$ 使得
+定义分块对角矩阵为 $A_n=[D(i,j)]_{n\times n}$ 满足存在 $n_0=1\leq n_1<...<n_k\leq n$ 使得
 
-其中 $D(i,j)=\begin{cases}a_{ij}&(\exists u((n_u\leq i<n_{u+1})\land(n_u\leq j<n_{u+1})))\\0&else\end{cases}$ 定义 $N=\{n_1,...,n_k\}$ 则分块对角矩阵记作 $\left[a_{ij}\right]^N_{n\times n}$
+其中 $D(i,j)=\begin{cases}a_{ij}&(\exists u((n_u\leq i<n_{u+1})\land(n_u\leq j<n_{u+1})))\\0&else\end{cases}$ 定义 $N=\{n_0,n_1,...,n_k\}$ 则分块对角矩阵记作 $\left[a_{ij}\right]^N_{n\times n}$
 
 ** 数量矩阵
 
@@ -693,6 +693,18 @@ $P_n(ki)$ 左乘矩阵 $A_{s\times n}$ 相当于 $A\xrightarrow[k\textcircled{i}
 根据[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK19][初等行变换]]以及[[MK32][初等变换]]可得 $|PA|=|AP|=k|A|$
 
 此时 $|PA|=|AP|=|P||A|=k|A|$ 成立
+
+** Jordan块<<MK86>>
+
+定义 $B=[b_{ij}]_{n\times n}$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，若满足 $b_{ij}=\begin{cases}a&i=j\\1&j=i+1\\0&\else\end{cases}$
+
+则称 $B$ 为Jordan块，记作 $J_n(a)$
+
+** Jordan型矩阵
+
+若 $A\left[a_{ij}\right]^{\{n_0,n_1,...,n_k\}}_{n\times n}$ 为[[MK72][分块对角矩阵]]，且任意 $i$ 有 $A_i=\left[\begin{matrix}a_{n_in_i}&a_{n_i(n_i+1)}&...&a_{n_i(n_{i+1}-1)}\\a_{(n_i+1)n_i}&a_{(n_i+1)(n_i+1)}&...&a_{(n_i+1)(n_{i+1}-1)}\\...&...&...&...\\a_{(n_{i-1}-1)n_i}&a_{(n_{i-1}-1)(n_i+1)}&...&a_{(n_{i-1}-1)(n_{i+1}-1)}\end{matrix}\right]$
+
+均有 $A_i$ 是[[MK86][Jordan块]]，则称 $A$ 是Jordan型矩阵
 
 * 基本运算<<MK49>>
 
@@ -1629,24 +1641,6 @@ f(B)I=&\sum_{z=0}^nB^*_zB^z=\sum_{z=1}^nB^*_zP^{-1}A^zP\\
 根据[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK26][拉普拉斯定理]]有 $b_{ij}=|M(A,i,j)|=\sum_{z=2}^nE(M(A,i,j),1,z)\cdot\det\left(M(M(A,i,j),1,z)\right)$
 
 根据上一步以及归纳假设类似可证其最高[[~/文档/note/抽象代数/cxds.org::MK519][次]]均小于 $n-1$
-
-*** 定理5
-
-设 $A=[a_{ij}]_{n\times n}\in M_{n\times n}(K)$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，定义 $f(x)=|Ix-A|$ 为 $A$ 的[[MK67][特征多项式]]，进一步定义：
-
-（1） [[MK76][单位域]]为 $\mathcal{M}_E=\left<M_1,I_E\right>$
-
-（2） $A$ 的[[MK75][方阵环]]为 $\mathcal{M}_A=\left<M_A,I_A\right>$
-
-（3） 定义 $\mathcal{M}_E[x]=\left<M_E[x],I_E[x]\right>$ 为 $\mathcal{M}_E$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
-
-若 $A$ 为[[MK72][分块对角矩阵]]，且有 $A_i=[a_{ij}]_{n_i\times n_i},1\leq i\leq m$ 个分块方阵构成，并定义：
-
-（1） $P_0=\left\{f(x)\big|f(A)=I_A(c_0)\land f(x)\in M_E[x]\right\}$
-
-（2） $P=\left\{p(x)\big|\left(\forall 1\leq i\leq n\left(\exists h_i(x)\in M_1[x](p(x)=h_i(x)\cdot f_i(x))\right)\right)\land p(x)\in M_1[x]\right\}$
-
-
 
 ** 性质
 

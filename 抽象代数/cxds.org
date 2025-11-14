@@ -2,7 +2,7 @@
 
 #+TITLE: 抽象代数
 
-currnet mark: 523
+currnet mark: 524
 
 free mark:
 
@@ -3760,7 +3760,7 @@ f(s_1,...,s_{n-1},a)&=\sum_{z\in K}\left(\left(\sum_{i\in P_z}a_i\left(\prod_{j\
 
 使得 $f(x)=I[x](f_\times)(g(x),h(x))$ ，则称 $f(x)$ 可约。若不存在，则称 $f(x)$ 不可约
 
-******** 性质<<MK521>>
+******** 性质1<<MK521>>
 
 若 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]] $\mathcal{M}[x]=\left<M[x],I[x]\right>$ 是其[[MK374][多项式环]]，任意 $\{f_1(x),f_2(x),g(x),h(x)\}\in M[x]$ 满足：
 
@@ -3793,6 +3793,52 @@ f_2(x)&=f_2(x)\times I[x](c_1)=u(x)\times f_1(x)\times f_2(x)+f_2(x)\times v(x)\
 即存在 $h^*(x)=u(x)\times h(x)+f_2(x)\times v(x)$ 满足 $f_2(x)=I[x](f _\times)(h^*_1(x),g(x))$
 
 同理可证若若不存在 $h'(x)\in M[x]$ 满足 $f_2(x)=h'(x)\times g(x)$ 则存在 $h^*(x)\in M[x]$ 使得 $f_1(x)=I[x](f_\times)(h^*_1(x),g(x))$ 
+
+******** 性质2<<MK524>>
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]] $\mathcal{M}[x]=\left<M[x],I[x]\right>$ 是其[[MK374][多项式环]]，任意 $\{f_1(x),...,f_n(x)\}\in M[x]$ 满足：
+
+（1） $f(x)=f_1(x)\cdot...\cdot f_n(x)$
+
+（2） 任意 $f_i(x),f_j(x),i\ne j$ 不存在 $\{g(x),g_1(x),g_2(x)\}\subset M_1[x]$ 满足 $f_i(x)=g(x)\cdot g_1(x)$
+
+     且 $f_j(x)=g(x)\cdot g_2(x)$ 且 $g(x)\ne I[x](c_1)$ 
+
+则对于任意 $1\leq i\leq n$ 不存在 $\{g(x),g_1(x),g_2(x)\}\subset M_1[x]$ 满足：
+
+（1） $f_i(x)=g(x)\cdot g_1(x)$ 且
+
+（2） $\prod_{j\ne i\land 1\leq j\leq n}f_j(x)=g(x)\cdot g_2(x)$ 且
+
+（3） $g(x)\ne I[x](c_1)$
+
+其中 $\prod$ 为连续 $I[x](f_\times)$ ， $\cdot$ 为 $I[x](f_\times)$ ， $+$ 为 $I[x](f_+)$ 下同
+
+********* 证明
+
+不妨设 $i=1$ 则对于 $f_1(x)$ 假设存在 $\{g(x),g_1(x),g_2(x)\}\subset M_1[x]$ 满足：
+
+（1） $f_1(x)=g(x)\cdot g_1(x)$ 且
+
+（2） $f_2(x)\cdot...\cdot f_n(x)=g(x)\cdot g_2(x)$ 且
+
+（3） $\deg(g(x))>0$
+
+则根据[[MK522][唯一因式分解]]易证存在[[MK377][首一不可约]] $g'(x)$ 满足 $g(x)=g'(x)\cdot h(x)$ 则有 $f_1(x)=g'(x)\cdot (h(x)\cdot g_1(x))$
+
+以及 $f_2(x)\cdot...\cdot f_n(x)=g'(x)\cdot (h(x)\cdot g_2(x))$
+
+又根据[[MK521][性质1]]以及数学归纳法可得存在 $2\leq u\leq n$ 满足存在 $h'(x)\in M[x]$ 使得 $f_u(x)=h'(x)g'(x)$
+
+由于 $g'(x)$ [[MK377][首一不可约]]，故可得 $\deg(g'(x))>0$ ，结合 $f_1(x)=g'(x)\cdot (h(x)\cdot g_1(x))$ 以及 $u\ne 1$
+
+显然与条件（2）矛盾，故假设不成立，即不存在 $\{g(x),g_1(x),g_2(x)\}\subset M_1[x]$ 满足：
+
+（1） $f_1(x)=g(x)\cdot g_1(x)$ 且
+
+（2） $f_2(x)\cdot...\cdot f_n(x)=g(x)\cdot g_2(x)$ 且
+
+（3） $\deg(g(x))>0$
 
 ******** 唯一因式分解定理<<MK522>>
 
