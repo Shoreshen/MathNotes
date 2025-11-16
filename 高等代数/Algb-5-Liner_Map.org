@@ -1969,7 +1969,13 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 （3） 定义 $\mathcal{M}_\sigma=\left<M_\sigma,I_\sigma\right>$ 为 $\sigma$ 的[[MK65][一元结构]]是[[~/文档/note/抽象代数/cxds.org::MK362][非零幺环]]
 
-若 $f(x)\in M_1[x]$ 为其[[MK108][最小零化多项式]]满足 $f(x)=\prod_{i=1}^n(x+k_i\sigma_1)^{l_i}$ 其中：
+若 $f(x)\in M_1[x]$ 为其[[MK108][最小零化多项式]]且满足 $f(x)=\prod_{i=1}^n(x+k_i\sigma_1)^{l_i}$ 则有：
+
+（5） $\mathcal{V}=\mathcal{V}_{1}\oplus...\oplus\mathcal{V}_n$
+
+（6） $\mathcal{V}_i$ 关于 $\sigma$ 的[[MK108][最小零化多项式]]为 $f_i(x)=(x+k_i\sigma_1)^{l_i}$
+
+其中：
 
 （a） $k_i\in K,l_i\in\mathbb{N}$
 
@@ -1981,9 +1987,24 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 （e） $\cdot$ 为 $I_1[x](f_\times)$ ， $+$ 为 $I_1[x](f_+)$ 下同
 
+（f） $g_i(x)=(x+k_i\sigma_1)^{l_i}$ 且 $\mathcal{V}_i=\left<\ker\left(g_i(\sigma)\right),K,\pmb{+},\pmb{\cdot}\right>$
 ***** 证明
 
+****** 证明（5）
 
+根据[[MK71][推论1]]以及[[MK108][零化多项式定义]]直接可证
+
+****** 证明（6）
+
+显然任意 $a\in\ker\left(g_i(\sigma)\right)$ 均满足 $\left(g_i(\sigma)\right)(a)=\vec{0}$ 则 $g_i(x)$ 为 $\mathcal{V}_i$ 的[[MK108][零化多项式]]
+
+设 $f_i(x)$ 为 $\mathcal{V}_i$ 的[[MK108][最小零化多项式]]，则根据[[MK111][性质2]]易证 $f_i(x)$ 整除 $g_i(x)$ 则显然有形式 $f_i(x)=(x+k_i\sigma_1)^{t_i},t_i\leq l_i$
+
+假设存在 $t_i<l_i$ 则根据[[MK109][定理3]]可得 $\prod(x+k_i\sigma_1)^{t_i}$ 亦为 $\sigma$ 的[[MK108][零化多项式]]，且根据[[~/文档/note/抽象代数/cxds.org::MK387][性质1]]可得[[~/文档/note/抽象代数/cxds.org::MK378][次]]数为 $\sum_{i=1}^nt_i$
+
+结合 $t_i\leq l_i$ 可得 $\sum_{i=1}^nt_i\leq\sum_{i=1}^nl_i$ 有根据假设有 $\sum_{i=1}^nt_i<\sum_{i=1}^nl_i$ 则显然 $f(x)$ 不是[[MK108][最小零化多项式]]，矛盾
+
+故假设不成立，不存在 $t_i<l_i$ ，结合之前证明有 $t_i=l_i$ 即 $\mathcal{V}_i$ 关于 $\sigma$ 的[[MK108][最小零化多项式]]为 $f_i(x)=(x+k_i\sigma_1)^{l_i}$
 
 *** 定理
 
@@ -2722,13 +2743,13 @@ I_\sigma(c_1)\left(\left[\begin{matrix}a_1&a_2&...&a_n\end{matrix}\right]\right)
 
 根据[[~/文档/note/抽象代数/cxds.org::MK441][带入值]]以及 $\sigma\in M_\sigma$ 可得 $\{f(\sigma),f_1(\sigma),f_2(\sigma)\}\subet M_\sigma\subset\text{Hom}(\mathcal{V},\mathcal{V})$
 
-由于 $f(x)=f_1(x)\cdot f_2(x)$ 则根据[[~/文档/note/抽象代数/cxds.org::MK442][性质1]]可得 $f(\sigma)=f_1(\sigma)\cdot f_2(\sigma)$ 
+由于 $f(x)=f_1(x)\cdot f_2(x)$ 则根据[[~/文档/note/抽象代数/cxds.org::MK442][性质1]]可得 $f(\sigma)=I(f_\times)(f_1(\sigma),f_2(\sigma))$ 
 
 ***** $\ker(f_1(\sigma))\dotplus\ker(f_2(\sigma))\subset \ker(f(\sigma))$
 
-对于任意 $a\in \ker(f_1(\sigma))$ 可得 $f_1(\sigma)(a)=0\in V$ ，根据[[MK17][定义]]、[[MK2][零元映射]]有 $(f_2(\sigma)\cdot f_1(\sigma))(a)=f_2(\sigma)(f_1(\sigma)(a))=f_2(\sigma)(0)=0$
+对于任意 $a\in \ker(f_1(\sigma))$ 可得 $f_1(\sigma)(a)=0\in V$ ，根据[[MK17][定义]]、[[MK2][零元映射]]有 $(I(f_\times)(f_2(\sigma),f_1(\sigma)))(a)=f_2(\sigma)(f_1(\sigma)(a))=f_2(\sigma)(0)=0$
 
-又根据条件（3）有 $\mathcal{M}_\sigma\vDash(\forall x_1(\forall x_2(f_\times(x_1,x_2)\hat{=}f_\times(x_2,x_1))))$ 可得 $f_2(\sigma)\cdot f_1(\sigma)=f_1(\sigma)\cdot f_2(\sigma)=f(\sigma)$
+又根据条件（3）有 $\mathcal{M}_\sigma\vDash(\forall x_1(\forall x_2(f_\times(x_1,x_2)\hat{=}f_\times(x_2,x_1))))$ 可得 $I(f_\times)(f_2(\sigma),f_1(\sigma))=I(f_\times)(f_1(\sigma),f_2(\sigma))=f(\sigma)$
 
 故根据[[MK9][相等]]可得对于任意 $a\in \ker(f_1(\sigma))$ 有 $(f(\sigma))(a)=0$ 即 $a\in \ker(f(\sigma))$ 。同理可证对于任意 $a\in \ker(f_2(\sigma))$ 有 $a\in \ker(f(\sigma))$
 
