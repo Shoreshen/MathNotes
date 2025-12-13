@@ -2,7 +2,7 @@
 
 #+TITLE: 矩阵运算
 
-current mark: 86
+current mark: 90
 
 * 矩阵基础
 
@@ -476,9 +476,25 @@ I_nA_{n\times s}&= A_{s\times n}\\
 
 ** 分块对角矩阵<<MK72>>
 
-定义分块对角矩阵为 $A_n=[D(i,j)]_{n\times n}$ 满足存在 $n_0=1\leq n_1<...<n_k\leq n$ 使得
+若有矩阵 $A_{n_k}=[a_{k,i,j}], 1\leq k\leq p$ 满足 $\sum_{k=1}^pn_k=n$ 则定义：
 
-其中 $D(i,j)=\begin{cases}a_{ij}&(\exists u((n_u\leq i<n_{u+1})\land(n_u\leq j<n_{u+1})))\\0&else\end{cases}$ 定义 $N=\{n_0,n_1,...,n_k\}$ 则分块对角矩阵记作 $\left[a_{ij}\right]^N_{n\times n}$
+（1） $N_0=0, N_u=\sum_{k=1}^un_k$
+
+（2） $A_n=\text{diag}\left(A_{n_1},...,A_{n_p}\right)=[a_{i,j}]$
+
+     其中 $a_{ij}=\begin{cases}a_{u,i-N_{u-1},j-N_{u-1}}&\left(\exists u\left(\left(N_{u-1}< i\leq N_u\right)\land\left(N_{u-1}< i\leq N_u\right)\right)\right)\\0&else\end{cases}$
+
+则称 $A_n=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ 为分块对角矩阵。
+
+另定义 $N=\{N_0,n_1,...,N_p\}$ 则分块对角矩阵亦可记作 $\left[a_{i,j}\right]^N_{n\times n}$
+
+*** 性质<<MK90>>
+
+若有 $A=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ ，则[[MK87][幂]]运算 $A^n=\text{diag}\left((A_{n_1})^n,...,(A_{n_p})^n\right)$
+
+**** 证明
+
+根据[[MK5][矩阵乘法]]以及数学归纳法易证
 
 ** 数量矩阵
 
@@ -700,11 +716,19 @@ $P_n(ki)$ 左乘矩阵 $A_{s\times n}$ 相当于 $A\xrightarrow[k\textcircled{i}
 
 则称 $B$ 为Jordan块，记作 $J_n(a)$
 
-** Jordan型矩阵
+*** 性质<<MK89>>
 
-若 $A\left[a_{ij}\right]^{\{n_0,n_1,...,n_k\}}_{n\times n}$ 为[[MK72][分块对角矩阵]]，且任意 $i$ 有 $A_i=\left[\begin{matrix}a_{n_in_i}&a_{n_i(n_i+1)}&...&a_{n_i(n_{i+1}-1)}\\a_{(n_i+1)n_i}&a_{(n_i+1)(n_i+1)}&...&a_{(n_i+1)(n_{i+1}-1)}\\...&...&...&...\\a_{(n_{i-1}-1)n_i}&a_{(n_{i-1}-1)(n_i+1)}&...&a_{(n_{i-1}-1)(n_{i+1}-1)}\end{matrix}\right]$
+[[MK87][幂]]运算 $(J_n(\mathfrak{g}(c_0)))^n=[c_{ij}]$ 满足 $c_{ij}=\begin{cases}1&j=i+n\\0&\else\end{cases}$
 
-均有 $A_i$ 是[[MK86][Jordan块]]，则称 $A$ 是Jordan型矩阵
+**** 证明
+
+根据[[MK5][矩阵乘法]]以及数学归纳法易证
+
+** Jordan型矩阵<<MK88>>
+
+若[[MK72][分块对角矩阵]] $A=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ 满足每一个子矩阵均为参数相同的[[MK86][Jordan块]]，即 $A=\text{diag}\left(J_{n_1}(a),...,J_{n_p}(a)\right)$
+
+则称 $A$ 是Jordan型矩阵
 
 * 基本运算<<MK49>>
 
@@ -726,7 +750,7 @@ $P_n(ki)$ 左乘矩阵 $A_{s\times n}$ 相当于 $A\xrightarrow[k\textcircled{i}
 
 则定义 $MN=\left[t_{ij}=\sum_{k=1}^n a_{ik}b_{kj}\right]_{s\times t}$
 
-*** 矩阵的幂
+*** 矩阵的幂<<MK87>>
 
 定义 $A_n$ 为 $n$ 行 $n$ 列的矩阵，则定义 $A^k_n=A_nA_n...A_n$ 即 $A$ 的 $n$ 次幂为 $n$ 个 $A_n$ [[MK5][相乘]]
 

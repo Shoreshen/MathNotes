@@ -211,15 +211,15 @@ $\mathcal{V}=<V,K,+,\times>$ 是[[MK1][线性空间]]，其有限次幂空间 $\
 
 * 线性子空间<<MK44>>
 
-若 $\mathcal{V}=<V,K,+,\cdot>$ 是数域 $K$ 上的[[MK1][线性空间]]，若 $U\subset V$ 满足 $\mathcal{V}'=<V,K,+,\cdot>$ 亦为线性空间  
+若 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是数域 $K$ 上的[[MK1][线性空间]]，若 $U\subset V$ 满足 $\mathcal{V}'=\left<V,K,+,\cdot\right>$ 亦为线性空间  
 
 则称 $\mathcal{V}'$ 是 $\mathcal{V}$ 在 $K$ 上的线性子空间
 
 ** 向量组生成子空间<<MK46>>
 
-线性空间 $\mathcal{V}=<V,K,+,\cdot>$ ，若存在 $S\subset V,S\ne\varnothing$ 定义 $\text{span}(S)=\left\{\sum_{i=1}^n k_i\vec{a}_i\big|k_i\in K\land\vec{a}_i\in S\land n\in\mathbb{N}\right\}$ 
+线性空间 $\mathcal{V}=\left<V,K,+,\cdot\right>$ ，若存在 $S\subset V,S\ne\varnothing$ 定义 $\text{span}(S)=\left\{\sum_{i=1}^n k_i\vec{a}_i\big|k_i\in K\land\vec{a}_i\in S\land n\in\mathbb{N}\right\}$ 
 
-则 $\mathcal{V}'=<\text{span}(S),K,+,\cdot>$ 为 $\mathcal{V}$ 的线性子空间，称为 $S$ 生成的子空间 
+则 $\mathcal{V}'=\left<\text{span}(S),K,+,\cdot\right>$ 为 $\mathcal{V}$ 的线性子空间，称为 $S$ 生成的子空间 
 
 *** 证明
 
@@ -256,7 +256,7 @@ $\mathcal{V}=<V,K,+,\times>$ 是[[MK1][线性空间]]，其有限次幂空间 $\
 
 *** 性质2<<MK50>>
 
-线性空间 $\mathcal{V}=<V,K,+,\cdot>$ 上[[MK46][生成子空间]] $<\text{span}(S),K,+,\cdot>$ 的[[MK36][基]]为 $S$ 的[[MK15][极大线性无关集]]
+线性空间 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 上[[MK46][生成子空间]] $\left<\text{span}(S),K,+,\cdot\right>$ 的[[MK36][基]]为 $S$ 的[[MK15][极大线性无关集]]
 
 **** 证明
 
@@ -1579,7 +1579,7 @@ $\mathcal{V}=<V,K,+,\times>$ 是[[MK1][线性空间]]且 $S\subset V$ 若满足�
 
 * 线性空间同构<<MK75>>
 
-若线性空间 $\mathcal{V}=<V,K,+,\cdot>,\mathcal{V}'=<V',K,\bar{+},\bar{\cdot}>$ 存在[[~/文档/note/离散数学/lssx.org::MK181][双射函数]] $\sigma:V\rightarrow V'$ 且满足：
+若线性空间 $\mathcal{V}=\left<V,K,+,\cdot\right>,\mathcal{V}'=\left<V',K,\bar{+},\bar{\cdot}\right>$ 存在[[~/文档/note/离散数学/lssx.org::MK181][双射函数]] $\sigma:V\rightarrow V'$ 且满足：
 
 （1） 对于任意 $\{\alpha,\beta\}\subset V$ 有 $\sigma(\alpha+\beta)=\sigma(\alpha)+\sigma(\beta)$
 
@@ -1667,7 +1667,7 @@ $\sigma(-\vec{v})=-\sigma(\vec{v})$
 
 ** 定理<<MK97>>
 
-定义有限维线性空间 $\mathcal{V}=<V,K,+,\cdot>,\mathcal{V}'=<S,K,\bar{+},\bar{\cdot}>$ [[~/文档/note/高等代数/Algb-1-Liner_sys_func.org][数域]] $K$
+定义有限维[[MK1][线性空间]] $\mathcal{V}=\left<V,K,+,\cdot\right>,\mathcal{V}'=\left<S,K,\bar{+},\bar{\cdot}\right>$ 其[[~/文档/note/抽象代数/cxds.org::MK338][域]]为 $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 
 
 则 $\mathcal{V},\mathcal{V}'$ 同构的充要条件是 $\mathcal{V},\mathcal{V}'$ 的[[MK51][维数]]相等
 
@@ -2118,7 +2118,7 @@ $[v]_W=[u]_W$ 的充要条件为 $v-u\in W$
 
 若矩阵 $A=\left[\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&...&...\\a_{m1}&a_{m2}&...&a_{mn}\end{matrix}\right]$ 
 
-定义列元素 $\vec{a}_i=\left[\begin{matrix}a_{1i}\\a_{2i}\\...\\a_{mi}\end{matrix}\right],1\leq i\leq n$ 则称 $\mathcal{V}_{col}<\text{span}(\{\vec{a}_1,...,\vec{a}_n\}),K,+,\cdot>$ 为矩阵的[[MK46][列空间]]
+定义列元素 $\vec{a}_i=\left[\begin{matrix}a_{1i}\\a_{2i}\\...\\a_{mi}\end{matrix}\right],1\leq i\leq n$ 则称 $\mathcal{V}_{col}=\left<\text{span}(\{\vec{a}_1,...,\vec{a}_n\}),K,+,\cdot\right>$ 为矩阵的[[MK46][列空间]]
 
 其中 $+$ 是[[~/文档/note/高等代数/Algb-3-Matrix.org::MK2][矩阵加法]]， $\cdot$ 是[[~/文档/note/高等代数/Algb-3-Matrix.org::MK3][矩阵数乘]]，则 $\dim_K(\mathcal{V}_{col})$ ，即列空间的[[MK51][维数]]为矩阵列[[MK19][秩]]
 
