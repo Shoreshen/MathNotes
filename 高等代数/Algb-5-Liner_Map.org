@@ -2657,7 +2657,7 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 由于 $\Gamma'_i,1\leq i\leq n$ 均为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]，则显然 $\Gamma$ 亦为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]
 
-****** （5）
+****** 证明（5）
 
 显然 $N_j$ 为参数为 $\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK86][Jordan块]]的个数，根据上一步可得 $\Gamma'_i=\Gamma_i+(\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_i) I_i$
 
@@ -2669,7 +2669,7 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 即有 $\mathcal{V}_{i,k}=\left<\ker(\sigma_i),K,+,\cdot\right>=\left<\ker(\sigma+\lambda_i\sigma_1),K,+,\cdot\right>=V_{\ker(\sigma+\lambda_i\sigma_1)}$ 则根据 $m=\dim(\mathcal{V}_{i,k})$ 即有 $m=\dim(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)})$ 
 
-****** （6）
+****** 证明（6）
 
 * 特殊子空间
 
