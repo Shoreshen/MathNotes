@@ -963,7 +963,7 @@ $\delta^n([a]_{V_0})=[\sigma^n(a)]_{V_0}=[\vec{0}]_{V_0}$ 显然 $[\vec{0}]_{V_0
 
 （1） 存在一组[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 对 $B$ 到自身的[[MK28][映射矩阵]]为参数是 $\mathfrak{g}(c_0)$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]，即 $M=\text{diag}\left(J_{n_1}(\mathfrak{g}(c_0)),...,J_{n_m}(\mathfrak{g}(c_0))\right)$
 
-（2） $m=\dim(\mathcal{V})-\dim\left(\mathcal{V}_{\sigma(IM)}\right)$ 其中 $\mathcal{V}_{\sigma(IM)}=\left<\left\{\sigma(a)\big|a\in V\right\},K,+,\cdot\right>$ 即 $\mathcal{V}$ 对于 $\sigma$ 的[[MK23][相空间]]
+（2） $m=\dim(\mathcal{V}_k)=\dim(\mathcal{V})-\dim\left(\mathcal{V}_{\sigma(IM)}\right)$ 其中 $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 为[[MK22][核空间]] $\mathcal{V}_{\sigma(IM)}=\left<\left\{\sigma(a)\big|a\in V\right\},K,+,\cdot\right>$ 即 $\mathcal{V}$ 对于 $\sigma$ 的[[MK23][相空间]]
 
 （3） 对于任意 $1\leq u\leq n$ 在 $\{n_1,...,n_m\}$ 中等于 $u$ 的元素个数 $z_u=\begin{cases}m-\left(rank(\sigma)-rank(\sigma^2)\right)&u=0\\rank(\sigma^{u-1})+rank(\sigma^{u+1})-2rank(\sigma^u)&1<u<n\\rank(\sigma^{u-1})-rank(\sigma^u)&u=n\end{cases}$
 
@@ -2264,11 +2264,11 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 （6） $\mathcal{V}_i$ 关于 $\sigma$ 的[[MK108][最小零化多项式]]为 $f_i(x)=(x+k_i\sigma_1)^{l_i}$
 
-（7） 定义 $\sigma_i$ 满足定义域为 $\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ 且对任意 $a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ 均有 $\sigma'_i(a)=(\sigma\oplus\lambda_i\sigma_1)(a)$
+（7） 定义 $\sigma_i$ 满足定义域为 $\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ 且对任意 $a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ 均有 $\sigma_i(a)=(\sigma\oplus\lambda_i\sigma_1)(a)$
 
      则 $\sigma_i$ 为 $\mathcal{V}_i$ 上的[[MK4][线性变换]]
 
-（8） 对于任意 $a\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$ 则有 $(\sigma\oplus k_i\sigma_1)(a)\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$
+（8） 对于任意 $a\not\in\ker\left((\sigma\oplus\lambda_i\sigma_i)^{l_i}\right)$ 则有 $(\sigma\oplus k_i\sigma_1)(a)\not\in\ker\left((\sigma\oplus\lambda_i\sigma_i)^{l_i}\right)$
 
 （9） 对于任意 $m\in\mathbb{N}$ 定义 $\ker(\sigma_i^m)=\left\{a\big|a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)\land \sigma_i^m(a)=\vec{0}\right\}$ 则有 $\ker(\sigma_i^m)=\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
 
@@ -2347,7 +2347,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 ******* 前提定义
 
-对于任意 $a\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$ 假设 $(\sigma\oplus k_i\sigma_1)(a)\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$
+对于任意 $a\not\in\ker\left((\sigma+\lambda_i\sigma_1)^{l_i}\right)$ 假设 $(\sigma\oplus k_i\sigma_1)(a)\in\ker\left((\sigma+\lambda_i\sigma_1)^{l_i}\right)$
 
 则根据（5）以及[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][定义]]可得 $a=\sum_{j=1}^nb_j,b_j\in\ker\left((\sigma\oplus\lambda_j\sigma_1)^{l_j}\right)$
 
@@ -2363,7 +2363,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 根据[[MK18][运算]]易证 $(\sigma\oplus\lambda_i\sigma_1)(b_j)=\sigma(b_j)\pmb{+}\lambda_i\pmb{\cdot}b_j$ 即有 $(\sigma\oplus\lambda_i\sigma_1)(b_j)\in\ker\left((\sigma\oplus\lambda_j\sigma_1)^{l_j}\right)$
 
-******* $b_j\ne\vec{0}$ 则有 $(\sigma\oplus\lambda_i\sigma_1)(b_j)\ne\vec{0}$
+******* 任意 $j\ne i$ 均有 $b_j\ne\vec{0}$ 则有 $(\sigma\oplus\lambda_i\sigma_1)(b_j)\ne\vec{0}$
 
 对于任意 $j\ne i$ 若有 $b_j\ne\vec{0}$ 假设 $(\sigma\oplus\lambda_i\sigma_1)(b_j)=\vec{0}$ 显然有 $l_i\geq 1$ 则根据[[MK69][幂性质]]、[[MK2][零映射]]以及[[MK20][零幂定义]]
 
@@ -2379,17 +2379,17 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 若有 $a\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$ 则易证存在 $j^*\ne i$ 满足 $b_{j^*}\ne\vec{0}$ 根据上一步可得 $(\sigma\oplus\lambda_i\sigma_1)(b_{j^*})\ne\vec{0}$
 
-定义 $a^*=\left((\sigma\oplus k_i\sigma_1)^{l}\right)(a)=\sum_{j=1}^n\left((\sigma\oplus k_i\sigma_1)^{l}\right)(b_j)$
+定义 $a^*=(\sigma\oplus k_i\sigma_1)(a)=\sum_{j=1}^n(\sigma\oplus k_i\sigma_1)(b_j)$
 
-即有 $\vec{0}=\sum_{1\leq j\leq n\land j\ne i}\left((\sigma\oplus k_i\sigma_1)^{l}\right)(b_j)\pmb{+}\left(\left((\sigma\oplus k_i\sigma_1)^{l}\right)(b_i)\pmb{+}(\mathfrak{g}(f_-)(\mathfrak{g}(c_1)))\pmb{\cdot}a^*\right)$
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK6][负元]]易证 $\vec{0}=\sum_{1\leq j\leq n\land j\ne i}(\sigma\oplus k_i\sigma_1)(b_j)\pmb{+}\left((\sigma\oplus k_i\sigma_1)(b_i)\pmb{ +}(\mathfrak{g}(f_-)(\mathfrak{g}(c_1)))\pmb{\cdot}a^*\right)$
 
 根据上上步可得 $(\sigma\oplus k_i\sigma_1)(b_i)\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$ 根据假设可得 $a^*\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$ 
 
-则根据[[MK22][核空间]]运算封闭可得 $\left(\left((\sigma\oplus k_i\sigma_1)^{l}\right)(b_i)\pmb{+}(\mathfrak{g}(f_-)(\mathfrak{g}(c_1)))\pmb{\cdot}a^*\right)\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$
+则根据[[MK22][核空间]]运算封闭可得 $\left((\sigma\oplus k_i\sigma_1)(b_i)\pmb{+}(\mathfrak{g}(f_-)(\mathfrak{g}(c_1)))\pmb{\cdot}a^*\right)\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$
 
-定义 $b^*_j=\begin{cases}\left((\sigma\oplus k_i\sigma_1)^{l}\right)(b_j)&1\leq j\leq n\land j\ne i\\\left(\left((\sigma\oplus k_i\sigma_1)^{l}\right)(b_i)\pmb{+}(\mathfrak{g}(f_-)(\mathfrak{g}(c_1)))\pmb{\cdot}a^*\right)&else\end{cases}$ 即有 $\vec{0}=\sum_{j=1}^nb^*_j$
+定义 $b^*_j=\begin{cases}(\sigma\oplus k_i\sigma_1)(b_j)&1\leq j\leq n\land j\ne i\\\left((\sigma\oplus k_i\sigma_1)(b_i)\pmb{+}(\mathfrak{g}(f_-)(\mathfrak{g}(c_1)))\pmb{\cdot}a^*\right)&else\end{cases}$ 即有 $\vec{0}=\sum_{j=1}^nb^*_j$
 
-且存在 $b^*_{j^*}\ne\vec{0}$ 即与[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK74][性质（2)]]矛盾，故假设不成立，即有 $\left((\sigma\oplus k_i\sigma_1)^l\right)(a)\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$
+且存在 $b^*_{j^*}=(\sigma\oplus\lambda_i\sigma_1)(b_{j^*})\ne\vec{0}$ 即与[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK74][性质（2)]]矛盾，故假设不成立，即有 $(\sigma\oplus k_i\sigma_1)(a)\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$
 
 ****** 证明（9）
 
@@ -2625,11 +2625,9 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 若 $f(x)\in M_1[x]$ 为其[[MK108][最小零化多项式]]有形式 $f(x)=\prod_{i=1}^n(x+\lambda_i\sigma_1)^{l_i},\lambda_i\in K$ 则有：
 
-（4） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+（4） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 且 $\delta_i\in \{\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_1,...,\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_n\}$
 
-     且 $\delta_i\in \{-\lambda_1,...,-\lambda_n\}$ 其中 $-\lambda_i=\mathfrak{g}(f_-)(\lambda_i)$ 
-
-（5） $N_j=\left|\left\{J_{d_i}(\delta_i)\big|\delta_i=-\lambda_j\land 1\leq i\leq m\right\}\right|=$
+（5） $N_j=\left|\left\{J_{d_i}(\delta_i)\big|\delta_i=\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j\land 1\leq i\leq m\right\}\right|=\dim\left(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)}\right)$ 其中 $V_{\ker(\sigma+\lambda_i\sigma_1)}=\left<\ker(\sigma+\lambda_i\sigma_1),K,+,\cdot\right>$ 是 $\mathcal{V}$ 关于 $\sigma+\lambda_i\sigma_1$ 的[[MK22][核空间]]
 
 （6） $N_j(t)=\left|\left\{J_{d_i}(\delta_i)\big|d_i=t\land\delta_i=-\lambda_j\land 1\leq i\leq m\right\}\right|=$
 
@@ -2641,21 +2639,17 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 （8） $\mathcal{V}_i$ 关于 $\sigma$ 的[[MK108][最小零化多项式]]为 $f_i(x)=(x+k_i\sigma_1)^{l_i}$
 
-即有[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $f(\sigma)=(\sigma+\lambda_i\sigma_1)^{l_i}=I_\sigma(c_0)=\sigma_0$ 则定义 $\sigma_i=\sigma+\lambda_i\sigma_1$ 显然 $\sigma_i$ 在 $\mathcal{V}_i$ 上是[[MK117][幂零变换]]且[[MK117][幂零指数]] $l_i$
+即有[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $f(\sigma)=(\sigma+\lambda_i\sigma_1)^{l_i}=I_\sigma(c_0)=\sigma_0$ 则定义 $\sigma_i=\sigma+\lambda_i\sigma_1$ 且定义域为 $V_i=\ker\left((\sigma+\lambda_i\sigma_1)^{l_i}\right)$ 显然 $\sigma_i$ 在 $\mathcal{V}_i$ 上是[[MK117][幂零变换]]且[[MK117][幂零指数]] $l_i$
 
 则根据[[MK133][定理2]]可得对于 $\mathcal{V}_i$ ：
 
 （9） 存在一组[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_i$ 满足 $\sigma_i$ 对 $B_i$ 到自身的[[MK28][映射矩阵]]为参数是 $\mathfrak{g}(c_0)$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]，即 $\Gamma_i=\text{diag}\left(J_{n_{i,1}}(\mathfrak{g}(c_0)),...,J_{n_{i,m_i}}(\mathfrak{g}(c_0))\right)$
 
-（10） $m_i=\dim(\mathcal{V}_i)-\dim\left(\mathcal{V}_{i,\sigma(IM)}\right)$ 其中 $\mathcal{V}_{\sigma_i(IM)}=\left<\left\{\sigma(a)\big|a\in V_i\right\},K,+,\cdot\right>$ 即 $\mathcal{V}_i$ 对于 $\sigma_i$ 的[[MK23][相空间]]
+（10） $m_i=\dim(\mathcal{V}_{i,k})$ 其中 $\mathcal{V}_{i,k}=\left<\ker(\sigma_i),K,+,\cdot\right>$ 为 $\mathcal{V}_i$ 关于 $\sigma_i$ 的[[MK22][核空间]]
 
-（11） 对于任意 $1\leq u\leq n$ 在 $\{n_{i_1},...,n_{i,m_i}\}$ 中等于 $u$ 的元素个数 $z_{i,u}=\begin{cases}m_i-\left(rank(\sigma_i)-rank((\sigma_i)^2)\right)&u=0\\rank((\sigma_i)^{u-1})+rank((\sigma_i)^{u+1})-2rank((\sigma_i)^u)&1<u<n\\rank((\sigma_i)^{u-1})-rank((\sigma_i)^u)&u=n\end{cases}$
+****** 证明（4）
 
-      其中 $rank(\sigma_i^n)$ 为 $\sigma_i^n$ 的[[MK38][秩]]
-
-****** （4）
-
-根据 $\sigma_i=\sigma+\lambda_i\sigma_1$ 可得 $\sigma=\sigma_i+(-\lambda_i)\sigma_1$ ，则根据[[MK29][性质1]]以及[[MK30][性质2]]易证 $\sigma$ 在 $\mathcal{V}_i$ 上对于 $B_i$ 到自身的[[MK28][映射矩阵]]为 $\Gamma'_i=\Gamma_i+(-\lambda_i) I_i$
+根据 $\sigma_i=\sigma+\lambda_i\sigma_1$ 可得 $\sigma=\sigma_i+(-\lambda_i)\sigma_1$ ，则根据[[MK29][性质1]]以及[[MK30][性质2]]易证 $\sigma$ 在 $\mathcal{V}_i$ 上对于 $B_i$ 到自身的[[MK28][映射矩阵]]为 $\Gamma'_i=\Gamma_i+(\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_i) I_i$
 
 其中 $I_i$ 为与 $\Gamma_i$ 同阶的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK4][单位矩阵]]，则显然易证 $\Gamma'_i=\text{diag}\left(J_{n_{i,1}}(-\lambda_i),...,J_{n_{i,m_i}}(-\lambda_i)\right)$ 亦为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]。
 
@@ -2665,7 +2659,15 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 ****** （5）
 
+显然 $N_j$ 为参数为 $\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK86][Jordan块]]的个数，根据上一步可得 $\Gamma'_i=\Gamma_i+(\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_i) I_i$
 
+其中 $\Gamma_i'$ 为 $\sigma$ 在 $\mathcal{V}_i$ 上对于 $B_i$ 到自身的[[MK28][映射矩阵]]， $\Gamma_i$ 为 $\sigma_i$ 在 $\mathcal{V}_i$ 上对于 $B_i$ 到自身的[[MK28][映射矩阵]]
+
+显然参数为 $\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK86][Jordan块]]的个数即为 $\Gamma_i$ 中[[~/文档/note/高等代数/Algb-3-Matrix.org::MK86][Jordan块]]的个数，根据（10）即可得 $m_i=\dim(\mathcal{V}_{i,k})$ ，即 $\mathcal{V}_i$ 
+
+易证 $\ker(\sigma_i)=\left\{a\big|a\in\ker\left((\sigma+\lambda_i\sigma_1)^{l_i}\right)\land\sigma_i(a)=\vec{0}\right\}$ 根据[[MK132][性质4]]中（9）可得 $\ker(\sigma_i)=\ker(\sigma+\lambda_i\sigma_1)$
+
+即有 $\mathcal{V}_{i,k}=\left<\ker(\sigma_i),K,+,\cdot\right>=\left<\ker(\sigma+\lambda_i\sigma_1),K,+,\cdot\right>=V_{\ker(\sigma+\lambda_i\sigma_1)}$ 则根据 $m=\dim(\mathcal{V}_{i,k})$ 即有 $m=\dim(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)})$ 
 
 ****** （6）
 
