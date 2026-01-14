@@ -965,9 +965,9 @@ $\delta^n([a]_{V_0})=[\sigma^n(a)]_{V_0}=[\vec{0}]_{V_0}$ 显然 $[\vec{0}]_{V_0
 
 （2） $m=\dim(\mathcal{V}_k)=\dim(\mathcal{V})-\dim\left(\mathcal{V}_{\sigma(IM)}\right)$ 其中 $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 为[[MK22][核空间]] $\mathcal{V}_{\sigma(IM)}=\left<\left\{\sigma(a)\big|a\in V\right\},K,+,\cdot\right>$ 即 $\mathcal{V}$ 对于 $\sigma$ 的[[MK23][相空间]]
 
-（3） 对于任意 $1\leq u\leq n$ 在 $\{n_1,...,n_m\}$ 中等于 $u$ 的元素个数 $z_u=\begin{cases}m-\left(rank(\sigma)-rank(\sigma^2)\right)&u=0\\rank(\sigma^{u-1})+rank(\sigma^{u+1})-2rank(\sigma^u)&1<u<n\\rank(\sigma^{u-1})-rank(\sigma^u)&u=n\end{cases}$
+（3） 对于任意 $1\leq u\leq n$ 在 $\{n_1,...,n_m\}$ 中等于 $u$ 的元素个数 $z_u=rank(\sigma^{u-1})+rank(\sigma^{u+1})-2rank(\sigma^u)$
 
-     其中 $rank(\sigma^n)$ 为 $\sigma^n$ 的[[MK38][秩]]
+     其中 $1\leq u\leq n$ ， $rank(\sigma^n)$ 为 $\sigma^n$ 的[[MK38][秩]]
 
 ***** 证明
 
@@ -1003,9 +1003,9 @@ $\delta^n([a]_{V_0})=[\sigma^n(a)]_{V_0}=[\vec{0}]_{V_0}$ 显然 $[\vec{0}]_{V_0
 
 则对于任意 $1\leq u\leq n$ 定义在 $\{n_1,...,n_m\}$ 中等于 $u$ 的元素个数为 $z_u$ ，则根据以下证明
 
-可得 $z_u=\begin{cases}m-\left(rank(\sigma)-rank(\sigma^2)\right)&u=0\\rank(\sigma^{u-1})+rank(\sigma^{u+1})-2rank(\sigma^u)&1<u<n\\rank(\sigma^{u-1})-rank(\sigma^u)&u=n\end{cases}$
+可得 $z_u=rank(\sigma^{u-1})+rank(\sigma^{u+1})-2rank(\sigma^u)$ 其中 $1\leq u\leq n$
 
-******* $n_i\leq n$
+******* $0<n_i\leq n$
 
 对于任意 $n_i$ 假设 $n_i> n$ 则显然 $B_i=\{\sigma^{n_i-1}(\xi_i),\sigma^{n_i-2}(\xi_i),...,\xi_i\}$ 中存在 $\sigma^n(\xi_i)$ 由于 $\xi_i\in V_i\subset V$
 
@@ -1013,17 +1013,21 @@ $\delta^n([a]_{V_0})=[\sigma^n(a)]_{V_0}=[\vec{0}]_{V_0}$ 显然 $[\vec{0}]_{V_0
 
 故假设不成立，即有 $n_i\leq n$
 
-******* $J_u(\mathfrak{g}(c_0))$ 的个数 $z_u=\begin{cases}m-(N(M)-N(M^2))&u=0\\N(M^{u-1})+N(M^{u+1})-2N(M^u)&1<u<n\\N(M^{u-1})-N(M^u)&u=n\end{cases}$
+显然 $n_i$ 是 $M$ 中某个对角子矩阵的行列数（行数=列数），故不为 $0$ 
+
+******* $J_u(\mathfrak{g}(c_0))$ 的个数 $z_u=N(M^{u-1})+N(M^{u+1})-2N(M^u)$ 其中 $1\leq u\leq n$
 
 显然 $J_{n_i}(\mathfrak{g}(c_0))$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $n_i-1$ ，根据结论（1）可得有 $M=\text{diag}\left(J_{n_1}(\mathfrak{g}(c_0)),...,J_{n_m}(\mathfrak{g}(c_0))\right)$ 
 
 设对于任意 $1\leq j\leq n$ 在 $\{n_1,...,n_m\}$ 中有 $z_j$ 个元素等于 $j$ ，则显然 $M$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $\sum_{j=2}^nz_j(j-1)$
 
-根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK89][性质]]可得[[~/文档/note/高等代数/Algb-3-Matrix.org::MK87][矩阵幂]] $\left(J_{n_i}(\mathfrak{g}(c_0))\right)^l$ 后 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $n_i-l$ ，根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK90][性质]]可得 $M^l=\text{diag}\left(\left(J_{n_1}(\mathfrak{g}(c_0))\right)^l,...,\left(J_{n_m}(\mathfrak{g}(c_0))\right)^l\right)$
+根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK89][性质]]易证[[~/文档/note/高等代数/Algb-3-Matrix.org::MK87][矩阵幂]] $\left(J_{n_i}(\mathfrak{g}(c_0))\right)^l$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $\max(0,n_i-l)$ ，根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK90][性质]]可得 $M^l=\text{diag}\left(\left(J_{n_1}(\mathfrak{g}(c_0))\right)^l,...,\left(J_{n_m}(\mathfrak{g}(c_0))\right)^l\right)$
 
-则显然易证 $M^u$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $\sum_{j=u+1}^nz_j(j-u)$ 。设 $M^l$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $N(M^u)$
+当 $u=0$ 时有 $M^0=I$ 即有 $N(M^0)=m=\sum_{j=1}^nz_jj$ ，综上所述 $M^u$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $\sum_{j=u+1}^nz_j(j-u)$ 。
 
-显然对于任意 $1<u<n$ 均有：
+当 $u\geq n$ 时根据 $N(\left(J_{n_i}(\mathfrak{g}(c_0))\right)^l)=\max(0,n_i-l)$ 以及 $n_i\leq n$ 易证 $N(M^u)=0$
+
+设 $M^l$ 中不全为 $\mathfrak{g}(c_0)$ 的行数为 $N(M^u)$ ，则对于任意 $1\leq u<n$ 均有：
 
 \begin{aligned}
 N\left(M^{u-1}\right)-N\left(M^u\right)=&\sum_{j=(u-1)+1}^nz_j(j-(u-1))-\sum_{j=u+1}^nz_j(j-u)\\
@@ -1044,9 +1048,11 @@ N(M^{u-1})+N(M^{u+1})-2N(M^u)=&\left(N\left(M^{u-1}\right)-N\left(M^u\right)\rig
 =&z_u$
 \end{aligned}
 
-则可得 $z_u=\begin{cases}m-\sum_{j=2}^nz_j&u=0\\N(M^{u-1})+N(M^{u+1})-2N(M^u)&1<u<n\\N(M^{u-1})-N(M^u)&u=n\end{cases}$
+即对于任意 $1\leq u<n$ 均有 $z_u=N(M^{u-1})+N(M^{u+1})-2N(M^u)$
 
-又由于 $N(M)-N(M^2)=\sum_{j=2}^nz_j$ 故可得 $z_u=\begin{cases}m-(N(M)-N(M^2))&u=0\\N(M^{u-1})+N(M^{u+1})-2N(M^u)&1<u<n\\N(M^{u-1})-N(M^u)&u=n\end{cases}$
+当 $u=n$ 时有 $N(M^{n-1})+N(M^{n+1})-2N(M^n)=N(M^{n-1})=\sum_{j=n-1+1}^nz_n(j-(n-1))=z_n$
+
+综上所述 $z_u=N(M^{u-1})+N(M^{u+1})-2N(M^u)$ 其中 $1\leq u\leq n$
 
 ******* $N(M^u)=rank(\sigma^u)$
 
@@ -2270,7 +2276,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 （8） 对于任意 $a\not\in\ker\left((\sigma\oplus\lambda_i\sigma_i)^{l_i}\right)$ 则有 $(\sigma\oplus k_i\sigma_1)(a)\not\in\ker\left((\sigma\oplus\lambda_i\sigma_i)^{l_i}\right)$
 
-（9） 对于任意 $m\in\mathbb{N}$ 定义 $\ker(\sigma_i^m)=\left\{a\big|a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)\land \sigma_i^m(a)=\vec{0}\right\}$ 则有 $\ker(\sigma_i^m)=\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
+（9） 对于任意 $m\in\mathbb{N}$ 定义 $\ker_i(\sigma_i^m)=\left\{a\big|a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)\land \sigma_i^m(a)=\vec{0}\right\}$ 则有 $\ker_i(\sigma_i^m)=\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
 
 其中：
 
@@ -2393,17 +2399,17 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 ****** 证明（9）
 
-根据以下证明以及[[~/文档/note/离散数学/lssx.org::MK16][自反性]]可得 $\ker(\sigma_i^m)=\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
+根据以下证明以及[[~/文档/note/离散数学/lssx.org::MK16][自反性]]可得 $\ker_i(\sigma_i^m)=\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
 
-******* $\ker(\sigma^m_i)\subset\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
+******* $\ker_i(\sigma^m_i)\subset\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
 
-对于任意 $a\in\ker(\sigma_i^n)$ 均有 $a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ ，则根据 $\sigma_i$ 定义可得 $\sigma^m(a)=\left((\sigma\oplus k_i\sigma_1)^m\right)(a)=\vec{0}$
+对于任意 $a\in\ker_i(\sigma_i^m)$ 均有 $a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ ，则根据 $\sigma_i$ 定义可得 $\sigma_i^m(a)=\left((\sigma\oplus k_i\sigma_1)^m\right)(a)=\vec{0}$
 
-即有 $a\in\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$ 即 $\ker(\sigma^m_i)\subset\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
+即有 $a\in\ker_i\left((\sigma\oplus k_i\sigma_1)^m\right)$ 即 $\ker_i(\sigma^m_i)\subset\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$
 
-******* $\ker\left((\sigma\oplus k_i\sigma_1)^m\right)\subset\ker(\sigma_i^m)$
+******* $\ker\left((\sigma\oplus k_i\sigma_1)^m\right)\subset\ker_i(\sigma_i^m)$
 
-根据下列证明可得 $\ker\left((\sigma\oplus k_i\sigma_1)^m\right)\subset\ker(\sigma_i^m)$
+根据下列证明可得 $\ker\left((\sigma\oplus k_i\sigma_1)^m\right)\subset\ker_i(\sigma_i^m)$
 
 ******** $m\leq l_i$ <<MK137>>
 
@@ -2411,9 +2417,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 故根据[[MK69][幂性质]]以及[[MK2][零映射]]可得 $\left((\sigma\oplus k_i\sigma_1)^{l_i}\right)(a)=\left((\sigma\oplus k_i\sigma_1)^{l_i-m}\right)\left(\left((\sigma\oplus k_i\sigma_1)^m\right)(a)\right)=\left((\sigma\oplus k_i\sigma_1)^{l_i-m}\right)(\vec{0})=\vec{0}$
 
-即有 $a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ ，则根据（7）可得 $\sigma^m_i(a)=\left((\sigma\oplus k_i\sigma_1)^m\right)(a)=\vec{0}$
-
-结合定义可得 $a\in\ker(\sigma_i^m)$
+即有 $a\in\ker\left((\sigma\oplus\lambda_i\sigma_1)^{l_i}\right)$ ，则根据（7）可得 $\sigma^m_i(a)=\left((\sigma\oplus k_i\sigma_1)^m\right)(a)=\vec{0}$ 结合定义可得 $a\in\ker_i(\sigma_i^m)$
 
 ******** $m>l_i$
 
@@ -2423,9 +2427,9 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 以此类推可得 $\left((\sigma\oplus k_i\sigma_1)^{m-l_i}\right)(a)\not\in\ker\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)$ 即有 $\left((\sigma+\lambda_i\sigma_i)^{l_i}\right)\left(\left(\sigma\oplus k_i\sigma_1)^{m-l_i}\right)(a)\right)\ne\vec{0}$ 
 
-即根据[[MK69][幂性质]] $\left((\sigma+\lambda_i\sigma_i)^{m}\right)(a)\ne\vec{0}$ 与 $a\in\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$ 矛盾，故假设不成立。
+即根据[[MK69][幂性质]] $\left((\sigma+\lambda_i\sigma_i)^{m}\right)(a)\ne\vec{0}$ 与 $a\in\ker\left((\sigma\oplus k_i\sigma_1)^m\right)$ 矛盾，故假设不成立。即有 $a\in\ker\left((\sigma\oplus k_i\sigma_1)^{l_i}\right)$
 
-即有 $a\not\in\ker\left((\sigma\oplus k_i\sigma_1)^{l_i}\right)$ 
+即有 $a\in\ker\left((\sigma\oplus k_i\sigma_1)^{l_i}\right)$ 且 $((\sigma\oplus k_i\sigma_1)^m)(a)=\vec{0}$ 即有 $a\in\ker_i(\sigma_i^m)$
 
 *** 定理
 
@@ -2627,9 +2631,13 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 （4） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 且 $\delta_i\in \{\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_1,...,\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_n\}$
 
-（5） $N_j=\left|\left\{J_{d_i}(\delta_i)\big|\delta_i=\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j\land 1\leq i\leq m\right\}\right|=\dim\left(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)}\right)$ 其中 $V_{\ker(\sigma+\lambda_i\sigma_1)}=\left<\ker(\sigma+\lambda_i\sigma_1),K,+,\cdot\right>$ 是 $\mathcal{V}$ 关于 $\sigma+\lambda_i\sigma_1$ 的[[MK22][核空间]]
+（5） $N_j=\left|\left\{J_{d_i}(\delta_i)\big|\delta_i=\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j\land 1\leq i\leq m\right\}\right|=\dim\left(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)}\right)$
 
-（6） $N_j(t)=\left|\left\{J_{d_i}(\delta_i)\big|d_i=t\land\delta_i=-\lambda_j\land 1\leq i\leq m\right\}\right|=$
+     其中 $V_{\ker(\sigma+\lambda_i\sigma_1)}=\left<\ker(\sigma+\lambda_i\sigma_1),K,+,\cdot\right>$ 是 $\mathcal{V}$ 关于 $\sigma+\lambda_i\sigma_1$ 的[[MK22][核空间]]
+
+（6） $N_j(t)=\left|\left\{J_{d_i}(\delta_i)\big|d_i=t\land\delta_i=-\lambda_j\land 1\leq i\leq m\right\}\right|=rank\left((\sigma+\lambda_i\sigma_1)^{u-1}\right)+rank\left((\sigma+\lambda_i\sigma_1)^{u+1}\right)-2rank\left((\sigma+\lambda_i\sigma_1)^{u}\right)$
+
+     其中 $rank(x)$ 是[[MK4][线性映射]] $x$ 在 $\mathcal{V}$ 上的[[MK38][秩]]
 
 ***** 证明
 
@@ -2646,6 +2654,10 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 （9） 存在一组[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_i$ 满足 $\sigma_i$ 对 $B_i$ 到自身的[[MK28][映射矩阵]]为参数是 $\mathfrak{g}(c_0)$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]，即 $\Gamma_i=\text{diag}\left(J_{n_{i,1}}(\mathfrak{g}(c_0)),...,J_{n_{i,m_i}}(\mathfrak{g}(c_0))\right)$
 
 （10） $m_i=\dim(\mathcal{V}_{i,k})$ 其中 $\mathcal{V}_{i,k}=\left<\ker(\sigma_i),K,+,\cdot\right>$ 为 $\mathcal{V}_i$ 关于 $\sigma_i$ 的[[MK22][核空间]]
+
+（11） $z_{i,u}=rank_i(\sigma_i^{u-1})+rank_i(\sigma_i^{u+1})-2rank_i(\sigma_i^u)$
+
+      其中 $z_{i,u}$ 是 $\{n_{i,1},...,n_{i,m_i}\}$ 中等于 $u$ 的元素个数， $rank_i(\sigma_i^u)$ 为 $\sigma_i$ 在 $\mathcal{V}_i$ 的[[MK38][秩]]， $1\leq u\leq l_i$
 
 ****** 证明（4）
 
@@ -2670,6 +2682,37 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 即有 $\mathcal{V}_{i,k}=\left<\ker(\sigma_i),K,+,\cdot\right>=\left<\ker(\sigma+\lambda_i\sigma_1),K,+,\cdot\right>=V_{\ker(\sigma+\lambda_i\sigma_1)}$ 则根据 $m=\dim(\mathcal{V}_{i,k})$ 即有 $m=\dim(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)})$ 
 
 ****** 证明（6）
+
+根据[[MK128][性质]]以及[[MK38][秩定义]]可得
+
+\begin{aligned}
+z_{i,u}&=rank_i(\sigma_i^{u-1})+rank_i(\sigma_i^{u+1})-2rank_i(\sigma_i^u)\\
+&=\left(\dim(\mathcal{V}_i)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u-1}\right)}\right)\right)+\left(\dim(\mathcal{V}_i)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u+1}\right)}\right)\right)-2\left(\dim(\mathcal{V}_i)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)\right)\\
+&=2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u+1}\right)}\right)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u-1}\right)}\right)
+\end{aligned}
+
+其中：
+
+（1） $\ker_i(\sigma_i^u)=\left\{a\in\ker\left((\sigma+\lambda_i\sigma_1)^{l_i}\right)\big|\sigma_i^u(a)=\vec{0}\right\}$ 即 $\sigma_i$ 在 $\mathcal{V}_i$ 上的[[MK37][核]]
+
+（2） $\mathcal{V}_{\ker_i(\sigma_i^u)}=\left<\ker_i(\sigma_i^u),K,+,\cdot\right>$ 为 $\sigma_i$ 在 $\mathcal{V}_i$ 上的[[MK22][核空间]]
+
+根据[[MK132][性质4]]有 $\ker_i(\sigma_i^u)=\ker\left((\sigma+k_i\sigma_1)^u\right)$ 其中：
+
+（1） $\ker_i(\sigma_i^u)=\left\{a\big|a\in\ker\left((\sigma+\lambda_i\sigma_1)^{l_i}\right)\land \sigma_i^u(a)=\vec{0}\right\}$
+
+（2） $\ker\left((\sigma+k_i\sigma_1)^u\right)=\left\{a\in V\big|\left((\sigma+k_i\sigma_1)^u\right)(a)=\vec{0}'\right\}$
+
+进一步易证 $\mathcal{V}_{\ker_i(\sigma_i^u)}=\mathcal{V}_{\ker((\sigma_i+\lambda_i\sigma_1)^u)}$ ，则又根据[[MK128][性质]]以及[[MK38][秩定义]]可得
+
+\begin{aligned}
+z_{i,u}=&2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u+1}\right)}\right)-\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u-1}\right)}\right)\\
+=&2\dim\left(\mathcal{V}_{\ker\left((\sigma+\lambda_i\sigma_1)^{u}\right)}\right)-\dim\left(\mathcal{V}_{\ker_i\left((\sigma+\lambda_i\sigma_1)^{u+1}\right)}\right)-\dim\left(\mathcal{V}_{\ker_i\left((\sigma+\lambda_i\sigma_1)^{u-1}\right)}\right)\\
+=&\left(\dim(\mathcal{V})-\dim\left(\mathcal{V}_{\ker\left((\sigma+\lambda_i\sigma_1)^{u-1}\right)}\right)\right)+\left(\dim(\mathcal{V})-\dim\left(\mathcal{V}_{\ker\left((\sigma+\lambda_i\sigma_1)^{u+1}\right)}\right)\right)-2\left(\dim(\mathcal{V})-\dim\left(\mathcal{V}_{\ker\left((\sigma+\lambda_i\sigma_1)^{u}\right)}\right)\right)\\
+=&rank\left((\sigma+\lambda_i\sigma_1)^{u-1}\right)+rank\left((\sigma+\lambda_i\sigma_1)^{u+1}\right)-2rank\left((\sigma+\lambda_i\sigma_1)^{u}\right)
+\end{aligned}
+
+其中 $rank(x)$ 是[[MK4][线性映射]] $x$ 在 $\mathcal{V}$ 上的[[MK38][秩]]
 
 * 特殊子空间
 
