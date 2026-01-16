@@ -2,7 +2,7 @@
 
 #+TITLE: 线性映射
 
-current mark: 144
+current mark: 147
 
 * 线性映射<<MK4>>
 
@@ -1323,15 +1323,19 @@ $\sigma$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]的充要
 
 由于 $|B|=n$ 故 $\mathcal{V}_2$ 的中[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维数]]为 $n$ ，则根据中[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK42][命题2]]可得 $\{\sigma(a'_1),...,\sigma(a'_n)\}$ 为 $\mathcal{V}_2$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
 
-**** 性质9
+**** 性质9<<MK145>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>,\mathcal{V}'=\left<V',K,\pmb{+},\pmb{\cdot}\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]， $\sigma:V\to V'$ 是[[MK4][线性映射]]
 
 若 $A=\{a_1,...,a_n\},B=\{b_1,...,b_n\}$ 分别为 $\mathcal{V}_1,\mathcal{V}_2$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]且 $\sigma$ 关于 $A$ 到 $B$ 的[[MK28][映射矩阵]]为 $M_{\sigma(A)\to B}$
 
-若存在 $M'$ 与 $M_{\sigma(A)\to B}$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]，则存在另一组 $\mathcal{V}_1,\mathcal{V}_2$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $A'=\{a'_1,...,a'_n\},B'=\{b'_1,...,b'_n\}$
+若存在 $M'$ 与 $M_{\sigma(A)\to B}$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]，即有 $M'=S^{-1}M_{\sigma(A)\to B}S$ ，则定义：
 
-满足 $M'=M_{\sigma(A')\to B'}$ 即为 $\sigma$ 关于 $A'$ 到 $B'$ 的[[MK28][映射矩阵]]
+（1） $\left[\begin{matrix}a'_1&...&a'_n\end{matrix}\right]=\left[\begin{matrix}a_1&...&a_n\end{matrix}\right]S$
+
+（2） $\left[\begin{matrix}b'_1&...&b'_n\end{matrix}\right]=\left[\begin{matrix}b_1&...&b_n\end{matrix}\right]S$
+
+则有 $A'=\{a'_1,...,a'_n\},B'=\{b'_1,...,b'_n\}$ 是 $\mathcal{V}_1,\mathcal{V}_2$ 的一组[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，且 $M'$ 为 $\sigma$ 关于 $A'$ 到 $B'$ 的[[MK28][映射矩阵]]
 
 ***** 证明
 
@@ -2449,6 +2453,36 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 即有 $a\in\ker\left((\sigma\oplus k_i\sigma_1)^{l_i}\right)$ 且 $((\sigma\oplus k_i\sigma_1)^m)(a)=\vec{0}$ 即有 $a\in\ker_i(\sigma_i^m)$
 
+**** 性质5<<MK147>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ 根据[[MK66][定理4]]定义：
+
+（1） [[MK65][单位结构]] $\mathcal{M}_1=\left<M_1,I_1\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]]
+
+（2） 定义 $\mathcal{M}_{1}[x]=\left<M_1[x],I_1[x]\right>$ 为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
+
+（3） 定义 $\mathcal{M}_\sigma=\left<M_\sigma,I_\sigma\right>$ 为 $\sigma$ 的[[MK65][一元结构]]是[[~/文档/note/抽象代数/cxds.org::MK362][非零幺环]]
+
+对于任意 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]] $M$
+
+则 $\sigma$ 的[[MK108][最小零化多项式]]可分解为一次因式的乘积的充要条件为 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
+
+***** 证明
+
+****** 充分
+
+若 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][最小零化多项式]]为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$ 即可得任意 $1\leq i\leq m$ 均有 $\delta_i\sigma_1$ 是 $f(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+
+则根据[[MK143][定理2]]可得 $1\leq i\leq m$ 均有 $\delta_i$ 是 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]] $g(\lambda)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]，即有 $g(\lambda)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$
+
+****** 必要
+
+若 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]] $g(\lambda)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$ 则显然任意 $1\leq i\leq m$ 均有 $\delta_i$ 是 $g(\lambda)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+
+根据[[MK110][定理1]]可得 $g(x)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$ 亦为 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][零化多项式]]，结合[[MK111][性质2]]可得存在 $h(x)$ 使得 $g(x)=h(x)f(x)$
+
+则 $f(x)$ 显然有形式 $f(x)=\prod_{i=1}^m(x-\delta_i)^{d_i}$ 
+
 *** 定理
 
 **** 定理1（特征零化多项式）<<MK110>>
@@ -2792,7 +2826,7 @@ z_{i,u}=&2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\le
 
 则根据[[MK109][定理3]]可得 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][最小零化多项式]]为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$
 
-***** 推论2
+***** 推论2<<MK146>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
 
@@ -2806,19 +2840,47 @@ z_{i,u}=&2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\le
 
 若存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\left\{v_{1},...,v_{\sum_{j=1}^md_i}\right\}$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
 
-则根据[[MK142][推论1]]可得 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][最小零化多项式]]为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$ 即可得任意 $1\leq i\leq m$ 均有 $\delta_i\sigma_1$ 是 $f(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+则根据[[MK142][推论1]]可得 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][最小零化多项式]]为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$
 
-则根据[[MK143][定理2]]可得 $1\leq i\leq m$ 均有 $\delta_i$ 是 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]] $g(\lambda)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]，即有 $g(\lambda)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$
+则根据[[MK147][性质5]]可得 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
 
 ******* 必要
 
-若 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]] 亦$g(\lambda)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$为 则显然任意 $1\leq i\leq m$ 均有 $\delta_i$ 是 $g(\lambda)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+若 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积，则根据[[MK147][性质5]]可得 $\sigma$ 的[[MK108][最小零化多项式]]可分解为一次因式的乘积
 
-根据[[MK110][定理1]]可得 $g(x)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$ 亦为 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][零化多项式]]，结合[[MK111][性质2]]可得存在 $h(x)$ 使得 $g(x)=h(x)f(x)$
+即有形式 $f(x)=\prod_{i=1}^m(x-\delta_i)^{d_i}$ ，则根据[[MK144][定理5]]可得存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$
 
-则 $f(x)$ 显然有形式 $f(x)=\prod_{i=1}^m(x-\delta_i)^{d_i}$ ，则根据[[MK144][定理5]]可得
+满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 
 
-存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 
+***** 推论3
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
+
+对于任意 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]] $M$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]与某个[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]矩阵 $M_J=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+的充要条件是 $\sigma$ 的[[MK108][最小零化多项式]]或 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
+
+****** 证明
+
+******* 充分
+
+若 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]] $M$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]与某个[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]矩阵 $M_J$ ，即有 $M=SM_JS^{-1}$
+
+则根据[[MK145][性质9]]可得 $\sigma$ 从 $BS$ 到自身的[[MK28][映射矩阵]]为 $M_J$ 则根据[[MK142][推论1]]可得其[[MK108][最小零化多项式]] $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$
+
+显然 $f(x)$ 可分解为一次因式的乘积，进一步根据[[MK146][推论2]]亦可得 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
+
+******* 必要
+
+若 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积，则根据[[MK146][推论2]]可得
+
+存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B'$ 满足 $\sigma$ 从 $B'$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M_J=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+由于 $B$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，故根据[[MK46][定理2]]可得 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]] $M$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]与 $M_J$
+
+若 $\sigma$ 的[[MK108][最小零化多项式]]可分解为一次因式的乘积，则根据[[MK147][性质5]]可得 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
+
+同理可得 $M$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]与 $M_J$ 且 $M_J$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]矩阵
 
 * 特殊子空间
 
