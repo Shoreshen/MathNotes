@@ -2,7 +2,7 @@
 
 #+TITLE: 线性映射
 
-current mark: 137
+current mark: 144
 
 * 线性映射<<MK4>>
 
@@ -839,6 +839,24 @@ $\forall\{l,k\}\subset K$ 均有 $(lk)\sigma=(kl)\sigma$
 =&\left[\begin{matrix}\vec{0}&\sigma^{n-1}(a)&...&\sigma(a)\end{matrix}\right]\\
 =&\left[\begin{matrix}\sigma^{n-1}(a)&\sigma^{n-2}(a)&...&a\end{matrix}\right]J_{n\times n}(\mathfrak{g}(c_0))\\
 \end{aligned}
+
+**** 性质6<<MK141>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $\sigma$ 是 $\mathcal{V}$ 上的[[MK117][幂零变换]]且[[MK117][幂零指数]] $n$
+
+若存[[MK4][线性变换]] $\sigma'\in\text{Hom}(\mathcal{V},\mathcal{V})$ 满足存在 $k\in K$ 使得 $\sigma=\sigma'+k\sigma_1$
+
+则有 $\sigma'$ 的[[MK108][最小零化多项式]]为 $(x-k\sigma_1)^n$
+
+***** 证明
+
+显然[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $(\sigma'-k\sigma_i)^n=\sigma^n=\sigma_0$ 即有 $(x-k\sigma_1)^n$ 是 $\sigma'$ 的[[MK108][零化多项式]]
+
+根据[[MK111][性质2]]可得必存在 $h(x)\in M_1[x]$ 使得 $(x-k\sigma_1)^n=h(x)f(x)$ 其中 $f(x)$ 是 $\sigma$ 的[[MK108][最小零化多项式]]
+
+显然 $f(x)$ 有形式 $f(x)=(x-k\sigma_1)^m,m\leq n$ 假设 $m<q$ 则有 $\sigma_0=(\sigma'-k\sigma_1)^m=\sigma^m$
+
+与幂零指数为 $n$ 矛盾，故假设不成立，即有 $m=n$ 故 $\sigma'$ 的[[MK108][最小零化多项式]]为 $(x-k\sigma_1)^n$
 
 *** 定理
 
@@ -2441,7 +2459,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 根据[[MK66][定理4]]可得其[[MK65][单位结构]] $\mathcal{M}_1=\left<M_1,I_{|M_1}\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]]，定义 $\mathcal{M}_{1}[x]=\left<M_1[x],I_{|M_1}[x]\right>$ 为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
 
-显然 $f(x)=\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^m(k_i\sigma_1)x^i$ 亦为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK436][多项式]]，其中 $\left(I_{|M_1}\left(\sum\right)\right)$ 为 $I_{|M_1}(f_+)$ 的连加
+显然 $f(x)=\left(I_{|M_1}[x]\left(\sum\right)\right)_{i=1}^m(k_i\sigma_1)x^i$ 亦为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK436][多项式]]，其中 $\left(I_{|M_1}[x]\left(\sum\right)\right)$ 为 $I_{|M_1}[x](f_+)$ 的连加
 
 则有 $f(x)$ 是 $\sigma$ 的[[MK108][零化多项式]]
 
@@ -2457,7 +2475,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 则根据[[~/文档/note/数理逻辑/sllj.org::MK275][引理]]可得 $$f(\sigma)=e^{-1}(e(f(\sigma)))=e^{-1}\left(\left(I_G\left(\sum\right)\right)_{i=1}^mI_G(f_\times)\left(k_iI_G(c_1),G^i\right)\right)=e^{-1}(I_G(c_0))=I(c_0)$$
 
-**** 定理2
+**** 定理2<<MK143>>
 
 设 $\mathcal{V}=\left<V,K,\pmb{+},\pmb{\cdot}\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，对于任意 $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ [[MK4][线性变换]]，根据[[MK66][定理4]]定义：
 
@@ -2477,7 +2495,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 （2） $\cdot$ 为[[MK6][映射数乘]]
 
-则任意 $k_b\in K$ 为 $g(x)$ 在 $\mathcal{K}$ 上的[[~/文档/note/抽象代数/cxds.org::MK389][根]]的充要条件为 $k_b\cdot\sigma_1$ 是 $f(x)$ 在 $\mathcal{M}_\sigma$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+则任意 $k_b\in K$ 为 $g(\lambda)$ 在 $\mathcal{K}$ 上的[[~/文档/note/抽象代数/cxds.org::MK389][根]]的充要条件为 $k_b\cdot\sigma_1$ 是 $f(x)$ 在 $\mathcal{M}_\sigma$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
 
 ***** 证明
 
@@ -2485,7 +2503,7 @@ f(\sigma)(k\cdot a)&=I_\sigma(f_+)(\sigma,\mathfrak{g}(f_-)(\lambda)\sigma_1)(k\
 
 若 $k_b\cdot\sigma_1$ 是 $f(x)$ 在 $\mathcal{M}_\sigma$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]，，则有[[~/文档/note/抽象代数/cxds.org::MK441][带入值]] $f(k_b\cdot\sigma_1)=I(c_0)$ 。定义 $g'(x)=\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^m(k_i\cdot \sigma_1)x^i\in M_1[x]$
 
-根据[[MK110][定理3]]可的 $g'(x)$ 亦为 $\sigma$ 的[[MK108][零化多项式]]，根据[[MK111][定理2]]可得 $g'(x)=h(x)f(x)$ 则有 $g'(k_b\cdot\sigma_1)=h(k_b\cdot\sigma_1)f(k_b\cdot\sigma_1)=(k_b\cdot\sigma_1)I(c_0)=I(c_0)$
+根据[[MK110][定理1]]可得 $g'(x)$ 亦为 $\sigma$ 的[[MK108][零化多项式]]，根据[[MK111][性质2]]可得 $g'(x)=h(x)f(x)$ 则有 $g'(k_b\cdot\sigma_1)=h(k_b\cdot\sigma_1)f(k_b\cdot\sigma_1)=(k_b\cdot\sigma_1)I(c_0)=I(c_0)$
 
 根据[[MK112][定理2]]可得 $e(k\cdot \sigma_1)=k$ 为 $\mathcal{M}_1$ 到 $K$ 的[[~/文档/note/数理逻辑/sllj.org::MK274][同构映射]]，且显然 $k_b\cdot\sigma_1\in M_1$ 则显然有：
 
@@ -2535,11 +2553,15 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 又定义：
 
-（3） 所有 $f_i(x)$ 公倍式集合 $P=\left\{p(x)\big|\left(\forall 1\leq i\leq n\left(\exists h_i(x)\in M_1[x](p(x)=h_i(x)\cdot f_i(x))\right)\right)\land p(x)\in M_1[x]\right\}$
+（3） 所有 $f_i(x)$ 公倍式集合 $P=\left\{p(x)\big|\left(\forall 1\leq i\leq n\left(\exists h_i(x)\left((h_i(x)\in M_1[x])\land(p(x)=h_i(x)\cdot f_i(x))\right)\right)\right)\land p(x)\in M_1[x]\right\}$
 
 （4） 所有 $\sigma$ 的[[MK108][零化多项式]]集合为 $P_0\subset M_1[x]$
 
-则有 $P=P_0$
+则有:
+
+(5) $P=P_0$
+
+(6) $f(x)=\prod_{i=1}^nf_i(x)$
 
 ***** 证明
 
@@ -2551,9 +2573,11 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 （9） 定义 $\mathcal{M}_\sigma=\left<M_\sigma,I\right>$ 为 $\sigma$ 的[[MK65][一元结构]]
 
+****** 证明（1）
+
 则有 $\{f(x),f_1(x),...,f_n(x)\}\subset M_1[x]$ ，则对于任意 $p(x)\in P_0$ 满足 $p(\sigma)=I(c_0)$ 任取 $a\in V_i$ 均有 $p(\sigma)(a)=\vec{0}$
 
-显然 $p(x)$ 亦为 $\sigma$ 在 $\mathcal{V}_i$ 上的[[MK108][零化多项式]]，根据[[MK111][定理2]]可得存在 $h_i(x)$ 满足 $p(x)=h_i(x)f_i(x)$ 即 $P_0\subset P$
+显然 $p(x)$ 亦为 $\sigma$ 在 $\mathcal{V}_i$ 上的[[MK108][零化多项式]]，根据[[MK111][性质2]]可得存在 $h_i(x)$ 满足 $p(x)=h_i(x)f_i(x)$ 即 $P_0\subset P$
 
 对于任意 $p'(x)\in P$ 有对于任意 $1\leq i\leq n$ 有 $p'(x)=h_i'(x)f_i(x)$
 
@@ -2564,6 +2588,16 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 又根据 $P$ 定义有 $p'(\sigma)(a)=\sum_{i=1}^nh'_i(\sigma)f_i(\sigma)(a)=\sum_{i=1}^nh'_i(\sigma)(\vec{0})=\vec{0}$ 即 $p'(x)$ 是[[MK108][零化多项式]]，故 $P\subset P_0$
 
 根据[[~/文档/note/离散数学/lssx.org::MK16][自反性]]可得 $P=P_0$
+
+****** 证明（2）
+
+由于 $P$ 是所有 $f_i(x)$ 公倍式集合，结合 $f_i(x)$ 为 $\mathcal{V}_i$ 上的[[MK108][最小零化多项式]]可得 $f_i(x)\ne I_{|M_1}[x](c_0)$
+
+则根据[[~/文档/note/抽象代数/cxds.org::MK387][性质]]易证 $P$ 中[[~/文档/note/抽象代数/cxds.org::MK378][次]]数最低显然为 $\prod_{i=1}f_i(x)$ ，又根据 $f_i(x)$ 为 $\mathcal{V}_i$ 上的[[MK108][最小零化多项式]]
+
+可得 $f_i(x)$ 的首项系数为 $I_{|M_1}(c_1)$ ，则根据[[~/文档/note/抽象代数/cxds.org::MK439][多项式环]]中乘法易证 $\prod_{i=1}f_i(x)$ 的首项系数亦为 $I_{|M_1}(c_1)$
+
+综上所述 $f(x)=\prod_{i=1}^nf_i(x)$
 
 **** 定理4<<MK134>>
 
@@ -2617,7 +2651,7 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 结合上三步结论以及[[MK73][定理1]]可得结论
 
-**** 定理5
+**** 定理5<<MK144>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ 根据[[MK66][定理4]]定义：
 
@@ -2629,7 +2663,7 @@ f(k_b\cdot\sigma)=&\left(I_{|M_1}\left(\sum\right)\right)_{i=1}^pI_{|M_1}(f_\tim
 
 若 $f(x)\in M_1[x]$ 为其[[MK108][最小零化多项式]]有形式 $f(x)=\prod_{i=1}^n(x+\lambda_i\sigma_1)^{l_i},\lambda_i\in K$ 则有：
 
-（4） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 且 $\delta_i\in \{\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_1,...,\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_n\}$
+（4） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 且 $\delta_i=\mathfrak{g}(f_-)(\lambda_i)$
 
 （5） $N_j=\left|\left\{J_{d_i}(\delta_i)\big|\delta_i=\mathfrak{g}(f_-)(\mathfrak{g}(c_1))\cdot\lambda_j\land 1\leq i\leq m\right\}\right|=\dim\left(\mathcal{V}_{\ker(\sigma+\lambda_i\sigma_1)}\right)$
 
@@ -2713,6 +2747,78 @@ z_{i,u}=&2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\le
 \end{aligned}
 
 其中 $rank(x)$ 是[[MK4][线性映射]] $x$ 在 $\mathcal{V}$ 上的[[MK38][秩]]
+
+***** 推论1<<MK142>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ 根据[[MK66][定理4]]定义：
+
+（1） [[MK65][单位结构]] $\mathcal{M}_1=\left<M_1,I_1\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]]
+
+（2） 定义 $\mathcal{M}_{1}[x]=\left<M_1[x],I_1[x]\right>$ 为 $\mathcal{M}_1$ 上的[[~/文档/note/抽象代数/cxds.org::MK374][一元多项式环]]
+
+（3） 定义 $\mathcal{M}_\sigma=\left<M_\sigma,I_\sigma\right>$ 为 $\sigma$ 的[[MK65][一元结构]]是[[~/文档/note/抽象代数/cxds.org::MK362][非零幺环]]
+
+若存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\left\{v_{1},...,v_{\sum_{j=1}^md_i}\right\}$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+则其[[MK108][最小零化多项式]] $f(x)\in M_1[x]$ 为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$
+
+****** 证明
+
+定义 $\vec{v}_i=\left\{\vec{v}_{\sum_{j=1}^{i-1}d_j+1},...,\vec{v}_{\sum_{j=1}^{i}d_j}\right\}$ 根据[[MK73][定理]]以及[[MK138][性质11]]可得：
+
+（1） [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK46][生成空间]] $\mathcal{V}_i=\left<\text{span}\left(\vec{v}_{i}\right),K,+,\cdot\right>,1\leq i\leq k$ 是 $\sigma$ 在 $\mathcal{V}$ 上的[[MK57][不变子空间]]
+
+（2） $\mathcal{V}=\sum_{i=1}^k\mathcal{V}_i$ 其中加法为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][直和]]
+
+（3） $\vec{v}_i$ 是 $\mathcal{V}_i$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+（4） $J_{d_i}(\delta_i)$ 是 $\sigma$ 在 $\mathcal{V}_i$ 上 $\vec{v}_i$ 到自身的[[MK28][映射矩阵]]
+
+根据[[MK139][定理3]]可得 $J_{d_i}(\delta_i)$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK75][方阵环]] $\mathcal{M}_{J_i}=\left<M_{j_i},I_{j_i}\right>$ 与 $\mathcal{M}_\sigma$ 的[[~/文档/note/数理逻辑/sllj.org::MK274][同构映射]]为 $e$
+
+则显然有 $e(\sigma-\delta_i\sigma_1)=e(\sigma)-\delta_i\sigma(\sigma_1)=J_{d_i}(\delta_i)-\delta_iI_{d_i}=J_{d_i}(\mathfrak{g}(c_0))$
+
+又根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK89][性质]]易证 $\left(J_{d_i}(\mathfrak{g}(c_0))\right)^{d_i}=[\mathfrak{g}(c_0)]_{d_i\times d_i}=I_{J_i}(c_0)$ 则同理可得 $e((\sigma-\delta_i\sigma_1)^{d_i})=\left(e(\sigma-\delta_i\sigma_1)\right)^{d_i}=I_{J_i}(c_0)$
+
+根据[[~/文档/note/数理逻辑/sllj.org::MK275][引理]]可得 $(\sigma-\delta_i\sigma_1)^{d_i}=e^{-1}\left(e((\sigma-\delta_i\sigma_1)^{d_i})\right)=e^{-1}(I_{J_i}(c_0))=I_{\sigma}(c_0)=\sigma_0$
+
+即可得 $\sigma_i=\sigma-\delta_i\sigma_1$ 是 $\mathcal{V}_i$ 上的[[MK117][幂零变换]]，且幂零指数为 $d_i$ 。根据[[MK141][性质6]]可得 $\sigma$ 在 $\mathcal{V}_i$ 上的[[MK108][最小零化多项式]]为 $(x-\delta_i\sigma_1)^{d_i}$
+
+综上所述：
+
+（1） $\mathcal{V}=\sum_{i=1}^k\mathcal{V}_i$ 其中加法为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][直和]]
+
+（2） $\sigma$ 在 $\mathcal{V}_i$ 上的[[MK108][最小零化多项式]]为 $(x-\delta_i\sigma_1)^{d_i}$
+
+则根据[[MK109][定理3]]可得 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][最小零化多项式]]为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$
+
+***** 推论2
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
+
+则存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\left\{v_{1},...,v_{\sum_{j=1}^md_i}\right\}$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+的充要条件是 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
+
+****** 证明
+
+******* 充分
+
+若存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\left\{v_{1},...,v_{\sum_{j=1}^md_i}\right\}$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+则根据[[MK142][推论1]]可得 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][最小零化多项式]]为 $f(x)=\prod_{i=1}^m(x-\delta_i\sigma_1)^{d_i}$ 即可得任意 $1\leq i\leq m$ 均有 $\delta_i\sigma_1$ 是 $f(x)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+
+则根据[[MK143][定理2]]可得 $1\leq i\leq m$ 均有 $\delta_i$ 是 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]] $g(\lambda)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]，即有 $g(\lambda)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$
+
+******* 必要
+
+若 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]] 亦$g(\lambda)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$为 则显然任意 $1\leq i\leq m$ 均有 $\delta_i$ 是 $g(\lambda)$ 的[[~/文档/note/抽象代数/cxds.org::MK389][根]]
+
+根据[[MK110][定理1]]可得 $g(x)=\prod_{i=1}^m(x-\delta_i)^{d'_i}$ 亦为 $\sigma$ 在 $\mathcal{V}$ 上的[[MK108][零化多项式]]，结合[[MK111][性质2]]可得存在 $h(x)$ 使得 $g(x)=h(x)f(x)$
+
+则 $f(x)$ 显然有形式 $f(x)=\prod_{i=1}^m(x-\delta_i)^{d_i}$ ，则根据[[MK144][定理5]]可得
+
+存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$ 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 
 
 * 特殊子空间
 
@@ -3020,7 +3126,33 @@ $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 是 $\mathcal{V}$ 的[[~/文
 
 根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK5][矩阵乘法]]易证 $\sigma\left(\left[\begin{matrix}\vec{v}_{n_i}&...&\vec{v}_{n_{i+1}-1}\end{matrix}\right]\right)=\left[\begin{matrix}\vec{v}_{n_i}&...&\vec{v}_{n_{i+1}-1}\end{matrix}\right]\left[\begin{matrix}a_{n_in_i}&...&a_{n_i(n_{i+1}-1)}\\...&...&...\\a_{(n_{i+1}-1)n_i}&...&a_{(n_{i+1}-1)(n_{i+1}-1)}\end{matrix}\right]=\left[\begin{matrix}\vec{v}_{n_i}&...&\vec{v}_{n_{i+1}-1}\end{matrix}\right]M_i$
 
-则根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK5][矩阵乘法]]易证 $\sigma(B)=B\text{\diag}\left(M_1,...,M_k\right)$ 
+则根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK5][矩阵乘法]]易证 $\sigma(B)=B\text{\diag}\left(M_1,...,M_k\right)$
+
+**** 性质11<<MK138>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
+
+若 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\left\{v_{1},...,v_{\sum_{j=1}^kn_i}\right\}$ 满足 $\sigma$ 关于 $B$ 到自身的[[MK28][映射矩阵]] $M=\text{diag}\left(M_{n_1\times n_1},...,M_{n_k\times n_k}\right)$ 
+
+定义 $\vec{v}_i=\left\{\vec{v}_{\sum_{j=1}^{i-1}n_j+1},...,\vec{v}_{\sum_{j=1}^{i}n_j}\right\}$ 根据[[MK73][定理]]有：
+
+（1） [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK46][生成空间]] $\mathcal{V}_i=\left<\text{span}\left(\vec{v}_{i}\right),K,+,\cdot\right>,1\leq i\leq k$ 是 $\sigma$ 在 $\mathcal{V}$ 上的[[MK57][不变子空间]]
+
+（2） $\mathcal{V}=\sum_{i=1}^k\mathcal{V}_i$ 其中加法为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][直和]]
+
+则有：
+
+（1） $\vec{v}_i$ 是 $\mathcal{V}_i$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+（2） $M_{n_i\times n_i}$ 是 $\sigma$ 在 $\mathcal{V}_i$ 上 $\vec{v}_i$ 到自身的[[MK28][映射矩阵]]
+
+***** 证明
+
+由于 $B$ 是[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，故[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]，则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK88][性质1]]可得 $\vec{v}_i$ 是 $\mathcal{V}_i$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK5][矩阵乘法]]以及[[MK28][映射矩阵]]定义易证有 $\left[\begin{matrix}\sigma\left(\vec{v}_{\sum_{j=1}^{i-1}n_j+1}\right)&...&\sigma\left(\vec{v}_{\sum_{j=1}^{i}n_j}\right)\end{matrix}\right]=\left[\begin{matrix}\vec{v}_{\sum_{j=1}^{i-1}n_j+1}&...&\vec{v}_{\sum_{j=1}^{i}n_j}\end{matrix}\right]M_{n_i\times n_i}$
+
+即可得 $M_{n_i\times n_i}$ 是 $\sigma$ 在 $\mathcal{V}_i$ 上 $\vec{v}_i$ 到自身的[[MK28][映射矩阵]]
 
 *** 定理<<MK73>>
 
@@ -3116,7 +3248,7 @@ $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 是 $\mathcal{V}$ 的[[~/文
 
 则称[[~/文档/note/数理逻辑/sllj.org::MK154][结构]] $\mathcal{M}_1=\left<M_1,I_{|M_1}\right>$ 为 $\sigma$ 的单位[[~/文档/note/数理逻辑/sllj.org::MK154][结构]]
 
-** 性质<<MK111>>
+** 性质<<MK140>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，且即[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维数]]为 $n<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
 
@@ -3255,7 +3387,7 @@ e(I_{|M_1}(f_-)(a))&=e(\mathfrak{g}(f_-)(k_1)\cdot\sigma_1)\\
 &=I_E(f_-)(e(k_1\cdot\sigma_1))\\
 \end{aligned}$$
 
-** 定理3<<MK110>>
+** 定理3<<MK139>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，且即[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维数]]为 $n<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
 
@@ -3285,7 +3417,7 @@ I_\sigma(c_1)\left(\left[\begin{matrix}a_1&a_2&...&a_n\end{matrix}\right]\right)
 
 **** [[~/文档/note/离散数学/lssx.org::MK181][双射]]
 
-根据[[MK29][性质1]]、[[MK30][性质2]]、[[MK33][性质3]]以及[[MK111][性质]]易证对于任意 $I_\sigma(\sum)_{i=1}^nI_{\sigma}(f_\times)(k_i\sigma_1,\sigma^i)\in M_\sigma$
+根据[[MK29][性质1]]、[[MK30][性质2]]、[[MK33][性质3]]以及[[MK140][性质]]易证对于任意 $I_\sigma(\sum)_{i=1}^nI_{\sigma}(f_\times)(k_i\sigma_1,\sigma^i)\in M_\sigma$
 
 有 $e\left(I_\sigma(\sum)_{i=1}^nI_{\sigma}(f_\times)(k_i\sigma_1,\sigma^i)\right)=I_G(\sum)_{i=1}^nI_G(f_\times)(e(k_i\sigma_1),e(\sigma)^i)=I_G(\sum)_{i=1}^nI_G(f_\times)(E(k_i),G^i)$
 

@@ -4303,7 +4303,7 @@ r_{n+2}(x)=&r_n(x)+(-h_{n+2}(x))r_{n+1}(x)\\
 
 若 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]] $\mathcal{M}[x]=\left<M[x],I[x]\right>$ 是其[[MK374][多项式环]]，对于任意 $\{f(x),g_1(x),g_2(x),h_1(x),h_2(x)\}\subset M[x]$ 若满足：
 
-（1） $f(x)=h_1(x)g_1(x),f(x)=h_2(x)g_2(x)$
+（1） $f(x)=h_1(x)g_1(x)=h_2(x)g_2(x)$
 
 （2） 不存在 $\{u(x),v_1(x),v_2(x)\}\subset M[x]$ 使得 $g_1(x)=v_1(x)u(x),g_2(x)=v_2(x)u(x)$
 
