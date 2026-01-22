@@ -2,13 +2,13 @@
 
 #+TITLE: 矩阵运算
 
-current mark: 90
+current mark: 93
 
 * 矩阵基础
 
 ** 矩阵的表述<<MK6>>
 
-定义 $M_{s\times n}(K)$ 为[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK24][数域]] $K$ 上的 $s$ 行 $n$ 列的 *所有* 矩阵的集合
+定义 $M_{s\times n}(K)$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $s$ 行 $n$ 列的 *所有* 矩阵的集合
 
 定义 $M=\left[m_{ij}\right]_{s\times n}$ 为第 $i$ 行 $j$ 列上的元素为 $m_{ij}$ 的 $s$ 行 $n$ 列的矩阵
 
@@ -488,13 +488,68 @@ I_nA_{n\times s}&= A_{s\times n}\\
 
 另定义 $N=\{N_0,n_1,...,N_p\}$ 则分块对角矩阵亦可记作 $\left[a_{i,j}\right]^N_{n\times n}$
 
-*** 性质<<MK90>>
+*** 性质1<<MK90>>
 
 若有 $A=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ ，则[[MK87][幂]]运算 $A^n=\text{diag}\left((A_{n_1})^n,...,(A_{n_p})^n\right)$
 
 **** 证明
 
 根据[[MK5][矩阵乘法]]以及数学归纳法易证
+
+*** 性质2<<MK91>>
+
+若有 $A=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ ，任取 $1\leq i<j\leq p$ 定义 $S(A,i,j)=\text{diag}(A_{n'_1},...,A_{n'_p})$
+
+其中 $n'_k=\begin{cases}n_j&k=i\\n_i&k=j\\n_k&else\end{cases}$ ，则有 $A$ [[MK64][相似于]] $A'$
+
+**** 证明
+
+***** 相邻
+
+即 $j=i+1$ 且 $n_i\leq n_j$ 定义 $n_b=\sum_{k=1}^{i-1}n_k,n=\sum_{k=1}^pn_i$
+
+则定义 $P_0=\prod_{k=1}^{n_i}P_n(n_b+k,n_b+n_j+k)$ 其中 $P^1_n(a,b)$ 是[[MK13][初等矩阵]]中第二型，则根据[[MK42][第二型]]以及[[MK21][结合律]]
+
+可得 $P_0A=A$ 为 $A$ 中第 $n_b+1\sim n_b+n_i$ 行与 $n_b+n_j\sim n_b+n_j+n_i$ 行互换
+
+定义
+
+\begin{aligned}
+P_1&=\prod^{k=n_j-n_i}_{1}\left(\prod_{l=1}^n_iP_n(n_b+n_i+k+1-l,n_b+n_i+k-l)\right)\\
+&=\prod_{l=1}^n_iP_n(n_b+n_i+n_j-n_i+1-l,n_b+n_i+n_j-n_i-l)...\prod_{l=1}^n_iP_n(n_b+n_i+1+1-l,n_b+n_i+1-l)
+\end{aligned}
+
+同理根据[[MK42][第二型]]以及[[MK21][结合律]]可得 $P_1P_0A$ 为将 $P_1A$ 中第 $n_b+n_i+1\sim n_b+n_j$ 行移动到 $n_b+1\sim n_b+(n_j-n_i)$ 行
+
+同时将 $n_b+1\sim n_b+n_i$ 行移动到 $n_b+n_i+1\sim n_b+n_j$ 行。经过上述移动，可得 $P_1P_0A=\left[\begin{matrix}...&...&...&...\\...&...&A_j&...\\...&A_i&...&...\\...&...&...&...\end{matrix}\right]$
+
+同理定义：
+
+（1） $P_3=\prod^{k=n_i}_{1}P_n(n_b+k,n_b+n_j+k)$
+
+（2） $P_4=\prod_{k=1}^{n_j-n_i}\left(\prod_{l=1}^n_iP_n(n_b+n_i+k+1-l,n_b+n_i+k-l)\right)$
+
+同理可得 $(P_1P_0A)P_3$ 为将 $P_1P_0A$ 中第 $n_b+1\sim n_b+n_i$ 列与 $n_b+n_j\sim n_b+n_j+n_i$ 列互换
+
+以及 $((P_1P_0A)P_3)P_4$ 为将 $(P_1P_0A)P_3$ 中第 $n_b+n_i+1\sim n_b+n_j$ 列移动到 $n_b+1\sim n_b+(n_j-n_i)$ 列
+
+同时将 $n_b+1\sim n_b+n_i$ 列移动到 $n_b+n_i+1\sim n_b+n_j$ 列。经过上述移动，可得 $P_1P_0AP_3P_4=\left[\begin{matrix}...&...&...&...\\...&A_j&...&...\\...&...&A_i&...\\...&...&...&...\end{matrix}\right]$
+
+即有 $A'=P_1P_0AP_3P_4$ 
+
+定义 $P_1P_0=\prod_{k=1}^{g}P_k,P_3P_4=\prod_{k=1}^{g}P'_k$ 显然根据定义有 $P_{g+1-k}=P'_k$ 且根据[[MK36][定理3]]可得 $P_{g+1-k}=P'_k=I$ 
+
+根据[[MK21][结合律]] $P_1P_0P_3P_4=\left(\prod_{k=1}^{g}P_k\right)\left(\prod_{k=1}^{g}P'_k\right)=\left(\prod_{k=1}^{g-1}P_k\right)(P_gP_1)\left(\prod_{k=1+1}^{g}P'_k\right)=\left(\prod_{k=1}^{g-1}P_k\right)I\left(\prod_{k=1+1}^{g}P'_k\right)=...=I$
+
+即有 $P_1P_0=(P_3P_4)^{-1}$ 即有 $A'\sim A$
+
+***** 不相邻
+
+定义 $S(A,k)=S(\text{diag}\left(A_{n_1},...A_k,A_{k+1},...,A_{n_p}\right),k)=\text{diag}\left(A_{n_1},...A_{k+1},A_k,...,A_{n_p}\right)$ 
+
+定义 $A_0=S(A,i)$ 根据上一步有 $A\sim A_0$ 定义 $A_k=S(A_{k-1},i+k)$ 同理对于任意 $0\leq k\leq p-i-1$ 均有 $A_{k-1}\sim A_k$ 
+
+则显然 $A_{j-i}=A'$ 则根据[[MK81][等价关系]]可得 $A\sim A'$
 
 ** 数量矩阵
 
@@ -618,6 +673,7 @@ I_nA_{n\times s}&= A_{s\times n}\\
 
 或者 $I_n\xrightarrow[k\textcircled{i}]{}P^2_n(ki)$ 即单位矩阵第 $i$ 列乘以 $k$
 
+
 [[MK12][同理可证]] $P^2_n(ki)=P^1_n(ki)$ 故记作 $P_n(ki)$
 
 *** 初等变换<<MK32>>
@@ -712,23 +768,79 @@ $P_n(ki)$ 左乘矩阵 $A_{s\times n}$ 相当于 $A\xrightarrow[k\textcircled{i}
 
 ** Jordan块<<MK86>>
 
-定义 $B=[b_{ij}]_{n\times n}$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，若满足 $b_{ij}=\begin{cases}a&i=j\\1&j=i+1\\0&\else\end{cases}$
+定义 $B=[b_{ij}]_{n\times n}$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，若满足 $b_{ij}=\begin{cases}a&i=j\\\mathfrak{g}(c_1)&j=i+1\\0&\else\end{cases}$
 
 则称 $B$ 为Jordan块，记作 $J_n(a)$
 
-*** 性质<<MK89>>
+*** 性质1<<MK89>>
 
-[[MK87][幂]]运算 $(J_n(\mathfrak{g}(c_0)))^n=[c_{ij}]$ 满足 $c_{ij}=\begin{cases}1&j=i+n\\0&\else\end{cases}$
+[[MK87][幂]]运算 $(J_n(\mathfrak{g}(c_0)))^n=[c_{ij}]$ 满足 $c_{ij}=\begin{cases}\mathfrak{g}(c_1)&j=i+n\\\mathfrak{g}(c_0)&else\end{cases}$
 
 **** 证明
 
 根据[[MK5][矩阵乘法]]以及数学归纳法易证
 
+*** 性质2<<MK92>>
+
+$J_n(a)$ 的[[MK67][特征多项式]]为 $(\lambda-a)^n$
+
+**** 证明
+
+根据[[MK67][特征多项式定义]]有 $f(\lambda)=|\lambda I_n-J_n(a)|=\left|\begin{matrix}\lambda-a&-\mathfrak{g}(c_1)&...&...&...&...\\...&\lambda-a&-\mathfrak{g}(c_1)&...&...&...\\...&...&...&...&...&...\\...&...&...&...&\lambda-a&-\mathfrak{g}(c_1)\end{matris}\right|$
+
+根据[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK18][上三角矩阵行列式]]可得 $f(\lambda)=(\lambda-a)^n$
+
+*** 性质3
+
+$J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
+
+**** 证明
+
+若 $a=b$ 则显然 $J_n(a)=J_n(b)$ 即[[MK81][相似]]
+
+若 $J_n(a)\sim J_n(b)$ 则根据[[MK68][性质4]]可得有相同的[[MK67][特征多项式]]，根据[[MK92][性质2]]可得 $J_n(a),J_n(b)$ 的[[MK67][特征多项式]]分别为 $(\lambda-a)^n,(\lambda-b)^n$
+
+则显然 $a=b$
+
 ** Jordan型矩阵<<MK88>>
 
-若[[MK72][分块对角矩阵]] $A=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ 满足每一个子矩阵均为参数相同的[[MK86][Jordan块]]，即 $A=\text{diag}\left(J_{n_1}(a),...,J_{n_p}(a)\right)$
+若[[MK72][分块对角矩阵]] $A=\text{diag}\left(A_{n_1},...,A_{n_p}\right)$ 满足每一个子矩阵均为参数相同的[[MK86][Jordan块]]，即 $A=\text{diag}\left(J_{n_1}(a_1),...,J_{n_p}(a_p)\right)$
 
 则称 $A$ 是Jordan型矩阵
+
+*** 性质1<<MK93>>
+
+任意 $A=\text{diag}\left(J_{n_1}(a),...,J_{n_p}(a)\right)$ 的[[MK67][特征多项式]]为 $\prod_{i=1}^p(\lambda-a_i)^{n_p}$
+
+**** 证明
+
+[[MK92][同理可证]]
+
+*** 性质2
+
+任意 $G_1=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right),G_2=\text{diag}\left(J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\right)$ 满足：
+
+（1） 对于任意 $1\leq i< j\leq m$ 均有 $\delta_i\ne\delta_j$
+
+（2） 对于任意 $1\leq i< j\leq m'$ 均有 $\delta'_i\ne\delta'_j$
+
+则 $G_1,G_2$ [[MK81][相似]]的充要条件是存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
+
+**** 证明
+
+***** 充分
+
+若存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$ 则显然 $G_1,G_2$ 仅[[MK86][Jordan块]]排列顺序不同。
+
+由于[[MK88][Jordan型]]为[[MK72][分块对角矩阵]]，故根据[[MK91][性质2]]易证 $G_1\sim G_2$
+
+***** 必要
+
+若 $G_1\sim G_2$ 则根据[[MK93][性质1]]可得[[MK67][特征多项式]]分别为 $f_1(\lambda)=\prod_{i=1}^m(\lambda-\delta_i)^{d_i},f_1(\lambda)=\prod_{i=1}^{m'}(\lambda-\delta'_i)^{n'_i}$
+
+显然 $\lambda-k,k\in K$ 为[[~/文档/note/抽象代数/cxds.org::MK519][不可约]]多项式，则根据[[~/文档/note/抽象代数/cxds.org::MK522][唯一因式分解]]
+
+结合条件（1）（2）易证存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
 
 * 基本运算<<MK49>>
 

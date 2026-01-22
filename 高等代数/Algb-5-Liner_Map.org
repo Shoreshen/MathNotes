@@ -2,7 +2,7 @@
 
 #+TITLE: 线性映射
 
-current mark: 147
+current mark: 150
 
 * 线性映射<<MK4>>
 
@@ -1371,6 +1371,30 @@ $\sigma$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]的充要
 
 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK74][性质]]可得 $B=\bigcup_{i=1}^m B_i$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，结合[[~/文档/note/高等代数/Algb-3-Matrix.org::MK5][矩阵乘法]]易证 $\sigma$ 在 $B$ 上的[[MK28][映射矩阵]]为 $M=\text{diag}\left(M_1,...,M_m\right)$
 
+**** 性质11<<MK149>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $n =\dim(\mathcal{V})<\infty$ 对于任意 $\mathcal{K}$ 上的 $n$ 阶矩阵 $M_1,M_2$
+
+若有 $M_1,M_2$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]，则存在[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_1,B_2$ 满足：
+
+（1） $M_1$ 是 $B_1$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
+（2） $M_2$ 是 $B_2$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
+***** 证明
+
+任取 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_1=\{b_1,...,b_n\}$ 根据[[MK34][定理1]]可得[[MK14][映射组成线性空间]]与[[~/文档/note/高等代数/Algb-3-Matrix.org::MK10][矩阵组成线性空间]]有[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK75][同构]]
+
+故可得存在 $\sigma$ 满足 $M_1$ 是 $B_1$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]，即有 $\left[\begin{matrix}\sigma(a_1)&\sigma(a_2)&...&\sigma(a_n)\end{matrix}\right]=\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right]M_1$
+
+由于[[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]故存在[[~/文档/note/高等代数/Algb-3-Matrix.org::MK28][可逆矩阵]]满足 $M_1=SM_2S^{-1}$ ，进一步有  $\left[\begin{matrix}\sigma(a_1)&\sigma(a_2)&...&\sigma(a_n)\end{matrix}\right]=\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right]SM_2S^{-1}$
+
+两边右乘 $S$ 可得 $\sigma\left(\left[\begin{matrix}a_1&a_2&...&a_n\end{matrix}\right]\right)S=\left[\begin{matrix}\sigma(a_1)&\sigma(a_2)&...&\sigma(a_n)\end{matrix}\right]S=\left[\begin{matrix}b_1&b_2&...&b_n\end{matrix}\right]SM_2$
+
+根据[[MK35][性质6]]可得 $\left[\begin{matrix}\sigma(a_1)&...&\sigma(a_n)\end{matrix}\right]S=\sigma\left(\left[\begin{matrix}a_1&...&a_n\end{matrix}\right]\right)S=\sigma\left(\left[\begin{matrix}a_1&...&a_n\end{matrix}\right]S\right)=\sigma(B_1S)$ 即有 $\sigma(B_1S)=B_1SM_2$
+
+又由于 $S$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK28][可逆矩阵]]以及 $B_1$ 为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，根据[[MK116][性质8]] $B_1S$ 亦为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，则显然 $M_2$ 是 $B_1S$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
 *** 定理
 
 **** 定理1<<MK34>>
@@ -1509,7 +1533,31 @@ $\sigma$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]的充要
 
 又根据[[MK34][定理1]]可得 $\delta$ 是 $\mathcal{V}_1=<\text{Hom}(\mathcal{V},\mathcal{V}'),K,+,\cdot>$ 到 $\mathcal{V}_2=<M_{m\times n}(K),K,+,\cdot>$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK75][同构映射]]
 
-则 $\delta$ 必为[[~/文档/note/离散数学/lssx.org::MK181][双射函数]]，显然矛盾。故假设不成立，即有 $SAS^{-1}=B$ 
+则 $\delta$ 必为[[~/文档/note/离散数学/lssx.org::MK181][双射函数]]，显然矛盾。故假设不成立，即有 $SAS^{-1}=B$
+
+***** 推论<<MK148>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $n=\dim(\mathcal{V})<\infty$ ，对于任意 $\mathcal{K}$ 上的 $n$ 阶矩阵 $M_1,M_2$ 及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$
+
+根据[[MK34][定理1]]可得存在 $B$ 到自身的[[MK4][线性变换]] $\{\sigma_1,\sigma_2\}\subset\text{Hom}(\mathcal{V},\mathcal{V})$ 满足其[[MK28][映射矩阵]]分别为 $M_1,M_2$
+
+则 $M_1,M_2$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]的充要条件为存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_1,B_2$ 满足：
+
+（1） $\sigma_2$ 对于 $B_2$ 到自身的[[MK28][映射矩阵]]为 $G_2$
+
+（2） $\sigma_1$ 对于 $B_1$ 到自身的[[MK28][映射矩阵]]为 $G_1$
+
+（3） $G_1$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]于 $G_2$
+
+****** 证明
+
+******* 充分
+
+若有 $M_1\sim M_2$ 则根据[[MK46][定理2]]可得 $M_1\sim G_1,M_2\sim G_2$ 即根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK81][定理1]]可得 $G_1\sim G_2$
+
+******* 必要
+
+若有 $G_1\sim G_2$ 则根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK81][定理1]]可得 $M_1\sim G_1,M_2\sim G_2$ 即根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK81][定理1]]可得 $M_1\sim M_2$
 
 **** 定理3<<MK70>>
 
@@ -2852,7 +2900,7 @@ z_{i,u}=&2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\le
 
 满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$ 
 
-***** 推论3
+***** 推论3<<MK150>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<\infty$ ，对于任意[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$
 
@@ -2881,6 +2929,42 @@ z_{i,u}=&2\dim\left(\mathcal{V}_{\ker_i\left(\sigma_i^{u}\right)}\right)-\dim\le
 若 $\sigma$ 的[[MK108][最小零化多项式]]可分解为一次因式的乘积，则根据[[MK147][性质5]]可得 $M$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积
 
 同理可得 $M$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]与 $M_J$ 且 $M_J$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]矩阵
+
+***** 推论4
+
+设 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $n=\dim(\mathcal{V})<\infty$ ，对于任意 $\mathcal{K}$ 上的 $n$ 阶矩阵 $M_1,M_2$ 及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$
+
+根据[[MK34][定理1]]可得存在 $B$ 到自身的[[MK4][线性变换]] $\{\sigma_1,\sigma_2\}\subset\text{Hom}(\mathcal{V},\mathcal{V})$ 满足其[[MK28][映射矩阵]]分别为 $M_1,M_2$
+
+则 $M_1,M_2$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积，则 $M_1,M_2$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK64][相似]]的充要条件为：
+
+（1） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_1$ 满足 $\sigma_1$ 对于 $B_1$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $G_1=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+（2） 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_2$ 满足 $\sigma_2$ 对于 $B_2$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $G_2=\text{diag}\left(J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\right)$
+
+（3） 存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_m}(\delta'_m)\}$
+
+****** 证明
+
+******* 充分
+
+若有条件（1）（2）（3），则显然 $G_1,G_2$ 中仅[[~/文档/note/高等代数/Algb-3-Matrix.org::MK86][Jordan块]]的排列不同，又由于为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK72][分块对角矩阵]]
+
+则根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK91][性质2]]可得 $G_1\sim G_2$ ，又根据[[MK148][推论]]可得 $M_1\sim M_2$
+
+******* 必要
+
+若有 $M_1\sim M_2$ 根据[[MK149][性质11]]可得则存在[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_1,B_2$ 满足：
+
+（1） $M_1$ 是 $B_1$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
+（2） $M_2$ 是 $B_2$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
+又由于 $M_1$ 的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK67][特征多项式]]可分解为一次因式的乘积，则根据[[MK146][推论2]]可得存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B$
+
+满足 $\sigma$ 从 $B$ 到自身的[[MK28][映射矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK88][Jordan型]] $M=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\right)$
+
+又根据[[MK46][定理2]]可得 $M_1\sim M,M_2\sim M$ 则显然条件（1）（2）（3）满足
 
 * 特殊子空间
 
@@ -2930,8 +3014,7 @@ $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 是 $\mathcal{V}$ 的[[~/文
 
 则根据是[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK40][性质2]]可得 $\dim(\mathcal{V}_1)=m$ ，又根据 $S_1$ 是 $\mathcal{V}_2$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]可得 $\dim(\mathcal{V}_2)=n$
 
-由于 $\mathcal{V}$ 中有一组[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]为 $S=\{a_1,...,a_n,b_1,...,b_m\}$ 可得 $\dim(\mathcal{V})=m+n=\dim(\mathcal{V}_1)+\dim(\mathcal{V}_2)$
-
+由于 $\mathcal{V}$ 中有一组[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]为 $S=\{a_1,...,a_n,b_1,...,b_m\}$ 可得 $\dim(\mathcal{V})=m+n=\dim(\math
 ** 相空间<<MK23>>
 
 定义 $U=\left\{\sigma(a)\big|a\in V\right\}$ 则 $\mathcal{V}_{Im}=\left<U,K,+,\cdot\right>$ 是 $\mathcal{V}'$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK44][子空间]]

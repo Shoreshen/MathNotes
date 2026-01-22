@@ -3962,7 +3962,7 @@ f_2(x)&=f_2(x)\times I[x](c_1)=u(x)\times f_1(x)\times f_2(x)+f_2(x)\times v(x)\
 
 若 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]] $\mathcal{M}[x]=\left<M[x],I[x]\right>$ 是其[[MK374][多项式环]]，对于任意 $f(x)\in M[x]$ 若存在 $a\in M$
 
-满足 $a$ 是 $f(x)$ 的[[MK389][根]]，则存在 $p(x)$ 满足 $f(x)=I[x](f_\times)(f(x),x+(-a))$
+满足 $a$ 是 $f(x)$ 的[[MK389][根]]，则存在 $p(x)$ 满足 $f(x)=I[x](f_\times)(p(x),x+(-a))$
 
 ********* 证明
 
