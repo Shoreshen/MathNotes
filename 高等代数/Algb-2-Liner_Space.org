@@ -2,7 +2,7 @@
 
 #+TITLE: 线性空间
 
-current mark: 119
+current mark: 120
 
 * 映射
 
@@ -101,6 +101,46 @@ $\left\{f(a)\big| \forall a\in A\right\}$ 即所有 $A$ 中元素通过 $f$ 在 
 *** <<MK6>> $-1\vec{a}$ 为 $\vec{a}$ 的负元
 
 对于 $\vec{a}\in V$ 根据[[MK4][数乘零元为零元]]以及[[MK1][定义]]中（5）（7） $\vec{0}=0\vec{a}=(1+(-1))\vec{a}=1\vec{a}+(-1)\vec{a}=\vec{a}+(-1)\vec{a}$
+
+*** <<MK120>> $\mathcal{V}_K=\left<K,K,\mathfrak{g}(f_+),\mathfrak{g}(f_\times)\right>$ 亦为[[MK1][线性空间]]，且 $\dim(\mathcal{V}_K)=1$
+
+**** 是[[MK1][线性空间]]
+
+定义 $\mathfrak{g}(f_+),\mathfrak{g}(f_\times),\mathfrak{g}(c_0),\mathfrak{g}(c_1)$ 分别用 $+,\cdot,0,1$ 表示，则根据[[~/文档/note/抽象代数/cxds.org::MK338][域定义]]显然对于任意 $\{a,b,c\}\subset K$ 均有
+
+（1） $a+b=a-b$
+
+（2） $(a+b)+c=a+(b+c)$
+
+（3） $0+a=a$
+
+（4） $a+\mathfrak{g}(f_-)(a)=0$
+
+（5） $1\cdot a=a$
+
+（6） $(bc)a=b(ca)$
+
+（7） $(b+c)a=ba+ca$
+
+（8） $c(a+b)=ca+cb$
+
+即 $\mathcal{V}_K$ 是[[MK1][线性空间]]。
+
+**** $\dim(\mathcal{V}_K)=1$
+
+对于任意 $B=\{b,a_1,...,a_n\}\subset K$ 均有 $A=\sum_{i=1}^na_i\in K$ 又根据[[~/文档/note/抽象代数/cxds.org::MK338][域定义]]有 $c\in K$ 满足 $c\cdot b=1$
+
+又根据[[~/文档/note/抽象代数/cxds.org::MK350][性质8]]可得 $\mathfrak{g}(f_-)(c\cdot b)=\mathfrak{g}(f_-)(1)\cdot (c\cdot b)=(\mathfrak{g}(f_-)(1)\cdot c)\cdot b$ 且 $(\mathfrak{g}(f_-)(1)\cdot d)\in K$
+
+进一步根据运算封闭有 $(\mathfrak{g}(f_-)(1)\cdot d)\cdot A\in K$ ，则 $\sum_{i=1}^na_i+\left((\mathfrak{g}(f_-)(1)\cdot d)\cdot A\right)\cdot b=A+A\cdot(\mathfrak{g}(f_-)(c,b))=0$
+
+即对于任意 $B\subset K$ 满足 $|B|>1$ 均存在不全为 $0$ 的 $\{k_i,k_b\}\subset K$ 满足 $\sum_{i=1}^nk_ia_i+k_bb=0$
+
+即 $B$ [[MK8][线性相关]]
+
+显然当 $B=\{b\},b\ne0$ 时，根据[[~/文档/note/抽象代数/cxds.org::MK400][性质4]]可得任意 $a\in K$ 满足 $b\cdot a=0$ 必有 $a=0$ ，即 $B=\{b\}$ [[MK8][线性无关]]
+
+去 $b=1$ 则任意 $a\in K$ 均有 $a\cdot 1=a$ 即 $\{1\}$ 是 $\mathcal{V}_K$ 的[[MK36][基]]，则根据[[MK51][维数]]可得 $\dim(\mathcal{V}_K)=1$
 
 ** 运算
 
@@ -1029,11 +1069,11 @@ $\mathcal{V}=<V,K,+,\times>$ 是[[MK1][线性空间]]，其有限次幂空间 $\
 
 若两个向量组 $A$ 和 $B$ 能互相[[MK12][线性表述]]则称两个向量组等价，记作 $A\cong B$
 
-**** 推论
+**** 推论<<MK20>>
 
 向量组 $\left\{\vec{a}_1,...,\vec{a}_n\right\}$ 与其极大线性无关组 $\left\{\vec{a}_{i_1},...,\vec{a}_{i_s}\right\}$ 等价
 
-***** 证明<<MK20>>
+***** 证明
 
 对于任意 $\vec{a}_i\in\left\{\vec{a}_1,...,\vec{a}_n\right\}$ 且 $\vec{a}_i\not\in\left\{\vec{a}_{i_1},...,\vec{a}_{i_s}\right\}$ 根据[[MK8][线性相关定义]]可得 $\left\{\vec{a}_i,\vec{a}_{i_1},...,\vec{a}_{i_s}\right\}$ 线性相关
 

@@ -2,7 +2,7 @@
 
 #+TITLE: 矩阵运算
 
-current mark: 93
+current mark: 97
 
 * 矩阵基础
 
@@ -110,7 +110,7 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 总上所述，线性不相关
 
-*** 推论1
+*** 推论1<<MK94>>
 
 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK43][定理2]]可得 $M_{s\times n}(K)$ 任意基包含的向量个数为 $sn$
 
@@ -440,7 +440,7 @@ I_nA_{n\times s}&= A_{s\times n}\\
 
 ** 基本矩阵<<MK8>>
 
-单位矩阵定义为 $E_{lk}=[D(i,j)]_{s\times n}$ 其中 $D(i,j)=\begin{cases}1&i=l\land j=k\\0&i\ne l\lor j\ne k\end{cases}$
+基本矩阵定义为 $E_{lk}=[D(i,j)]_{s\times n}$ 其中 $D(i,j)=\begin{cases}1&i=l\land j=k\\0&i\ne l\lor j\ne k\end{cases}$
 
 ** 对角矩阵<<MK70>>
 
@@ -842,6 +842,24 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 
 结合条件（1）（2）易证存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
 
+*** 性质2
+
+任意两个[[MK88][Jordan型]]矩阵 $G_1=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_n}(\delta_n)\right),G_2=\text{diag}\left(J_{c_1}(\gamma_1),...,J_{c_m}(\gamma_m)\right)$
+
+有 $G_1,G_2$ [[MK81][相似]]的充要条件是存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
+
+**** 证明
+
+若[[MK81][相似]]则显然 $G_1,G_2$ 行数相同，均为 $l$ 则任取 $\mathcal{V}=\left<V,K,+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})=l$
+
+则根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK149][性质11]]可得存在[[MK4][线性变换]] $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V})$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B_1,B_2$ 满足：
+
+（1） $G_1$ 是 $B_1$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
+（2） $G_2$ 是 $B_2$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
+
+进一步根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK1452][推论5]]可得存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
+
 * 基本运算<<MK49>>
 
 ** 基本运算定义
@@ -981,15 +999,15 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 
 定义 $B=\left[\begin{matrix}b_{11}&b_{12}&...&b_{1t}\\b_{21}&b_{22}&...&b_{2t}\\...&...&...&...\\b_{n1}&b_{n2}&...&b_{nt}\end{matrix}\right]$ 则根据[[MK5][乘法定义]]可得 $AB=\left[\begin{matrix}\sum_{i=1}^n\vec{a}_ib_{i1}&\sum_{i=1}^n\vec{a}_ib_{i2}&...&\sum_{i=1}^n\vec{a}_ib_{it}\end{matrix}\right]$
 
-则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][向量组关系-线性表述]]， $AB$ 的列向量可由 $A$ 的列向量线性表述
+则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK12][线性表述]]， $AB$ 的列向量可由 $A$ 的列向量线性表述
 
-故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][向量组关系-向量组秩的性质-性质2]]可得 $AB$ 的列秩小于等于 $A$ 的列秩
+故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK41][性质2]]可得 $AB$ 的列秩小于等于 $A$ 的列秩
 
-进一步由于[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-一般矩阵行秩与列秩-定义]]可的 $rank(AB)\leq rank(A)$
+进一步由于[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK57][一般矩阵行秩与列秩]]可的 $rank(AB)\leq rank(A)$
 
 根据[[MK7][转置性质]]可的 $(AB)^T=B^TA^T$ 则根据本性质有 $rank\left((AB)^T\right)=rank\left(B^TA^T\right)\leq rank\left(B^T\right)$
 
-由于[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-一般矩阵行秩与列秩]]可的同一矩阵行秩等于列秩，固有 $rank(AB)=rank\left((AB)^T\right),rank(B)=rank\left(B^T\right)$
+由于[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK57][一般矩阵行秩与列秩]]可的同一矩阵行秩等于列秩，固有 $rank(AB)=rank\left((AB)^T\right),rank(B)=rank\left(B^T\right)$
 
 故亦有 $rank(AB)\leq rank(B)$
 
@@ -1100,6 +1118,20 @@ B^TA^T&=\left[b'_{ij}=b_{ji}\right]_{m\times n}\left[a'_{ij}=a_{ji}\right]_{n\ti
 
 故当 $|A_n|\ne0$ 时 $\left(\frac{1}{|A_n|}B\right)$ 存在且有定义，故 $A_n$ 可逆
 
+*** 可逆乘法与[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK55][秩]]<<MK96>>
+
+任意 $\{A,B\}\subset M_{n\times n}(K)$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶方阵且 $A$ [[MK28][可逆]]，则 $rank(AB)=rank(BA)=rank(B)$
+
+**** 证明
+
+根据 $A$ [[MK28][可逆]]以及[[MK37][定理7]]可得 $A=\prod_{i=1}^n P_i$ 其中 $n$ 为有限数，$P_i$ 为[[MK13][初等矩阵]]
+
+又根据[[MK2][初等变换]]可得任意矩阵与初等矩阵相乘（左乘或右乘）相当于做[[MK2][初等变换]]
+
+又根据[[MK21][乘法结合律]]以及[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK53][初等变换与行秩]]和[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK54][初等变换与列秩]]可得 $rank(BA)=rank\left(B\prod_{i=1}^{n}P_i\right)=rank\left(B\prod_{i=1}^{n-1}P_i\right)=...=rank(B)$
+
+同理 $rank(AB)=rank\left(\left(\prod_{i=1}^{n}P_i\right)B\right)=rank\left(\left(\prod_{i=1}^{n-1}P_i\right)B\right)=...=rank(B)$
+
 ** 定理
 
 *** 定理1
@@ -1160,7 +1192,7 @@ B^TA^T&=\left[b'_{ij}=b_{ji}\right]_{m\times n}\left[a'_{ij}=a_{ji}\right]_{n\ti
 
 则根据 $n=2$ 时证明 $\left(\prod_{i=k}^1 S_i\right)S_{k+1}$ 可逆，且 $\left[\left(\prod_{i=k}^1 S_i\right)S_{k+1}\right]^{-1}=S^{-1}_{k+1}\left(\prod_{i=k}^1 S^{-1}_i\right)=\left(\prod_{i=k+1}^1 S^{-1}_i\right)$
 
-*** 定理5
+*** 定理5<<MK97>>
 
 若矩阵 $A_n$ 可逆，则其[[MK14][转置]]矩阵 $A^T_n$ 亦可逆，且其逆矩阵为 $\left(A^T_n\right)^{-1}=\left(A^{-1}_n\right)^T$ 
 
@@ -1174,9 +1206,9 @@ B^TA^T&=\left[b'_{ij}=b_{ji}\right]_{m\times n}\left[a'_{ij}=a_{ji}\right]_{n\ti
 
 **** 证明
 
-由于任意行列式可经过[[MK32][初等变换]]化为[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org][线性方程组-其他定义-阶梯矩阵]]
+由于任意行列式可经过[[MK32][初等变换]]化为[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK2][阶梯矩阵]]
 
-则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-阶梯矩阵的行秩与列秩]]可知 $\dim(A_n)=n$ 与主元个数相等
+则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK52][阶梯矩阵的行秩与列秩]]可知 $\dim(A_n)=n$ 与主元个数相等
 
 由于 $A_n$ 为 $n$ 行列的方阵，则化为阶梯矩阵后必为[[MK33][上三角矩阵]]
 
@@ -1985,7 +2017,7 @@ AP=&\left[\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&
 
 * 矩阵相似<<MK64>>
 
-定义 $\{A,B\}\subset M_{n\times n}(K)$ 为 $n$ 阶方阵，若存在[[MK28][可逆]]矩阵 $P\in M_{n\times n}(K)$ 满足 $P^{-1}AP=B$
+定义 $\{A,B\}\subset M_{n\times n}(K)$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶方阵，若存在[[MK28][可逆]]矩阵 $P\in M_{n\times n}(K)$ 满足 $P^{-1}AP=B$
 
 则称矩阵 $A$ 相似与矩阵 $B$ ，记作 $A\sim B$
 
@@ -2066,3 +2098,39 @@ AP=&\left[\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&
 根据[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK32][行列式与乘法]]可得 $|I\lambda-A|=|P^{-1}||\lambda I- B||P|=|P^{-1}||P||\lambda I- B|$
 
 根据[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK33][可逆矩阵与行列式]]可得 $|I\lambda-A|=|\lambda I- B|$ 根据 $\lambda$ 的任意性可得[[MK67][特征多项式]]相等
+
+* 矩阵合同<<MK95>>
+
+定义 $\{A,B\}\subset M_{n\times n}(K)$ 为 $n$ 阶方阵，若存在[[MK28][可逆]]矩阵 $P\in M_{n\times n}(K)$ 满足 $P^{T}AP=B$
+
+则称矩阵 $A$ 与矩阵 $B$ 合同，记作 $A\simeq B$
+
+** 性质1
+
+任意 $\{A,B\}\subset M_{n\times n}(K)$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶方阵且 $A\simeq B$ 则有 $rank(A)=rank(B)$
+
+*** 证明
+
+根据[[MK96][性质]]可得 $\rank(P^TAP)=rank(P^TA)=\rank(A)$ ，又由于[[MK95][合同]]故存在[[MK28][可逆]]矩阵 $P\in M_{n\times n}(K)$ 满足 $P^{T}AP=B$
+
+故有 $rank(A)=rank(P^TAP)=rank(B)$
+
+** 性质2
+
+[[MK95][合同]]是[[~/文档/note/离散数学/Disc_Math.org::MK176][等价关系]]
+
+*** 正明
+
+**** [[~/文档/note/离散数学/Disc_Math.org::MK168][自反性]]
+
+显然 $A=I^TAI$ 其中 $I$ 是与 $A$ 同阶的单位矩阵
+
+**** [[~/文档/note/离散数学/Disc_Math.org::MK170][对称性]]
+
+若 $A=P^TBP$ 且 $P$ [[MK28][可逆]]，则根据[[MK97][定理5]]可得 $\left(P^T\right)^{-1}=\left(P^{-1}\right)^T$ 即 $\left(P^{-1}\right)^TAP^{-1}=\left(P^T\right)^{-1}AP^{-1}=\left(P^T\right)^{-1}P^TBPP^{-1}=B$ 
+
+**** [[~/文档/note/离散数学/Disc_Math.org::MK172][传递性]]
+
+若 $A=P^TBP,B=Q^TCQ$ 即有 $A=\left(P^TQ^T\right)C(QP)$ 根据[[MK7][转置]]可得 $(QP)^T=P^TQ^T$ 即 $A=(QP)^TC(QP)$
+
+

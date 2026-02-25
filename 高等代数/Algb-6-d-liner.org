@@ -1,0 +1,147 @@
+#+LATEX_CLASS: ctexart
+
+#+TITLE: 双线性函数
+
+current mark: 4
+
+* 双线性函数<<MK1>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，若有[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f:V\times V\to K$ 满足对于任意 $\{a,b,c\}\subset V,\{k_1,k_2\}\subset K$ 均有：
+
+（1） $f(k_1\cdot a\oplus k_2\cdot b,c)=k_1\times f(a,c)+k_2\times f(b,c)$
+
+（2） $f(a,k_1\cdot b\oplus k_2\cdot c)=k_1\times f(a,b)+k_2\times f(a,c)$
+
+其中 $\times$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]]乘法 $\mathfrak{g}(f_\times)$ ， $+$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]]加法 $\mathfrak{g}(f_+)$ 。则称 $f$ 为双线性函数。
+
+* 度量矩阵<<MK2>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，任意[[MK1][双线性函数]] $f:V\times V\to K$ 以及 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
+
+称 $M_d=[f(a_i,a_j)]_{n\times n}$ 为 $f$ 关于 $\{a_1,...,a_n\}$ 在 $\mathcal{V}$ 上的度量矩阵
+
+** 性质
+
+*** 性质1<<MK3>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，任意[[MK1][双线性函数]] $f:V\times V\to K$ 以及 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
+
+若对于任意 $\{\alpha,\beta\}\subset V$ 显然有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 均有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 其中 $M_d$ 为[[MK2][度量矩阵]]
+
+**** 证明
+
+根据[[MK1][定义]]可得：
+
+\begin{aligned}
+f(\alpha,\beta)=&f\left(\sum_{i=1}^nx_ia_i,\sum_{j=1}^ny_ja_j\right)\\
+=&\sum_{i=1}^n\left(\sum_{j=1}^n\left(x_if(a_i,a_j)y_j\right)\right)\\
+=&\sum_{j=1}^n\left(\left(\sum_{i=1}^nx_if(a_i,a_j)\right)y_j\right)\\
+=&\left[\begin{matrix}\sum_{i=1}^nx_if(a_i,a_1)&\sum_{i=1}^nx_if(a_i,a_2)&...&\sum_{i=1}^nx_if(a_i,a_n)\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\\
+=&\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]\left[\begin{matrix}f(a_1,a_1)&f(a_1,a_2)&...&f(a_1,a_n)\\f(a_2,a_1)&f(a_2,a_2)&...&f(a_2,a_n)\\...&...&...&...\\f(a_n,a_1)&f(a_n,a_2)&...&f(a_n,a_n)\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\\
+\end{aligned}
+
+*** 性质2<<MK4>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，任取 $n$ 阶矩阵 $A =[a_{ij}]_{n\times n}$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
+
+则对于任意 $\{\alpha,\beta\}\subset V$ 显然有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 定义 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 则：
+
+（1） $f$ 是[[MK1][双线性函数]]
+
+（2） $A$ 是 $f$ 在 $\mathcal{V}$ 上关于 $\{a_1,...,a_n\}$ 的[[MK2][度量矩阵]]
+
+**** 证明
+
+***** 证明（1）
+
+对于任意 $\{a,b,c\}\subset V,\{k_1,k_2\}\subset K$ 设 $a=\sum_{i=1}^nx_ia_i,b=\sum_{i=1}^ny_ia_i,c=\sum_{i=1}^nz_ia_i$ 显然 $k_1a+k_2b=\sum_{i=1}^n(k_1x_i+k_2y_i)a_i$
+
+即 $f(k_1a+k_2b,c)=\left[\begin{matrix}(k_1x_1+k_2y_1)&(k_1x_2+k_2y_2)&...&(k_1x_n+k_2y_n)\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
+
+则根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK2][矩阵加法]]、[[~/文档/note/高等代数/Algb-3-Matrix.org::MK3][矩阵数乘]]以及[[~/文档/note/高等代数/Algb-3-Matrix.org::MK54][乘法分配]]易证：
+
+\begin{aligned}
+f(k_1a+k_2b,c)=&\left[\begin{matrix}(k_1x_1+k_2y_1)&(k_1x_2+k_2y_2)&...&(k_1x_n+k_2y_n)\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\\
+=&\left(k_1\left[\begin{matrix}(x_1&x_2&...&x_n\end{matrix}\right]+k_2\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right]\right)A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\\
+=&k_1\left(\left[\begin{matrix}(x_1&x_2&...&x_n\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\right)+k_2\left(\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\right)\\
+=&k_1f(a,c)+k_2f(b,c)
+\end{aligned}
+
+同理可证 $f(a,k_1b+k_2c)=k_1f(a,b)+k_2f(a,c)$ 即为[[MK1][双线性函数]]
+
+***** 证明（2）
+
+设[[MK2][度量矩阵]]为 $M_d$ 则根据[[MK3][性质1]]可得 $f(a_i,a_j)=\left[\begin{matrix}x(1)&x(2)&...&x(n)\end{matrix}\right]M_d\left[\begin{matrix}y(1)\\y(2)\\...\\y(n)\end{matrix}\right]$ 其中 $x(l)=\begin{cases}1&l=i\\0&l\ne i\end{cases},y(l)=\begin{cases}1&l=j\\0&l\ne j\end{cases}$
+
+又根据上一步证明可得 $f(a_i,a_j)=\left[\begin{matrix}x(1)&x(2)&...&x(n)\end{matrix}\right]A\left[\begin{matrix}y(1)\\y(2)\\...\\y(n)\end{matrix}\right]=a_{ij}$ 即 $A$ 是 $f$ 在 $\mathcal{V}$ 上关于 $\{a_1,...,a_n\}$ 的[[MK2][度量矩阵]]
+
+** 定理
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，则 $n$ 阶矩阵 $M_A,M_B$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK95][合同]]的充要条件是
+
+存在[[MK1][双线性函数]] $f:V\times V\to K$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $A =\{a_1,...,a_n\},B =\{b_1,...,b_2\}$
+
+满足 $f$ 在 $\mathcal{V}$ 上关于 $A$ 的[[MK2][度量矩阵]] $M_A$ 且 $f$ 在 $\mathcal{V}$ 上关于 $B$ 的[[MK2][度量矩阵]] $M_B$ 
+
+*** 证明
+
+任意 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $A =\{a_1,...,a_n\},B =\{b_1,...,b_2\}$ 根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK46][定理2]]可得存在 $P$ 满足 $A=BP$ 即 $A=B\left[\begin{matrix}p_{11}&p_{12}&...&p_{1n}\\p_{21}&p_{22}&...&p_{2n}\\...&...&...&...\\p_{n1}&p_{n2}&...&p_{nn}\end{matrix}\right]$
+
+**** 必要
+
+若存在存在[[MK1][双线性函数]] $f:V\times V\to K$ 满足：
+
+（1） $f$ 在 $\mathcal{V}$ 上关于 $A$ 的[[MK2][度量矩阵]] $M_A$
+
+（2） $f$ 在 $\mathcal{V}$ 上关于 $B$ 的[[MK2][度量矩阵]] $M_B$
+
+定义 $P_i=\left[\begin{matrix}p_{1i}\\p_{2i}\\...\\p_{ni}\end{matrix}\right]$ 则显然 $a_i=BP_i$ 则根据[[MK3][性质1]]可得 $f(a_i,a_j)=P_i^TM_BP_j$
+
+则根据[[MK2][度量矩阵]]定义以及[[~/文档/note/高等代数/Algb-3-Matrix.org::MK41][分块矩阵乘法]]易证
+
+\begin{aligned}
+M_A=&\left[\begin{matrix}f(a_1,a_1)&...&f(a_1,a_n)\\...&...&...\\f(a_n,a_1)&...&f(a_n,a_n)\end{matrix}\right]\\
+=&\left[\begin{matrix}P_1^TM_BP_1&...&P_1^TM_BP_n\\...&...&...\\P_n^TM_BP_1&...&P_n^TM_BP_n\end{matrix}\right]\\
+=&\left[\begin{matrix}P^T_1\\...\\P^T_n\end{matrix}\right]A\left[\begin{matrix}P_1&...&P_n\end{matrix}\right]\\
+=&P^TM_BP
+\end{aligned}
+
+**** 充分
+
+若 $n$ 阶矩阵 $M_A,M_B$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK95][合同]]，则存在[[~/文档/note/高等代数/Algb-3-Matrix.org::MK28][可逆]]矩阵 $P$ 满足 $M_A=P^TM_BP$ 任取 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $A =\{a_1,...,a_n\}$
+
+对于任意 $\{\alpha,\beta\}\subset V$ 显然有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 定义 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
+
+根据[[MK4][性质2]]可得 $f$ 是[[MK1][双线性函数]]且 $M_A$ 是 $f$ 在 $\mathcal{V}$ 上关于 $\{a_1,...,a_n\}$ 的[[MK2][度量矩阵]]
+
+进一步有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]P^TM_BP\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 定义：
+
+（1） $\left[\begin{matrix}x'_1&x'_2&...&x'_n\end{matrix}\right]=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]P^T$
+
+（2） $\left[\begin{matrix}y'_1&y'_2&...&y'_n\end{matrix}\right]^T=P\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right]^T$
+
+则有 $f(\alpha,\beta)=\left[\begin{matrix}x'_1&x'_2&...&x'_n\end{matrix}\right]M_B\left[\begin{matrix}y'_1\\y'_2\\...\\y'_n\end{matrix}\right]$ 由于 $P$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK28][可逆]]，则可定义 $B=AP^{-1}$ 则有 $A=BP$
+
+又由于 $P$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK28][可逆]]则根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK160][推论]]可得 $B$ 亦为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK7][转置性质]]有
+
+\begin{aligned}
+\alpha=&\sum_{i=1}^nx_ia_i=\left[\begin{matrix}x_1&x_1&...&x_n\end{matrix}\right]A^T=\left[\begin{matrix}x_1&x_1&...&x_n\end{matrix}\right](BP)^T\\
+=&\left[\begin{matrix}x_1&x_1&...&x_n\end{matrix}\right]P^TB^T\\
+=&\left[\begin{matrix}x'_1&x'_1&...&x'_n\end{matrix}\right]B^T\\
+=&\sum_{i=1}^nx'_ib_i
+\end{aligned}
+
+同理
+
+\begin{aligned}
+\beta=&\sum_{i=1}^ny_ia_i=\left[\begin{matrix}y_1&y_1&...&y_n\end{matrix}\right]A^T=\left[\begin{matrix}y_1&y_1&...&y_n\end{matrix}\right](BP)^T\\
+=&\left[\begin{matrix}y_1&y_1&...&y_n\end{matrix}\right]P^TB^T\\
+=&\left(P\left[\begin{matrix}y_1&y_1&...&y_n\end{matrix}\right]^T\right)^TB^T\\
+=&\left(\left[\begin{matrix}y'_1&y'_1&...&y'_n\end{matrix}\right]^T\right)^TB^T\\
+=&\left[\begin{matrix}y'_1&y'_1&...&y'_n\end{matrix}\right]B^T\\
+=&\sum_{i=1}^ny'_ib_i
+\end{aligned}
+
+即对于任意 $\{\alpha,\beta\}\subset V$ 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\{b_1,...,b_n\}$ 满足 $\alpha=\sum_{i=1}^nx'_ib_i,\beta=\sum_{i=1}^ny'_ib_i$ 且 $f(\alpha,\beta)=\left[\begin{matrix}x'_1&x'_2&...&x'_n\end{matrix}\right]M_B\left[\begin{matrix}y'_1\\y'_2\\...\\y'_n\end{matrix}\right]$
+
+则根据[[MK3][性质1]]可得 $M_B$ 为 $f$ 关于 $\{b_1,...,b_n\}$ 在 $\mathcal{V}$ 上的[[MK2][度量矩阵]]
