@@ -2,7 +2,7 @@
 
 #+TITLE: 双线性函数
 
-current mark: 4
+current mark: 5
 
 * 双线性函数<<MK1>>
 
@@ -13,6 +13,22 @@ current mark: 4
 （2） $f(a,k_1\cdot b\oplus k_2\cdot c)=k_1\times f(a,b)+k_2\times f(a,c)$
 
 其中 $\times$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]]乘法 $\mathfrak{g}(f_\times)$ ， $+$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]]加法 $\mathfrak{g}(f_+)$ 。则称 $f$ 为双线性函数。
+
+** 性质
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]，则有：
+
+（1） $\forall \beta\in V\to f(\vec{0},\beta)=\mathfrak{g}(c_0)$
+
+（2） $\forall \alpha\in V\to f(\alpha,\vec{0})=\mathfrak{g}(c_0)$
+
+其中 $\vec{0}$ 为 $\mathcal{V}$ 中的零元
+
+*** 证明
+
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK5][性质]]可得 $\vec{0}=\mathfrak{g}(c_0)\cdot\vec{0}$ 则根据[[MK1][定义]]可得 $f(\vec{0},\beta)=f(\mathfrak{g}(c_0)\cdot\vec{0},\beta)=\mathfrak{g}(f_\times)\left(\mathfrak{g}(c_0),f(\vec{0},\beta)\right)$
+
+根据[[~/文档/note/抽象代数/cxds.org::MK356][性质4]]可得 $\mathfrak{g}(f_\times)\left(\mathfrak{g}(c_0),f(\vec{0},\beta)\right)=\mathfrak{g}(c_0)$
 
 * 度量矩阵<<MK2>>
 
@@ -26,7 +42,7 @@ current mark: 4
 
 设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，任意[[MK1][双线性函数]] $f:V\times V\to K$ 以及 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
 
-若对于任意 $\{\alpha,\beta\}\subset V$ 显然有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 均有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 其中 $M_d$ 为[[MK2][度量矩阵]]
+若对于任意 $\{\alpha,\beta\}\subset V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]] $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 均有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 其中 $M_d$ 为[[MK2][度量矩阵]]
 
 **** 证明
 
@@ -145,3 +161,63 @@ M_A=&\left[\begin{matrix}f(a_1,a_1)&...&f(a_1,a_n)\\...&...&...\\f(a_n,a_1)&...&
 即对于任意 $\{\alpha,\beta\}\subset V$ 存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $B=\{b_1,...,b_n\}$ 满足 $\alpha=\sum_{i=1}^nx'_ib_i,\beta=\sum_{i=1}^ny'_ib_i$ 且 $f(\alpha,\beta)=\left[\begin{matrix}x'_1&x'_2&...&x'_n\end{matrix}\right]M_B\left[\begin{matrix}y'_1\\y'_2\\...\\y'_n\end{matrix}\right]$
 
 则根据[[MK3][性质1]]可得 $M_B$ 为 $f$ 关于 $\{b_1,...,b_n\}$ 在 $\mathcal{V}$ 上的[[MK2][度量矩阵]]
+
+* 根<<MK5>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，对于任意[[MK1][双线性函数]] $f$ 若存在 $a\in V$ 满足对于任意 $b\in V$ 有：
+
+（1） $f(a,b)=\mathfrak{g}(c_0)$ 则称 $a$ 是 $f$ 的左根
+
+（2） $f(b,a)=\mathfrak{g}(c_0)$ 则称 $a$ 是 $f$ 的右根
+
+当 $f$ 的左根和有根有且仅有零向量，即 $\left\{a\big|\forall b\in V\to f(a,b)=0\right\}=\left\{a\big|\forall b\in V\to f(b,a)=0\right\}=\{\vec{0}\}$
+
+则称 $f$ 是非退化函数
+
+** 定理
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]且 $\dim(\mathcal{V})=n$ ，对于任意[[MK1][双线性函数]] $f$ 有
+
+（1） $\vec{0}$ 是唯一[[MK5][右根]]
+
+（2） $\vec{0}$ 是唯一[[MK5][左根]]
+
+（3） $f$ [[MK5][非退化]]
+
+的充要条件均为任意 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]下 $f$ 的[[MK2][度量矩阵]]均满[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK87][秩]]
+
+*** 证明
+
+**** 证明（1）是充要条件
+
+任取 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ ，则对于任意 $\{\alpha,\beta\}\subset V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]]有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$
+
+进一步根据[[MK3][性质1]]可得 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 若 $\beta$ 是 $f$ 的[[MK5][右根]],则当且仅当 $M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=\left[\begin{matrix}\mathfrak{g}(c_0)\\\mathfrak{g}(c_0)\\...\\\mathfrak{g}(c_0)\end{matrix}\right]$ 时
+
+对于任意 $\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]$ 均有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]\left(M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\right)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]\left[\begin{matrix}\mathfrak{g}(c_0)\\\mathfrak{g}(c_0)\\...\\\mathfrak{g}(c_0)\end{matrix}\right]=\mathfrak{g}(c_0)$
+
+显然 $M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=\left[\begin{matrix}\mathfrak{g}(c_0)\\\mathfrak{g}(c_0)\\...\\\mathfrak{g}(c_0)\end{matrix}\right]$ 构成[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK28][其次线性方程组]]，根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK113][解空间]]定义 $\mathcal{W}=\left<W,K,+,\cdot\right>,W\subset K^n$ 为其[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK113][解空间]]
+
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK120][性质]]以及[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK103][定理1]]易证 $\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>$ 为 $\mathcal{W}$ 的零向量，即 $\beta$ 是 $f$ 唯一[[MK5][右根]]的充要条件为 $W=\left{\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>\right\}$ 
+
+又根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维数]]可得 $W=\left{\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>\right\}$ 的充要条件是 $\dim(\mathcal{W})=0$ 结合[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK110][解空间维数]]可得 $\dim(\mathcal{W})=n-rank(M_d)$
+
+即有 $\dim(\mathcal{W})=0$ 的充要条件是 $rank(M_d)=n$ 即满[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK87][秩]]
+
+**** 证明（2）是充要条件
+
+任取 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ ，则对于任意 $\{\alpha,\beta\}\subset V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]]有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$
+
+进一步根据[[MK3][性质1]]可得 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 若 $\alpha$ 是 $f$ 的[[MK5][左根]]
+
+则当且仅当 $\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d=\left[\begin{matrix}\mathfrak{g}(c_0)&\mathfrak{g}(c_0)&...&\mathfrak{g}(c_0)\end{matrix}\right]$ 对于任意 $\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 均有 $f(\alpha,\beta)\mathfrak{g}(c_0)$
+
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK7][转置]]充要条件为 $M_d^T\left[\begin{matrix}x_1\\x_2\\...\\x_n\end{matrix}\right]=\left[\begin{matrix}\mathfrak{g}(c_0)\\\mathfrak{g}(c_0)\\...\\\mathfrak{g}(c_0)\end{matrix}\right]$ 则根据上一步同理可证充要条件为 $rank\left(M_d^T\right)=n$
+
+又根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK56][行列秩关系]]易证 $rank\left(M_d^T\right)=rank\left(M_d\right)$
+
+**** 证明（3）是充要条件
+
+结合上两步证明即得
+
+

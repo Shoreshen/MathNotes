@@ -1,4 +1,4 @@
-#+LATEX_HEADER:
+#+LATEX_HEADER: ctexart
 
 #+TITLE: 抽象代数
 
@@ -6653,8 +6653,4 @@ $a_i\in M$ 均有 $\mathcal{M}\vDash(f_+(x_i),x_0)$
 综上所述，对于任意素数 $p$ 均有 $T_{\test{ACF}_p}\vdash\varphi$ ，则根据[[MK516][定理9]]可得 $\mathcal{C}\vDash\varphi$
 
 又根据上一步证明中 $\mathcal{C}\vDash\varphi$ 的阐述可得若 $P$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射]]，可得 $P$ 是[[~/文档/note/离散数学/lssx.org::MK179][满射]]
-
-
-
-
 
