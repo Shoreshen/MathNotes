@@ -2,7 +2,7 @@
 
 #+TITLE: 抽象代数
 
-currnet mark: 531
+currnet mark: 532
 
 free mark:
 
@@ -5642,6 +5642,40 @@ e\left(\frac{p_1}{q_1}\times\frac{p_2}{q_2}\right)=&e\left(\frac{p_1p_2}{q_1q_2}
 又根据[[MK440][性质15]]可得 $a\times(-a)=-(a\times a)<0$ 再根据[[MK528][性质2]]可得 $0<a\times a$ 
 
 故无论那种情况均有 $0<a\times a$ 根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]有 $\mathcal{M}\vDash(\forall x_1((\lnot(x_1\hat{=}c_0))\to p_<(c_0,f_\times(x_1,x_1))))$
+
+**** 性质6
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK526][有序域]]
+
+则 $\mathcal{M}\vDash(\forall x_1(\forall x_2(p_<(f_\times(\tau_2,f_\times(x_1,x_2)),f_+(f_\times(x_1,x_2),f_\times(x_2,x_2)))\lor((f_\times(\tau_2,f_\times(x_1,x_2))\hat{=}f_+(f_\times(x_1,x_2),f_\times(x_2,x_2)))))))$
+
+***** 证明
+
+定义 $\times,<,+,-,0,1$ 分别代表 $I(f_\times),I(p_<),I(f_+),I(f_-),I(c_0),I(c_1)$ 定义 $x\leq y$ 为 $(x<y)\lor(x=y)$
+
+则根据[[MK531][性质5]]对于任意 $\{a,b\}\subset M$ 均有 $0\leq(a+(-b))\times(a+(-b))$
+
+则根据[[MK527][性质1]]中加法与 $<,=$ 以及运算法则，结合[[MK440][性质15]]易证
+
+\begin{aligned}
+0&\leq(a+b)\times(a+(-b))\\
+0&\leq a\times a+(-(2\times(a\times b)))+b\times b\\
+2\times(a\times b)&\leq a\times a+b\times b
+\end{aligned}
+
+**** 性质7<<MK532>>
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK526][有序域]]
+
+则 $\mathcal{M}\vDash(\forall x_1(\forall x_2( (p_<(x_1,x_2)\land p_<(c_0,x_1)\land p_<(c_0,x_2)) \to p_<(f_\times(x_1,x_1),f_\times(x_2,x_2)) )))$
+
+***** 证明
+
+定义 $\times,<,+,-,0,1$ 分别代表 $I(f_\times),I(p_<),I(f_+),I(f_-),I(c_0),I(c_1)$
+
+则对于任意 $\{a,b\}\subset M$ 若有 $a<b,0<a,0<b$ 则根据[[MK527][性质1]]乘法相容 $a\times a<b\times a,a\times b<b\times b$
+
+则根据[[MK527][性质1]]的乘法交换以及传递性有 $a\times a<b\times b$
 
 ** 代数封闭域<<MK390>>
 

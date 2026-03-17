@@ -2,7 +2,7 @@
 
 #+TITLE: 双线性函数
 
-current mark: 16
+current mark: 17
 
 * 双线性函数<<MK1>>
 
@@ -89,7 +89,7 @@ f(\alpha,\beta)=&[f(\alpha,\beta)]^T=\left(\left[\begin{matrix}x_1&x_2&...&x_n\e
 
 ** 性质
 
-*** 性质1
+*** 性质1<<MK17>>
 
 设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]，则有：
 
@@ -130,6 +130,75 @@ f(\alpha,\beta)=&[f(\alpha,\beta)]^T=\left(\left[\begin{matrix}x_1&x_2&...&x_n\e
 显然$f(a,b)=\sum_{i=1}^nx_iy_i=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]I_n\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
 
 根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK99][性质]]可得[[~/文档/note/高等代数/Algb-3-Matrix.org::MK4][单位矩阵]] $I_n$ 是[[~/文档/note/高等代数/Algb-3-Matrix.org::MK98][正定矩阵]]，则根据[[MK16][性质]]可得 $f$ 具有[[MK14][正定性]]
+
+*** 性质4（Cauchy-Schwarz不等式）
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上具有[[MK6][对称性]]以及[[MK14][正定性]]的[[MK1][双线性函数]]
+
+则对于任意 $\{a,b\}\subset V$ 均有：
+
+（1） $\left<\mathfrak{g}(f_\times)(f(a, b),f(a, b)),\mathfrak{g}(f_\times)(f(a,b),f(a,b))\right>\in\mathfrak{g}(p_<)$ 或 $\mathfrak{g}(f_\times)(f(a, b),f(a, b))=\mathfrak{g}(f_\times)(f(a,b),f(a,b))$
+
+（2） $\mathfrak{g}(f_\times)(f(a, b),f(a, b))=\mathfrak{g}(f_\times)(f(a,b),f(a,b))$ 成立的充要条件是 $a,b$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]
+
+**** 证明
+
+定义 $+,\times,-,0,1,<$ 分别为 $\mathfrak{g}(f_+),\mathfrak{g}(f_\times),\mathfrak{g}(f_-),\mathfrak{g}(c_0),\mathfrak{g}(c_1),\mathfrak{g}(p_<)$
+
+则有 $f(ka\oplus(-b),ka\oplus(-b))=f(ka,ka)+f(ka,-b)+f(-b,ka)+f(-b,-b)$ 其中 $k\in K$
+
+根据[[~/文档/note/抽象代数/cxds.org::MK440][性质15]]易证 $-b=(-1)\times b$ 结合[[MK6][对称型]]有 $f(ka,-b)=f(-b,ka)=-f(ka,b)$
+
+根据[[MK1][双线性]] $f(ka-b,ka-b)=(k\times k)\times f(a,a)-(2\times k)\times f(a,b)+f(b,b)$
+
+***** 证明（1）
+
+结合[[~/文档/note/抽象代数/cxds.org::MK531][性质5]]可得若 $0<f(ka-b,ka-b)$ 或 $0=f(ka-b,ka-b)$
+
+故有 $0<(k\times k)f(a,a)-(2\times k)f(a,b)+f(b,b)$ 或 $0=(k\times k)f(a,a)-(2\times k)f(a,b)+f(b,b)$
+
+即 $0\leq (k\times k)\times f(a,a)-(2\times k)\times f(a,b)+f(b,b)$
+
+若 $f(a,a)=0$ 根据[[MK14][正定型]]可得 $a=\vec{0}$ 则根据[[MK17][性质1]]可得 $f(a,b)=0$ 即有 $f(a\cdot b,a\cdot b)=f(\vec{0},\vec{0})=f(a,b)=0$
+
+故显然有 $f(a\cdot b,a\cdot b)=f(a,b)\times f(a,b)=0$
+
+若 $f(a,a)\ne0$ 则根据[[~/文档/note/抽象代数/cxds.org::MK526][域]]定义存在乘法幺元，则定义 $k=\frac{f(a,b)}{f(a,a)}$ 其中 $\frac{1}{f(a,a)}$ 是 $f(a,a)$ 的乘法幺元
+
+则有 $0\leq \frac{f(a,b)\times f(a,b)}{f(a,a)}-2\times\frac{f(a,b)\times f(a,b)}{f(a,a)}+f(b,b)$ 整理得 $\frac{f(a,b)\times f(a,b)}{f(a,a)}\leq f(b,b)$
+
+由[[MK14][正定型]]可得 $0<f(a,a)$ 则根据[[~/文档/note/抽象代数/cxds.org::MK527][性质1]]中乘法相容易证 $f(a,b)\times f(a,b)\leq f(a,a)\times f(b,b)$
+
+***** 证明（2）
+
+****** 充分
+
+若 $a,b$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]则存在不为 $0$ 的 $k\in K$ 满足 $a=kb$ 则有 $f(a,b)\times f(a,b)=k\times f(b,b)\times k\times f(b,b)$
+
+根据[[MK1][双线性]]整理得 $f(a,b)\times f(a,b)=f(kb,kb)\times f(b,b)=f(a,a)\times f(b,b)$
+
+结合 $a,b$ 要么[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]，要么[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]即可证得
+
+****** 必要
+
+若 $a,b$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]，假设 $f(a,b)\times f(a,b)=f(a,a)\times f(b,b)$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK102][性质3]]可得 $a\ne\vec{0}$ 由[[MK6][对称性]]易证 $b\ne\vec{0}$
+
+则根据[[~/文档/note/抽象代数/cxds.org::MK526][域]]定义存在乘法幺元，故有 $\frac{f(a,b)\times f(a,b)}{f(a,a)}=f(b,b)$ 则定义 $k=\frac{f(a,b)}{f(a,a)}$ 可得：
+
+\begin{aligned}
+f(ka-b,ka-b)=&(k\times k)f(a,a)-(2\times k)f(a,b)+f(b,b)\\
+=&\left(\frac{f(a,b)}{f(a,a)}\times \frac{f(a,b)}{f(a,a)}\right)f(a,a)-\left(2\times \frac{f(a,b)}{f(a,a)}\right)f(a,b)+f(b,b)\\
+=&\frac{f(a,b)\times f(a,b)}{f(a,a)}-\left(2\times \frac{f(a,b)\times f(a,b)}{f(a,a)}\right)+f(b,b)\\
+=&\left(-\frac{f(a,b)\times f(a,b)}{f(a,a)}\right)+f(b,b)\\
+=&(-f(b,b))+f(b,b)\\
+=&0
+\end{aligned}
+
+则根据[[MK14][正定性]]可得 $ka-b=\vec{0}$ 若 $k=0$ 则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK5][零元素性质]]可得 $ka-b=-b=\vec{0}$ 即 $(-1)\cdot b=\vec{0}$
+
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK7][性质]]可得 $b=\vec{0}$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK102][性质3]]有 $a,b$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]，若 $k\ne 0$ 则直接有 $a,b$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]
+
+即与假设矛盾，故假设不成立。结合（1）可得若 $a,b$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]则 $f(a,b)\times f(a,b)<f(a,a)\times f(b,b)$ 
 
 ** 定理
 
