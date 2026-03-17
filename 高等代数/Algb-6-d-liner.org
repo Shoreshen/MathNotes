@@ -2,7 +2,7 @@
 
 #+TITLE: 双线性函数
 
-current mark: 5
+current mark: 16
 
 * 双线性函数<<MK1>>
 
@@ -14,7 +14,82 @@ current mark: 5
 
 其中 $\times$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]]乘法 $\mathfrak{g}(f_\times)$ ， $+$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]]加法 $\mathfrak{g}(f_+)$ 。则称 $f$ 为双线性函数。
 
+** 相关定义
+
+*** 对称性<<MK6>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]，若对于任意 $\{a,b\}\subset V$ 均有：
+
+（1） $f(a,b)=f(b,a)$ 则 $f$ 具有对称性
+
+（2） $f(a,b)=-f(b,a)$ 则 $f$ 具有斜对称性
+
+**** 定理<<MK10>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ， $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]，其[[MK2][度量矩阵]] $M_f$ 则有
+
+（1） $f$ 有[[MK6][对称性]]的充要条件是 $(M_f)^T=M_f$ ，即 $M_f$ 是[[~/文档/note/高等代数/Algb-3-Matrix.org::MK17][对称矩阵]]
+
+（2） $f$ 有[[MK6][斜对称性]]的充要条件是 $(M_f)^T=-M_f$
+
+***** 证明
+
+仅证（1），（2）同理可证。设 $M_f=[m_{ij}]_{n\times n}$ ，任取 $\{a_1,...,a_n\}$ 为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]]对于任意 $\{\alpha,\beta\}\subset V$ 均存在 $\{x_1,...,x_n\},\{y_1,...,y_n\}$ 满足 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 
+
+****** 充分
+
+若 $f$ 有[[MK6][对称性]]则 $f(\alpha,\beta)=f(\beta,\alpha)$ ，则根据[[MK3][性质1]]有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_f\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
+
+以及 $f(\beta,\alpha)=\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right]M_f\left[\begin{matrix}x_1\\x_2\\...\\x_n\end{matrix}\right]$ 由于 $\alpha,\beta$ 任意性可取 $\alpha=a_i,\beta=a_j$ 则有 $x_i=y_j=1$ 其他 $x_p=0,p\ne i\land p\ne j$
+
+则显然有 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_f\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=m_{ij}$ 以及 $f(\beta,\alpha)=\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right]M_f\left[\begin{matrix}x_1\\x_2\\...\\x_n\end{matrix}\right]=m_{ji}$
+
+根据[[MK6][对称性]]可得 $m_{ij}=f(\alpha,\beta)=f(\beta,\alpha)=m_{ji}$ 即 $(M_f)^T=M_f$
+
+****** 必要
+
+若有 $(M_f)^T=M_f$ 则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK7][转置]]有：
+
+\begin{aligned}
+f(\alpha,\beta)=&[f(\alpha,\beta)]^T=\left(\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_f\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]\right)^T
+=&\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right](M_f)^T\left[\begin{matrix}x_1\\x_2\\...\\x_n\end{matrix}\right]\\
+=&\left[\begin{matrix}y_1&y_2&...&y_n\end{matrix}\right]M_f\left[\begin{matrix}x_1\\x_2\\...\\x_n\end{matrix}\right]\\
+=&f(\beta,\alpha)
+\end{aligned}
+
+*** 正定性<<MK14>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]，若对于任意 $a\in V$ 均有
+
+（1） 若 $a\ne\vec{0}$ 则有 $\mathfrak{g}(p_<)(\mathfrak{g}(c_0),f(a,b))$
+
+（2） 若 $a=\vec{0}$ 则有 $\mathfrak{g}(c_0)=f(a,b)$
+
+则称 $f$ 是正定的
+
+**** 性质<<MK16>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]
+
+则 $f$ 是[[MK14][正定的]]的充要条件是 $f$ 的[[MK2][度量矩阵]]是[[~/文档/note/高等代数/Algb-3-Matrix.org::MK98][正定矩阵]]
+
+***** 证明
+
+根据[[MK3][性质1]]可得任取 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ 对于任意 $\alpha\in V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]] $\alpha=\sum_{i=1}^nx_ia_i$
+
+有 $f(\alpha,\alpha)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]M_d\left[\begin{matrix}x_1\\x_2\\...\\x_n\end{matrix}\right]=XM_dX^T$ 其中 $M_d$ 是[[MK2][度量矩阵]]，则 $f$ [[MK14][正定]]即：
+
+（1） 若 $a\ne\vec{0}$ 则有 $\mathfrak{g}(p_<)\left(\mathfrak{g}(c_0),XMX^T\right)$
+
+（2） 若 $a=\vec{0}$ 则有 $\mathfrak{g}(c_0)=f(a,b)=XM_dX^T$
+
+即同[[~/文档/note/高等代数/Algb-3-Matrix.org::MK98][正定矩阵]]定义
+
 ** 性质
+
+*** 性质1
 
 设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]，则有：
 
@@ -24,11 +99,201 @@ current mark: 5
 
 其中 $\vec{0}$ 为 $\mathcal{V}$ 中的零元
 
-*** 证明
+**** 证明
 
 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK5][性质]]可得 $\vec{0}=\mathfrak{g}(c_0)\cdot\vec{0}$ 则根据[[MK1][定义]]可得 $f(\vec{0},\beta)=f(\mathfrak{g}(c_0)\cdot\vec{0},\beta)=\mathfrak{g}(f_\times)\left(\mathfrak{g}(c_0),f(\vec{0},\beta)\right)$
 
 根据[[~/文档/note/抽象代数/cxds.org::MK356][性质4]]可得 $\mathfrak{g}(f_\times)\left(\mathfrak{g}(c_0),f(\vec{0},\beta)\right)=\mathfrak{g}(c_0)$
+
+*** 性质2<<MK7>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]
+
+任意 $\{a,b\}\subset V$ 均有 $f(a,\vec{0})=f(\vec{0},b)=\mathfrak{g}(c_0)$
+
+**** 证明
+
+任意 $\{a,b\}\subset V$ 有 $f(a,b)=f(\vec{0}+a,b)=f(\vec{0},b)+f(a,b)$ 即有 $f(\vec{0},b)=\mathfrak{g}(c_0)$
+
+同理可证 $f(a,\vec{0})=\mathfrak{g}(c_0)$
+
+*** 性质3<<MK15>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，任取 $\mathcal{V}$ 的任意[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
+
+任意 $\{a,b\}\subset V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]] $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ ，则定义 $f(a,b)=\sum_{i=1}^nx_iy_i$ 
+
+则 $f$ 是具有[[MK6][对称性]]以及[[MK14][正定型]]的[[MK1][双线性函数]]
+
+**** 证明
+
+显然$f(a,b)=\sum_{i=1}^nx_iy_i=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]I_n\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
+
+根据[[~/文档/note/高等代数/Algb-3-Matrix.org::MK99][性质]]可得[[~/文档/note/高等代数/Algb-3-Matrix.org::MK4][单位矩阵]] $I_n$ 是[[~/文档/note/高等代数/Algb-3-Matrix.org::MK98][正定矩阵]]，则根据[[MK16][性质]]可得 $f$ 具有[[MK14][正定性]]
+
+** 定理
+
+*** 定理1<<MK9>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK339][特征]]不为 $2$ 的[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]且 $\dim(\mathcal{V})=n<\infty$ ， $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]且[[MK6][对称]]
+
+则存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ 满足 $f$ 的[[MK2][度量矩阵]] $M_d$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK70][对角矩阵]]
+
+**** 证明
+
+根据以下证明以及数学归纳法可得
+
+***** $n=1$
+
+此时 $M_d$ 为 $1\times 1$ 方阵，即为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK70][对角矩阵]]
+
+***** 归纳假设
+
+对于任意 $n<N$ 均存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ 满足 $f$ 的[[MK2][度量矩阵]] $M_d$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK70][对角矩阵]]
+
+***** $n=N$
+
+若任意 $\{a,b\}\subset V$ 均有 $f(a,b)=\mathfrak{g}(c_0)$ ，即 $f$ 是零函数，则显然 $M_d=[\mathfrak{g}(c_0)]_{n\times n}$ 即为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK70][对角矩阵]]
+
+若 $f$ 不是零函数
+
+****** 存在 $a_1\in V$ 满足 $f(a,a)\ne\mathfrak{g}(c_0)$
+
+假设对于任意 $a\in V$ 均有 $f(a,a)=\mathfrak{g}(c_0)$ 则任意 $\{a,b\}\subset V$ 均有 $f(a+b,a+b)=\mathfrak{g}(c_0)$
+
+由于 $f$ [[MK6][对称]] $f(a,a)+f(b,b)+f(a,b)+f(b,a)=2f(a,b)=\mathfrak{g}(c_0)$
+
+根据[[~/文档/note/抽象代数/cxds.org::MK339][特征]]不为 $2$ 以及[[~/文档/note/抽象代数/cxds.org::MK525][性质5]]易证 $f$ 为零函数，矛盾，故假设不成立。
+
+****** 定义 $A=\{a_1,c_1,...,c_{n-1}\}$ <<MK8>>
+
+根据[[MK7][性质2]]可得 $a_1\ne\vec{0}$ ，则显然 $\{a_1\}$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]，则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK119][命题4]]可得存在 $\{a_1,b_1,...,b_{n-1}\}$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+定义 $c_i=b_i-\frac{f(a_1,b_i)}{f(a_1,a_1)}a_1$ 即有 $A=\{a_1,c_1,...,c_{n-1}\}$
+
+则根据[[MK1][定义]]有 $f(a_1,c_i)=f(a_1,b_i)-\frac{f(a_1,b_i)}{f(a_1,a_1)}f(a_1,a_1)=\mathfrak{g}(c_0)$
+
+根据 $f$ [[MK6][对称]]亦有 $f(a_1,c_i)=f(c_i,a_1)=\mathfrak{g}(c_0)$
+
+****** $A$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+假设 $A$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]，则存在不全为 $\mathfrak{g}(c_0)$ 的 $\{l_1,...,l_n\}$ 满足 $\sum_{i=1}^{n-1}l_ic_i+l_na_1=\mathfrak{g}(c_0)$ 
+
+进一步有 $\sum_{i=1}^{n-1}l_ib_i+\left(l_n-\sum_{i=1}^nk_i\right)a_1=\mathfrak{g}(c_0)$
+
+若 $\left(l_n-\sum_{i=1}^nk_i\right)\ne\mathfrak{g}(c_0)$ 则与 $\{a_1,b_1,...,b_{n-1}\}$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]矛盾
+
+若 $\left(l_n-\sum_{i=1}^nk_i\right)=\mathfrak{g}(c_0)$ 则有 $\sum_{i=1}^{n-1}l_ib_i=\mathfrak{g}(c_0)$ ，由于 $\{a_1,b_1,...,b_{n-1}\}$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]故 $\{b_1,...,b_n\}$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]
+
+即有 $l_i=\mathfrak{g}(c_0),1\leq i\leq n-1$ 故有 $\sum_{i=1}^{n-1}l_ic_i+l_na_1=l_na=\mathfrak{g}(c_0)$
+
+又根据 $\{l_1,...,l_n\}$ 不全为 $\mathfrak{g}(c_0)$ ，上一步中 $a\ne\vec{0}$ 以及[[~/文档/note/抽象代数/cxds.org::MK340][性质2]]可得矛盾。故假设不成立，即 $A$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]
+
+又根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK42][命题2]]可得 $A$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+****** 用归纳假设
+
+根据上一步以及[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK46][生成空间]]可得 $\mathcal{V}'=\left<\text{span}\left(\{c_1,...,c_{n-1}\}\right),K,+,\cdot\right>$ 亦为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]
+
+则根据归纳假设可得存在 $\{a_2,...,a_n\}$ 满足 $f$ 在 $\mathcal{V}'$ 关于 $B$ 的[[MK2][度量矩阵]] $M'_d$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK70][对角矩阵]]
+
+即对于任意 $a_i,a_j$ 满足 $2\leq i<j\leq n$ 均有 $f(a_j,a_i)=f(a_i,a_j)=\mathfrak{g}(c_0)$
+
+定义 $\mathcal{V}''=\left<\text{span}\left(\{a_1\}\right),K,+,\cdot\right>$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK46][生成空间]]可得亦为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，且根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK88][性质1]]可得 $\{a_1\}$ 是 $\mathcal{V}''$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+且 $\{c_1,...,c_{n-1}\}$ 是 $\mathcal{V}'$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK69][性质1]]可得 $\mathcal{V}=\mathcal{V}'\oplus\mathcal{V}''$ ，同样根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK69][性质1]]可得 $\{a_1,...,a_n\}$ 是 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]
+
+****** $f$ 关于 $\{a_1,...,a_n\}$ 的[[MK2][度量矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK33][下三角矩阵]]
+
+由于 $\{c_1,...,c_{n-1}\}$ 以及 $\{a_1,...,a_n\}$ 均为 $\mathcal{V}'$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，则显然有 $a_i=\sum_{j=1}^{n-1}k_{i,j}c_j$
+
+进一步有 $f(a_1,a_i)=f\left(a,\sum_{j=1}^{n-1}k_{i,j}c_j\right)=\sum_{j=1}^{n-1}k_{i,j}f(a_1,c_j)=f(a_i,a_1)$
+
+根据[[MK8][之前证明]]可得 $f(a_1,c_j)=\mathfrak{g}(c_0),1\leq j\leq n-1$ 故可得 $f(a_i,a_j)=\mathfrak{g}(c_0),2\leq j\leq n$
+
+结合[[MK2][定义]]，上一步结论易证 $M_d=[f(a_i,a_j)]_{n\times n}$ 亦为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK70][对角矩阵]]
+
+*** 定理2
+
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK339][特征]]不为 $2$ 的[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]且 $\dim(\mathcal{V})=n<\infty$ ， $f$ 是 $\mathcal{V}$ 上的[[MK1][双线性函数]]且[[MK6][斜对称]]
+
+则存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ 满足 $f$ 的[[MK2][度量矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK72][分块对角矩阵]] $M_d=\text{diag}(A_1,...,A_m)$
+
+且存在 $l$ 使得 $A_i=\begin{cases}\left[\begin{matrix}\mathfrak{g}(c_0)&\mathfrak{g}(c_1)\\\mathfrak{g}(f_-)(\mathfrak{g}(c_1))&\mathfrak{g}(c_0)\end{matrix}\right]&i\leq l\\\left[\mathfrak{g}(c_0)\right]&i>l\end{cases}$
+
+**** 证明
+
+记 $\mathfrak{g}(c_0)=0,\mathfrak{g}(c_1)=1$ 任意 $k\in K$ 即 $-k=\mathfrak{g}(f_-)(k)$ 。结合数学归纳法和以下证明可得
+
+***** $n=1$
+
+此时 $M_d$ 为 $1\times 1$ 方阵，根据[[MK10][定理]]可得 $M_d=-(M_d)^T$ 显然有 $M_d=[\mathfrak{g}(c_0)]$
+
+***** $n=2$ <<MK13>>
+
+任取 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,a_2\}$ 若 $f(a_1,a_2)=0$ 则显然满足
+
+若 $f(a_1,a_2)=k\ne0$ ，则根据[[MK10][定理]]可得 $M_d=-(M_d)^T$ 显然有 $M_d=\left[\begin{matrix}0&k\\-k&0\end{matrix}\right]$
+
+定义 $a_2'=\frac{1}{k}a_2$ 反证法显然易证 $\{a_1,a'_2\}$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]，根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK42][命题2]]亦为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]且有 $\alpha=x_1a_1+x_2ka'_2,\beta=y_1a_1+y_2ka'_2$ 
+
+对于任意 $\{x_1,x_2,y_1,y_2\}\subset K$ 均有 $\left[\begin{matrix}x_1&x_2\end{matrix}\right]\left[\begin{matrix}0&k\\-k&0\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\end{matrix}\right]=\left[\begin{matrix}0-kx_2&kx_1+0\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\end{matrix}\right]=-kx_2y_1+kx_1y_2$
+
+类似可证有 $\left[\begin{matrix}x_1&kx_2\end{matrix}\right]\left[\begin{matrix}0&1\\-1&0\end{matrix}\right]\left[\begin{matrix}y_1\\ky_2\end{matrix}\right]=\left[\begin{matrix}0-kx_2&x_1+0\end{matrix}\right]\left[\begin{matrix}y_1\\ky_2\end{matrix}\right]=-kx_2y_1+kx_1y_2$
+
+故可得 $f$ 在 $\{a_1,a'_2\}$ 上的[[MK2][度量矩阵]]为 $\left[\begin{matrix}0&1\\-1&0\end{matrix}\right]$
+
+***** 归纳假设
+
+对于任意 $n<N$ 均存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ 满足 $f$ 的[[MK2][度量矩阵]] $M_d$ 为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK72][分块对角矩阵]] $M_d=\text{diag}(A_1,...,A_m)$
+
+且存在 $l$ 使得 $A_i=\begin{cases}\left[\begin{matrix}\mathfrak{g}(c_0)&\mathfrak{g}(c_1)\\\mathfrak{g}(f_-)(\mathfrak{g}(c_1))&\mathfrak{g}(c_0)\end{matrix}\right]&i\leq l\\\left[\mathfrak{g}(c_0)\right]&i>l\end{cases}$
+
+***** $n=N$
+
+任取 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$ 若任意 $f(a_i,a_j)=0$ 则显然满足条件
+
+若存在 $f(a_i,a_j)=k\ne 0$ 则[[MK13][同理可证]]存在 $a'_1,a'_2$ 满足 $f(a'_1,a'_2)=1,f(a'_2,a'_1)=-1$ 且 $\{a'_1,a'_2\}$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性无关]]
+
+****** 定义 $\mathcal{V}',\mathcal{V}''$
+
+定义 $V'=\left\{v\big|v\in V\land f(a'_1,v)=0\land f(a'_2,v)=0\right\}$ 则对于任意 $\{v_1,v_2\}\subset V',k\in K$ 有：
+
+（1） $f(a'_1,v_1+v_2)=f(a'_1,v_1)+f(a'_1,v_2)=0$ 同理 $f(a'_2,v_1+v_2)=0$ 即 $v_1+v_2\in V'$
+
+（2） $f(a'_1,kv_1)=kf(a'_1,v_1)=0$ 即 $kv_1\in V'$
+
+则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK60][定理1]]可得 $\mathcal{V}'=\left<V',K,+,\cdot\right>$ 为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK44][子空间]]
+
+定义 $\mathcal{V}''=\left<\text{span}(\{a'_1,a'_2\}),K,+\cdot\right>$ 显然为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK46][向量生成子空间]]
+
+****** $\mathcal{V}=\mathcal{V}'\oplus\mathcal{V}''$
+
+对于任意 $v\in V$ 定义 $v'=v+f(v,a'_2)a'_1-f(v,a'_1)a'_2$ 根据 $f$ [[MK6][斜对称]]易证
+
+（1） $f(a'_1,v')=f(a'_1,v)+f(v,a'_2)f(a'_1,a'_1)-f(v,a'_1)f(a'_1,a'_2)=f(a'_1,v)-f(v,a'_1)1=0$
+
+（2） $f(a'_2,v')=f(a'_2,v)+f(v,a'_2)f(a'_2,a'_1)-f(v,a'_1)f(a'_2,a'_2)=f(a'_2,v)-f(v,a'_2)=0$
+
+即有 $v'\in V'$ 另有 $u=-f(v,a'_2)a'_1+f(v,a'_1)a'_2$ 显然 $u\in\text{span}(a'_1,a'_2)$ 且 $v=v'+u$
+
+即有 $\mathcal{V}=\mathcal{V}'+\mathcal{V}''$ 加法为[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK86][子空间加法]]
+
+任意 $v\in V'\cap\text{span}(a'_1,a'_2)$ 均有 $v=k_1a'_1+k_2a'_2$ 进一步 $f(a'_1,v)=k_2f(a'_1,a'_2)=0,(a'_2,v)=k_2f(a'_2,a'_1)=0$
+
+则显然 $k_1=0,k_2=0$ 即有 $v=\vec{0}$ 即 $V'\cap\text{span}(a'_1,a'_2)=\{\vec{0}\}$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK69][性质]]可得 $\mathcal{V}=\mathcal{V}'\oplus\mathcal{V}''$
+
+****** 证明结论
+
+根据归纳假设可得存在 $\mathcal{V}'$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a'_3,...,a'_n\}$ 满足 $f$ 在 $\mathcal{V}'$ 上关于 $\{a'_3,...,a'_n\}$ 的[[MK2][度量矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK72][分块对角矩阵]] $M'_d=\text{diag}(A_2,...,A_m)$
+
+且存在 $l$ 使得 $A_i=\begin{cases}\left[\begin{matrix}\mathfrak{g}(c_0)&\mathfrak{g}(c_1)\\\mathfrak{g}(f_-)(\mathfrak{g}(c_1))&\mathfrak{g}(c_0)\end{matrix}\right]&i\leq l\\\left[\mathfrak{g}(c_0)\right]&i>l\end{cases}$ 
+
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK69][性质]]可得 $\{a'_1,...,a'_n\}$ 为 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]]，且由于 $\{a'_3,...,a'_n\}\subset V'$ 故有 $f(a'_1,a_i)=f(a'_2,a_i)=0$
+
+结合[[MK6][斜对称]]易证 $f$ 在 $\mathcal{V}$ 上关于 $\{a'_1,...,a'_n\}$ 的[[MK2][度量矩阵]]为[[~/文档/note/高等代数/Algb-3-Matrix.org::MK72][分块对角矩阵]] $M_d=\text{diag}(A_1,...,A_m)$
+
+且存在 $l$ 使得 $A_i=\begin{cases}\left[\begin{matrix}\mathfrak{g}(c_0)&\mathfrak{g}(c_1)\\\mathfrak{g}(f_-)(\mathfrak{g}(c_1))&\mathfrak{g}(c_0)\end{matrix}\right]&i\leq l\\\left[\mathfrak{g}(c_0)\right]&i>l\end{cases}$ 
 
 * 度量矩阵<<MK2>>
 
@@ -58,9 +323,9 @@ f(\alpha,\beta)=&f\left(\sum_{i=1}^nx_ia_i,\sum_{j=1}^ny_ja_j\right)\\
 
 *** 性质2<<MK4>>
 
-设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，任取 $n$ 阶矩阵 $A =[a_{ij}]_{n\times n}$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})=n<\infty$ ，任取 $n$ 阶矩阵 $A =[a_{ij}]_{n\times n}$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{a_1,...,a_n\}$
 
-则对于任意 $\{\alpha,\beta\}\subset V$ 显然有 $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 定义 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 则：
+则对于任意 $\{\alpha,\beta\}\subset V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]] $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 定义 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$ 则：
 
 （1） $f$ 是[[MK1][双线性函数]]
 
@@ -91,11 +356,11 @@ f(k_1a+k_2b,c)=&\left[\begin{matrix}(k_1x_1+k_2y_1)&(k_1x_2+k_2y_2)&...&(k_1x_n+
 
 又根据上一步证明可得 $f(a_i,a_j)=\left[\begin{matrix}x(1)&x(2)&...&x(n)\end{matrix}\right]A\left[\begin{matrix}y(1)\\y(2)\\...\\y(n)\end{matrix}\right]=a_{ij}$ 即 $A$ 是 $f$ 在 $\mathcal{V}$ 上关于 $\{a_1,...,a_n\}$ 的[[MK2][度量矩阵]]
 
-** 定理
+** 定理<<MK12>>
 
-设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})<n$ ，则 $n$ 阶矩阵 $M_A,M_B$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK95][合同]]的充要条件是
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})=n<\infty$ ，则 $n$ 阶矩阵 $M_A,M_B$ [[~/文档/note/高等代数/Algb-3-Matrix.org::MK95][合同]]的充要条件是
 
-存在[[MK1][双线性函数]] $f:V\times V\to K$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $A =\{a_1,...,a_n\},B =\{b_1,...,b_2\}$
+存在[[MK1][双线性函数]] $f:V\times V\to K$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $A =\{a_1,...,a_n\},B =\{b_1,...,b_n\}$
 
 满足 $f$ 在 $\mathcal{V}$ 上关于 $A$ 的[[MK2][度量矩阵]] $M_A$ 且 $f$ 在 $\mathcal{V}$ 上关于 $B$ 的[[MK2][度量矩阵]] $M_B$ 
 

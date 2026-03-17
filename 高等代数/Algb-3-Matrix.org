@@ -2,7 +2,7 @@
 
 #+TITLE: 矩阵运算
 
-current mark: 97
+current mark: 99
 
 * 矩阵基础
 
@@ -615,6 +615,22 @@ P_1&=\prod^{k=n_j-n_i}_{1}\left(\prod_{l=1}^n_iP_n(n_b+n_i+k+1-l,n_b+n_i+k-l)\ri
 
 若 $A=[a_{ij}]_{n\times n}$ 为对称矩阵，则根据[[MK14][矩阵转置]] $a_{ij}=a_{ij}$
 
+**** [[MK95][合同]]标准型
+
+任意[[MK17][对角矩阵]] $A=[a_{ij}]_{n\times n}$ 存在与其[[MK95][合同]]的[[MK70][对角矩阵]]
+
+***** 证明
+
+任取 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK339][特征]]不为 $2$ 的[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]满足 $\dim(\mathcal{V})=n<\infty$ 以及 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{b_1,...,b_n\}$
+
+则对于任意 $\{\alpha,\beta\}\subset V$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK80][定理3]] $\alpha=\sum_{i=1}^nx_ia_i,\beta=\sum_{i=1}^ny_ia_i$ 定义 $f(\alpha,\beta)=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]A\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
+
+则根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK4][性质2]]可得 $f$ 是据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性函数]]，又由于 $A$ 是[[MK17][对称矩阵]]，则根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK10][定理]]可得 $f$ 具有[[~/文档/note/高等代数/Algb-6-d-liner.org::MK6][对称性]]
+
+又根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK9][定理]]可得存在 $\mathcal{V}$ 的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK36][基]] $\{b^*_1,...,b^*_n\}$ 满足 $f$ 的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK2][度量矩阵]] $M_d$ 为[[MK70][对角矩阵]]
+
+则根据的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK12][定理]]可得 $M_d$ 与 $A$ [[MK95][合同]]
+
 ** 斜对称矩阵
 
 *** 定义<<MK18>>
@@ -859,6 +875,28 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 （2） $G_2$ 是 $B_2$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
 
 进一步根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK1452][推论5]]可得存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
+
+** 正定矩阵<<MK98>>
+
+定义 $B=[b_{ij}]_{n\times n}$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵，若对于任意 $\mathcal{K}$ 上的单行矩阵 $X=[x_i]_{n\times 1}$ 均有 $XBX^T$ 满足：
+
+（1） 若存在 $x_i\ne\mathfrak{g}(c_0)$ 则 $\mathfrak{g}(p_<)(\mathfrak{g}(c_0),XBX^T)$
+
+（2） 若任意 $x_i=\mathfrak{g}(c_0)$ 则 $\mathfrak{g}(c_0)=XBX^T$
+
+则称 $B$ 是正定矩阵
+
+*** 性质<<MK99>>
+
+[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶矩阵[[MK4][单位矩阵]]是[[MK98][正定矩阵]]
+
+**** 证明
+
+定义 $+,\times,0,<$ 分别表示 $\mathfrak{g}{f_+},\mathfrak{g}(f_\times),\mathfrak{g}(c_0),\mathfrak{g}(p_<)$ 则任意 $X=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right],x_i\in K$
+
+根据[[MK3][乘法]]有 $XI_n(X^T)=\sum_{i=1}^n x_i\times x_i$ 结合[[~/文档/note/抽象代数/cxds.org::MK531][性质5]]可得当 $x_i\ne0$ 时有 $0<x\times x$ 根据[[~/文档/note/抽象代数/cxds.org::MK340][性质2]]可得 $0=0\times 0$
+
+即 $I_n$ 是[[MK98][正定矩阵]]
 
 * 基本运算<<MK49>>
 
@@ -2105,32 +2143,32 @@ AP=&\left[\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&
 
 则称矩阵 $A$ 与矩阵 $B$ 合同，记作 $A\simeq B$
 
-** 性质1
+** 性质
+
+*** 性质1
 
 任意 $\{A,B\}\subset M_{n\times n}(K)$ 为[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K}=\left<K,\mathfrak{g}\right>$ 上的 $n$ 阶方阵且 $A\simeq B$ 则有 $rank(A)=rank(B)$
 
-*** 证明
+**** 证明
 
 根据[[MK96][性质]]可得 $\rank(P^TAP)=rank(P^TA)=\rank(A)$ ，又由于[[MK95][合同]]故存在[[MK28][可逆]]矩阵 $P\in M_{n\times n}(K)$ 满足 $P^{T}AP=B$
 
 故有 $rank(A)=rank(P^TAP)=rank(B)$
 
-** 性质2
+*** 性质2
 
 [[MK95][合同]]是[[~/文档/note/离散数学/Disc_Math.org::MK176][等价关系]]
 
-*** 正明
+**** 正明
 
-**** [[~/文档/note/离散数学/Disc_Math.org::MK168][自反性]]
+***** [[~/文档/note/离散数学/Disc_Math.org::MK168][自反性]]
 
 显然 $A=I^TAI$ 其中 $I$ 是与 $A$ 同阶的单位矩阵
 
-**** [[~/文档/note/离散数学/Disc_Math.org::MK170][对称性]]
+***** [[~/文档/note/离散数学/Disc_Math.org::MK170][对称性]]
 
 若 $A=P^TBP$ 且 $P$ [[MK28][可逆]]，则根据[[MK97][定理5]]可得 $\left(P^T\right)^{-1}=\left(P^{-1}\right)^T$ 即 $\left(P^{-1}\right)^TAP^{-1}=\left(P^T\right)^{-1}AP^{-1}=\left(P^T\right)^{-1}P^TBPP^{-1}=B$ 
 
-**** [[~/文档/note/离散数学/Disc_Math.org::MK172][传递性]]
+***** [[~/文档/note/离散数学/Disc_Math.org::MK172][传递性]]
 
 若 $A=P^TBP,B=Q^TCQ$ 即有 $A=\left(P^TQ^T\right)C(QP)$ 根据[[MK7][转置]]可得 $(QP)^T=P^TQ^T$ 即 $A=(QP)^TC(QP)$
-
-

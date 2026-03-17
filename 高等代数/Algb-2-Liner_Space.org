@@ -2,7 +2,7 @@
 
 #+TITLE: 线性空间
 
-current mark: 120
+current mark: 122
 
 * 映射
 
@@ -2635,4 +2635,32 @@ $\forall\gamma=(z_1,...,z_n)\in W\Rightarrow\alpha_0+\gamma=(x_1+z_1,...,x_n+z_n
 $\forall\alpha\in U$ 由于 $\alpha_0\in U$ 则根据[[MK63][定理1]]有 $\gamma=\alpha-\alpha_0\in W$ 故有 $\alpha=\alpha_0+\gamma\in \alpha_0+W$ 即 $U\subset \alpha_0+W$
 
 故得 $U=\alpha_0+W$
+
+* 内积空间<<MK121>>
+
+设 $\mathcal{V}=\left<V,\mathcal{K},+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[MK1][线性空间]]， $f$ 是 $\mathcal{V}$ 上的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性函数]]具有[[~/文档/note/高等代数/Algb-6-d-liner.org::MK6][对称性]]以及[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]
+
+则对于任意 $\{a,b\}\subset V$ 称 $f(a,b)$ 是 $a,b$ 的内积，定义 $a\odot b=f(a,b)$
+
+则结构 $\mathcal{W}=\left<V,K,+,\cdot,\odot\right>$ 是含有内积的[[MK1][线性空间]]，即内积空间
+
+** 维数<<MK121>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot,\odot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} = \left<K,\mathfrak{g}\right>$ 上[[MK121][含有内积线性空间]]，定义其维数 $\dim(\mathcal{V})=\dim\left(\left<V,K,+,\cdot\right>\right)$
+
+** 欧几里得空间
+
+有限[[MK121][维度]]的实数域上[[MK121][含有内积的线性空间]] $\mathcal{V}=\left<\mathbb{R}^n,\mathbb{R},+,\cdot,\odot\right>$ 即为欧几里得空间
+
+*** 内积
+
+任意 $X=\left<x_1,...,x_n\right>,Y=\left<y_1,...,y_n\right>$ 满足 $\{X,Y\}\subset\mathbb{R}^n$
+
+有定义 $X\odot Y=\sum_{i=1}^nx_iy_i=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=\left[\begin{matrix}x_1&x_2&...&x_n\end{matrix}\right]I_n\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]$
+
+其中 $I_n$ 为实数域上的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK4][单位矩阵]]，则 $f(X,Y)=X\odot Y$ 是具有[[~/文档/note/高等代数/Algb-6-d-liner.org::MK6][对称性]]以及[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性函数]]
+
+**** 证明
+
+根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK15][性质3]]即可证
 

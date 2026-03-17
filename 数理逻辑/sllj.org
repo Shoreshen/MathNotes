@@ -2604,7 +2604,7 @@ $\tau_i[j]$ 与 $\tau[|\tau|]$ 间 $)$ 的对数为为 $\tau_i[j]$ 与 $\tau[|\t
 
 给定 $\Sigma^*$ 期[[MK117][项]]集为 $T$ ，定义表达式封闭子集 $L\subset\Sigma^*$ 为满足以下五个条件的集合：
 
-（1） 若 $\tau_1\in T\land\tau_2\in T$ 则 $(\tau_1\hat{=}\tau_2)$
+（1） 若 $\tau_1\in T\land\tau_2\in T$ 则 $(\tau_1\hat{=}\tau_2)\in L$
 
 （2） 若 $\tau_i\in T,1\leq i\leq n$ 且 $p_i\in P,\pi_P(p_i)=n$ 则 $p_i(\tau_1,...,\tau_n)\in L$
 

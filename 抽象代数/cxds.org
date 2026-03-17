@@ -1,8 +1,8 @@
-#+LATEX_HEADER: ctexart
+#+LATEX_HEADER:
 
 #+TITLE: 抽象代数
 
-currnet mark: 524
+currnet mark: 531
 
 free mark:
 
@@ -734,7 +734,7 @@ $T_\mathcal{R}\vdash(\forall x_1(f_\times(x_1,c_0)\hat{=}c_0))$ 以及 $T_\mathc
 
 根据[[MK334][加法交换]]、[[MK334][加法结合]]以及[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]可得对于任意 $\{a,b,c\}\subset M$ 均有 $I(f_+)(a,b)=I(f_+)(b,a)$ 和 $I(f_+)(I(f_+)(a,b),c)=I(f_+)(a,I(f_+)(b,c))$
 
-故若 $I(f_+)(a,b)=I(c_0)$ 则有 $I(f_+)(b,a)=I(c_0)$ ，故根据[[MK304][性质2]]可得 存在唯一 $b\in M$ 满足 $I(f_+)(a,b)=I(c_0)$
+故若 $I(f_+)(a,b)=I(c_0)$ 则有 $I(f_+)(b,a)=I(c_0)$ ，故根据[[MK304][性质2]]可得存在唯一 $b\in M$ 满足 $I(f_+)(a,b)=I(c_0)$
 
 **** 性质7<<MK349>>
 
@@ -821,6 +821,18 @@ $T_\mathcal{R}\vdash(\forall x_1(f_\times(x_1,c_0)\hat{=}c_0))$ 以及 $T_\mathc
 根据[[MK349][性质7]] $I(f_\times)(b,I(f_+)(-1_m,1_m))=I(f_+)(I(f_\times)(b,-1_m),I(f_\times)(b,1_m))=I(f_+)(I(f_\times)(b,-1_m),b)$
 
 即有 $I(f_+)(I(f_\times)(b,-1_m),b)=I(c_0)$ 又根据[[MK351][性质6]]可得 $b$ 的逆元唯一，即有 $I(f_-)(b)=I(f_\times)(b,-1_m)$
+
+**** 性质9<<MK528>>
+
+[[MK338][结构]] $\mathcal{M}=\left<M,I\right>$ 是[[MK309][环]]则有 $\mathcal{M}\vDash(\forall x_1(x_1\hat{=}f_-(f_-(x_1))))$
+
+***** 证明
+
+定义 $+,-,0$ 分别代表 $I(f_+),I(f_-),I(c_0)$ ，则根据[[MK349][性质7]]可得对于任意 $a\in M$ 均有 $(-a)+(-(-a))=0$
+
+两边加 $a$ 则有 $a=a+((-a)+(-(-a)))$ 根据[[MK349][性质7]]中结合律 $a=(a+(-a))+(-(-a))=(-(-a))$
+
+又根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]易证 $\mathcal{M}\vDash(\forall x_1(x_1\hat{=}f_-(f_-(x_1))))$ 
 
 **** 性质13<<MK371>>
 
@@ -1852,6 +1864,18 @@ a_{i^*-1}&=a_{i^*-3}-n_{i^*-2}a_{i^*-2}=(v_{i^*-3}a_0+u_{i^*-3}p)-n_{i^*-2}(v_{i
 由于 $0\leq i\leq j\leq p-1$ 故可得 $j-i<p$ 则[[MK339][特征]]亦小于 $p$ 矛盾。
 
 故假设不成立，即对于任意 $0\leq i\leq j\leq p-1$ 均有 $\mathcal{M}\vDash(\lnot(\tau_i\hat{=} I(f_-)(\tau_j)))$
+
+***** 性质5<<MK525>>
+
+任意[[MK338][域结构]] $\mathcal{M}=\left<M,I\right>$ 对于任意 $a\in M$ 定义 $a_i=f_+(a,f_+(...f_+(a,a)...) )$ 即 $i$ 个 $a$ 相加
+
+若[[MK339][特征]]不为 $p$ 且 $a\ne I(c_0)$ 则 $\mathcal{M}\vDash(\lnot(a_p\hat{=}c_0))$
+
+****** 证明
+
+根据[[MK356][性质4]]中乘法分配可得 $(a+...+a)=I(f_\times)(a,1+...+1)=I(f_\times)(a,I(\tau_p))$ 根据[[MK339][特征]]不为 $p$ 可得 $I(\tau_p)\ne I(c_0)$
+
+结合[[MK340][性质2]]以及 $a\ne I(c_0)$ 即可得 $I(f_\times)(a,I(\tau_p))\ne I(c_0)$ ，根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $\mathcal{M}\vDash(\lnot(a_p\hat{=}c_0))$
 
 **** 域的扩张<<MK341>>
 
@@ -4475,7 +4499,7 @@ $T_\mathbb{F}\vdash(\forall x_1(\forall x_2((f_\times(x_1,x_2)\hat{=}c_0)\to((x_
 
 **** 性质15<<MK440>>
 
-任意 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]]则对于任意 $\{a,b\}\subset M$ 有 $I(f_-)(I(f_\times)(a,b))=I(f_\times)(I(f-)(a),b)=I(f_\times)(a,I(f_-)(b))$
+任意 $\mathcal{M}=\left<M,I\right>$ 是[[MK338][域]]则对于任意 $\{a,b\}\subset M$ 有 $I(f_-)(I(f_\times)(a,b))=I(f_\times)(I(f_-)(a),b)=I(f_\times)(a,I(f_-)(b))$
 
 ***** 证明
 
@@ -5507,6 +5531,118 @@ e\left(\frac{p_1}{q_1}\times\frac{p_2}{q_2}\right)=&e\left(\frac{p_1p_2}{q_1q_2}
 
 对于任意 $\frac{p_1}{q_1}\in\mathbb{Q}$ 显然有 $e\left(-\frac{p}{q}\right)=I(f_-)\left(I(f_\times)\left(\sum_{i=1}^p I(c_1),\left(\sum_{i=1}^q I(c_1)\right)^{-1}\right)\right)=I(f_-)\left(e\left(\frac{p}{q}\right)\right)$
 
+** 有序域<<MK526>>
+
+*** 语言
+
+除[[~/文档/note/数理逻辑/sllj.org::MK105][固定符号]]外有：
+
+（1） [[~/文档/note/数理逻辑/sllj.org::MK109][函数符号]] $f_\times,f_+,f_-$ 分别表示乘法，加法，取加法逆元
+
+（2） [[~/文档/note/数理逻辑/sllj.org::MK108][常元符号]] $c_0,c_1$
+
+（3） [[~/文档/note/数理逻辑/sllj.org::MK10][谓词符号]] $p_<$
+
+则有 $\mathcal{A}_{\mathbb{F}_<}=\{f_\times,f_+,f_-,c_0,c_1\}$ 进一步有 $\mathcal{L}_{\mathcal{A}_{\mathcbb{F}_<}}$ 是环理论的[[~/文档/note/数理逻辑/sllj.org::MK151][语言]]
+
+*** 公理
+
+同[[MK337][域公理]]，外加以下四条
+
+（1） 三歧性 $\phi_\text{tri}=(\forall x_1(\forall x_2(\phi_1\land\phi_2\land\phi_3)))$ 其中 $\phi_1,\phi_2,\phi_3$ 定义如下
+
+     $\phi_1=((x_1\hat{=}x_2)\to((\lnot p_<(x_1,x_2))\land(\lnot p_<(x_2,x_1))))$
+
+     $\phi_2=(p_<(x_1,x_2)\to((\lnot (x_1\hat{=}x_2))\land(\lnot p_<(x_2,x_2))))$
+
+     $\phi_3=(p_<(x_2,x_1)\to((\lnot p_<(x_1,x_2))\land(\lnot (x_1\hat{=}x_2))))$
+
+（2） 传递性 $(\forall x_1(\forall x_2(\forall x_3((p_<(x_1,x_2)\land p_<(x_2,x_3))\to p_<(x_1,x_3)))))$
+
+（3） 加法相容 $(\forall x_1(\forall x_2(\forall x_3(p_<(x_1,x_2)\to p_<(f_+(x_1,x_3),f_+(x_2,x_3))))))$
+
+（3） 乘法相容 $(\forall x_1(\forall x_2(\forall x_3((p_<(x_1,x_2)\land p_<(c_0,x_3))\to p_<(f_\times(x_1,x_3),f_\times(x_2,x_3))))))$
+
+*** 性质
+
+**** 性质1<<MK527>>
+
+[[MK338][结构]] $\mathcal{M}=\left<M,I\right>$ 是 $\mathcal{L}_{\mathcal{A}_{\mathcbb{F}_<}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]]，则其满足[[MK356][性质4]]以及：
+
+（1)  $\mathcal{M}\vDash\phi_{\text{tri}}$ 的充要条件是对于任意 $\{a,b\}\subset M$ 三项 $a=b,\left<a,b\right>\in I(p_<),\left<b,a\right>\in I(p_<)$ 有且只有一项成立
+
+（2） $\mathcal{M}\vDash(\forall x_1(\forall x_2(\forall x_3((p_<(x_1,x_2)\land p_<(x_2,x_3))\to p_<(x_1,x_3)))))$ 的充要条件是
+
+     对于任意 $\{a,b,c\}\subset M$ 若有 $\left<a,b\right>\in I(p_<),\left<b,c\right>\in I(p_<)$ 则 $\left<a,c\right>\in I(p_<)$
+
+（3） $\mathcal{M}\vDash(\forall x_1(\forall x_2(\forall x_3(p_<(x_1,x_2)\to p_<(f_+(x_1,x_3),f_+(x_2,x_3))))))$ 的充要条件是
+
+     对于任意 $\{a,b,c\}\subset M$ 若有 $\left<a,b\right>\in I(p_<)$ 则 $\left<I(f_+)(a,c),I(f_+)(b,c)\right>\in I(p_<)$
+
+（4） $\mathcal{M}\vDash(\forall x_1(\forall x_2(\forall x_3((p_<(x_1,x_2)\land p_<(c_0,x_3))\to p_<(f_\times(x_1,x_3),f_\times(x_2,x_3))))))$ 的充要条件是
+
+     对于任意 $\{a,b,c\}\subset M$ 若有 $\left<a,b\right>\in I(p_<),\left<I(c_0),c\right>\in I(p_<)$ 则 $\left<I(f_\times)(a,c),I(f_\times)(b,c)\right>\in I(p_<)$
+
+***** 证明
+
+[[MK349][同理可证]]
+
+**** 性质2<<MK530>>
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK526][有序域]]，则 $\mathcal{M}\vDash(\forall x_1(p_<(x_1,c_0)\to p_<(c_0,f_-(x_1))))$ 以及 $\mathcal{M}\vDash(\forall x_1(p_<(f_-(x_1),c_0)\to p_<(c_0,x_1)))$
+
+***** 证明
+
+定义 $<,+,-,0$ 分别代表 $I(p_<),I(f_+),I(f_-),I(c_0)$ 则任意 $a\subset M$ 若有 $a<0$ 则根据[[MK527][性质1]] $a+(-a)<0+(-a)$
+
+同理根据[[MK527][性质1]]中加法逆元可得 $0<(-a)$ 即根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]有 $\mathcal{M}\vDash(\forall x_1(p_<(x_1,c_0)\to p_<(c_0,f_-(x_1))))$ 
+
+结合[[MK528][性质9]]同理易证 $\mathcal{M}\vDash(\forall x_1(p_<(f_-(x_1),c_0)\to p_<(c_0,x_1)))$
+
+**** 性质3<<MK529>>
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK526][有序域]]，则 $\mathcal{M}\vDash p_<(c_0,c_1)$ 
+
+***** 证明
+
+定义 $\times,<,+,-,0,1$ 分别代表 $I(f_\times),I(p_<),I(f_+),I(f_-),I(c_0),I(c_1)$ 根据[[MK527][性质1]]显然 $1\ne 0$ ，假设 $1<0$
+
+则根据[[MK527][性质1]]中加法相容有 $1+(-1)<0+(-1)$ 即 $0<-1$ 进一步根据乘法相容可得 $0\times(-1)=(-1)\times(-1)$
+
+根据[[MK440][性质15]]可得 $-(-1)=-(-(1\times 1))=-((-1)\times 1)=(-1)\times(-1)$ 又根据[[MK528][性质9]]可得 $-(-1)=1$
+
+即有 $0<(-1)\times(-1)=1$ 显然与假设矛盾。故假设不成立，即 $1\not<0$
+
+则根据[[MK527][性质1]]三歧性可得 $0<1$ 即 $\mathcal{M}\vDash p_<(c_0,c_1)$
+
+**** 性质4
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK526][有序域]]则其[[MK339][特征]] $p=0$
+
+***** 证明
+
+定义 $\times,<,+,-,0,1$ 分别代表 $I(f_\times),I(p_<),I(f_+),I(f_-),I(c_0),I(c_1)$ 假设 $p=n\ne0$ 则 $\sum_{i=1}^n1=0$
+
+根据[[MK529][性质3]]可得 $0<1$ 则有 $0+1=1<2=1+1$ 又根据[[MK527][性质1]]的传递性有 $0<2$
+
+以此类推可得 $0<n=\sum_{i=1}^n1$ 显然与[[MK527][性质1]]中三歧性矛盾，故假设不成立，即 $p=0$
+
+**** 性质5<<MK531>>
+
+若 $\mathcal{M}=\left<M,I\right>$ 是[[MK526][有序域]]则 $\mathcal{M}\vDash(\forall x_1((\lnot(x_1\hat{=}c_0))\to p_<(c_0,f_\times(x_1,x_1))))$
+
+***** 证明
+
+定义 $\times,<,+,-,0,1$ 分别代表 $I(f_\times),I(p_<),I(f_+),I(f_-),I(c_0),I(c_1)$ 对于任意 $a\in M$ 有 $a\ne 0$
+
+若 $0<a$ 则根据[[MK527][性质1]]乘法相容直接可得 $0=0\times a<a\times a$
+
+若有 $a<0$ 根据[[MK340][性质2]]有 $0<-a$ 则根据[[MK527][性质1]]中乘法相容可得 $a\times(-a)<0\times(-a)=0$
+
+又根据[[MK440][性质15]]可得 $a\times(-a)=-(a\times a)<0$ 再根据[[MK528][性质2]]可得 $0<a\times a$ 
+
+故无论那种情况均有 $0<a\times a$ 根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]有 $\mathcal{M}\vDash(\forall x_1((\lnot(x_1\hat{=}c_0))\to p_<(c_0,f_\times(x_1,x_1))))$
+
 ** 代数封闭域<<MK390>>
 
 *** 语言
@@ -5606,17 +5742,13 @@ f(x)=&p_n(x)\prod_{i=1}^{n-1}h_i(x)\\
 
 ***** 证明
 
-假设 $M=\{a_1,...,a_n\}$ 是[[~/文档/note/离散数学/lssx.org::MK82][有限集]]，则定义[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi=(f_+(\prod_{i=1}^{n}f_+(x_i,f_-(x_0)),c_1)\hat{=}c_0)$
+假设 $M=\{a_1,...,a_n\}$ 是[[~/文档/note/离散数学/lssx.org::MK82][有限集]]，则定义[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi=f_+(\prod_{i=1}^{n}f_+(x_i,f_-(x_0)),c_1)$
 
-易证 $\phi$ 存在[[~/文档/note/数理逻辑/sllj.org::MK396][等价]]的[[MK336][一元多项式]] $\psi$ ，则任取 $\mathcal{M}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]]满足 $v(x_i)=a_i$ 设 $v(x_0)=a_j$
+易证 $\phi$ 存在[[~/文档/note/数理逻辑/sllj.org::MK396][等价]]的[[MK336][一元多项式]] $\psi$ ，对于任意 $\mathcal{M}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]]满足 $v(x_i)=a_i$ 由于是[[~/文档/note/离散数学/lssx.org::MK82][有限集]]，则易证有 $\left<\mathcal{M},v\right>\vDash((f_+(x_j,x_0)\hat{=}c_0)$
 
-则易证有 $\left<\mathcal{M},v\right>\vDash((f_+(x_j),x_0)\hat{=}c_0)$ ，进一步易证 $\left<\mathcal{M},v\right>\vDash(f_+(\prod_{i=1}^{n}f_+(x_i,f_-(x_0)),c_1)\hat{ =}c_1)$
+则进一步易证 $\left<\mathcal{M},v\right>\vDash(f_+(\prod_{i=1}^{n}f_+(x_i,f_-(x_0)),c_1)\hat{ =}c_1)$ 根据[[MK411][公理]]可得 $\mathcal{M}\vDash(\lnot(c_1\hat{ =}c_0))$
 
-根据[[MK411][公理]]可得 $\mathcal{M}\vDash(\lnot(c_1\hat{ =}c_0))$ 即显然 $\mathcal{M}\vDash(\forall x_0(\lnot(\psi\hat{ =}c_0)))[a_1,...,a_n]$ 与[[MK411][公理]]矛盾
-
-故假设不成立，即 $M$ 是[[~/文档/note/离散数学/lssx.org::MK83][无限集]]
-
-$a_i\in M$ 均有 $\mathcal{M}\vDash(f_+(x_i),x_0)$
+即存在一个[[MK336][一元多项式]] $\phi$ 满足 $\mathcal{M}\vDash(\forall x_0(\lnot(\psi\hat{ =}c_0)))[a_1,...,a_n]$ 与[[MK411][公理]]矛盾，故假设不成立，即 $M$ 是[[~/文档/note/离散数学/lssx.org::MK83][无限集]]
 
 **** 性质4<<MK487>>
 
