@@ -2,39 +2,25 @@
 
 #+TITLE: 离散数学概论
 
-currnet mark: 705
+currnet mark: 709
 
 free mark:
  
 数理逻辑: P26
 
-* 集合论
+* 公理化集合论
 
-** 集合论语言<<MK468>>
+** 语言<<MK468>>
 
-*** 符号及表达式
-
-集合论语言为[[MK466][一阶语言]]，除[[MK116][固定符号]]外尤其仅有一个[[MK132][谓词符号]] $\mathcal{A}_c=\{p_\in\}$ 其中根据[[MK445][符号假定]]有 $\pi_P(p_\in)=2$
-
-为方便书写：
-
-（1） 定义 $p_\in(x,y)$ 书写为 $(x\in y)$
-
-（2） 定义 $(x\hat{=}y)$ 书写为 $(x=y)$
-
-（3） 定义 $\lnot(x\hat{=}y)$ 书写为 $(x\ne y)$
-
-集合论的[[MK135][表达式]]均遵循以上简写
-
-*** 等式符号
-
-语言规定[[MK116][等式符号]] $\hat{=}$ 必须满足[[MK176][等价关系]]，由[[MK5][外延公理]]定义
+除[[~/文档/note/数理逻辑/sllj.org::MK105][固定符号]]外仅有一个[[MK132][谓词符号]] $p_\in$ 且根据[[MK445][符号假定]]有 $\pi_P(p_\in)=2$ 即 $\mathcal{A}_{zfc}=\{p_\in\}$ 
 
 ** 集合论非逻辑公理
 
+定义以下公理集合为 $T_s$
+
 *** 外延公理<<MK5>>
 
-形式语言： $(\forall x(\forall y((x=y)\to(\forall z((z\in x)\leftrightarrow(z\in y))))))$
+形式语言： $\phi_{ext}=(\forall x(\forall y((\forall z(p_\in(z,x)\leftrightarrow p_\in(z,y)))\to (x\hat{=}y))))$
 
 即当且仅当 $x,y$ 中具有相同的[[MK2][元素]]，集合 $x,y$ 相等，显然满足[[MK176][等价关系]]
 
@@ -46,67 +32,69 @@ free mark:
 
 *** 第一存在性<<MK469>>
 
-$\exists x(x=x)$ 即存在一个集合
+$\phi_{exi}=\exists x(x\hat{=}x)$ 即存在一个集合
 
 *** 幂集公理<<MK467>>
 
-形式语言： $\forall A\exists B\forall z\big(z\in B\leftrightarrow z\subset A\big)$
+形式语言： $\phi_\rho=(\forall A(\exists B(\forall z(p_\in(z,B)\leftrightarrow z\subset A))))$
 
 即对于任意结合 $A$ 其[[MK25][幂集]] $B$ 存在且亦为集合
 
 *** 分离公理模式<<MK9>>
 
-形式语言： $\forall p_1(...(\forall p_n(\forall U(\exists S(\forall x((x\in S)\leftrightarrow((x\in U)\land \phi(p_1,...,p_n,x)))))))...)$
+形式语言： $\phi_{sep}=(\forall p_1(...(\forall p_n(\forall U(\exists S(\forall x(p_\in(x,S)\leftrightarrow(p_\in(x,U)\land \phi(p_1,...,p_n,x)))))))...))$
 
-其中 $n\in\mathbb{N}$ 是自然数， $\phi(p_1,...,p_n,x)$ 是[[MK441][自由变元]]为 $p_1,...,p_n,x$ 且不包含 $U,S$ 的[[MK135][表达式]]
+其中 $n\in\mathbb{N}$ 是自然数， $\phi(p_1,...,p_n,x)$ 是[[MK441][自由变元]]为 $p_1,...,p_n,x$ 且不包含 $U,S$ 的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
-即对于任一集合 $U$ 存在 $S$ 使得 $x\in S$ 的充要条件是 $x\in U\land \phi(p_1,...,p_n,x)$ 
+即对于任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash\phi_{sep}$ 满足任意 $\{P_1,...,P_n,U\}\subset M$ 存在 $S\in M$
 
-即对于任意一组给定的 $p_1,...,p_n$ 以及给定的 $U$ 均存在 $S=\left\{x\big|((x\in U)\land\phi(p_1,...,p_n,x))\right\}$
+使得 $x\in S$ 的充要条件是 $\left<\mathcal{M},v\right>\vDash (p_\in(x,U)\land\phi(p_1,...,p_n,x))$ 其中 $v(p_i)=P_i$
+
+为方便，记作 $S=\left\{x\big|\mathcal{M}\vDash\phi(x)[P_1,...,P_n]\right\}$
 
 **** 唯一性
 
-设 $x$ 为一个集合 $\phi(a_1,...,a_n,z)$ 是[[MK441][自由变元]]为 $a_1,...,a_n,z$ 且不包含 $x$ 的[[MK135][表达式]]
-
-则当 $a_1,...,a_n$ [[MK447][赋值]]确定时，存在唯一的 $y$ 满足 $\forall z((z\in y)\leftrightarrow((z\in x)\land(\phi(a_1,...,a_n,z))))$
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 对于任意 $\phi(p_1,...,p_n,x)\in\mathcal{L}_{\mathcal{A}_{zfc}}$ 存在唯一 $S\in M$ 满足 $S=\left\{x\big|\mathcal{M}\vDash\phi(x)[P_1,...,P_n]\right\}$
 
 ***** 证明
 
-假设存在 $y_1,y_2$ 同时满足，则对于任意 $z$
+对于任意 $\{P_1,...,P_n,U\}\subset M$ 以及 $\phi(p_1,...,p_n,x)\in\mathcal{L}_{\mathcal{A}_{zfc}}$ 若存在 $S_1,S_2$ 同时满足
 
-有 $(z\in y_1)\leftrightarrow((z\in x)\land(\phi(a_1,...,a_n,z)))\leftrightarrow(z\in y_2)$
+则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]对于任意 $a\in M$ 有 $a\in S_1$ 等价于 $\mathcal{M}\vDash((x\in U)\land\phi(x))[P_1,...,P_n,a]$ 等价与 $a\in S_2$
 
-则根据[[MK5][外延公理]]可得 $y_1=y_2$
+即 $a\in S_1$ 的充要条件是 $a\in S_2$ 则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]易证 $\left<\mathcal{M},v\right>\vDash(\forall x_1(p_\in(x_1,x_2)\leftrightarrow p_\in(x_1,x_3)))$ 其中 $v(x_2)=S_1,v(x_3)=S_2$
 
-**** 推论
+则根据[[MK5][外延公理]]可得 $\left<\mathcal{M},v\right>\vDash(x_2\hat{=}x_3)$ 根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $S_1=S_2$
 
-$\lnot(\exists x(\forall y(y\in x)))$ 即不存在包含一切集合的集合
+**** 推论1<<MK708>>
+
+$T_s\vdash(\lnot(\exists x(\forall y (p_\in(y,x)))))$ 即不存在包含一切集合的集合
 
 ***** 证明
 
-假设 $\exists x(\forall y(y\in x))$ 成立，则存在 $x$ 包含所有集合
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 假设 $\mathcal{M}\vDash(\exists x(\forall y (p_\in(y,x))))$ 则存在 $a\in M$ 满足任意 $y\in M$ 均有 $y\in a$
 
-定义 $y=\left\{z\in x\big|z\not\in z\right\}$ 根据[[MK9][分离模式]]可得 $y$ 是一个集合，则有 $y\in x$
+定义 $y=\left\{x\big|\mathcal{M}\vDash((x\in p_1)\land(x\not\in x))[a]\right\}$ 根据[[MK9][分离模式]]以及[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]可得 $y\in M$ 
 
 此时若 $y\in y$ 则根据 $y$ 的定义有 $y\not\in y$ ，若 $y\not\in y$ 则根据 $y$ 的定义有 $y\in y$
 
-故推出矛盾，即假设不成立，有 $\lnot(\exists x(\forall y(y\in x)))$ 
+故推出矛盾，即假设不成立，有 $\mathcal{M}\not\vDash(\exists x(\forall y (p_\in(y,x))))$ 即 $\mathcal{M}\vDash(\lnot(\exists x(\forall y (p_\in(y,x)))))$
+
+又由于 $\mathcal{M}$ 的任意性，根据[[~/文档/note/数理逻辑/sllj.org::MK257][第二完备]]有 $T_s\vdash(\lnot(\exists x(\forall y (p_\in(y,x)))))$ 
 
 **** 空集存在<<MK6>>
 
-形式语言： $\exists A\big(\forall x(x\not\in A)\big)$
-
-即存在一个集合 $A$ 他不包含任何[[MK2][元素]]（空集），记作 $\varnothing$
+$T_s\vdash\left(\exists x_1\big(\forall x_2(\lnot p_\in(x_2,x_1))\big)\right)$ 即任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 存在 $\varnothing\in M$ 满足任意 $b\in M$ 均有 $\left<b,\varnothing\right>\not\in I(p_\in)$
 
 ***** 证明
 
-显然 $\lnot(z=z)$ 是[[MK468][集合论语言]]的合法[[MK135][表达式]]，则根据[[MK469][第一存在]]可得有集合 $x$
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 则根据[[MK469][第一存在]]可得存在 $a\in M$ 定义 $y=\left\{x\big|\mathcal{M}\vDash((x\in p_1)\land(\lnot(x\hat{=}x)))[a]\right\}$ 根据[[MK9][分离模式]]可得 $y\in M$
 
-故根据[[MK9][分离模式]]可得 $y=\left\{z\in x\big|\lnot(z=z)\right\}$ 亦为一个集合
+显然根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]以及[[~/文档/note/数理逻辑/sllj.org::MK197][恒等律]]有 $\mathcal{M}\vDash(\forall x(x\hat{=}x))$ 即对于任意 $b\in M$ 均有 $b=b$ 故可得对于任意 $b\in M$ 均有 $b\not\in y$
 
-根据[[MK468][集合论语言]]可得 $=$ 符号满足[[MK176][等价关系]]，即有 $\forall z(z=z)$ 故不存在任意元素满足 $\lnot(z=z)$
+故可得 $\left<\mathcal{M},v\right>\vDash\big(\forall x_2(\lnot p_\in(x_2,x_1))\big)$ 其中 $v(x_1)=y$ 则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]有 $\left<\mathcal{M},v\right>\vDash\left(\exists x_1\big(\forall x_2(\lnot p_\in(x_2,x_1))\big)\right)$
 
-综上所述，不存在 $x\in y$ 即 $y=\varnothing$
+又由于 $\mathcal{M}$ 的任意性，根据[[~/文档/note/数理逻辑/sllj.org::MK257][第二完备]]有 $T_s\vdash\left(\exists x_1\big(\forall x_2(\lnot p_\in(x_2,x_1))\big)\right)$
 
 ***** 唯一性<<MK470>>
 
@@ -114,65 +102,73 @@ $\lnot(\exists x(\forall y(y\in x)))$ 即不存在包含一切集合的集合
 
 ****** 证明
 
-根据定义可得 $\forall x(x\not\in\varnothing)$ ，若存在 $y$ 亦满足 $\forall x(x\not\in y)$
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 根据[[MK6][空集存在]]可得存在 $\varnothing\in M$ 满足对于任意 $a\in M$ 均有 $a\not\in\varnothing$
 
-则对于[[MK135][表达式]] $\forall x((x\in\varnothing)\leftrightarrow (x\in y))$ 来说对于任意 $x$ 均有 $x\in\varnothing$ 与 $x\in y$ 均不成立
+若存在 $y\in M$ 亦满足上述条件，则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $\left<\mathcal{M},v\right>\vDash(\forall x_1(p_\in(x_1,x_2)\leftrightarrow p_\in(x_1,x_3)))$ 其中 $v(x_2)=\varnothing,v(x_3)=y$
 
-则有 $\forall x((x\in\varnothing)\leftrightarrow (x\in y))$ 成立，则根据[[MK5][外延公理]]有 $y=\varnothing$ 
+则根据[[MK5][外延公理]]有 $\left<\mathcal{M},v\right>\vDash(x_2\hat{=}x_3)$ 即根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $y =\varnothing$
 
-***** 包含
+***** 空集是任意集合的子集
 
-$\forall x(\varnothing\subset x)$ 即空集是任意集合的子集
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 满足 $v(x_3)=\varnothing$ 均有 $\left<\mathcal{M},v\right>\vDash(\forall x_1(\forall x_2(p_\in(x_1,x_3)\to p_\in(x_1,x_2))))$
+
+即根据[[MK20][子集]]可得任意 $a\in M$ 均有 $\varnothing\subset a$
 
 ****** 证明
 
-根据[[MK20][子集]]定义，对于集合 $x$ 均有 $\forall z(z\in\varnothing\rightarrow x\in x)$
+由于 $v(x_3)=\varnothing$ 则根据[[MK6][空集]]可得任意 $a\in M$ 均有 $a\not\in\varnothing$ 即有 $\left<\mathcal{M},v\right>\vDash(\lnot p_\in(x_1,x_3))$
 
-由于 $z\in\varnothing$ 恒不成立，故可得 $z\in\varnothing\rightarrow x\in x$ 恒成立，故有 $\forall x(\forall z(z\in\varnothing\rightarrow x\in x))$
-
-即 $\forall x(\varnothing\subset x)$ 
+则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]显然易证 $\left<\mathcal{M},v\right>\vDash(\forall x_1(\forall x_2(p_\in(x_1,x_3)\to p_\in(x_1,x_2))))$
 
 *** 配对公理<<MK7>>
 
-形式语言： $\forall B(\forall C(\exists A(\forall x((x\in A)\leftrightarrow((x=B)\lor (x=C))))))$
+形式语言： $\phi_{par}=(\forall x_1(\forall x_2(\exists x_3((\forall x_4(p_\in(x_4,x_3)\leftrightarrow((x_4\hat{=}x_1)\lor(x_4\hat{=}x_2))))))))$
 
 即给定集合 $B,C$ ，存在集合 $A=\{B,C\}$
 
 **** 推论
 
-$\forall y\exists x(y\in x)$
+$T_s\vdash(\forall x_1(\exists x_2 p_\in(x_1,x_2)))$
 
 ***** 证明
 
-根据[[MK7][配对公理]]可得当 $B=C$ 时有 $\forall C(\exists A(\forall x((x\in A)\leftrightarrow((x=C)\lor (x=C)))))$
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 显然有 $\mathcal{M}\vDash\phi_{par}$ 则对于任意 $a\in M$ 取[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 满足 $v(x_1)=v(x_2)=a$
 
-故可得对于任意 $C$ 均存在 $A$ 满足 $C\in A$
+则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]以及[[MK7][配对公理]]可得存在 $b\in M$ 使得任意 $c\in M$ 有 $c\in b$ 的充要条件为 $c=v(x_1)$ 或者 $c=v(x_2)$
+
+即有 $v(x_1)=v(x_2)=a$ 且 $\left<a,b\right>\in I(p_\in)$
 
 *** 并集公理<<MK8>>
 
-形式语言： $\forall A(\exists B(\forall x((x\in B)\leftrightarrow(\exists u((u\in A)\land(x\in u))))))$
+形式语言： $\phi_\cap=(\forall x_1(\exists x_2(\forall x_3(p_\in(x_3,x_2)\leftrightarrow(\exists x_4(p_\in(x_3,x_4)\land p_\in(x_4,x_2)))))))$
 
 即对于任意集合 $A$ 存在 $A$ [[MK2][元素]]的[[MK2][元素]]的集合 $B$
 
 *** 无穷公理<<MK462>>
 
-形式语言： $\exists A\big(\varnothing\in A\land (x\in A\rightarrow x\cup\{x\}\in A)\big)$
+形式语言： $\phi_{\inf}=(\exists x_1(\forall x_2(\phi_\varnothing(x_2)\to p_\in(x_2,x_1))\land(\forall x_3(p_\in(x_3,x_1)\to(\exists x_4(p_\in(x_4,x_1)\land(\forall x_5(p_\in(x_5,x_4)\leftrightarrow((x_5\hat{=}x_3)\lor p_\in(x_5,x_3))))))))))$
 
-即存在一个集合 $A$ 包含[[MK6][空集]]，且任意元素 $x$ 若 $x\in A$ 则其后继 $x\cup\{x\}=\{x,\{x\}\}$ 也属于 $A$
+其中 $\phi_\varnothing$ 为[[MK6][空集]]表达式。即存在一个集合 $A$ 包含[[MK6][空集]]，且任意元素 $x$ 若 $x\in A$ 则其后继 $x\cup\{x\}$ 也属于 $A$
 
 定义所有满足 $((\varnothing\in A)\land ((x\in A)\rightarrow (x\cup\{x\}\in A)))$ 的集合为 $Inf$
 
 *** 替换公理模式
 
-形式语言： $\forall X\exists Y\big(f(x)\in Y\leftrightarrow x\in X\big)$
+对于任意 $\phi\in\mathcal{L}_{\mathcal{A}_{zfc}}$ 满足 $\phi$ 中的[[MK441][自由变元]] $S\subset\{p_1,...,p_n,x_1,x_2\}$
 
-即对于任意[[MK194][函数]] $f(x)$ 和任意集合 $X$ ，若对于任意 $x\in X$ 来说 $f(x)$ 有定义
+形式语言： $\phi_{sub}=(\forall p_1(...(\forall p_n(\forall x_1((\forall x_2(p_\in(x_2,x_1)\to\text{IsFunc}(\phi,\vec{p}_n,x_2)))\to(\exists x_3(\forall x_4(p_\in(x_4,x_3)\leftrightarrow(\exists x_5(p_\in(x_5,x_1)\land\phi(x_5,x_4)))))))))...))$
 
-则存在集合 $Y$ 使得 $f(x)\in Y$ 是 $x\in X$ 的充要条件
+其中 $\text{IsFunc}$ 是[[MK135][表达式确定函数]]，则对于任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash\phi_{sub}$ 均有对于任意给定 $\{P_1,...,P_n,a_1\}\subset M$ 满足对于任意 $a_2\in a_1$ 均有唯一 $b\in M$
 
-*** 正则公理
+满足 $\mathcal{M}\vDash\phi\left(\left<p_1,...,p_n,x_1,x_2\right>,\left<P_1,...,P_n,a_2,b\right>\right)$ 则存在 $a_3\in M$ 满足对于任意 $a_4\in a_3$ 均存在 $a_5$ 满足 $a_5\in a_1$
 
-形式语言： $\forall A\big((\exists z(z\in A))\rightarrow \left(\exists x((x\in A)\land(\lnot\exists y(y\in x\land y\in A)))\right)\big)$
+且 $\mathcal{M}\vDash\phi\left(\left<p_1,...,p_n,x_1,x_2\right>,\left<P_1,...,P_n,a_5,a_4\right>\right)$ 
+
+即相当于若存在 $\phi$ 确定的[[MK194][函数]] $f:a_1\to M$ 满足 $f(a_1)=b$ 则所有 $f$ 关于 $a_1$ 的相组成的集合 $f_{im}=\left\{a\big|\exists b\left(\left<b,a_1\right>\in I(p_\in)\land f(b)=a\right)\right\}\in M$
+
+*** 正则公理<<MK706>>
+
+形式语言： $(\forall x_1((\exists x_2 p_\in(x_2,x_1))\to(\exists x_3(p_\in(x_3,x_1)\land(\lnot(\exists x_4(p_\in(x_4,x_3)\land p_\in(x_4,x_1))))))))$
 
 即对于任意非空集合 $A$ ，存在元素 $x\in A$ 使得 $x\cap A=\varnothing$ 
 
@@ -180,21 +176,25 @@ $\forall y\exists x(y\in x)$
 
 **** 引理1<<MK26>>
 
-$\forall A(\lnot(\exists B(B\in A\land B=A)))$ 即集合不包含自身
+$T_s\vdash(\lnot(\exists x_1p_\in(x_1,x_1)))$ 即集合不包含自身
 
 ***** 证明
 
-假设 $A\in A$ 即集合 $A$ 中有一个元素是其自身。
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 假设 $\mathcal{M}\vDash(\exists x_1p_\in(x_1,x_1))$ 则存在 $a\in M$ 且 $a\in a$
 
-则根据[[MK7][配对公理]]设 $x=A,y=A$ 则存在 $B=\{A\}$ 
+则根据[[MK7][配对公理]]设 $x=a,y=a$ 则存在 $b=\{a,a\}$ ，根据[[MK5][外延公理]]即得 $b=\{a\}$
 
-此时 $B$ 非空且仅含有一个元素，则 $A\cap B=A\cap \{A\}$
+显然 $b$ 非空且仅有一个元素 $a$ ，则 $a\cap b=a\cap\{a\}$ 由于 $a\in a$
 
-由于 $A\in A,A\in\{A\}$ 故有 $A\cap B=A$ 与正则公理矛盾，故 $A\not\in A$
+故可得 $a=\{a\}\cup (a-a)$ 故可得 $a\cap\{a\}=a$ 根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]易证与[[MK706][正则公理]]矛盾。
 
-**** 引理2<<MK606>>
+故假设不成立，即 $\mathcal{M}\not\vDash(\exists x_1p_\in(x_1,x_1))$ 根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $\mathcal{M}\vDash(\lnot(\exists x_1p_\in(x_1,x_1)))$
 
-无限递降序列 $\\...\in A_n\in...\in A_2\in A_1$ 不存在
+又根据 $\mathcal{M}$ 的任意性以及[[~/文档/note/数理逻辑/sllj.org::MK257][第二完备]]有 $T_s\vdash(\lnot(\exists x_1p_\in(x_1,x_1)))$
+
+**** 引理2<<MK606>>（证明需要修正）
+
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 不存在无限递降序列 $\\...\in A_n\in...\in A_2\in A_1\in M$
 
 ***** 证明
 
@@ -206,9 +206,11 @@ $\forall A(\lnot(\exists B(B\in A\land B=A)))$ 即集合不包含自身
 
 **** 三岐性<<MK604>>
 
-对于任意 $x=y$ 均有 $x\not\in y$ 且 $y\not\in x$
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 对于任意 $\{x,y\}\subset M$ 有：
 
-对于任意 $x\in y$ 均有 $x\ne y$ 且 $y\not\in x$
+（1） 若 $x=y$ 均有 $x\not\in y$ 且 $y\not\in x$
+
+（2） 若 $x\in y$ 均有 $x\ne y$ 且 $y\not\in x$
 
 ***** 证明
 
@@ -216,21 +218,127 @@ $\forall A(\lnot(\exists B(B\in A\land B=A)))$ 即集合不包含自身
 
 若有 $x\in y$ 则根据[[MK26][引理1]]可得 $x\ne y$ ，假设 $y\in x$ 则根据[[MK7][无序对公理]]可得存在集合 $S=\{x,y\}$
 
-则 $S\ne\varnothing$ 且对于任意 $a\in S$ 均有 $b\in S-\{a\}$ 满足 $b\in a$ 与正则公理矛盾
+则 $S\ne\varnothing$ 则对于 $x\in S$ 有 $x\cap S=x\cap\{x,y\}=\left\{y\}\cap(x-\{y\}\right)\cap\{x,y\}$ 即有 $y\in x\cap S$
+
+故可得 $x\cap S\ne\varnothing$ 同理可证 $y\cap S\ne\varnothing$ 故与[[MK706][正则公理]]矛盾，则假设不成立。即 $y\not\in x$
 
 *** 选择公理<<MK10>>
 
-对于任意不包含空集的[[MK12][集合族]] $A=\left\{S_i\big|i\in I\right\}$ 存在选择[[MK194][函数]] $f:A\to\bigcup_{i\in I}S_i$ 满足 $f(S_i)\in S_i$
+定义 $\text{NoEmpElt}(x_1)=(\forall x_2(p_\in(x_2,x_1)\to(\lnot\phi_\varnothing(x_2))))$
 
-形式语言： $\forall A\left(S_i\ne\varnothing\land S_i\in A\rightarrow\exists (f:A\to\bigcup S_i)\rightarrow\left(f(S_i)\in S_i\right)\right)$
+定义 $\text{OneCapElt}(x_1,x_2)=(\exists x_3(p_\in(x_3,x_1)\land p_\in(x_3,x_2)\land(\forall x_4(((p_\in(x_4,x_1)\land p_\in(x_4,x_2)\to(x_3\hat{=}x_4))))))$
 
-**** 推论
+形式语言： $(\forall x_1(\text{NoEmpElt}(x_1)\to(\exists x_2(\forall x_3(p_\in(x_3,x_1)\to\text{OneCapElt}(x_2,x_3))))))$
 
-对于任意集合 $A$ 中的每个[[MK2][元素]]选择一个[[MK2][元素]]的[[MK2][元素]]，可组成一个新的集合 $B$
+即任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 有任意 $A\in M$ 满足任意 $a\in A$ 不为[[MK6][空集]]，则存在 $B\in M$
 
-根据选择公理，存在选择函数。则对于任意 $S\in A$ 存在 $\{f(S)\}$ 使得 $f(S)\in S$
+满足对于任意 $a\in A$ 存在唯一 $c\in M$ 满足 $\{\left<c,a\right>,\left<c,B\right>\}\subset I(p_\in)$
 
-根据[[MK7][无序对公理]]及[[MK8][并集公理]]可得 $B=\left\{f(S)\big|S\in A\right\}$ 存在
+相当存在 $B$ 使得 $f=\left\{\left<a,c\right>\big|\left(\left<a,A\right>\in I(p_\in)\right)\land\left(\left<c,a\right>\in I(p_\in)\right)\land\left(\left<c,B\right>\in I(p_\in)\right)\right\}$ 是[[MK194][函数]]
+
+该 $f$ 亦被称为选择函数
+
+** 相关定义
+
+*** [[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]确定[[MK194][函数]]<<MK135>>
+
+对于任意[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi$ 满足其[[MK441][自由变元]] $S\subset\{x_1,...,x_{n+1}\}$ 
+
+定义 $\text{IsFunc}(\phi,x_1,...,x_n)=(\forall x_{n+1}(\forall x_{n+2}((\phi\land\phi(\left<x_{n+1}\right>,\left<x_{n+2}\right>))\to(x_{n+1}\hat{=}x_{n+2}))))$
+
+则对于任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 若满足 $\left<\mathcal{M},v\right>\vDash\text{IsFunc}(\phi,x_1,...,x_n)$
+
+均有对于任意 $v'$ 满足 $v(x_i)=v'(x_i),1\leq i\leq n$ 以及 $\left<\mathcal{M},v'\right>\vDash\phi$ 则有 $v(x_{n+1})=v'(x_{n+1})$
+
+为进一步简化可简写为 $\text{IsFunc}(\phi,\vec{x}_n)$ 其中 $\vec{x}_n=\left<x_1,....,x_n\right>$
+
+*** 空集判断<<MK709>>
+
+定义 $\phi_\varnothing(x_i)=(\forall x_1(\lnot p_\in(x_1,x_i)))$ 显然任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 满足 $\left<\mathcal{M},v\right>\vDash\phi_\varnothing(x_i)$
+
+有任意 $b\in M$ 均有 $\left<b,v(x_i)\right>\not\in I(p_\in)$
+
+*** 类<<MK707>>
+
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 以及任意[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi\in\mathcal{L}_{\mathcal{A}_{zfc}}$ 其[[MK441][自由变元]]为 $p_1,...,p_n,x$ 对于任意给定 $\left<P_1,...,P_n\right>\in M^n$
+
+定义 $C=\left\{c\big|c\in M\land \mathcal{M}\vDash\phi[P_1,...,P_n,c]\right\}$ 则称 $C$ 为类
+
+**** 性质1（真类）
+
+存在 $C$ 是[[MK707][类]]满足不存在 $B\in M$ 满足对于任意 $b$ 满足 $\left<b,B\right>\in I(p_\in)$ 的充要条件为 $b\in C$ ，即 $C$ 不是集合
+
+不是集合的[[MK707][类]]称为真类
+
+***** 证明
+
+定义 $R=\left\{c\big|c\in M\land\mathcal{M}\vDash(\lnot p_\in(x,x))[c]\right\}$ 显然根据[[MK707][定义]]可得 $R$ 是[[MK707][类]]，根据[[MK26][引理1]]可得 $\mathcal{M}\vDash(\lnot(\exists x_1p_\in(x_1,x_1)))$
+
+根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]可得不存在 $b\in\mathcal{M}$ 满足 $\left<b,b\right>\in I(p_\in)$ 即可得任意 $c\in M$ 均有 $\mathcal{M}\vDash(\lnot p_\in(x,x))[c]$
+
+故任意 $c\in M$ 均有 $c\in R$ 假设存在 $B\in M$ 满足任意 $b$ 满足 $\left<b,B\right>\in I(p_\in)$ 的充要条件为 $b\in R$
+
+即可得任意 $c\in M$ 均有 $\left<c,B\right>\in I(p_\in)$ 即 $\mathcal{M}\vDash(\exists x(\forall y (p_\in(y,x))))$ 显然与[[MK708][推论1]]矛盾。
+
+故假设不成立，即不存在 $B\in M$ 满足任意 $b$ 满足 $\left<b,B\right>\in I(p_\in)$ 的充要条件为 $b\in R$
+
+** 集合关系
+
+*** 子集<<MK20>>
+
+定义 $p_\subset(x_i,x_j)=(\forall x_{i'}(p_\in(x_{i'},x_i)\to p_\in(x_{i'},x_j)))$ 其中 $i'\ne i,i'\ne j$
+
+即任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 有 $\left<\mathcal{M},v\right>\vDash p_\subset(x_1,x_2)$ 的充要条件是
+
+在 $I(p_\in)$ 的角度上满足 $v(x_1)$ 是 $v(x_2)$ 的子集
+
+**** 自反性<<MK21>>
+
+$T_s\vdash(\forall x_1(\forall x_2((p_\subset(x_1,x_2)\land p_\subset(x_2,x_1))\to(x_1\hat{=}x_2))))$
+
+***** 证明
+
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 若有 $\left<\mathcal{M},v\right>\vDash(p_\subset(x_1,x_2)\land p_\subset(x_2,x_1))$
+
+则根据[[MK20][定义]]以及[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]易证对于任意 $b$ 有 $\left<b,v(x_1)\right>\in I(p_\in)$ 的充要条件是 $\left<b,v(x_2)\right>\in I(p_\in)$
+
+即根据[[MK5][外延公理]]可得 $\left<\mathcal{M},v\right>\vDash(x_1\hat{=}x_2)$ 故有 $\left<\mathcal{M},v\right>\vDash((p_\subset(x_1,x_2)\land p_\subset(x_2,x_1))\to(x_1\hat{=}x_2))$
+
+又由于 $v$ 的任意性可得 $\mathcal{M}\vDash(\forall x_1(\forall x_2((p_\subset(x_1,x_2)\land p_\subset(x_2,x_1))\to(x_1\hat{=}x_2))))$
+
+结合 $\mathcal{M}$ 的任意性以及[[~/文档/note/数理逻辑/sllj.org::MK257][第二完备]]有 $T_s\vdash(\forall x_1(\forall x_2((p_\subset(x_1,x_2)\land p_\subset(x_2,x_1))\to(x_1\hat{=}x_2))))$
+
+**** 传递性<<MK22>>
+
+$T_s\vdash(\forall x_1(\forall x_2(\forall x_3((p_\subset(x_1,x_2)\land p_\subset(x_2,x_3))\to p_\subset(x_1,x_3)))))$
+
+***** 证明
+
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 若有 $\left<\mathcal{M},v\right>\vDash(p_\subset(x_1,x_2)\land p_\subset(x_2,x_3))$
+
+则根据[[MK20][定义]]以及[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]易证对于任意 $b$ ：
+
+（1） 若满足 $\left<b,v(x_1)\right>\in I(p_\in)$ 均有 $\left<b,v(x_2)\right>\in I(p_\in)$
+
+（2） 若满足 $\left<b,v(x_2)\right>\in I(p_\in)$ 均有 $\left<b,v(x_3)\right>\in I(p_\in)$
+
+即对于任意 $b$ 若满足 $\left<b,v(x_1)\right>\in I(p_\in)$ 则有 $\left<b,v(x_3)\right>\in I(p_\in)$
+
+结合 $v$ 的任意性， $\mathcal{M}$ 的任意性以及[[~/文档/note/数理逻辑/sllj.org::MK257][第二完备]]有易证 $T_s\vdash(\forall x_1(\forall x_2(\forall x_3((p_\subset(x_1,x_2)\land p_\subset(x_2,x_3))\to p_\subset(x_1,x_3)))))$
+
+**** 空集是子集<<MK23>>
+
+$T_s\vdash(\forall x_1(\forall x_2(\phi_\varnothing(x_1)\to p_\subset(x_1,x_2))))$
+
+***** 证明
+
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 若有 $\left<\mathcal{M},v\right>\vDash\phi_\varnothing(x_1)$ 则根据[[MK709][空集判断]]易证
+
+对于任意 $a\in M$ 均有 $\left<a,v(x_1)\right>\not\in I(p_\in)$ ，则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]易证 $\left<\mathcal{M},v\right>\vDash(\forall x_3(p_\in(x_3,x_1)\to p_\in (x_3,x_2)))$
+
+则结合 $v$ 的任意性， $\mathcal{M}$ 的任意性以及[[~/文档/note/数理逻辑/sllj.org::MK257][第二完备]]有易证 $T_s\vdash(\forall x_1(\forall x_2(\phi_\varnothing(x_1)\to p_\subset(x_1,x_2))))$
+
+* 集合论
 
 ** 罗素定理
 
@@ -244,17 +352,17 @@ $\forall A(\lnot(\exists B(B\in A\land B=A)))$ 即集合不包含自身
 
 ** 集合的关系
 
-*** 包含（子集）<<MK20>>
+*** 包含（子集）
 
-若集合 $A$ 的每一个[[MK2][元素]]都是集合 $B$ 的元素，则称 $A$ 为 $B$ 的子集，记作 $A\subset B$ 。
+任意[[~/文档/note/数理逻辑/sllj.org::MK221][模型]] $\mathcal{M}=\left<M,I\right>\vDash T_s$ 若有 $A\in M$ 的每一个[[MK2][元素]]都是集合 $B\in M$ 的元素，则称 $A$ 为 $B$ 的子集，记作 $A\subset B$ 。
 
-即 $\forall x(x\in A\rightarrow x\in B)\rightarrow A\subset B$
+即 $A\subset B$ 等价与 $\left<\mathcal{M},v\right>\vDash(\forall x_1(p_\in(x_1,x_2)\to p_\in(x_1,x_3)))$ 其中 $v(x_2)=A,v(x_1)=B$ 
 
 **** 真子集
 
 若 $A\subset B\land A\ne B$ 则称 $A$ 为 $B$ 的真子集
 
-**** 定理1（自反性）<<MK21>>
+**** 定理1（自反性）
 
 对于任意集合 $A,B$ 当且仅当 $A\subset B$ 且 $B\subset A$ 时 $A=B$
 
@@ -271,7 +379,7 @@ $\forall A(\lnot(\exists B(B\in A\land B=A)))$ 即集合不包含自身
 
 故得 $A=B{|\!\!\!=\!\!\!|}&(A\subset B)\land(B\subset A)$
 
-**** 定理2（传递性）<<MK22>>
+**** 定理2（传递性）
 
 若 $A\subset B\land B\subset C$ 则有 $A\subset C$
 
@@ -294,7 +402,7 @@ $\forall A(\lnot(\exists B(B\in A\land B=A)))$ 即集合不包含自身
 
 由于 $x\in U$ 为永真，故有 $x\in A\rightarrow x\in U$ 永真，故 $\forall x(x\in A\rightarrow x\in U)\rightarrow A\subset U$
 
-**** 定理4<<MK23>>
+**** 定理4
 
 空集是任意集合的子集
 
@@ -494,7 +602,7 @@ $X$ 是[[MK461][传递集]]的等价条件是 $\forall x(\forall y((x\in y\land 
 
 **** 引理3
 
-$X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
+$X$ 是[[MK601][序数]]且 $X\ne\varnothing$ ，则有 $\varnothing\in X$
 
 ***** 证明
 
@@ -706,7 +814,7 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
 
 （4） 对于任意 $A\in F\land A\subset B\subset X$ 则有 $B\in F$
 
-显然，在已知 $X$ 表达式的情况下 $X$ 的滤子可用[[MK135][一阶表达式]]描述
+显然，在已知 $X$ 表达式的情况下 $X$ 的滤子可用[[~/文档/note/数理逻辑/sllj.org::MK129][一阶表达式]]描述
 
 **** 定理1
 
@@ -720,7 +828,7 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
 
 定义 $\phi_n(A)=(A\subset X)\land(\exists B_1(...\exists B_n((B_1\in E)\land...\land(B_n\in E)\land((B_1\cap...\cap B_n)\subset A))...))$
 
-由于 $n<\infty$ 故可得 $|\phi_n(A)|<\infty$ 故已知 $A$ 的情况下 $\phi(A)$ 是[[MK135][表达式]]
+由于 $n<\infty$ 故可得 $|\phi_n(A)|<\infty$ 故已知 $A$ 的情况下 $\phi(A)$ 是[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
 定义 $F_n=\left\{A\big|\phi_n(A)\right\}$ ，进一步定义 $F=\bigcup_{n\in\mathbb{N}}F_n$ 显然 $F\subset\rho(X)$
 
@@ -858,7 +966,7 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
 
 ***** 证明
 
-定义 $\phi(A)$ 为 $A$ 是 $X$ 的[[MK622][滤子]]的[[MK135][表达式]]，则定义 $D=\left\{E\big|E\in\rho(X)\land F\subset E\land \phi(E)\right\}$
+定义 $\phi(A)$ 为 $A$ 是 $X$ 的[[MK622][滤子]]的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]，则定义 $D=\left\{E\big|E\in\rho(X)\land F\subset E\land \phi(E)\right\}$
 
 易证 $\left<D,\subset\right>$ 是[[MK185][偏序关系]]
 
@@ -978,11 +1086,11 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
 
 *** 描述法<<MK14>>
 
-利用[[MK135][谓词公式定义]]描述集合中的元素。
+利用[[~/文档/note/数理逻辑/sllj.org::MK129][谓词公式定义]]描述集合中的元素。
 
 例如 $A=\left\{x\big|P(x)\right\}$ 或 $A=\left\{x\big:P(x)\right\}$ 
 
-定义为当且仅当[[MK135][谓词公式]] $P(x)=1$ 时，有 $x\in A$ 即 $\forall x(P(x)\leftrightarrow x\in A)=1$ 。
+定义为当且仅当[[~/文档/note/数理逻辑/sllj.org::MK129][谓词公式]] $P(x)=1$ 时，有 $x\in A$ 即 $\forall x(P(x)\leftrightarrow x\in A)=1$ 。
 
 **** 替换引理<<MK330>>
 
@@ -1020,7 +1128,7 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
 
 **** 归纳原理（数学归纳法）
 
-若集合 $A$ 以[[MK15][归纳定义]]，若 $P(x)$ 是[[MK135][谓词公式]]其中 $x$ 是命题变元。要证明 $\forall x(x\in A\rightarrow P(x))$ 仅需证明：
+若集合 $A$ 以[[MK15][归纳定义]]，若 $P(x)$ 是[[~/文档/note/数理逻辑/sllj.org::MK129][谓词公式]]其中 $x$ 是命题变元。要证明 $\forall x(x\in A\rightarrow P(x))$ 仅需证明：
 
 （1） [[MK16][基础条款]]中定义的所有元素为真 $P(x^1_0)\land...\land P(x^u_0)=1$
 
@@ -1032,7 +1140,7 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
  
 ***** 证明
 
-假设集合 $A$ 有[[MK15][归纳定义]]，[[MK135][谓词公式]] $P$ 且两个条件均成立，即：
+假设集合 $A$ 有[[MK15][归纳定义]]，[[~/文档/note/数理逻辑/sllj.org::MK129][谓词公式]] $P$ 且两个条件均成立，即：
 
 （1） $P(x^1_0)\land...\land P(x^u_0)=1$
 
@@ -1114,7 +1222,7 @@ $X$ 是[[MK601][序数]]，则有 $\varnothing\in X$
 
 ***** 存在性证明
 
-显然 $\forall c((c\in C)\rightarrow (x\in c))$ 是[[MK468][集合论语言]]的[[MK135][表达式]]，又根据[[MK8][并集公理]]可得 $\bigcup C$ 存在
+显然 $\forall c((c\in C)\rightarrow (x\in c))$ 是[[MK468][集合论语言]]的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]，又根据[[MK8][并集公理]]可得 $\bigcup C$ 存在
 
 根据[[MK9][分离模式]]定理存在 $S=\left\{x\big|((x\in\bigcup C)\land(\forall c((c\in C)\rightarrow (x\in c)))\right\}$
 
@@ -1552,7 +1660,7 @@ $A\cap B=C\cap B\rightarrow\overline{A}\cap B=\overline{C}\cap B$
 )
 \end{aligned}
 
-即 $f$ 是 $(B\times\mathbb{N})\to A$ 的[[MK195][单射函数]]的[[MK135][表达式]]。定义 $F=\left\{f\big|(\text{IsFunc}(f,B)\land B\subset A)\right\}$
+即 $f$ 是 $(B\times\mathbb{N})\to A$ 的[[MK195][单射函数]]的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]。定义 $F=\left\{f\big|(\text{IsFunc}(f,B)\land B\subset A)\right\}$
 
 根据[[MK614][定理1]]可得存在 $B^*\subset A$ 满足 $|B^*|=|\mathbb{N}|$ 根据[[MK27][定义]]可得存在[[MK200][双射函数]] $\sigma:B^*\to\mathbb{N}$ 
 
@@ -1736,7 +1844,7 @@ $A\cap B=C\cap B\rightarrow\overline{A}\cap B=\overline{C}\cap B$
 )
 \end{aligned}
 
-即 $f$ 是 $A$ 到 $A\times A$ 的[[MK200][双射函数]]的[[MK135][表达式]]，定义 $Y=\left\{f\big|A\subset X\land\text{IsFunc}(f,A)\right\}$
+即 $f$ 是 $A$ 到 $A\times A$ 的[[MK200][双射函数]]的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]，定义 $Y=\left\{f\big|A\subset X\land\text{IsFunc}(f,A)\right\}$
 
 根据[[MK614][定理1]]可得存在 $C\in X$ 满足 $|C|=|\mathbb{N}|$ ，根据[[MK499][定理2]]易证 $|C\times C|=|C|$
 
@@ -3948,6 +4056,35 @@ $B$ 的极大元： $b\in B\land\lnot\exists x(x\in B\land b<x)$
 进而有 $<M,\leq_M>\preceq<M',\leq_{M'}>$ 与 $<M,\leq_M>$ 是[[MK186][极大元]]矛盾
 
 故假设不成立 $X=M$ 进而有 $<X,\leq_M>$ 是[[MK384][良序关系]]
+
+**** 超限归纳
+
+任意[[MK384][良序关系]] $\left<X,\leq\right>$ 若对于命题 $P$ 满足：
+
+（1） $P(x_0)$ 为真，其中 $x_0$ 是 $X$ 的[[MK186][最小元]]
+
+（2） 对于任意 $a<b,a\ne b$ 均有命题 $P(a)$ 为真，则 $P(b)$ 为真
+
+则对于任意 $a\in X$ 均有命题 $P(a)$ 为真
+
+***** 证明
+
+对于任意[[MK384][良序关系]] $\left<X,\leq\right>$ 满足条件，假设存在 $a\in X$ 满足 $P(a)$ 为假
+
+则定义集合 $S=\left\{a\big|a\in X\land(\lnot P(a))\right\}$ 显然 $S$ 非空，则根据[[MK384][良序]]可得存在 $s\in S$
+
+满足对于任意 $s'\in S$ 均有 $s<s'$ 即 $S$ 上的[[MK186][最小元]]
+
+则若 $s=x_0$ 则根据条件（1）可得 $P(x_0)$ 为真，矛盾
+
+若 $s\ne x_2$ 则 $x_0\in Z=\left\{x\big|x\in X\land x<s\land x\ne s\right\}$ 即 $Z$ 非空
+
+显然根据 $s$ 定义可得任意 $x\in Z$ 满足 $x<s$ 均有 $x\not\in S$ 则有 $P(x)$ 为真
+
+则根据条件（2）可得 $P(s)$ 为真，矛盾
+
+综上所述，假设不成立，即不存在 $a\in X$ 满足 $P(a)$ 为假
+
 
 ** 函数（映射）
 

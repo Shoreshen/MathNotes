@@ -2,7 +2,7 @@
 
 #+TITLE: 线性空间
 
-current mark: 122
+current mark: 140
 
 * 映射
 
@@ -870,11 +870,11 @@ $\mathcal{V}=<V,K,+,\times>$ 是[[MK1][线性空间]]，其有限次幂空间 $\
 
  $\mathcal{V}=<V,K,+,\times>$ 是[[MK1][线性空间]]， $K$ 为[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org][数域]]，有 $S\subset V$ 满足：
 
-（1） 存在 $\{\vec{\alpha}_1,...,\vec{\alpha}_n\}\subset S$ 满足存在一组不全为零的数 $\{k_1,...,k_n\}\subset K$
+（1） 存在互不相等的 $\{\vec{\alpha}_1,...,\vec{\alpha}_n\}\subset S$ 满足存在一组不全为零的数 $\{k_1,...,k_n\}\subset K$
 
      使得 $\sum_{i=1}^nk_i\vec{\alpha}_i=\vec{0}$ 则称 $S$ 在 $\mathcal{V}$ 上线性相关
 
-（2） 对于任意 $\{\vec{\alpha}_1,...,\vec{\alpha}_n\}\subset S, n\in\mathbb{N}$ 若满足 $\sum_{i=1}^nk_i\vec{\alpha}_i=\vec{0}$ 则有 $k_1=...=k_n=0$
+（2） 对于任意互不相等 $\{\vec{\alpha}_1,...,\vec{\alpha}_n\}\subset S, n\in\mathbb{N}$ 若满足 $\sum_{i=1}^nk_i\vec{\alpha}_i=\vec{0}$ 则有 $k_1=...=k_n=0$
 
      则称 $S$ 在 $\mathcal{V}$ 上线性无关
 
@@ -2644,15 +2644,103 @@ $\forall\alpha\in U$ 由于 $\alpha_0\in U$ 则根据[[MK63][定理1]]有 $\gamm
 
 则结构 $\mathcal{W}=\left<V,K,+,\cdot,\odot\right>$ 是含有内积的[[MK1][线性空间]]，即内积空间
 
-** 维数<<MK121>>
+** 相关定义
+
+*** [[MK1][线性空间]]定义
+
+**** [[MK51][维数]]<<MK121>>
 
 设 $\mathcal{V}=\left<V,K,+,\cdot,\odot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} = \left<K,\mathfrak{g}\right>$ 上[[MK121][含有内积线性空间]]，定义其维数 $\dim(\mathcal{V})=\dim\left(\left<V,K,+,\cdot\right>\right)$
 
-** 欧几里得空间
+**** [[MK36][基]]<<MK137>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot,\odot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} = \left<K,\mathfrak{g}\right>$ 上[[MK121][含有内积线性空间]]，定义其[[MK36][基]]为 $\left<V,K,+,\cdot\right>$ 的[[MK36][基]]
+
+** 性质
+
+*** 性质1<<MK139>>
+
+设 $\mathcal{V}=\left<V,K,+,\cdot,\odot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} = \left<K,\mathfrak{g}\right>$ 的[[MK121][内积空间]]，对于任意 $B\subset V$ 满足 $\vec{0}\not\in B$
+
+以及任意 $\{a,b\}\subset B$ 均有 $a\odot b=\mathfrak{g}(c_0)$ 则 $B$ [[MK8][线性无关]]
+
+**** 证明
+
+定义 $\times,<,0$ 分别为 $\mathfrak{g}(f_\times),\mathfrak{g}(p_<),\mathfrak{g}(c_0)$ 
+
+任取互不相等的有限子集 $\{a_1,...,a_n\}\subset B$ 以及 $\{k_1,...,k_n\}\subset K$ 若有 $\sum_{i=1}^nk_i\cdot a_i=\vec{0}$ 其中加法为[[MK132][空间加法]]
+
+则对于 $a_j$ 有 $a_j\odot \sum_{i=1}^nk_i\cdot a_j=a_i\odot\vec{0}$ 根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK7][性质2]]可得 $a_j\odot\vec{0}=0$
+
+又根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性函数]]可得 $a_i\odot \sum_{i=1}^nk_i\cdot a_i=\mathfrak{g}\left(\sum\right)_{i=1}^nk_i\times (a_j\odot a_i)$
+
+根据条件可得 $\mathfrak{g}\left(\sum\right)_{i=1}^nk_i\times (a_j\odot a_i)=k_j\times(a_i\odot a_i)$ 根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]以及 $\vec{0}\not\in B$ 可得 $0<a_i\odot a_i$
+
+又根据[[~/文档/note/抽象代数/cxds.org::MK340][性质2]]以及[[~/文档/note/抽象代数/cxds.org::MK527][三歧性]]可得 $k_j=0$ 同理可证任意 $1\leq i\leq n$ 均有 $k_i=0$
+
+即 $B$ 中任意有限子集[[MK8][线性无关]]，故 $B$ [[MK8][线性无关]]
+
+** 定理
+
+设 $\mathcal{V}=\left<V,K,+,\cdot,\odot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK526][有序域]] $\mathcal{K} = \left<K,\mathfrak{g}\right>$ 的[[MK121][内积空间]]且 $\{a_1,...,a_n\}\subset V$ 是 $\mathcal{V}$ 的[[MK137][基]]
+
+则存在 $\{b_1,...,b_n\}\subset V$ 亦为 $\mathcal{V}$ 的[[MK137][基]]且任意 $i\ne j$ 均有 $b_i\odot b_j=\mathfrak{g}(c_0)$
+
+*** 证明
+
+根据以下证明以及数学归纳法可证
+
+**** $n=1$
+
+显然成立
+
+**** 归纳假设
+
+对于任意 $n<N$ 命题均成立
+
+**** $n=N$
+
+设 $\{a_1,...,a_n\}\subset V$ 是 $\mathcal{V}$ 的[[MK137][基]]，则定义 $\mathcal{V}_1=\left<\text{span}(\{a_1,...,a_{n-1}\}),K,+,\cdot,\odot\right>,\mathcal{V}_1=\left<\text{span}(\{a_n\}),K,+,\cdot,\odot\right>$ 
+
+则根据[[MK89][性质3]]可得 $\mathcal{V}=\mathcal{V}_1\oplus\mathcal{V}_2$ 其中 $\oplus$ 是[[MK83][直和]]。又根据[[MK88][性质1]]可得 $\{a_1,...,a_{n-1}\},\{a_n\}$ 分别是 $\mathcal{V}_1,\mathcal{V}_2$ 的[[MK137][基]]
+
+根据归纳假设 $\mathcal{V}_1$ 存在 $B=\{b_1,...,b_{n-1}\}$ 满足：
+
+（1） $B$ 是 $\mathcal{V}_1$ 的[[MK137][基]]
+
+（2） 任意 $i\ne j$ 均有 $b_i\odot b_j=\mathfrak{g}(c_0)$
+
+根据[[MK102][性质3]]可得任意 $b_i\ne\vec{0}$ 则根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]可得 $b_i\odot b_i\ne\mathfrak{g}(c_0)$ 则根据[[~/文档/note/抽象代数/cxds.org::MK526][有序域]]可得存在乘法逆元，记作 $\frac{1}{b_i\odot b_i}$
+
+又根据[[MK69][性质1]]可得 $\{b_1,...,b_{n-1},a_n\}$ 是 $\mathcal{V}$ 的[[MK137][基]]，定义 $b_n=a_n-\sum_{i=1}^n\frac{a_n\odot b_i}{b_i\odot b_i}b_i$ 根据
+
+则对于任意 $b_j$ 有 $b_j\odot b_n=b_i\odot a_n-\sum_{i=1}^n\frac{a_n\odot b_i}{b_i\odot b_i}(b_i\odot b_j)=b_i\odot b_j-\frac{a_n\odot b_j}{b_j\odot b_j}(b_j\odot b_j)=\mathfrak{g}(c_0)$
+
+假设 $\{b_1,...,b_n\}$ [[MK8][线性相关]]则存在不全为 $\mathfrak{g}(c_0)$ 的 $\{k_1,...,k_n\}\subset K$ 满足 $\sum_{i=1}^nk_ib_i=\vec{0}$
+
+由于 $\{b_1,...,b_{n-1}\}$ 是 $\mathcal{V}_1$ 的[[MK137][基]]，故显然 $k_n\ne\mathfrak{g}(c_0)$ 则有 $\sum_{i=1}^{n-1}\left(k_i-\frac{a_n\odot b_i}{b_i\odot b_i}k_n\right)b_i+a_n=\vec{0}$
+
+即 $\{b_1,...,b_{n-1},a_n\}$ [[MK8][线性相关]]，显然与其是 $\mathcal{V}$ 的[[MK137][基]]矛盾，故假设不成立，即 $\{b_1,...,b_n\}$ [[MK8][线性无关]]
+
+则根据[[MK42][命题2]]可得 $\{b_1,...,b_n\}$ 是 $\mathcal{V}$ 的[[MK137][基]]且任意 $i\ne j$ 均有 $b_i\odot b_j=\mathfrak{g}(c_0)$
+
+** 欧几里得空间<<MK134>>
 
 有限[[MK121][维度]]的实数域上[[MK121][含有内积的线性空间]] $\mathcal{V}=\left<\mathbb{R}^n,\mathbb{R},+,\cdot,\odot\right>$ 即为欧几里得空间
 
-*** 内积
+*** [[MK1][线性空间]]定义
+
+**** 运算
+
+***** 加法<<MK132>>
+
+任意 $X=\left<x_1,...,x_n\right>,Y=\left<y_1,...,y_n\right>$ 满足 $\{X,Y\}\subset\mathbb{R}^n$ 定义 $X+Y=\left<x_1+y_1,...,x_n+y_n\right>$
+
+***** 数乘
+
+任意 $X=\left<x_1,...,x_n\right>\in\mathbb{R}^n$ 以及任意 $k\in\mathbb{R}$ 定义 $k\cdot X=\left<kx_1,...,kx_n\right>$
+
+***** 内积<<MK124>>
 
 任意 $X=\left<x_1,...,x_n\right>,Y=\left<y_1,...,y_n\right>$ 满足 $\{X,Y\}\subset\mathbb{R}^n$
 
@@ -2660,7 +2748,246 @@ $\forall\alpha\in U$ 由于 $\alpha_0\in U$ 则根据[[MK63][定理1]]有 $\gamm
 
 其中 $I_n$ 为实数域上的[[~/文档/note/高等代数/Algb-3-Matrix.org::MK4][单位矩阵]]，则 $f(X,Y)=X\odot Y$ 是具有[[~/文档/note/高等代数/Algb-6-d-liner.org::MK6][对称性]]以及[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性函数]]
 
-**** 证明
+****** 证明
 
 根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK15][性质3]]即可证
+
+****** 性质<<MK131>>
+
+任意 $\{X,Y\}\subset\mathbb{R}^n$ 均有：
+
+（1） $(X\odot Y)^2\leq|X||Y|$ 当且仅当 $X,Y$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]有 $(X\odot Y)^2=|X||Y|$
+
+（2） 当且仅当 $Y=kX,k\in\mathbb{R}\land k\leq 0$ 时有 $-|X||Y|= X\odot Y$
+
+（3） 当且仅当 $Y=kX,k\in\mathbb{R}\land k\geq 0$ 时有 $|X||Y|= X\odot Y$
+
+其中 $|X|$ 是 $X$ 的长度
+
+******* 证明
+
+******** 证明（1)
+
+根据[[MK123][长度]] $(X\odot X)(Y\odot Y)=|X|^2|Y|^2=(|X||Y|)^2$ 则根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK18][柯西不等式]]有 $(X\odot Y)^2\leq (X\odot X)(Y\odot Y)=(|X||Y|)^2$
+
+且当且仅当 $X,Y$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]有 $(X\odot Y)^2=|X||Y|$
+
+******** 证明（2）
+
+********* 充分
+
+若有 $Y=kX,k\in\mathbb{R}\land k<0$ 则根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性]]易证 $X\odot Y=k(X\odot X)=k|X|^2$ 且 $|X||Y|=|X||kX|=\sqrt{k^2}|X|^2$
+
+若 $k=0$ 则有 $X\odot Y=k|X|^2=0=-0=-\sqrt{k^2}|X|^2=-|X||Y|$
+
+若 $k<0$ 则有 $k=-\sqrt{k^2}$ 进一步有 $X\odot Y=k|X|^2=-\sqrt{k^2}|X|^2=-|X||Y|$
+
+********* 必要
+
+若有 $-|X||Y|= X\odot Y$ 则显然 $|X|^2|Y|^2=(X\odot Y)^2$ 结合（1）证明以及[[~/文档/note/高等代数/Algb-6-d-liner.org::MK18][柯西不等式]]可得 $X,Y$ [[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][线性相关]]
+
+即有 $Y=kX$ 则通上一步可得 $X\odot Y=k|X|^2$ 且 $|X||Y|=\sqrt{k^2}|X|^2$ 结合 $-|X||Y|= X\odot Y$ 即有 $k|X|^2=-\sqrt{k^2}|X|^2$
+
+整理得 $k=-\sqrt{k^2}$ 即有 $k\leq 0$
+
+******** 证明（3）
+
+与（2）同理可证
+
+**** 加法零元<<MK135>>
+
+即 $\vec{0}=\left<0,...,0\right>\in\mathbb{R}^n$ 为[[MK1][加法零元]]，显然对于任意 $\vec{x}=\left<x_1,...,x_n\right>\in\mathbb{R}$
+
+根据[[MK132][加法]]均有 $\vec{x}+\vec{0}=\left<x_1+0,...,x_n+0\right>=\vec{x}$
+
+**** [[MK121][维数]]与[[MK138][基]]
+
+***** 标准[[MK36][基]]<<MK136>>
+
+[[MK134][欧几里得空间]] $\mathcal{V}=\left<\mathbb{R}^n,\mathbb{R},+,\cdot,\odot\right>$ 则有：
+
+
+（1） $\dim(\mathcal{V})=n$
+
+
+（2） 定义 $B=\left\{\vec{x}_i\bigg|\vec{x}_i=\left<x_1,...,x_n\right>\land x_j=\begin{cases}0&j\ne i\\1&j=i\end{cases}\land 1\leq i\leq n\land i\in\mathbb{N}\right\}$ 则 $B$ 是 $\mathcal{V}$ 的[[MK36][基]]
+
+称其为[[MK134][欧几里得空间]]的标准[[MK36][基]]
+
+****** 证明
+
+定义 $\mathcal{V}'=\left<\mathbb{R}^n,\mathbb{R},+,\cdot\right>$ 对于任意 $\{k_1,...,k_n\}\subset\mathbb{R}$ 易证 $\sum_{i=1}^nk_i\vec{x}_i=\left<k_1,k_2,...,k_n\right>$ 则根据[[MK135][加法零元]]显然
+
+当且仅当 $k_1=...=k_n=0$ 时有 $\sum_{i=1}^nk_i\vec{x}_i=\vec{0}$ 即可得 $B$ [[MK8][线性无关]]
+
+对于任意 $\vec{y}=\left<y_1,...,y_n\right>\in\mathbb{R}$ 均有 $\vec{y}=\sum_{i=1}^ny_i\vec{x}_i$ 故任意元素可由 $B$ [[MK12][线性表述]]
+
+即 $B$ 是 $\mathcal{V}'$ 的[[MK36][基]]，则根据[[MK121][维数]]与[[MK138][基]]可得 $B$ 是 $\mathcal{V}$ 的[[MK138][基]]且 $\dim(\mathcal{V})=n$
+
+****** 性质
+
+[[MK134][欧几里得空间]] $\mathcal{V}=\left<\mathbb{R}^n,\mathbb{R},+,\cdot,\odot\right>$ 的[[MK136][标准基]] $B=\left\{\vec{\epsilon}_1,...,\vec{\epsilon}_n\right\}$ 中任意两个不同的元素[[MK130][正交]]
+
+******* 证明
+
+根据[[MK124][内积]]定以易证 $i\ne j\to\vec{\epsilon}_i\odot\vec{\epsilon}_j=0$ 即[[MK130][正交]]
+
+***** 正交[[MK36][基]]
+
+[[MK134][欧几里得空间]] $\mathcal{V}=\left<\mathbb{R}^n,\mathbb{R},+,\cdot,\odot\right>$ 任意 $n$ 个两两[[MK130][正交]]的元素组成集合 $B$ 是其[[MK36][基]]，称作正交[[MK36][基]]
+
+****** 证明
+
+根据[[MK139][性质1]]可得 $n$ 个两两[[MK130][正交]]的元素[[MK8][线性无关]]，又根据[[MK136][标准基]]可得 $\dim(\mathcal{V})=n$
+
+则根据[[MK42][命题2]]可得是 $B$ 是[[MK36][基]]
+
+*** 扩展定义
+
+**** 长度<<MK123>>
+
+任意 $X\in\mathbb{R}^n$ 定义其长度为 $|X|=\sqrt{X\odot X}$ 其中 $X\odot X$ 为 $X$ 与自身的[[MK124][内积]]
+
+***** 非负性<<MK128>>
+
+任意 $X\subset\mathbb{R}^n$ 均有 $|X|\in\mathbb{R}$ 有定义且 $|X|\geq 0$
+
+****** 证明
+
+根据[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]可得 $X\odot X=f(X,X)\geq0$ 则显然 $\sqrt{X\odot X}\in\mathbb{R}$ 且 $|X|\geq 0$
+
+***** 不等式<<MK133>>
+
+任意 $\{X,Y\}\subset\mathbb{R}^n$ 均有 $|X+Y|\leq|X|+|Y|$ 且 $|X+Y|=|X|+|Y|$ 当且仅当 $Y=kX,k\in\mathbb{R}\land k\geq 0$ 
+
+****** 证明
+
+根据 $\odot$ 为[[~/文档/note/高等代数/Algb-6-d-liner.org::MK6][对称性]]以及[[~/文档/note/高等代数/Algb-6-d-liner.org::MK14][正定型]]的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK1][双线性函数]]，以及[[MK131][性质]]可得
+
+\begin{aligned}
+\left(|X+Y|\right)^2=&(X+Y)\odot(X+Y)=X\odot X+2X\odot Y+Y\odot Y\\
+\leq&X\odot X+2|X||Y|+Y\odot Y\\
+=&(|X|+|Y|)^2
+\end{aligned}
+
+结合[[MK128][非负性]]可得 $|X+Y|\leq|X|+|Y|$
+
+又根据[[MK131][性质]]可得当且仅当 $Y=kX,k\in\mathbb{R}\land k\geq 0$ 时有 $|X||Y|= X\odot Y$ 结合上述公式可得 $|X+Y|=|X|+|Y|$
+
+**** 夹角<<MK125>>
+
+任意 $\{X,Y\}\subset\mathbb{R}^n$ 定义夹角 $<X,Y>=\arccos\left(\frac{X\odot Y}{|X||Y|}\right)$ 其中 $|X|,|Y|$ 分别为 $X,Y$ 的[[MK123][长度]]
+
+***** 值域
+
+任意 $\{X,Y\}\subset\mathbb{R}^n$ 均有 $0\leq<X,Y>\leq\pi$
+
+****** 证明
+
+根据[[MK131][性质]]易证 $-1\leq \frac{X\odot Y}{|X||Y|}\leq 1$ 则 $0\leq\arccos\left(\frac{X\odot Y}{|X||Y|}\right)\leq\pi$
+
+**** 正交<<MK130>>
+
+任意 $\{X,Y\}\subset\mathbb{R}^n$ 若有 $<X,Y>=0$ 则称 $X,Y$ 正交，记作 $X\perp Y$ ，其中 $<X,Y>$ 为 $X,Y$ 的[[MK125][夹角]]
+
+***** 对称性
+
+若 $X\perp Y$ 则 $Y\perp X$
+
+****** 证明
+
+根据[[MK124][内积]]的[[~/文档/note/高等代数/Algb-6-d-liner.org::MK6][对称性]]以及实数乘法交换律可得 $0=<X,Y>=\arccos\left(\frac{X\odot Y}{|X||Y|}\right)=\arccos\left(\frac{Y\odot X}{|Y||X|}\right)=<Y,X>$
+
+***** 勾股定理
+
+任意 $\{X,Y\}\subset\mathbb{R}^n$ 若[[MK130][正交]]，则有 $\left(|X+Y|\right)^2=|X|^2+|Y|^2$ 即勾股定理
+
+****** 证明
+
+即 $X\odot Y=0$ 则有
+
+\begin{aligned}
+\left(|X+Y|\right)^2=&(X+Y)\odot(X+Y)=X\odot X+2X\odot Y+Y\odot Y\\
+=&X\odot X+Y\odot Y\\
+=&|X|^2+|Y|^2
+\end{aligned}
+
+**** 距离<<MK126>>
+
+任意 $X=\left<x_1,...,x_n\right>,Y=\left<y_1,...,y_n\right>$ 满足 $\{X,Y\}\subset\mathbb{R}^n$ 定义 $d(X,Y)=|X+((-1)\cdot Y)|$ 为他们之间的距离
+
+其中 $|X|$ 为 $X$ 的[[MK123][长度]]
+
+***** 对称性<<MK127>>
+
+任意 $X=\left<x_1,...,x_n\right>,Y=\left<y_1,...,y_n\right>$ 满足 $\{X,Y\}\subset\mathbb{R}^n$ 有 $d(X,Y)=d(Y,X)$
+
+****** 证明
+
+根据[[MK126][举例]]、[[MK123][长度]]以及[[MK124][内积]] $d(X,Y)=|X+((-1)\cdot Y)|=\sqrt{(X+((-1)\cdot Y))\odot (X+((-1)\cdot Y))}=\sqrt{\sum_{i=1}^n\left(x_i-y_i\right)^2}$
+
+显然实数域内 $(x_i-y_i)^2=(y_i-x_i)^2$
+
+故可得 $d(X,Y)=|X+((-1)\cdot Y)|=\sqrt{\sum_{i=1}^n\left(x_i-y_i\right)^2}=\sqrt{\sum_{i=1}^n\left(y_i-x_i\right)^2}=d(Y,X)$
+
+***** 非负性<<MK129>>
+
+任意 $X=\left<x_1,...,x_n\right>,Y=\left<y_1,...,y_n\right>$ 满足 $\{X,Y\}\subset\mathbb{R}^n$ 有：
+
+（1） $d(X,Y)\geq 0$
+
+（2） $d(X,Y)=0$ 的充要条件为 $X=Y$
+
+****** 证明
+
+根据[[MK127][对称性证明]]可得 $d(X,Y)=\sqrt{\sum_{i=1}^n\left(x_i-y_i\right)^2}$ 根据[[~/文档/note/抽象代数/cxds.org::MK531][性质5]]可得 $x_i-y_i\ne0\to (x_i-y_i)^2>0$
+
+且根据[[~/文档/note/抽象代数/cxds.org::MK527][性质1]] $x_i-y_i=0\to(x_i-y_i)^2=0$ 又根据[[~/文档/note/抽象代数/cxds.org::MK527][性质1]]加法相容易证 $\sum_{i=1}^n\left(x_i-y_i\right)^2\geq0$
+
+且当且仅当 $x_i=y_i,1\leq i\leq n$ 时 $\sum_{i=1}^n\left(x_i-y_i\right)^2=0$ 故证得结论
+
+***** 三角不等式
+
+任意 $\{X,Y,Z\}\subset\mathbb{R}^n$ 有 $d(X,Y)\leq d(Y,Z)+d(X,Z)$
+
+****** 证明
+
+根据[[MK126][距离]]以及[[MK127][对称性]]可得 $d(X,Y)=|X-Y|,d(X,Z)=|X-Z|,d(Z,Y)=|Z-Y|$
+
+根据[[MK132][加法]]易证 $X-Y=(X-Z)+(Z-Y)$ 定义 $a=X-Z,b=Z-Y$ 则有 $a+b=X-Y$
+
+故 $d(X,Y)=|a+b|,d(X,Z)=|a|,d(Y,Z)=|b|$ 根据[[MK133][不等式]]有 $|a+b|\leq|a|+|b|$ 即 $d(X,Y)\leq d(Y,Z)+d(X,Z)$
+
+***** 三角不等式2
+
+任意 $\{X,Y,Z\}\subset\mathbb{R}^n$ 有：
+
+（1） $d(X,Y)\leq |X|+|Y|$
+
+（2） $d(X,Y)=|X|+|Y|$ 当且仅当 $<X,Y>=\pi$ 即夹角 $180$ 度
+
+****** 证明
+
+******* 证明（1）
+
+根据[[MK131][性质]]可得 $(X\odot Y)^2=|X||Y|$ 则易证 $-|X||Y|\leq X\odot Y\leq |X||Y|$ 即 $-(X\odot Y)\leq |X||Y|$ 又根据[[MK127][之前证明]]可得
+
+\begin{aligned}
+\left(d(X,Y)\right)^2=&\sum_{i=1}^n(x_i-y_i)^2\\
+=&\sum_{i=1}^nx_i^2-2\sum_{i=1}^nx_iy_i+\sum_{i=1}^ny_i^2\\
+=&|X|^2+|Y|^2-2(X\odot Y)\\
+\leq&|X|^2+|Y|^2+2|X||Y|\\
+=&(|X|+|Y|)^2
+\end{aligned}
+
+根据[[MK128][长度非负性]]易证 $|X|+|Y|\geq 0$ 结合[[MK129][距离非负性]]可得 $d(X,Y)\geq 0$ 结合 $(d(X,Y))^2\leq \left(|X|+|Y|\right)^2$ 易证 $d(X,Y)\leq |X|+|Y|$
+
+******* 证明（2）
+
+根据[[MK131][性质]]可得当且仅当 $Y=kX,k\in\mathbb{R}\land k\leq 0$ 时有 $-|X||Y|= X\odot Y$ 结合上一部有 $(d(X,Y))^2=\left(|X|+|Y|\right)^2$
+
+同理结合[[MK128][长度非负性]]以及[[MK129][距离非负性]]易证 $d(X,Y)=|X|+|Y|$ 此时 $\frac{X\odot Y}{|X||Y|}=\frac{k|X|^2}{\sqrt{k^2}|X|^2}=-1$
+
+则根据[[MK125][夹角]]可得 $<X,Y>=\arccos\left(\frac{X\odot Y}{|X||Y|}\right)=\arccos(-1)=\pi$
+
 

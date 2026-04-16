@@ -3078,7 +3078,7 @@ d. 若为情况（4）则 $\phi$ 中包含 $\to$ 与（1）冲突
 
 对于任意 $\phi\in\mathcal{L}$ 是[[MK129][表达式]]， $\{\tau_1,...,\tau_n,\tau'_1,...,\tau'_n\}\in T$ 是[[MK117][项]]。则定义 $\phi(\left<\tau_1,...,\tau_n\right>\cong\left<\tau'_1,...,\tau'_n\right>)$
 
-是将 $\phi$ 中所有出现的 $\tau_i$ 替换为 $\tau'_i$ 后的字符串，根据[[MK146][项替换]]可得 $\phi(\left<x_1,...,x_n\right>,\left<\tau_1,...,\tau_n\right>)\in\mathcal{L}$
+是将 $\phi$ 中所有出现的 $\tau_i$ 替换为 $\tau'_i$ 后的字符串，根据[[MK146][项替换]]可得 $\phi(\left<x_1,...,x_n\right>\cong\left<\tau_1,...,\tau_n\right>)\in\mathcal{L}$
 
 **** 可替换<<MK150>>
 
@@ -7056,7 +7056,7 @@ $\theta$ 是[[MK144][语句]]，且对于任意[[MK153][结构]] $\mathcal{M}=\l
 
 根据条件由于 $\mathcal{M}^*$ 是无限结构，故有 $\mathcal{M}^*\vDash\theta$ 矛盾，故假设不成立。即推论为真
 
-**** 定理2<<MK273>>
+**** 定理2（向下勒文海姆-斯科伦定理）<<MK273>>
 
 [[MK151][一阶可数语言]] $\mathcal{L}_\mathcal{A}$ 任意关于 $x_1,...,x_n$ 的[[MK222][一致]]的[[MK129][表达式]]集合 $\Gamma$
 
@@ -8518,7 +8518,7 @@ $<\mathcal{M},v>\vDash\phi$ 的充要条件是 $<\mathcal{N},u>\vDash\phi$
 
 综上所述， $\left<\mathcal{M},v\right>\vDash\phi$ 的充要条件是 $\left<\mathcal{N},v\cdot e\right>\vDash\phi$ 即 $\mathcal{M}$ 是 $\mathcal{N}$ 的[[MK301][同质嵌入]]
 
-***** 定理2（嵌入放大）<<MK303>>
+***** 定理2（嵌入放大，即向上勒文海姆-斯科伦定理）<<MK303>>
 
 [[MK151][一阶可数语言]] $\mathcal{L}_\mathcal{A}$ 存在[[MK153][结构]] $\mathcal{M}=\left<M,I\right>$ 其中 $M$ 是[[~/文档/note/离散数学/lssx.org::MK83][无限集]]
 
