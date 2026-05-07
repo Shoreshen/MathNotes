@@ -2,7 +2,7 @@
 
 #+TITLE: 数理逻辑
 
-currnet mark: 508
+currnet mark: 509
 
 free mark: 
   
@@ -4516,9 +4516,39 @@ $\Gamma=\left\{(\lnot(c\hat{=}f(c)))\big|c\in C\right\}\cup\{(\exists x_1(x_1\ha
 
 （10） $\Gamma\vdash((\lnot(\phi_1\to\phi_2))\to\phi_1)$
 
+（11） $\Gamma\vdash((\phi_1\to\phi_2)\to((\phi_1\to(\lnot\phi_2))\to(\lnot\phi_1)))$
+
 ****** 证明
 
-根据命题逻辑[[MK60][推论2]]、[[MK61][推论3]]和[[MK62][推论4]]同理可证
+（1）~(10）根据命题逻辑[[MK60][推论2]]、[[MK61][推论3]]和[[MK62][推论4]]同理可证，以下证明（11）
+
+1. 根据[[MK197][第二宽容]]有 $\Gamma\vdash(\phi_2\to((\lnot\phi_2)\to\phi_1))$
+
+2. 根据[[MK198][推论]]中（1）可得 $\Gamma\vdash((\phi_2\to((\lnot\phi_2)\to\phi_1))\to((\phi_1\to\phi_2)\to(\phi_1\to((\lnot\phi_2)\to\phi_1))))$
+
+3. 根据1和2可得 $\Gamma\vdash((\phi_1\to\phi_2)\to(\phi_1\to((\lnot\phi_2)\to\phi_1)))$
+
+4. 根据[[MK197][蕴含分配]]有 $\Gamma\vdash((\phi_1\to((\lnot\phi_2)\to(\lnot\phi_1)))\to((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1))))$
+
+5. 根据[[MK197][推论]]中（5）可得 $\Gamma\vdash(((\phi_1\to\phi_2)\to(\phi_1\to((\lnot\phi_2)\to(\lnot\phi_1))))\to\\(((\phi_1\to((\lnot\phi_2)\to(\lnot\phi_1)))\to((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1))))\to((\phi_1\to\phi_2)\to((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1))))))$
+
+6. 根据3和5可得 $\Gamma\vdash(((\phi_1\to((\lnot\phi_2)\to(\lnot\phi_1)))\to((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1))))\to\\((\phi_1\to\phi_2)\to((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1)))))$
+
+7. 根据4和6可得 $\Gamma\vdash((\phi_1\to\phi_2)\to((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1))))$
+
+8. 根据第7步以及[[MK211][演绎定理]]有 $\Gamma\cup\{(\phi_1\to\phi_2)\}\vdash((\phi_1\to(\lnot\phi_2))\to(\phi_1\to(\lnot\phi_1)))$
+
+9. 根据第8步以及[[MK211][演绎定理]]有 $\Gamma\cup\{(\phi_1\to\phi_2),(\phi_1\to(\lnot\phi_2))\}\vdash(\phi_1\to(\lnot\phi_1))$
+
+10. 根据[[MK198][推论]]中（5）可得 $\Gamma\vdash((\phi_1\to(\lnot\phi_1))\to(\lnot\phi_1))$
+
+11. 根据第10步易证 $\Gamma\cup\{(\phi_1\to\phi_2),(\phi_1\to(\lnot\phi_2))\}\vdash((\phi_1\to(\lnot\phi_1))\to(\lnot\phi_1))$
+
+12. 根据第9，11步可得 $\Gamma\cup\{(\phi_1\to\phi_2),(\phi_1\to(\lnot\phi_2))\}\vdash(\lnot\phi_1)$
+
+13. 根据第12步以及[[MK211][演绎定理]]有 $\Gamma\cup\{(\phi_1\to\phi_2)\}\vdash((\phi_1\to(\lnot\phi_2))\to(\lnot\phi_1))$
+
+14. 根据第13步以及[[MK211][演绎定理]]有 $\Gamma\vdash((\phi_1\to\phi_2)\to((\phi_1\to(\lnot\phi_2))\to(\lnot\phi_1)))$
 
 **** 特化公理
 
@@ -4785,6 +4815,24 @@ $\Gamma\vdash(\psi_1\leftrightarrow\psi_2)$ 的充要条件亦可为：
 则根据 $\Gamma\vdash(\psi_2\to\psi_3)$ 以及[[MK210][导出引理]]有 $\Gamma\vdash((\psi_1\to\psi_2)\to(\psi_1\to\psi_3))$
 
 又结合 $\Gamma\vdash(\psi_1\to\psi_2)$ 以及[[MK210][导出引理]]有 $\Gamma\vdash(\psi_1\to\psi_3)$
+
+**** 引理5<<MK509>>
+
+[[MK151][一阶语言]] $\mathcal{L}_\mathcal{A}$ 任意[[MK129][表达式]]集合 $\Gamma\subset\mathcal{L}_\mathcal{A}$ 均有 $\Gamma\vdash(\exists x_1(x_1\hat{=}x_1))$
+
+***** 证明
+
+1. 根据[[MK197][特化公理]]可得 $\Gamma\vdash((\forall x_i(\lnot(x_i\hat{=}x_i)))\to(\lnot(x_i\hat{=}x_i)))$
+
+2. 根据[[MK197][第一宽容]]可得 $\Gamma\vdash((x_i\hat{=}x_i)\to((\forall x_1(\lnot(x_1\hat{=}x_i)))\to(x_i\hat{=}x_i)))$
+
+3. 根据第2步以及[[MK197][恒等律]]可得 $\Gamma\vdash((\forall x_1(\lnot(x_1\hat{=}x_i)))\to(x_i\hat{=}x_i))$
+
+4. 根据[[MK198][推论]]中（11）可得 $\Gamma\vdash(((\forall x_1(\lnot(x_1\hat{=}x_i)))\to(x_i\hat{=}x_i))\to(((\forall x_i(\lnot(x_i\hat{=}x_i)))\to(\lnot(x_i\hat{=}x_i)))\to(\lnot(\forall x_1(\lnot(x_1\hat{=}x_i))))))$
+
+5. 根据第3，4步可得 $\Gamma\vdash(((\forall x_i(\lnot(x_i\hat{=}x_i)))\to(\lnot(x_i\hat{=}x_i)))\to(\lnot(\forall x_1(\lnot(x_1\hat{=}x_i)))))$
+
+6. 根据第1，6步可得 $\Gamma\vdash(\lnot(\forall x_1(\lnot(x_1\hat{=}x_i))))$ 根据[[MK206][定义]]即得 $\Gamma\vdash(\exists x_1(x_1\hat{ =}x_1))$
 
 *** 定理
 
