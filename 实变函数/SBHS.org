@@ -4606,7 +4606,7 @@ Borel集中元素均为可测集
 
 设 $f(x)$ 是 $[a,b]$ 上的[[MK383][有限函数]]，若对于任意 $\epsilon>0$ 均存在 $\delta>0$ 满足
 
-任取[[~/文档/note/离散数学/Disc_Math.org:MK48][至多可数]]个 $[a,b]$ 上互不相交的开区间 $\{(a_i,b_i)\}$ 若满足 $\sum_{i=1}^n(b_i-a_i)<\delta$
+任取[[~/文档/note/离散数学/Disc_Math.org::MK48][至多可数]]个 $[a,b]$ 上互不相交的开区间 $\{(a_i,b_i)\}$ 若满足 $\sum_{i=1}^n(b_i-a_i)<\delta$
 
 则均有 $\sum_{i=1}^n|f(a_i)-f(b_i)|<\epsilon$ 。则称 $f(x)$ 是 $[a,b]$ 上的绝对连续函数
 
@@ -4644,7 +4644,7 @@ Borel集中元素均为可测集
 
 **** 证明
 
-由于是绝对连续函数，故对于 $\epsilon=1$ 存在 $\delta>0$ 对于任意[[~/文档/note/离散数学/Disc_Math.org:MK48][至多可数]]个互不相交的开区间 $\{(a_i,b_i)\}$
+由于是绝对连续函数，故对于 $\epsilon=1$ 存在 $\delta>0$ 对于任意[[~/文档/note/离散数学/Disc_Math.org::MK48][至多可数]]个互不相交的开区间 $\{(a_i,b_i)\}$
 
 若满足 $\sum_{i=1}^n(b_i-a_i)<\delta$ 则均有 $\sum_{i=1}^n|f(a_i)-f(b_i)|<\epsilon$
 
@@ -4684,7 +4684,7 @@ Borel集中元素均为可测集
 
 ***** 前置证明<<MK391>>
 
-故对于任意 $\epsilon>0$ 存在 $\delta$ 任取[[~/文档/note/离散数学/Disc_Math.org:MK48][至多可数]]个 $[a,x_0]$ 上互不相交的开区间 $\{(a_i,b_i)\}$
+故对于任意 $\epsilon>0$ 存在 $\delta$ 任取[[~/文档/note/离散数学/Disc_Math.org::MK48][至多可数]]个 $[a,x_0]$ 上互不相交的开区间 $\{(a_i,b_i)\}$
 
 若满足 $\sum_{i=1}^n(b_i-a_i)<\delta$ 则有 $\sum_{i=1}^n|f(a_i)-f(b_i)|<\epsilon$
 
@@ -6580,7 +6580,7 @@ E-E_\delta=&\left(\bigcup_{i=1}^\infty\bigcup_{k\geq N_{\delta,i}}^\infty\left\{
 
 由于是[[MK174][外测度可测集]]则根据[[MK65][Caratheodory定理]]外侧度可测集是[[MK50][ $\sigma$ 代数]]，且[[MK61][外测度]]是[[MK56][测度]]
 
-则根据[[MK73][定理]]、[[~/文档/note/离散数学/Disc_Math.org:MK333][集合族并]]以及极限的四则运算有
+则根据[[MK73][定理]]、[[~/文档/note/离散数学/Disc_Math.org::MK333][集合族并]]以及极限的四则运算有
 
 \begin{aligned}
 \int_{E} f(x)dx=&\int_{\cup_{n=1}^\infty A_n} f(x)dx\\

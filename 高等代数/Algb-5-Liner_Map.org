@@ -526,7 +526,7 @@ $\forall\{l,k\}\subset K$ 均有 $(lk)\sigma=(kl)\sigma$
 
 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK89][性质3]]可得 $\mathcal{V}=\mathcal{V}_1+\mathcal{V}_2=<\text{span}(S_1),K,+,\cdot>\textcircled{+}<\text{span}(S_2),K, +,\cdot>$ 是[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][直和]]
 
-则对于任意 $a\in V$ 均有 $a=a_1+a_2$ 表述唯一，即对于任意 $a\in V$ 均有唯一 $\sigma(a)$ 故为[[~/文档/note/离散数学/Disc_Math.org;;MK194][映射]]
+则对于任意 $a\in V$ 均有 $a=a_1+a_2$ 表述唯一，即对于任意 $a\in V$ 均有唯一 $\sigma(a)$ 故为[[~/文档/note/离散数学/Disc_Math.org::MK194][映射]]
 
 对于任意 $a+b\in V$ 有 $a=a_1+a_2\land b=b_1+b_2$ 以及 $a+b=a_1+b_1+a_2+b_2$
 
