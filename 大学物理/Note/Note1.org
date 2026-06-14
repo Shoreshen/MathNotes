@@ -161,7 +161,7 @@
 
 不收外力下保持静止或匀速直线运动。
 
-***** 动量定律：
+***** 动量定律<<MK1>>
 
 $F(t)=\frac{d\vec{p}(t)}{dt},\ \vec{p}(t)=m(t)\vec{v}(t)$ 如果质量随时间保持不变 $F(t)=\frac{d\vec{p}(t)}{dt}=m\frac{d\vec{v}(t)}{dt}=m\vec{a}(t)$
 

@@ -2,7 +2,7 @@
 
 #+TITLE: 函数项级数
 
-current mark: 6
+current mark: 16
 
 * 函数项级数
 
@@ -194,7 +194,7 @@ a&,m\neq n_i,a\in D
 
 **** A-D判别：
 
-***** Abel:
+***** Abel<<MK7>>:
 
 若函数项级数满足 $a_n(x)$ 对于任何 $x\in D$ 单调有界 $a_n(x)<K$ ，$\sum_{i=1}^\infty b_i(x)$ 一致收敛
 
@@ -210,7 +210,7 @@ a&,m\neq n_i,a\in D
 & \left| \sum_n^m a_i(x) b_i(x) \right| \leq \epsilon (|a_n(x)|+2|a_m(x)|) \leq 3K\epsilon\\
 \end{aligned}
 
-***** Dirichlet:
+***** Dirichlet:<<MK11>>
 
 若函数项级数满足 $a_n(x)$ 对于任何 $x\in D$ 一致单调趋于 $0$
 
@@ -227,7 +227,7 @@ $\sum_{i=1}^n b_i(x)$ 对于任何 $x\in D$ 有界 $|\sum_{i=1}^n b_i(x)|<K$ ，
 
 ** 一致收敛性质：
 
-*** 连续性：
+*** 连续性：<<MK12>>
 
 若函数项级数一致收敛，且部分和 $S_n(x)$ 连续，则 $\lim_{x\to x_0}S(x)=S(x_0),x_0\in D$
 
@@ -255,7 +255,7 @@ $\sum_{i=1}^n b_i(x)$ 对于任何 $x\in D$ 有界 $|\sum_{i=1}^n b_i(x)|<K$ ，
 &\lim_{x\to x_0}\sum_{i=1}^\infty u_i(x)=\lim_{x\to x_0}S(x)=S(x_0)=\sum_{i=1}^\infty u_i(x_0)=\sum_{i=1}^\infty \lim_{x\to x_0}u_i(x)\\
 \end{aligned}
 
-*** 可积性：
+*** 可积性：<<MK13>>
 
 若函数项级数一致收敛，且部分和 $S_n(x)$ 连续，则 $\int_a^b S(x) dx=\lim_{n\to\infty}\int_a^b S_n(x) dx$
 
@@ -277,7 +277,7 @@ $\sum_{i=1}^n b_i(x)$ 对于任何 $x\in D$ 有界 $|\sum_{i=1}^n b_i(x)|<K$ ，
 &\leq \int_a^x |S_n(r) - S(r)| dr < \int_a^x \epsilon dr=\epsilon(x-a) \leq \epsilon(b-a)
 \end{aligned}
 
-**** 推论：
+**** 推论<<MK8>>：
 
 \begin{aligned}
 &\int_a^b \sum_{i=1}^\infty u_i(x) dx
@@ -286,7 +286,7 @@ $\sum_{i=1}^n b_i(x)$ 对于任何 $x\in D$ 有界 $|\sum_{i=1}^n b_i(x)|<K$ ，
 &\int_a^x \sum_{i=1}^\infty u_i(r) dr=\sum_{i=1}^\infty \int_a^x u_i(r) dr
 \end{aligned}
 
-*** 可导性：
+*** 可导性：<<MK14>>
 
 若函数满足以下条件：
 
@@ -327,7 +327,7 @@ $\sum_{i=1}^n b_i(x)$ 对于任何 $x\in D$ 有界 $|\sum_{i=1}^n b_i(x)|<K$ ，
 &\frac{d}{dx} \left\{\sum_{i=1}^\infty u_i(x)\right\} = \sum_{i=1}^\infty  \left\{\frac{d}{dx} u_i(x)\right\}\\
 \end{aligned}
 
-*** Dini定理：
+*** Dini定理<<MK9>>：
 
 若函数项级数（部分和： $S_n(x)$ ）在有界闭区间 $D=[a,b]$ 中满足以下条件：
 
@@ -528,7 +528,7 @@ R=\frac{1}{\overline{\lim_{n\to\infty}} \sqrt[n]{\left|a_n\right|}}
 
 注：判别式本身判断绝对收敛，如果绝对收敛，级数也收敛。
 
-**** [[~/文档/note/数学分析/Chap9Note.org][达朗贝尔]]：
+**** [[~/文档/note/数学分析/Chap9Note.org::MK6][达朗贝尔]]：
 
 判别下式：
 
@@ -594,7 +594,7 @@ R=\frac{1}{\lim_{n\to\infty}\left| \frac{a_{n+1}}{a_n}\right|}
 
 得出幂级数可逐项求导。 
 
-** 幂级数展开：
+** 幂级数展开：<<MK15>>
 
 *** 补充1：柯西中值定理
 
@@ -610,7 +610,7 @@ R=\frac{1}{\lim_{n\to\infty}\left| \frac{a_{n+1}}{a_n}\right|}
 
 **** 证明：
 
-根据[[~/文档/note/大学物理/Note/DiffEq.org][导数基本知识-拉格朗日中值定理]]，给定描述中的条件：
+根据[[~/文档/note/大学物理/Note/DiffEq.org::MK5][拉格朗日中值定理]]，给定描述中的条件：
 
 \begin{aligned}
 &F(x)=[f(b)-f(a)][g(x)-g(a)]-[g(b)-g(a)][f(x)-f(a)]\\
@@ -620,7 +620,7 @@ R=\frac{1}{\lim_{n\to\infty}\left| \frac{a_{n+1}}{a_n}\right|}
 \therefore & F'(\xi)=[f(b)-f(a)]g'(\xi)-[g(b)-g(a)]f'(\xi)=0\Rightarrow \frac{f(a)-f(b)}{g(a)-g(b)}=\frac{f'(\xi)}{g'(\xi)}\\
 \end{aligned}
 
-*** 补充2：Taylor公式
+*** 补充2：Taylor公式<<MK16>>
 
 **** 带Peano余项：
 
@@ -765,7 +765,7 @@ R_n(x)=R_n(x)-R_n(x_0)=\frac{1}{n!}\int_{x_0}^x f^{(n+1)}(t)(x-t)^ndt
 
 由于 $x_0$ 在 $x$ 的单侧，故 $(x-t)^n$ 在积分区间内不变号，且 $f(x)$ 在区间内可导(连续)
 
-故可用[[~/文档/note\反常积分概念.org][无界函数反常积分收敛判别-一般函数（不定号）反常积分判别法-第一积分中值定理]]，则有：
+故可用[[~/文档/note\反常积分概念.org][第一积分中值定理]]，则有：
 
 \begin{aligned}
 &\frac{1}{n!}\int_{x_0}^x f^{(n+1)}(t)(x-t)^ndt=\frac{1}{n!}f^{(n+1)}(\xi)\int_{x_0}^x (x-t)^ndt\\
@@ -788,7 +788,7 @@ R_n(x)=R_n(x)-R_n(x_0)=\frac{1}{n!}\int_{x_0}^x f^{(n+1)}(t)(x-t)^ndt
 
 其中 $\theta \in [0,1]$ 。
 
-*** 经典例题：
+*** 经典例题<<MK10>>
 
 求 $f(x)=(1+x)^\alpha$ 在 $x=0$ 点的Taylor展开。
 
@@ -829,7 +829,7 @@ R_n&=\frac{1}{(n+1)!}f^{(n+1)}(\xi)(x-x_0)^{(n+1)}\\
 &=\binom \alpha {n+1}x^{n+1} \left(\frac{1}{1+\xi}\right)^n \xi^{\alpha-1}\\
 \end{aligned}
 
-由于幂级数 $\sum_{n=0}^\infty \binom \alpha n x^n$ 在 $x\in (-1,1)$ 收敛，根据[[~/文档/note\Series.org][柯西收敛原理-推论2]]，
+由于幂级数 $\sum_{n=0}^\infty \binom \alpha n x^n$ 在 $x\in (-1,1)$ 收敛，根据[[~/文档/note\Series.org][推论2]]，
 
 通项极限为0： $\lim_{n\to\infty}\binom \alpha n x^n=0,\ \ x\in(-1,1)$
 
@@ -844,7 +844,7 @@ R_n&=\frac{1}{n!}f^{(n+1)}(x_0+\theta(x-x_0))(1-\theta)^n(x-x_0)^{n+1}\\
 &=\binom \alpha {n+1} (n+1) x^{n+1} \left(\frac{1-\theta}{1+\theta x}\right)^n (1+\theta x)^{\alpha-1}\\
 \end{aligned}
 
-同样根据[[~/文档/note\Series.org][达朗贝尔]]判别可证 $\sum_{n=0}^\infty \binom \alpha {n+1} (n+1) x^{n+1}$ 在 $x\in (-1,1)$ 收敛，故根据[[~/文档/note\Series.org][柯西收敛原理-推论2]]，
+同样根据[[~/文档/note\Series.org][达朗贝尔]]判别可证 $\sum_{n=0}^\infty \binom \alpha {n+1} (n+1) x^{n+1}$ 在 $x\in (-1,1)$ 收敛，故根据[[~/文档/note\Series.org][推论2]]，
 
 通项极限为0： $\lim_{n\to\infty}\binom \alpha {n+1} (n+1) x^{n+1}=0$
 
@@ -863,7 +863,7 @@ R_n&=\frac{1}{n!}f^{(n+1)}(x_0+\theta(x-x_0))(1-\theta)^n(x-x_0)^{n+1}\\
 \therefore & \lim_{n\to\infty}\left|\frac{\alpha(\alpha-1)...(\alpha-j+1)...(\alpha-n+1)}{(1)(2)...(j)...(n)}\right|>1\\
 \end{aligned}
 
-根据[[~/文档/note\Series.org][柯西收敛原理-推论2]]，通项不趋于零，级数发散。
+根据[[~/文档/note\Series.org][推论2]]，通项不趋于零，级数发散。
 
 ***** 当 $-1<\alpha<0$ 时：
 
@@ -887,9 +887,9 @@ u_n&=(-1)^n|u_n|\\
 &=\prod_{i=1}^n\left(1-\frac{1+\alpha}{i}\right)\\
 \end{aligned}
 
-根据[[~/文档/note\Series.org][无穷乘积与无穷级数-推论1]]， $-\frac{1+\alpha}{i}$ 不编号，则无穷乘积 $\prod_{i=1}^\infty\left(1-\frac{1+\alpha}{i}\right)$ 与 $\sum_{n=1}^\infty -\frac{1+\alpha}{n}$ 同时敛散。
+根据[[~/文档/note\Series.org][推论1]]， $-\frac{1+\alpha}{i}$ 不编号，则无穷乘积 $\prod_{i=1}^\infty\left(1-\frac{1+\alpha}{i}\right)$ 与 $\sum_{n=1}^\infty -\frac{1+\alpha}{n}$ 同时敛散。
 
-又根据[[~/文档/note\Series.org][部分极限证明-P级数]]，无穷乘积发散。由于 $-1<-\frac{1+\alpha}{i}<0\Rightarrow 0<\left(1-\frac{1+\alpha}{i}\right)<1, \forall i\geq 1$ 故无穷乘积发散到0。
+又根据[[~/文档/note\Series.org][P级数]]，无穷乘积发散。由于 $-1<-\frac{1+\alpha}{i}<0\Rightarrow 0<\left(1-\frac{1+\alpha}{i}\right)<1, \forall i\geq 1$ 故无穷乘积发散到0。
 
 至此，通项 $u_n$ 具有以下性质：
 
@@ -972,7 +972,7 @@ r&=\lim_{n\to\infty}n\left(\frac{|u_n|}{|u_{n+1}|}-1\right)\\
 &|R_n(1)| \leq \left|\binom \alpha {n+1}\right|
 \end{aligned} 
 
-又根据[[P1][之前证明]] $\sum_{n=0}^\infty \binom \alpha n$ 在 $\alpha>0$ 时绝对收敛，故根据[[~/文档/note\Series.org][柯西收敛原理-推论2]]可得 $\lim_{n\to\infty}\binom \alpha n=0,\alpha>0$
+又根据[[P1][之前证明]] $\sum_{n=0}^\infty \binom \alpha n$ 在 $\alpha>0$ 时绝对收敛，故根据[[~/文档/note\Series.org][推论2]]可得 $\lim_{n\to\infty}\binom \alpha n=0,\alpha>0$
 
 故根据夹逼定理  $\lim_{n\to\infty}R_n(1)=0$
 
@@ -1005,9 +1005,9 @@ R_n(-1)&=\binom \alpha {n+1} (n+1) \int_{x_0}^x(1+t)^{\alpha-n-1}(x-t)^ndt\\
 &=A\lim_{n\to\infty}\prod_{i=N+1}^n\left(1-\frac{\alpha}{i}\right)\\
 \end{aligned}
 
-其中 $A$ 为与 $n$ 不相关的常数且 $0<\alpha<\infty\Rightarrow 0<A<\infty$ 故有界，由于 $\forall i>N\Rightarrow0<\frac{\alpha}{i}<1$ 故根据[[~/文档/note\Series.org][无穷乘积与无穷级数-推论1]]，无穷乘积与 $\sum_{n=N}^\infty \frac{\alpha}{n}$ 同时敛散。
+其中 $A$ 为与 $n$ 不相关的常数且 $0<\alpha<\infty\Rightarrow 0<A<\infty$ 故有界，由于 $\forall i>N\Rightarrow0<\frac{\alpha}{i}<1$ 故根据[[~/文档/note\Series.org][推论1]]，无穷乘积与 $\sum_{n=N}^\infty \frac{\alpha}{n}$ 同时敛散。
 
-又根据[[~/文档/note\Series.org][部分极限证明-P级数]]可知级数发散。由于 $0<\frac{\alpha}{i}<1\Rightarrow 0<\left(1-\frac{\alpha}{i}\right)<1$ ，故级数发散到 $0$ 。故 $\lim_{n\to\infty}\prod_{i=N+1}^n\left(1-\frac{\alpha}{i}\right)=0$ 
+又根据[[~/文档/note\Series.org][P级数]]可知级数发散。由于 $0<\frac{\alpha}{i}<1\Rightarrow 0<\left(1-\frac{\alpha}{i}\right)<1$ ，故级数发散到 $0$ 。故 $\lim_{n\to\infty}\prod_{i=N+1}^n\left(1-\frac{\alpha}{i}\right)=0$ 
 
 最后证得：
 

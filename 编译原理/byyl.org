@@ -756,7 +756,7 @@ $D_X$ 中的任意[[~/文档/note/离散数学/Disc_Math.org::MK293][分支]] $v
 
 若满足对于任意 $e\in E$ 若 $e$ 在映射 $f$ 中有定义则 $|f(e)|=1$
 
-定义[[~/文档/note/高等代数/Algb-3-Matrix.org][矩阵基础-矩阵的表述]] $M_{|S|\times|\Sigma|}[a_{sa}]$ 其中 $s\in S\land a\in\Sigma$ 
+定义[[~/文档/note/高等代数/Algb-3-Matrix.org::MK6][矩阵的表述]] $M_{|S|\times|\Sigma|}[a_{sa}]$ 其中 $s\in S\land a\in\Sigma$ 
 
 进一步定义 $a_{sa}=\begin{cases}s'&\exists s'\in S\rightarrow f(s,s')=\{a\}\\\varnothing&else\end{cases}$
 
@@ -2313,7 +2313,7 @@ void $A$(){
 
 **** 算符优先表<<MK104>>
 
-对于[[MK103][算符优先文法]] $G=<V_N,V_T,P,s>$ 定义[[~/文档/note/高等代数/Algb-3-Matrix.org][矩阵基础-矩阵的表述]] $M_{|V_T|\times|V_T|}[a_{ij}]$
+对于[[MK103][算符优先文法]] $G=<V_N,V_T,P,s>$ 定义[[~/文档/note/高等代数/Algb-3-Matrix.org::MK6][矩阵的表述]] $M_{|V_T|\times|V_T|}[a_{ij}]$
 
 对于 $<v_i,v_j>,\{v_i,v_j\}\subset V_T$ 根据其[[MK102][算符优先级]]定义 $a_{ij}=\begin{cases}1&a\doteq b\\2&a\lessdot b\\3&a\gtrdot b\\0&else\end{cases}$ 
 
@@ -3257,7 +3257,7 @@ LR($k$)文法不是[[MK43][二义性]]文法
 
 此时定义 $g_0:\mathcal{L}(M_1)\to\mathcal{L}(M_2)$ 为 $g(\delta_i)=\lambda_i$ 易证 $g_0$ 是[[MK41][分析函数]]
 
-根据[[MK93][定理1]]可得 $D_1,D_2$ 有[[MK92][句柄]] $\beta_1,\beta_2$ 及其[[~/文档/note/离散数学/Disc_Math.org::MK74][父节点]] $\delta,\lambda$
+根据[[MK93][定理1]]可得 $D_1,D_2$ 有[[MK92][句柄]] $\beta_1,\beta_2$ 及其[[~/文档/note/离散数学/Disc_Math.org::MK279][父节点]] $\delta,\lambda$
 
 根据LR($k$)文法定义可确定唯一句柄及其归约产生式，故得 $\beta_1=\beta_2\land f_1(\delta)=f_2(\lambda)$
 

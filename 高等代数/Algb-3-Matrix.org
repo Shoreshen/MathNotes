@@ -24,7 +24,7 @@ current mark: 99
 
 ** 矩阵组成的线性空间<<MK10>>
 
-$\mathcal{V}=<M_{s\times n}(K),K,+,\cdot>$ 是[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK24][数域]] $K$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间]]，记为 $M_{s\times n}(K)$
+$\mathcal{V}=<M_{s\times n}(K),K,+,\cdot>$ 是[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK24][数域]] $K$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，记为 $M_{s\times n}(K)$
 
 其中 $+$ 是[[MK2][矩阵乘法]]， $\cdot$ 是[[MK3][矩阵数乘]]
 
@@ -46,7 +46,7 @@ $\mathcal{V}=<M_{s\times n}(K),K,+,\cdot>$ 是[[~/文档/note/高等代数/Algb-
 
 （7） 乘法分配率
 
-则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间]]定义以及以下证明可得 $\mathcal{V}$ 是线性空间
+则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]定义以及以下证明可得 $\mathcal{V}$ 是线性空间
 
 **** 交换律
 
@@ -120,7 +120,7 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 ** 定理1
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性子空间-子空间的运算-直和]]，线性空间 $M_{n\times n}(K)$ 是其[[MK15][对称子空间]]和[[MK16][斜对称子空间]]的直和
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK83][直和]]，线性空间 $M_{n\times n}(K)$ 是其[[MK15][对称子空间]]和[[MK16][斜对称子空间]]的直和
 
 *** 证明
 
@@ -134,7 +134,7 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 综上所述 $a_{ij}=a_{ji}=-b_{ji}=b_{ij}=-a_{ij}$ 即 $a_{ij}=-a_{ji}$ 则 $a_{ij}=0$
 
-故 $A=B=[0]_{n\times n}$ 则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性子空间-子空间的运算-直和-两个子空间直和-性质]]可得 $S+S'$ 为直和，即  $S+S'=S\textcircled{+}S'$
+故 $A=B=[0]_{n\times n}$ 则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK69][性质]]可得 $S+S'$ 为直和，即  $S+S'=S\textcircled{+}S'$
 
 **** 求子空间得基
 
@@ -154,19 +154,19 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 **** 证明基可以互相表述
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性子空间-子空间的运算-直和-两个子空间直和-性质]]可得 $S+S'$ 的基为 $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK69][性质]]可得 $S+S'$ 的基为 $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$
 
 根据[[MK20][矩阵空间基]]可得 $M_{n\times n}(K)$ 的一组基为 $\left\{E_{ij}\big|1\leq i\leq n\land 1\leq j\leq n\right\}$ 
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间的基和维数-线性空间的维数]]可知 $\dim(M_{n\times n}(K))=n^2=\dim(S+S')$
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][线性空间的维数]]可知 $\dim(M_{n\times n}(K))=n^2=\dim(S+S')$
 
 由于 $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$ 是基，故线性不相关
 
-则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间的基和维数-线性空间的维数-命题2]] $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$ 亦为 $M_{n\times n}(K)$ 的一组基
+则根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK42][命题2]] $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$ 亦为 $M_{n\times n}(K)$ 的一组基
 
-即任意 $A\in M_{n\times n}(K)$ 同样可由 $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$ 线性表述，且根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间定义]]线性表述运算封闭
+即任意 $A\in M_{n\times n}(K)$ 同样可由 $\left\{Z_{ij}\big|i>j\right\}\cup\left\{Z'_{ij}\big|i\leq j\right\}$ 线性表述，且根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间定义]]线性表述运算封闭
 
-故对于任意 $A\in M_{n\times n}(K)$ 可得 $A\in S+S'$ 由于线性空间本身为集合，则根据[[~/文档/note/离散数学/Disc_Math.org][集合论-集合定义-ZFC公理化集合论-外延公理]]可得 $M_{n\times n}(K)=S+S'$
+故对于任意 $A\in M_{n\times n}(K)$ 可得 $A\in S+S'$ 由于线性空间本身为集合，则根据[[~/文档/note/离散数学/Disc_Math.org::MK5][外延公理]]可得 $M_{n\times n}(K)=S+S'$
 
 * 方阵环<<MK75>>
 
@@ -392,7 +392,7 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 （18） 所有 $f^\sigma_i(x)$ 公倍式集合 $P^\sigma=\left\{p(x)\big|\left(\forall 1\leq i\leq m\left(\exists h_i(x)\in M_1[x](p(x)=h_i(x)\cdot f^\sigma_i(x))\right)\right)\land p(x)\in M_1[x]\right\}$
 
-（19） 所有 $\sigma$ 的[[MK108][零化多项式]]集合为 $P^\sigma_0\subset M_1[x]$
+（19） 所有 $\sigma$ 的[[MK83][零化多项式]]集合为 $P^\sigma_0\subset M_1[x]$
 
 对于任意 $h(x)=\left(I_A(\sum)\right)_{i=1}^vE(p_i)x^i\in P_0$ 有 $h(A)=I_A(c_0)$
 
@@ -410,7 +410,7 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 即有 $h(x)\in P$ 综上所述，对于任意 $h(x)\in P_0$ 均有 $h(x)\in P$ 故 $P_0\subset P$
 
-同理可证 $P\subset P_0$ 则根据[[~/文档/note/离散数学/lssx.org::MK16][自反性]]可得 $P=P_0$
+同理可证 $P\subset P_0$ 则根据[[~/文档/note/离散数学/Disc_Math.org::MK21][自反性]]可得 $P=P_0$
 
 * 特殊矩阵
 
@@ -454,7 +454,7 @@ I_nA_{n\times s}&= A_{s\times n}\\
 
 ***** 证明<<MK11>>
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性子空间-线性子空间充要条件]]依次证明
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK44][线性子空间充要条件]]依次证明
 
 （1）显然对于 $M_{n\times n}(K)$ 对角矩阵不为空集
 
@@ -840,13 +840,13 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 
 （2） 对于任意 $1\leq i< j\leq m'$ 均有 $\delta'_i\ne\delta'_j$
 
-则 $G_1,G_2$ [[MK81][相似]]的充要条件是存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
+则 $G_1,G_2$ [[MK81][相似]]的充要条件是存在[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
 
 **** 证明
 
 ***** 充分
 
-若存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$ 则显然 $G_1,G_2$ 仅[[MK86][Jordan块]]排列顺序不同。
+若存在[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$ 则显然 $G_1,G_2$ 仅[[MK86][Jordan块]]排列顺序不同。
 
 由于[[MK88][Jordan型]]为[[MK72][分块对角矩阵]]，故根据[[MK91][性质2]]易证 $G_1\sim G_2$
 
@@ -856,13 +856,13 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 
 显然 $\lambda-k,k\in K$ 为[[~/文档/note/抽象代数/cxds.org::MK519][不可约]]多项式，则根据[[~/文档/note/抽象代数/cxds.org::MK522][唯一因式分解]]
 
-结合条件（1）（2）易证存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
+结合条件（1）（2）易证存在[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]] $\beta:\{J_{d_1}(\delta_1),...,J_{d_m}(\delta_m)\}\to\{J'_{d'_1}(\delta'_1),...,J'_{d'_{m'}}(\delta'_{m'})\}$
 
 *** 性质2
 
 任意两个[[MK88][Jordan型]]矩阵 $G_1=\text{diag}\left(J_{d_1}(\delta_1),...,J_{d_n}(\delta_n)\right),G_2=\text{diag}\left(J_{c_1}(\gamma_1),...,J_{c_m}(\gamma_m)\right)$
 
-有 $G_1,G_2$ [[MK81][相似]]的充要条件是存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
+有 $G_1,G_2$ [[MK81][相似]]的充要条件是存在[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
 
 **** 证明
 
@@ -874,7 +874,7 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 
 （2） $G_2$ 是 $B_2$ 通过 $\sigma$ 到自身的[[MK28][映射矩阵]]
 
-进一步根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK1452][推论5]]可得存在[[~/文档/note/离散数学/lssx.org::MK181][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
+进一步根据[[~/文档/note/高等代数/Algb-5-Liner_Map.org::MK152][推论5]]可得存在[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]] $\beta:\{1,...,n\}\to\{1,...,m\}$ 满足 $J_{d_i}(\delta_i)=J_{c_{e(i)}}\left(\gamma_{e(i)}\right)$
 
 ** 正定矩阵<<MK98>>
 
@@ -930,7 +930,7 @@ $J_n(a),J_n(b)$ [[MK81][相似]]的充要条件是 $a=b$
 
 *** 矩阵求逆
 
-若矩阵 $A=[a_{ij}]$ 且[[MK28][可逆]]，则 $A^{-1}_n=\frac{1}{|A_n|}\left([U_{ij}]^T_{n\times n}\right)$ 为其逆矩阵，其中 $U_{ij}$ 定义为[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org][行列式-其他定义-代数余子式]]。
+若矩阵 $A=[a_{ij}]$ 且[[MK28][可逆]]，则 $A^{-1}_n=\frac{1}{|A_n|}\left([U_{ij}]^T_{n\times n}\right)$ 为其逆矩阵，其中 $U_{ij}$ 定义为[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK17][代数余子式]]。
 
 ** 基本运算性质
 
@@ -1184,13 +1184,13 @@ B^TA^T&=\left[b'_{ij}=b_{ji}\right]_{m\times n}\left[a'_{ij}=a_{ji}\right]_{n\ti
 
 **** 证明
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性相关与线性无关-定义]] $I_n$ 行、列向量均线性不相关，故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-一般矩阵行秩与列秩-推论1]]可得 $rank(I_n)=n$
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK8][定义]] $I_n$ 行、列向量均线性不相关，故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK58][推论1]]可得 $rank(I_n)=n$
 
 根据[[MK24][乘法性质]]可得 $rank(I_n)=rank(A_nB_n)\leq rank(A_n)$ 
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-矩阵的秩与行列式]]可得 $A_n$ 秩最大为 $n$ 即 $rank(A_n)\leq n$ 故得 $rank(A_n)=n$
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK59][矩阵的秩与行列式]]可得 $A_n$ 秩最大为 $n$ 即 $rank(A_n)\leq n$ 故得 $rank(A_n)=n$
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-行列式与线性相关性]]可得 $|A_n|\ne0$ 故根据[[MK29][充要条件]]可得 $A_n$ 可逆
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK57][行列式与线性相关性]]可得 $|A_n|\ne0$ 故根据[[MK29][充要条件]]可得 $A_n$ 可逆
 
 即存在 $A_n^{-1}$ 满足 $A_n^{-1}A_n=A_nA_n^{-1}=I_n$ 又根据[[MK26][唯一性]]可得 $B=A_n^{-1}$
 
@@ -1292,7 +1292,7 @@ B^TA^T&=\left[b'_{ij}=b_{ji}\right]_{m\times n}\left[a'_{ij}=a_{ji}\right]_{n\ti
 
 根据[[MK32][初等变换]]可得上述乘法可定义为对矩阵 $A$ 做初等变换，
 
-故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-一般矩阵行秩与列秩-推论3]]可得初等变换不改变矩阵的秩。
+故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][推论3]]可得初等变换不改变矩阵的秩。
 
 故有 $\dim(A)=\dim(AC_n)$ 同理可证 $\dim(A)=\dim(B_sA)$
 
@@ -1488,7 +1488,7 @@ A 的第 $k$ 分块列右乘以可逆矩阵 $P$ ，即 $A'= [A'_{ij}]$ 其中 $A
 
 第三型由于 $P,I_{kk}$ 可逆，则根据[[MK35][定理4]]可得 $I_{kk}P=PI_{kk}=P$ 可逆。则 $\dim(P)=n$ 其中 $n=\dim(I_{kk})$ 
 
-故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][线性空间与矩阵-一般矩阵行秩与列秩-推论1]]可得调整后 $I'$ 矩阵中 $P$ 分块所在的列线性不相关
+故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK58][推论1]]可得调整后 $I'$ 矩阵中 $P$ 分块所在的列线性不相关
 
 且显然除去 $P$ 分块的其他列也线性不相关，故 $I'$ 所有列线性不相关，即满秩，即可逆
 

@@ -6,7 +6,7 @@ current mark: 18
 
 * 双线性函数<<MK1>>
 
-设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，若有[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f:V\times V\to K$ 满足对于任意 $\{a,b,c\}\subset V,\{k_1,k_2\}\subset K$ 均有：
+设 $\mathcal{V}=\left<V,\mathcal{K},\oplus,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，若有[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f:V\times V\to K$ 满足对于任意 $\{a,b,c\}\subset V,\{k_1,k_2\}\subset K$ 均有：
 
 （1） $f(k_1\cdot a\oplus k_2\cdot b,c)=k_1\times f(a,c)+k_2\times f(b,c)$
 

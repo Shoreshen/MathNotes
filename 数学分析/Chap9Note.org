@@ -2,7 +2,7 @@
 
 #+TITLE: 数项级数
 
-current mark: 5
+current mark: 11
 
 * Bolzano-Weiserstrass定理
 
@@ -55,7 +55,7 @@ current mark: 5
 
 *** 若 $\{x_n\}>0$ 则 $S_n=\sum_{i=1}^n x_n$ 单调增加，故收敛充分必要条件是: $\sup\left\{S_n\right\}<\infty$
 
-*** 比较判别法：
+*** 比较判别法：<<MK7>>
 
 **** 对于数列 $\{x_n\}$ , $\{y_n\}$ 部分和 $S_n^x=\sum_{i=1}^n x_i$ ， $S_n^y=\sum_{i=1}^n y_i$ ，以及级数 $S^x=\sum_{i=1}^\infty x_i$ ， $S^y=\sum_{i=1}^\infty y_i$ 来说，有以下判别条件：
 
@@ -110,7 +110,7 @@ $r=1$ 无法判别
 
 故在数列 $\{x_n\}$ 中有无限多项 $>1$ ，则 $S=\sum_{n=1}^\infty x_n=\infty$
 
-*** 达朗贝尔判别：
+*** 达朗贝尔判别<<MK6>>
 
 $\overline{\lim_{n \to \infty}}\frac{x_{n+1}}{x_n}=r<1$ 则 $\sum_{n=1}^\infty x_n$ 收敛
 
@@ -262,7 +262,7 @@ $r=1$ 判别失效。
 
 由于 $S_{N+1}\in\mathbb{R}$ 即 $S_m\in(S_{N+1}-1,S_{N+1}+1)$ 则显然数列 $\{S_n\}$ 有界
 
-根据[[~/文档/note/数学分析/Chap11Note.org::MK29][Bolzano-Weiserstrass定理]]必有收敛子列，假设子列 $\{S_{k_1},S_{k_2},...\}$ 收敛与 $A$
+根据[[~/文档/note/数学分析/Chap11Note.org::MK29][Bolzano-Weierstrass定理]]必有收敛子列，假设子列 $\{S_{k_1},S_{k_2},...\}$ 收敛与 $A$
 
 则有 $\forall\epsilon>0,\exists K,\forall n>K\rightarrow\left|S_{k_n}-A\right|<\epsilon$ 又存在 $N$ 满足 $\forall m>n>N\rightarrow|S_m-S_n|<\epsilon$
 
@@ -412,7 +412,7 @@ $x'_n^-=
 0&x'_n \geq 0
 \end{cases}$
 
-** 收敛性质
+** 收敛性质<<MK8>>
 
 *** 若 $\sum_{n=1}^\infty x_n$ 绝对收敛，则 $\sum_{n=1}^\infty x_n^+\ \&\ \sum_{n=1}^\infty x_n^-$ 收敛
 
@@ -630,7 +630,7 @@ $\sum_{i=N'+1}^\infty |a_i|$ 收敛；
 
 * 部分极限证明：
 
-** P级数：
+** P级数：<<MK9>>
 
 *** 通项：$\frac{A}{n^p}$
 
@@ -790,7 +790,7 @@ P_n&=\prod_{i=1}^n \left(1-\frac{1}{(2i)^2}\right)\\
 
 带入 $x=\frac{\pi}{2}$ 得到Viete公式 $$\frac{2}{\pi}=\cos\frac{\pi}{4}\cos\frac{\pi}{8}...\cos\frac{\pi}{2^n}... $$
 
-** Stirling公式：
+** Stirling公式：<<MK10>>
 
 *** 描述： $n! \sim \sqrt{2\pi} n^{n+\frac{1}{2}} e ^{-n},\ (n \to +\infty)$
 
@@ -868,7 +868,7 @@ P_n&=\prod_{i=1}^n \left(1-\frac{1}{(2i)^2}\right)\\
 
 故数列 $b_n$ 有下界（ $b_n>e^{\frac{11}{12}}$ ）且 $b_n$ 单调递减，故必收敛于大于零极限 $\lim_{n\to\infty} b_n=B>0$ ，则第一步证明成立。
 
-** 正弦函数无穷乘积展开
+** 正弦函数无穷乘积展开<<MK11>>
 
 *** 描述：
 

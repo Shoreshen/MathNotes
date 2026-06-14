@@ -2,7 +2,7 @@
 #+OPTIONS: ^:nil
 #+TITLE: 定积分
 
-currnet mark: 22
+currnet mark: 24
 
 * 定积分定义
 
@@ -17,7 +17,7 @@ currnet mark: 22
 $\Delta x_i=x_i-x_{i-1}$; $\xi_i \in \left[ x_i, x_{i-1}
 \right]$; $\lambda=max(\Delta x_i)$
 
-** 定义黎曼和:
+** 定义黎曼和<<MK23>>:
 
 $\sum_{i=1}^n f(\xi_i)\Delta x$
 
@@ -1022,7 +1022,7 @@ $\forall \epsilon>0,\ \exists T>0,\ \forall |\xi-y|<T\ \&\ y\in[c,d] \Rightarrow
 
 * 定积分几何应用
 
-** 三角函数正交性:
+** 三角函数正交性:<<MK24>>
 
 *** 定义:
 

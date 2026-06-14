@@ -74,7 +74,7 @@ free mark:
 
 显然有 $\left<\mathcal{M},v_1\right>\vDash(\tau_n\hat{=}f_s(\tau_{n-1}))$ ，则根据[[MK2][公理（12）]]可得 $\left<\mathcal{M},v_1\right>\vDash(p_<(x_2,\tau_{n-1}))$ ，若 $\left<\mathcal{M},v_1\right>\vDash(x_2\hat{ =}\tau_0)$
 
-则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $v_1(x_2)=I(c_0)$ 由于 $I(f_s)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]故有 $I(f_s)(v_1(x_2))=I(f_s)(I(c_0))$ ，即根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $\left<\mathcal{M},v_1\right>\vDash(f_s(x_2)\hat{ =}f_s(\tau_0))$
+则根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $v_1(x_2)=I(c_0)$ 由于 $I(f_s)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]故有 $I(f_s)(v_1(x_2))=I(f_s)(I(c_0))$ ，即根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]] $\left<\mathcal{M},v_1\right>\vDash(f_s(x_2)\hat{ =}f_s(\tau_0))$
 
 即有 $\left<\mathcal{M},v_1\right>\vDash(f_s(x_2)\hat{ =}\tau_1)$ 又根据 $\left<\mathcal{M},v_1\right>\vDash(x_1\hat{ =}f_s(x_2))$ 以及[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]有 $\left<\mathcal{M},v_1\right>\vDash(x_1\hat{ =}\tau_1)$
 
@@ -1000,13 +1000,13 @@ $\mathfrak{N}$ 是 $\mathcal{L}_{\mathcal{A}_N}$ 的[[~/文档/note/数理逻辑
 
 ***** 证明（1）
 
-****** 是[[~/文档/note/离散数学/lssx.org::MK176][单射]]
+****** 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]
 
 对于任意 $\{n,m\}\subset\mathbb{N}$ 且 $n\ne m$ 根据[[MK11][定理1]]可得有 $\bar{I}(\tau_n)=n,\bar{I}(\tau_m)=m$ 且显然有 $\mathcal{N}\vDash(\lnot(\tau_n\hat{=}\tau_m))$
 
 根据[[MK12][性质5]]以及 $\mathcal{N}^*\vDash T_N$ 可得 $\mathcal{N}^*\vDash(\lnot(\tau_n\hat{=}\tau_m))$ 即根据[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]可得 $e(n) =\bar{I}^*(\tau_n)\ne\bar{I}^*(\tau_m)=e(m)$
 
-即有对于任意 $\{n,m\}\subset\mathbb{N}$ 且 $n\ne m$ 有 $e(n)\ne e(m)$ 即是[[~/文档/note/离散数学/lssx.org::MK176][单射]]
+即有对于任意 $\{n,m\}\subset\mathbb{N}$ 且 $n\ne m$ 有 $e(n)\ne e(m)$ 即是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]
 
 ****** [[~/文档/note/数理逻辑/sllj.org::MK108][常元符号]]
 
@@ -1086,13 +1086,13 @@ $I^*(f_s)(e(n))=I^*(f_s)(\bar{I}(\tau_n))=\bar{I}(f_s(\tau_n))=\bar{I}(\tau_{n+1
 
 ***** $\Gamma$ [[~/文档/note/数理逻辑/sllj.org::MK222][一致]]并存在[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{N}^*=\left<N^*,I^*\right>$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $\mu$ 满足 $\left<\mathcal{N}^*,\mu\right>\vDash\Gamma$ <<MK10>>
 
-任取 $\Gamma_0\subset\Gamma$ 为[[~/文档/note/离散数学/lssx.org::MK82][有限集]]，则可取 $m$ 满足对于所有 $p_<(\tau_j,x_1)\in\Gamma_0-T$ 均有 $j<m$
+任取 $\Gamma_0\subset\Gamma$ 为[[~/文档/note/离散数学/Disc_Math.org::MK42][有限集]]，则可取 $m$ 满足对于所有 $p_<(\tau_j,x_1)\in\Gamma_0-T$ 均有 $j<m$
 
 则定义 $\mathcal{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v(x_1)=m+i$ 则由于 $T$ 的定义显然有 $\left<\mathcal{N},v\right>\vDash\Gamma_0\cap T$
 
 显然对于任意 $\theta=p_<(\tau_j,x_1)\in\Gamma_0-T$ 有 $\left<\bar{I}(\tau_j),v(x_1)\right>=\left<j,m+i\right>\in I(p_<)$ 故有 $\left<\mathcal{N},v\right>\vDash\Gamma_0-T$
 
-综上所述，对于任意 $\Gamma$ 的[[~/文档/note/离散数学/lssx.org::MK82][有限子集]] $\Gamma_0$ 均存在 $\mathcal{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]]满足 $\left<\mathcal{N},v\right>\vDash\Gamma_0$ 根据[[~/文档/note/数理逻辑/sllj.org::MK254][完备性定理]]可得 $\Gamma_0$ [[~/文档/note/数理逻辑/sllj.org::MK222][一致]]
+综上所述，对于任意 $\Gamma$ 的[[~/文档/note/离散数学/Disc_Math.org::MK42][有限子集]] $\Gamma_0$ 均存在 $\mathcal{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]]满足 $\left<\mathcal{N},v\right>\vDash\Gamma_0$ 根据[[~/文档/note/数理逻辑/sllj.org::MK254][完备性定理]]可得 $\Gamma_0$ [[~/文档/note/数理逻辑/sllj.org::MK222][一致]]
 
 根据[[~/文档/note/数理逻辑/sllj.org::MK271][紧致性定理]]可得 $\Gamma$ [[~/文档/note/数理逻辑/sllj.org::MK222][一致]]，又根据[[~/文档/note/数理逻辑/sllj.org::MK254][完备性定理]]可得存在[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{N}^*=\left<N^*,I^*\right>$ 及其[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $\mu$
 
@@ -1238,11 +1238,11 @@ $I^*(f_s)(e(n))=I^*(f_s)(\bar{I}(\tau_n))=\bar{I}(f_s(\tau_n))=\bar{I}(\tau_{n+1
 
 ***** 性质1<<MK28>>
 
-$\mu_{x_1}$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+$\mu_{x_1}$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ****** 证明
 
-给定 $\mathcal{M},v,(\exists x_1\phi)$ 且 $V\ne\varnothing$ 若 $\mu$ 不是[[~/文档/note/离散数学/lssx.org::MK175][函数]]，假设存在两个及以上 $v^*\in V$ 满足任意 $v\in V$ 均有 $\left<v,v^*\right>\not\in I(p_<)$
+给定 $\mathcal{M},v,(\exists x_1\phi)$ 且 $V\ne\varnothing$ 若 $\mu$ 不是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，假设存在两个及以上 $v^*\in V$ 满足任意 $v\in V$ 均有 $\left<v,v^*\right>\not\in I(p_<)$
 
 任取其中两个 $v_1,v_2$ ，则满足 $v_1\ne v_2$ 且 $\left<v_2,v_1\right>\not\in I(p_<),\left<v_1,v_2\right>\not\in I(p_<)$
 
@@ -1394,13 +1394,14 @@ $\mu_{x_1}$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
 
 ***** 性质1<<MK71>>
 
-$\mu_{x_1<\tau}$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+$\mu_{x_1<\tau}$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ****** 证明
 
 由于 $V\subset M$ ，故与[[MK28][性质]]同理可证
 
 ***** 性质2<<MK65>>
+
 
 $\left<b,\mu_{x_1\leq b}(\mathcal{M},v,(\exists x_1\phi))\right>\not\in I(p_<)$
 
@@ -1420,7 +1421,7 @@ $\left<b,\mu_{x_1\leq b}(\mathcal{M},v,(\exists x_1\phi))\right>\not\in I(p_<)$
 
 ****** 证明
 
-根据[[MK51][性质2]]可得 $\mathcal{M}\vDash\mu(\phi,x_1,x_{n+1})[a,v(x_2),...,v(x_n),b]$ 即 $\mathcal{M}\vDash\mu(\phi\lor(x_1\hat{=}x_{n+1}),x_1)[a,v(x_2),...,v(x_n),b]$ 
+根据[[MK52][等价表达]]可得 $\mathcal{M}\vDash\mu(\phi,x_1,x_{n+1})[a,v(x_2),...,v(x_n),b]$ 即 $\mathcal{M}\vDash\mu(\phi\lor(x_1\hat{=}x_{n+1}),x_1)[a,v(x_2),...,v(x_n),b]$ 
 
 的充要条件是 $\mu_{x_1}(\mathcal{M},v,(\phi\lor(x_1\hat{=}x_{n+1})))=a$ 以及 $v(x_{n+1})=b$ 则显然 $b\in V$ 。又根据[[MK26][无界算子定义]]
 
@@ -1618,19 +1619,19 @@ $\text{Sub}(\mathcal{M},a,b)$ 等价与 $\mu_{x_1}(\mathcal{M},v,((f_+(x_3,x_1)\
 
 显然 $I(c_0)\in M=V$ 又根据 $\mathcal{M} =\left<M,I\right>\vDash T_{PA}$ 以及[[MK2][公理（8）]]以及[[~/文档/note/数理逻辑/sllj.org::MK158][满足]]可得任意 $c\in M$ 且 $c\ne I(c_0)$ 必有 $\left<c,I(c_0)\right>\not\in I(p_<)$
 
-满足 $\mu(\mathcal{M},v,(\exists x_1\phi))=I(c_0)$ 又根据[[MK28][性质]]可得 $\mu$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]，故不存在其他元素 $c\in M$ 满足 $\mu(\mathcal{M},v,(\exists x_1\phi))=c$
+满足 $\mu(\mathcal{M},v,(\exists x_1\phi))=I(c_0)$ 又根据[[MK28][性质]]可得 $\mu$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，故不存在其他元素 $c\in M$ 满足 $\mu(\mathcal{M},v,(\exists x_1\phi))=c$
 
 即可得 $\left<a,b\right>\in I(p_<)$ 则有 $\text{Sub}(\mathcal{M},a,b)=\mu(\mathcal{M},v,(\exists x_1\phi))=I(c_0)$
 
 ***** 性质2<<MK42>>
 
-$\text{Sub}(\mathcal{M},a,b)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+$\text{Sub}(\mathcal{M},a,b)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ****** 证明
 
 根据定义有 $\text{Sub}(\mathcal{M},a,b)=\mu_{x_1}(\mathcal{M},v,((f_+(x_3,x_1)\hat{=}x_2)\lor p_<(x_2,x_3)))$
 
-根据[[MK28][性质]]可得 $\mu_{x_1}(\mathcal{M},v,((f_+(x_3,x_1)\hat{=}x_2)\lor p_<(x_2,x_3)))$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]，故 $\text{Sub}(\mathcal{M},a,b)$ 亦是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+根据[[MK28][性质]]可得 $\mu_{x_1}(\mathcal{M},v,((f_+(x_3,x_1)\hat{=}x_2)\lor p_<(x_2,x_3)))$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，故 $\text{Sub}(\mathcal{M},a,b)$ 亦是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ***** 性质3<<MK67>>
 
@@ -1694,7 +1695,7 @@ $\text{OP}(\mathcal{M},a,b)$ 等价于 $I(f_+)(I(f_+)(I(f_\times)(I(f_+)(a,b),I(
 
 ***** 性质<<MK34>>
 
-若 $\mathcal{M}=\mathcal{N}$ 是[[MK27][自然数模型]]，则 $\text{OP}(\mathcal{N},a,b)$ 是 $\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ 的[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
+若 $\mathcal{M}=\mathcal{N}$ 是[[MK27][自然数模型]]，则 $\text{OP}(\mathcal{N},a,b)$ 是 $\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ 的[[~/文档/note/离散数学/Disc_Math.org::MK195][单射函数]]
 
 ****** 证明
 
@@ -1834,7 +1835,7 @@ $\beta(\mathcal{M},a,i)$ 等价于 $\mu_{x_1<\text{Sub}\left(\mathcal{M},a,\bar{
 
 ***** 性质2<<MK43>>
 
-$\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+$\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ****** 证明
 
@@ -1842,9 +1843,9 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 根据[[MK42][性质2]]可得 $\text{Sub}\left(\mathcal{M},a,I(f_s)(I(c_0))\right)$ 值确定
 
-又根据[[MK71][性质]]可得 $\mu_{x_1<\text{Sub}\left(a,I(f_s)(I(c_0))\right)}\left(\mathcal{M},v,\left(\exists x_{4<x_2}\left(\exists x_{5<x_2}\left((x_2\hat{=}op(x_4,x_5))\land\phi(x_4,x_1,x_3,x_5)\right)\right)\right)\right)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+又根据[[MK71][性质]]可得 $\mu_{x_1<\text{Sub}\left(a,I(f_s)(I(c_0))\right)}\left(\mathcal{M},v,\left(\exists x_{4<x_2}\left(\exists x_{5<x_2}\left((x_2\hat{=}op(x_4,x_5))\land\phi(x_4,x_1,x_3,x_5)\right)\right)\right)\right)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
-故 $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+故 $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ***** 性质3<<MK69>>
 
@@ -1918,7 +1919,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 （2） $\beta(\mathcal{N},a,i)=\min\left(\left\{v^*(x_1)\big|v^*\in V^*\right\}\right)$
 
-由于任意 $v^*\in V^*$ 均有 $v^*(x_2)=a$ 且论域为 $\mathbb{N}$ ，又根据[[MK34][性质]]可得 $\text{OP}(\mathcal{N},a,b)$ 是 $\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ 的[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
+由于任意 $v^*\in V^*$ 均有 $v^*(x_2)=a$ 且论域为 $\mathbb{N}$ ，又根据[[MK34][性质]]可得 $\text{OP}(\mathcal{N},a,b)$ 是 $\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ 的[[~/文档/note/离散数学/Disc_Math.org::MK195][单射函数]]
 
 故易证当且仅当 $v^*(x_4)=y,v^*(x_5)=z$ 时有 $\left<\mathcal{N},v^*\right>\vDash(x_2\hat{=}op(x_4,x_5))$
 
@@ -1976,7 +1977,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 （1） $J(a,b)>a$
 
-（2） $\mathbb{N}\times\mathbb{N}\to\mathbb{N}-\{1\}$ 的[[~/文档/note/离散数学/lssx.org::MK181][双射]]
+（2） $\mathbb{N}\times\mathbb{N}\to\mathbb{N}-\{1\}$ 的[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]]
 
 ****** 证明
 
@@ -1990,7 +1991,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 （4） 当 $s=1$ 时 $g(s)=1$
 
-******* 是[[~/文档/note/离散数学/lssx.org::MK176][单射]]
+******* 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]
 
 对于任意 $\left<a_1,b_1\right>\ne\left<a_2,b_2\right>$ 有 $J(a_1,b_1)=\frac{(a_1+b_1)(a_1+b_1+1)}{2}+a_1=\frac{s_1(s_1+1)}{2}+a_1,J(a_1,b_1)=\frac{s_2(s_2+1)}{2}+a_2$
 
@@ -2006,9 +2007,9 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 显然与 $\left<a_1,b_1\right>\ne\left<a_2,b_2\right>$ 矛盾，故假设不成立，即对于任意 $\left<a_1,b_1\right>\ne\left<a_2,b_2\right>$ 有 $J(a_1,b_1)\ne J(a_2,b_2)$
 
-即是[[~/文档/note/离散数学/lssx.org::MK176][单射]]
+即是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]
 
-******* 是[[~/文档/note/离散数学/lssx.org::MK179][满射]]
+******* 是[[~/文档/note/离散数学/Disc_Math.org::MK198][满射]]
 
 对于任意 $n\in \mathbb{N}-1$ 可得 $n\geq 1$ 由于 $g(s)$ 在值域 $\mathbb{N}-\{1\}$ 上严格递增且 $g(1)=1$
 
@@ -2018,23 +2019,23 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 取 $b=s-a=s-(n-g(s))$ 由于 $n-g(s)\leq s$ 根据 $g(s)$ 性质（3）易证 $g(s)\in\mathbb{N}$
 
-故可得 $b\in\mathbb{N}$ 。综上所述，对于任意 $n\in \mathbb{N}-1$ 均存在 $\{a,b\}\subset\mathbb{N}$ 使得 $J(a,b)=n$ 即是[[~/文档/note/离散数学/lssx.org::MK179][满射]]
+故可得 $b\in\mathbb{N}$ 。综上所述，对于任意 $n\in \mathbb{N}-1$ 均存在 $\{a,b\}\subset\mathbb{N}$ 使得 $J(a,b)=n$ 即是[[~/文档/note/离散数学/Disc_Math.org::MK198][满射]]
 
 ** 等价[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
-*** [[~/文档/note/离散数学/lssx.org::MK175][函数]]等价表达<<MK102>>
+*** [[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]等价表达<<MK102>>
 
-对于 $n$ 元[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f:\mathbb{N}^n\to \mathbb{N}$ 以及[[MK27][自然数标准模型]] $\mathfrak{N}$ 若存在表达式 $\phi$ 包含 $x_1,...,x_n,x_{n+1}$
+对于 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f:\mathbb{N}^n\to \mathbb{N}$ 以及[[MK27][自然数标准模型]] $\mathfrak{N}$ 若存在表达式 $\phi$ 包含 $x_1,...,x_n,x_{n+1}$
 
 满足对于 $\mathcfrak{N}$ 的任意[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 有 $\left<\mathfrak{N},v\right>\vDash\phi$ 的充要条件是 $f(v(x_1),...,v(x_n))=v(x_{n+1})$
 
 则称 $\phi$ 是 $f$ 的等价表达式。为方便，可记作 $\phi(\vec{x},y)$
 
-**** 性质1（[[~/文档/note/离散数学/lssx.org::MK515][复合]]）<<MK103>>
+**** 性质1（[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]]）<<MK103>>
 
 若有任意 $f:\mathbb{N}^m\to \mathbb{N}$ 以及 $g_1,...,g_k:\mathbb{N}^n\to \mathbb{N}$ 均有[[MK102][等价表达式]]
 
-则其[[~/文档/note/离散数学/lssx.org::MK515][复合]] $f\cdot(g_1,...,g_k)$ 亦有[[MK102][等价表达式]]
+则其[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]] $f\cdot(g_1,...,g_k)$ 亦有[[MK102][等价表达式]]
 
 ***** 证明
 
@@ -2072,7 +2073,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 对于任意 $\mathcal{L}_{\mathcal{A}_{N}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 任意 $\mathfrak{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 有 $\left<\mathfrak{N},v\right>\vDash\phi_*$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi_*$
 
-则其[[~/文档/note/离散数学/lssx.org::MK515][复合]] $f\cdot(g_1,...,g_k)$ 的[[MK102][等价表达式]] $\phi$ 亦有
+则其[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]] $f\cdot(g_1,...,g_k)$ 的[[MK102][等价表达式]] $\phi$ 亦有
 
 对于任意 $\mathcal{L}_{\mathcal{A}_{N}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 任意 $\mathfrak{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 有 $\left<\mathfrak{N},v\right>\vDash\phi$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi$
 
@@ -2082,9 +2083,9 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 则根据[[MK62][推论]]可得有 $\left<\mathfrak{N},v\right>\vDash\left(\bigwedge_{i=1}^m\phi_{g_i}(\vec{x},y_i)\land\phi_f(\vec{y},z)\right)$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\left(\bigwedge_{i=1}^m\phi_{g_i}(\vec{x},y_i)\land\phi_f(\vec{y},z)\right)$
 
-*** [[~/文档/note/离散数学/lssx.org::MK514][关系]]等价表达<<MK105>>
+*** [[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]等价表达<<MK105>>
 
-对 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset \mathbb{N}^n$ 以及[[MK27][自然数标准模型]] $\mathfrak{N}$ 若存在表达式 $\phi(x_1,...,x_n)$
+对 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset \mathbb{N}^n$ 以及[[MK27][自然数标准模型]] $\mathfrak{N}$ 若存在表达式 $\phi(x_1,...,x_n)$
 
 满足对于 $\mathfrak{N}$ 的任意[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$ 有 $\left<\mathfrak{N},v\right>\vDash\phi$ 的充要条件是 $\left<v(x_1),...,v(x_n)\right>\in R$
 
@@ -2092,7 +2093,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 **** 性质1<<MK109>>
 
-若 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset M^n$ 存在[[MK105][等价表达式]]的充要条件是[[MK74][特征函数]] $\chi_R$ 亦存在[[MK105][等价表达式]]
+若 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset M^n$ 存在[[MK105][等价表达式]]的充要条件是[[MK74][特征函数]] $\chi_R$ 亦存在[[MK105][等价表达式]]
 
 ***** 证明
 
@@ -2108,7 +2109,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 **** 性质2<<MK133>>
 
-若 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset M^n$ 的[[MK105][等价表达式]] $\psi$ ，其的[[MK74][特征函数]] $\chi_R$ 存在[[MK105][等价表达式]] $\phi$ 则
+若 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset M^n$ 的[[MK105][等价表达式]] $\psi$ ，其的[[MK74][特征函数]] $\chi_R$ 存在[[MK105][等价表达式]] $\phi$ 则
 
 （a） 对于任意 $\mathcal{L}_{\mathcal{A}_{N}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 任意 $\mathfrak{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$
 
@@ -2138,7 +2139,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 **** 性质3<<MK110>>
 
-若 $R,Q$ 均为 $M$ 上的 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]]且存在[[MK105][等价表达]]，则其[[MK108][布尔组合]]亦存在[[MK105][等价表达]]
+若 $R,Q$ 均为 $M$ 上的 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]且存在[[MK105][等价表达]]，则其[[MK108][布尔组合]]亦存在[[MK105][等价表达]]
 
 ***** 证明
 
@@ -2148,7 +2149,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 **** 性质4<<MK139>>
 
-若 $R,Q$ 均为 $M$ 上的 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]]，其[[MK102][等价表达式]]分为 $\phi,\psi$ 且满足
+若 $R,Q$ 均为 $M$ 上的 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]，其[[MK102][等价表达式]]分为 $\phi,\psi$ 且满足
 
 （a） 对于任意 $\mathcal{L}_{\mathcal{A}_{N}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 任意 $\mathfrak{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$
 
@@ -2170,7 +2171,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 **** 性质5<<MK143>>
 
-若 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset \mathbb{N}^n$ 的[[MK105][等价表达式]] $\psi$ 满足对于任意 $\mathcal{L}_{\mathcal{A}_{N}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 任意 $\mathfrak{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$
+若 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset \mathbb{N}^n$ 的[[MK105][等价表达式]] $\psi$ 满足对于任意 $\mathcal{L}_{\mathcal{A}_{N}}$ 的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 任意 $\mathfrak{N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK154][赋值]] $v$
 
 有 $\left<\mathfrak{N},v\right>\vDash\phi$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi$ 以及 $\left<\mathfrak{N},v\right>\vDash\psi$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\psi$
 
@@ -2184,7 +2185,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
    
 ***** 证明
 
-根据[[MK109][性质1]]可得 $\chi_R$ 存在[[MK102][等价表达]]，根据定义可得 $\chi_{R'}(\vec{a})=\chi_R(\pi^n_{i_1}(\vec{a}),...,\pi^n_{i_m}(\vec{a}))$ 即 $\chi_{R'}$ 是 $\chi_R$ 与 $\pi^i_j$ 的[[~/文档/note/离散数学/lssx.org::MK515][复合]]
+根据[[MK109][性质1]]可得 $\chi_R$ 存在[[MK102][等价表达]]，根据定义可得 $\chi_{R'}(\vec{a})=\chi_R(\pi^n_{i_1}(\vec{a}),...,\pi^n_{i_m}(\vec{a}))$ 即 $\chi_{R'}$ 是 $\chi_R$ 与 $\pi^i_j$ 的[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]]
 
 ****** 证明（1）
 
@@ -2200,7 +2201,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 显然 $\pi^i_j$ 是[[MK81][递归函数]]，则根据[[MK134][推论1]]可得 $\pi^i_j$ 的[[MK102][等价表达]] $\phi_\pi$ 亦有 $\left<\mathfrak{N},v\right>\vDash\phi_\pi$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi_\pi$ 
 
-由于 $\chi_{R'}$ 是 $\chi_R$ 与 $\pi^i_j$ 的[[~/文档/note/离散数学/lssx.org::MK515][复合]]，则根据[[MK136][性质2]]可得 $\chi_{R'}$ 的[[MK102][等价表达]] $\phi_2$ 亦有 $\left<\mathfrak{N},v\right>\vDash\phi_2$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi_2$ 
+由于 $\chi_{R'}$ 是 $\chi_R$ 与 $\pi^i_j$ 的[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]]，则根据[[MK136][性质2]]可得 $\chi_{R'}$ 的[[MK102][等价表达]] $\phi_2$ 亦有 $\left<\mathfrak{N},v\right>\vDash\phi_2$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi_2$ 
 
 最终根据[[MK133][性质2]]可得 $R'$ 的[[MK105][等价表达式]] $\phi$ 有 $\left<\mathfrak{N},v\right>\vDash\phi$ 的充要条件是 $\left<\mathcal{M},v\cdot e\right>\vDash\phi$ 
 
@@ -2498,7 +2499,7 @@ $\beta(\mathcal{M},a,i)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数
 
 *** [[~/文档/note/数理逻辑/sllj.org::MK105][符号]]的哥德尔数<<MK40>>
 
-根据[[~/文档/note/数理逻辑/sllj.org::MK111][定义]] $\Sigma$ 为所有[[~/文档/note/数理逻辑/sllj.org::MK105][符号]]的集合，定义[[~/文档/note/离散数学/lssx.org::MK175][函数]] $SN:\Sigma\to\mathbb{N}$ 如下
+根据[[~/文档/note/数理逻辑/sllj.org::MK111][定义]] $\Sigma$ 为所有[[~/文档/note/数理逻辑/sllj.org::MK105][符号]]的集合，定义[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $SN:\Sigma\to\mathbb{N}$ 如下
 
 \begin{aligned}
 \test{SN}(\sigma)=\begin{cases}
@@ -2531,11 +2532,11 @@ J(6n+10,i)&\sigma=p^n_i\\
 
 **** 性质<<MK44>>
 
-$SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
+$SN$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射函数]]
 
 ***** 证明
 
-根据[[MK39][引理3]]可得 $J(a,b)>a$ 且为[[~/文档/note/离散数学/lssx.org::MK181][双射]]，则显然易证[[~/文档/note/数理逻辑/sllj.org::MK105][固定符号]]均小于其他符号
+根据[[MK39][引理3]]可得 $J(a,b)>a$ 且为[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]]，则显然易证[[~/文档/note/数理逻辑/sllj.org::MK105][固定符号]]均小于其他符号
 
 显然有：
 
@@ -2545,7 +2546,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 可得任意[[~/文档/note/数理逻辑/sllj.org::MK107][变元符号]]，[[~/文档/note/数理逻辑/sllj.org::MK108][常元符号]]，[[~/文档/note/数理逻辑/sllj.org::MK109][函数符号]]，[[~/文档/note/数理逻辑/sllj.org::MK110][谓词符号]]的输入整数对均不同
 
-根据[[MK39][引理3]]亦可得 $J$ 为[[~/文档/note/离散数学/lssx.org::MK181][双射]]，故显然 $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
+根据[[MK39][引理3]]亦可得 $J$ 为[[~/文档/note/离散数学/Disc_Math.org::MK200][双射]]，故显然 $SN$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射函数]]
 
 *** [[~/文档/note/数理逻辑/sllj.org::MK117][项]]的哥德尔数<<MK41>>
 
@@ -2677,11 +2678,11 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 ** [[MK27][自然数]]递归函数/关系<<MK81>>
 
-定义递归函数集 $\mathscr{R}$ 为包含如下[[~/文档/note/离散数学/lssx.org::MK175][函数]]的最小[[~/文档/note/离散数学/lssx.org::MK175][函数]]集合：
+定义递归函数集 $\mathscr{R}$ 为包含如下[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]的最小[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]集合：
 
 （1） 基本函数：
 
-     a） 包含[[MK27][自然数标准模型中]] $\{\mathfrak{J}(f_+),\mathfrak{J}(f_\times),\mathfrak{J}(f_s),\chi_{\mathfrak{J}(p_<)}\}$ 其中 $\chi_{\mathfrak{J}(p_<)}$ 为[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\mathfrak{J}(p_<)$ 的[[MK74][特征函数]]
+     a） 包含[[MK27][自然数标准模型中]] $\{\mathfrak{J}(f_+),\mathfrak{J}(f_\times),\mathfrak{J}(f_s),\chi_{\mathfrak{J}(p_<)}\}$ 其中 $\chi_{\mathfrak{J}(p_<)}$ 为[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\mathfrak{J}(p_<)$ 的[[MK74][特征函数]]
 
          为方便，以下用 $+,\times$ 表示 $\mathfrak{J}(f_+),\mathfrak{J}(f_\times)$
 
@@ -2689,13 +2690,13 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 （2） 生成函数：
 
-     a） 任意 $f:\mathbb{N}^k\to\mathbb{N}$ 以及 $g_1,...,g_k:\mathbb{N}^n\to\mathbb{N}$ 满足 $\{f,g_1,...,g_k\}\subset\mathscr{R}$ 则有其[[~/文档/note/离散数学/lssx.org::MK515][复合]] $f\cdot(g_1,...,g_k)\in\mathscr{R}$
+     a） 任意 $f:\mathbb{N}^k\to\mathbb{N}$ 以及 $g_1,...,g_k:\mathbb{N}^n\to\mathbb{N}$ 满足 $\{f,g_1,...,g_k\}\subset\mathscr{R}$ 则有其[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]] $f\cdot(g_1,...,g_k)\in\mathscr{R}$
 
      b） 任意 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 满足 $g\in\mathscr{R}$ 且对于 $\vec{a}\in\mathbb{N}$ 存在 $b\in\mathbb{N}$ 满足 $g(\vec{a},b)=0$
 
          则其[[MK76][全域 $\mu$ 算子]] $f(\vec{a})=\mu_x(g(\vec{a},x)=0)$ 亦满足 $f\in\mathscr{R}$
 
-对于任意 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset\mathbb{N}^n$ 若有 $\chi_R\in\mathscr{R}$ 则称 $R$ 是递归关系
+对于任意 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset\mathbb{N}^n$ 若有 $\chi_R\in\mathscr{R}$ 则称 $R$ 是递归关系
 
 *** 相关定义
 
@@ -2705,7 +2706,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 全域 $\mu$ 算子<<MK76>>
 
-任意[[~/文档/note/离散数学/lssx.org::MK175][函数]] $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 存在 $f:\mathbb{N}^n\to\mathbb{N}$ 满足：
+任意[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 存在 $f:\mathbb{N}^n\to\mathbb{N}$ 满足：
 
 （1） 任意 $\vec{a}\in\mathbb{N}^n$ 均存在 $b\in\mathbb{N}$ 满足 $g(\vec{a},b)=0$ ，即 $Z(\vec{a})=\left\{b\big|b\in\mathbb{N}\land g(\vec{a},b)=0\right\}\ne\varnothing$
 
@@ -2739,15 +2740,15 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 特征函数<<MK74>>
 
-对于 $\mathcal{L}_{\mathcal{A}_{N}}$ 的任意[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 以及在 $M$ 上的 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset M^n$
+对于 $\mathcal{L}_{\mathcal{A}_{N}}$ 的任意[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 以及在 $M$ 上的 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset M^n$
 
 定义 $\chi_{R}:M^n\to\left\{I(c_0),\bar{I}(\tau_1)\right\}$ 为对于任意 $\vec{a}\in M^n$ 有 $\chi_R(\vec{a})=\begin{cases}\bar{I}(\tau_1)&\vec{a}\in R\\I(c_0)&\vec{a}\not\in R\end{cases}$
 
-则称 $\chi_R$ 是[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset M^n$ 的特征函数
+则称 $\chi_R$ 是[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset M^n$ 的特征函数
 
-**** [[~/文档/note/离散数学/lssx.org::MK514][关系]]的布尔组合<<MK108>>
+**** [[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]的布尔组合<<MK108>>
 
-对于 $\mathcal{L}_{\mathcal{A}_{N}}$ 的任意[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 以及在 $M$ 上的 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset M^n,Q\subset M^n$ 其布尔组合定义如下：
+对于 $\mathcal{L}_{\mathcal{A}_{N}}$ 的任意[[~/文档/note/数理逻辑/sllj.org::MK153][结构]] $\mathcal{M} =\left<M,I\right>\vDash T_{N}$ 以及在 $M$ 上的 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset M^n,Q\subset M^n$ 其布尔组合定义如下：
 
 （1） 对于任意 $\vec{a}\in M^n$ 有 $\vec{a}\in\lnot R$ 等价于 $\vec{a}\not\in R$ 
 
@@ -2757,7 +2758,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 （4） 对于任意 $\vec{a}\in M^n$ 有 $\vec{a}\in(R\to Q)$ 等价与 $\vec{a}\not\in R$ 或 $\vec{a}\in Q$   ，为方便亦可记作 $\vec{a}\in R\to\vec{a}\in Q$
 
-***** 非对称[[~/文档/note/离散数学/lssx.org::MK514][关系]]的布尔组合<<MK86>>
+***** 非对称[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]的布尔组合<<MK86>>
 
 对于任意 $R\subset\mathbb{N}^m,Q\subset\mathbb{N}^n$ 对于任意 $\vec{a}=\left<a_1,...,a_k\right>\in\mathbb{N}^k$ 定义
 
@@ -2797,7 +2798,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 ***** 布尔表达式<<MK145>>
 
-任意 $n$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R\subset \mathbb{N}^n,Q\subset \mathbb{N}^n$ ，对于任意 $\{a,b,c\}\in\mathbb{N}$ 定义：
+任意 $n$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R\subset \mathbb{N}^n,Q\subset \mathbb{N}^n$ ，对于任意 $\{a,b,c\}\in\mathbb{N}$ 定义：
 
 （1） $\chi_{\land}(a,b)=a\cdot b$ 显然有 $\chi_{R\land Q}(\vec{a})=\chi_{\land}(\chi_R(\vec{a}),\chi_Q(\vec{a}))$
 
@@ -2807,7 +2808,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 （4） $\chi_{\to}(a,b)=1-a\cdot(1-b)$ 显然有 $\chi_{R\to Q}(\vec{a})=\chi_{\to}(\chi_R(\vec{a}),\chi_Q(\vec{a}))$
 
-则称上述四个函数以及其有限[[~/文档/note/离散数学/lssx.org::MK515][复合]]为关系的布尔组合表达式
+则称上述四个函数以及其有限[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]]为关系的布尔组合表达式
 
 ****** 性质1<<MK146>>
 
@@ -2859,7 +2860,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 ******* $R\land Q$
 
-根据[[MK81][定义]]可得 $\{\chi_R,\chi_Q\}\subset\mathscr{R}$ ，则根据[[MK89][性质0]]可得[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f$ 满足 $f(\vec{a})=\mathfrak{J}(f_\times)(\chi_R(\vec{a}),\chi_Q(\vec{a}))\in\mathscr{R}$
+根据[[MK81][定义]]可得 $\{\chi_R,\chi_Q\}\subset\mathscr{R}$ ，则根据[[MK89][性质0]]可得[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f$ 满足 $f(\vec{a})=\mathfrak{J}(f_\times)(\chi_R(\vec{a}),\chi_Q(\vec{a}))\in\mathscr{R}$
 
 显然 $f(\vec{a})=\begin{cases}1&\chi_R(\vec{a})=\chi_Q(\vec{a})=1\\0&else\end{cases}$
 
@@ -2867,13 +2868,13 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 ******* $R\lor Q$
 
-根据[[MK82][之前证明]]可得[[~/文档/note/离散数学/lssx.org::MK63][补集]] $\overline{R},\overline{Q}$ 亦分别为 $m,n$ 元[[MK81][递归关系]]，则根据上一步同理可证 $\chi_{\left(\overline{R}\land\overline{Q}\right)}\in\mathscr{R}$ 以及 $\chi_{\left(\overline{\overline{R}\land\overline{Q}}\right)}\in\mathscr{R}$ 
+根据[[MK82][之前证明]]可得[[~/文档/note/离散数学/Disc_Math.org::MK33][补集]] $\overline{R},\overline{Q}$ 亦分别为 $m,n$ 元[[MK81][递归关系]]，则根据上一步同理可证 $\chi_{\left(\overline{R}\land\overline{Q}\right)}\in\mathscr{R}$ 以及 $\chi_{\left(\overline{\overline{R}\land\overline{Q}}\right)}\in\mathscr{R}$ 
 
 显然易证 $\overline{\overline{R}\land\overline{Q}}=\lnot((\lnot R)\land(\lnot Q))=(R\lor Q)$ 即有 $\chi_{(R\lor Q)}\in\mathscr{R}$ 即 $R\lor Q$ 亦为 $n$ 元[[MK81][递归关系]]
 
 ******* $R\to Q$
 
-同理[[~/文档/note/离散数学/lssx.org::MK515][复合函数]] $f(\vec{a})=\mathfrak{J}(f_\times)(\chi_{\overline{R}}(\vec{a}),\chi_Q(\vec{a}))\in\mathscr{R}$ 显然 $f(\vec{a})=\begin{cases}1&\chi_R(\vec{a})=0\lor\chi_Q(\vec{a})=1\\0&else\end{cases}$ 即 $f=\chi_{R\to Q}$
+同理[[~/文档/note/离散数学/Disc_Math.org::MK737][复合函数]] $f(\vec{a})=\mathfrak{J}(f_\times)(\chi_{\overline{R}}(\vec{a}),\chi_Q(\vec{a}))\in\mathscr{R}$ 显然 $f(\vec{a})=\begin{cases}1&\chi_R(\vec{a})=0\lor\chi_Q(\vec{a})=1\\0&else\end{cases}$ 即 $f=\chi_{R\to Q}$
 
 即根据[[MK81][定义]] $R\to Q$ 亦为 $n$ 元[[MK81][递归关系]]
 
@@ -2883,7 +2884,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 显然 $(R\to Q)\land (Q\to R)=R\leftrightarrow Q$ 故 $R\leftrightarrow Q$ 亦为 $n$ 元[[MK81][递归关系]]
 
-**** [[~/文档/note/离散数学/lssx.org::MK514][关系]]的量词计算<<MK87>>
+**** [[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]的量词计算<<MK87>>
 
 对于任意 $R\in\mathbb{N}^n$ 以及任意 $\vec{a}\in\mathbb{N}^k,k\leq n$ 定义如下：
 
@@ -2899,7 +2900,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 （2） $\left<\vec{a},m\right>\in R\leftrightarrow(\forall x(((x<m)\to(\left<\vec{a},x\right>\in U))))$
 
-其中上述计算为[[~/文档/note/离散数学/lssx.org::MK514][关系]]的[[MK86][布尔组合]]和[[MK87][量词计算]]。则 $R,Q$ 亦为[[MK81][递归关系]]
+其中上述计算为[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]的[[MK86][布尔组合]]和[[MK87][量词计算]]。则 $R,Q$ 亦为[[MK81][递归关系]]
 
 ****** 证明
 
@@ -2917,7 +2918,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 即 $\left<\vec{a},m\right>\in Q$ 等价于 $f(\vec{a},m)<m$ ，显然 $\chi_Q=\chi_{<}\cdot\left(f,\pi_{n+1}^{n+1}\right)$ 由于 $\{\chi_<,f,\pi_{n+1}^{n+1}\}\subset\mathscr{R}$
 
-则根据[[MK81][定义]]有[[~/文档/note/离散数学/lssx.org::MK515][复合函数]] $\chi_Q\in\mathscr{R}$
+则根据[[MK81][定义]]有[[~/文档/note/离散数学/Disc_Math.org::MK737][复合函数]] $\chi_Q\in\mathscr{R}$
 
 ******* $R$
 
@@ -2929,13 +2930,13 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 递归定义<<MK115>>
 
-设 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f$ 是由 $g$ 递归定义的当且仅当对于任意 $\vec{a}\in\mathbb{N}^{n-1},a\in\mathbb{N}$ 均有 $f(a,\vec{a})=g\left(\prec f(0,\vec{a}),...,f(a-1,\vec{a})\succ,a,\vec{a}\right)$
+设 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f$ 是由 $g$ 递归定义的当且仅当对于任意 $\vec{a}\in\mathbb{N}^{n-1},a\in\mathbb{N}$ 均有 $f(a,\vec{a})=g\left(\prec f(0,\vec{a}),...,f(a-1,\vec{a})\succ,a,\vec{a}\right)$
 
 其中 $\prec f(0,\vec{a}),...,f(a-1,\vec{a})\succ$ 表示 $\left< f(0,\vec{a}),...,f(a-1,\vec{a})\right>$ 的[[MK38][哥德尔数]]
 
 ***** 定理<<MK160>>
 
-对于任意 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]存在唯一 $f$ 是 $g$ [[MK115][递归定义]]的
+对于任意 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]存在唯一 $f$ 是 $g$ [[MK115][递归定义]]的
 
 ****** 证明
 
@@ -2947,7 +2948,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 ***** 引理<<MK161>>
 
-对于任意 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]若有 $g\in\mathscr{R}$ 则有其[[MK115][递归定义]]的 $f\in\mathscr{R}$
+对于任意 $g:\mathbb{N}^{n+1}\to\mathbb{N}$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]若有 $g\in\mathscr{R}$ 则有其[[MK115][递归定义]]的 $f\in\mathscr{R}$
 
 ****** 证明
 
@@ -2995,7 +2996,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 （2） $P_2=\{1,...,z\}$
 
-任意[[~/文档/note/离散数学/lssx.org::MK175][函数]] $p:P_1\to P_2$ 定义[[~/文档/note/离散数学/lssx.org::MK175][函数]] $h$ 满足对于任意 $\vec{a}=\left<a_1,...,a_z\right>\in\mathbb{N}^z$ 有 $h(\vec{a})=f\left(g_1(a_{p(1,1)},...,a_{p(1,n_1)}),...,g_k(a_{p(k,1)},...,a_{p(k,n_k)})\right)$
+任意[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $p:P_1\to P_2$ 定义[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $h$ 满足对于任意 $\vec{a}=\left<a_1,...,a_z\right>\in\mathbb{N}^z$ 有 $h(\vec{a})=f\left(g_1(a_{p(1,1)},...,a_{p(1,n_1)}),...,g_k(a_{p(k,1)},...,a_{p(k,n_k)})\right)$
 
 则 $h\in\mathscr{R}$
 
@@ -3009,7 +3010,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 性质1<<MK153>>
 
-若 $R$ 为 $n$ 元[[MK81][递归关系]] $g_1,...,g_n$ 为[[MK81][递归函数]]，则定义 $R'$ 为 $m$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]]满足对于任意 $\vec{a}\in\mathbb{N}^k$
+若 $R$ 为 $n$ 元[[MK81][递归关系]] $g_1,...,g_n$ 为[[MK81][递归函数]]，则定义 $R'$ 为 $m$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]满足对于任意 $\vec{a}\in\mathbb{N}^k$
 
 有 $\vec{a}\in R'$ 等价于 $\left<g_1(a_{k_{1,1}},...,a_{k_{1,n_1}}),...,g_n(a_{k_{n,1}},...,a_{k_{n,n_n}})\right>\in R$ 其中 $1\leq k_{i,j}\leq k$
 
@@ -3019,7 +3020,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 由于 $R$ 是 $n$ 元[[MK81][递归关系]]，故根据[[MK81][定义]]有 $\chi_R\in\mathscr{R}$ ，则根据[[MK89][性质0]]可得
 
-[[~/文档/note/离散数学/lssx.org::MK515][复合]]函数 $f=\chi_R\cdot(g_1(a_{k_{1,1}},...,a_{k_{1,n_1}}),...,g_n(a_{k_{n,1}},...,a_{k_{n,n_n}}))\in\mathscr{R}$ 显然 $f$ 即为 $R'$ 的[[MK74][特征函数]]
+[[~/文档/note/离散数学/Disc_Math.org::MK737][复合]]函数 $f=\chi_R\cdot(g_1(a_{k_{1,1}},...,a_{k_{1,n_1}}),...,g_n(a_{k_{n,1}},...,a_{k_{n,n_n}}))\in\mathscr{R}$ 显然 $f$ 即为 $R'$ 的[[MK74][特征函数]]
 
 故可得 $R'$ 是[[MK81][递归关系]]
 
@@ -3077,7 +3078,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 ****** $>$ 与 $\leq$
 
-根据[[MK81][定义]]可得 $\{\pi^2_1,\pi^2_2\}\subset\mathscr{R}$ 则[[~/文档/note/离散数学/lssx.org::MK515][复合函数]] $f=\chi_{\mathfrak{J}(p_<)}\cdot(\pi^2_2,\pi^2_1)\in\mathscr{R}$ 显然对于任意 $\left<a,b\right>\in\mathbb{N}^2$
+根据[[MK81][定义]]可得 $\{\pi^2_1,\pi^2_2\}\subset\mathscr{R}$ 则[[~/文档/note/离散数学/Disc_Math.org::MK737][复合函数]] $f=\chi_{\mathfrak{J}(p_<)}\cdot(\pi^2_2,\pi^2_1)\in\mathscr{R}$ 显然对于任意 $\left<a,b\right>\in\mathbb{N}^2$
 
 有 $f(a,b)=\begin{cases}1&b<a\\0&b\geq a\end{cases}$ 即 $f(a,b)=\begin{cases}1&a>b\\0&a\leq b\end{cases}$ 即自然数 $>$ 关系的[[MK74][特征函数]] $\chi_>\in\mathscr{R}$
 
@@ -3109,7 +3110,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 （2） $\left<\vec{a},m\right>\in R\leftrightarrow(\forall x(((x<m)\to(\left<\vec{a},x\right>\in U))))$
 
-其中上述计算为[[~/文档/note/离散数学/lssx.org::MK514][关系]]的[[MK86][布尔组合]]和[[MK87][量词计算]]。则 $R,Q$ 亦为[[MK81][递归关系]]
+其中上述计算为[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]的[[MK86][布尔组合]]和[[MK87][量词计算]]。则 $R,Q$ 亦为[[MK81][递归关系]]
 
 ***** 证明
 
@@ -3127,7 +3128,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 即 $\left<\vec{a},m\right>\in Q$ 等价于 $f(\vec{a},m)<m$ ，显然 $\chi_Q=\chi_{<}\cdot\left(f,\pi_{n+1}^{n+1}\right)$ 由于 $\{\chi_<,f,\pi_{n+1}^{n+1}\}\subset\mathscr{R}$
 
-则根据[[MK81][定义]]有[[~/文档/note/离散数学/lssx.org::MK515][复合函数]] $\chi_Q\in\mathscr{R}$
+则根据[[MK81][定义]]有[[~/文档/note/离散数学/Disc_Math.org::MK737][复合函数]] $\chi_Q\in\mathscr{R}$
 
 ****** $R$
 
@@ -3139,7 +3140,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 性质9<<MK90>>
 
-[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f(a,b)=\mu_x(\chi_{((b+x=a)\lor_p(a<b))}(a,b,x)=1)$ 是[[MK81][递归函数]]
+[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f(a,b)=\mu_x(\chi_{((b+x=a)\lor_p(a<b))}(a,b,x)=1)$ 是[[MK81][递归函数]]
 
 其中 $p$ 是满足 $\left<b,c,a,a,b\right>$ 到 $\left<a,b,c\right>$ 位置的[[MK81][投影]]
 
@@ -3155,13 +3156,13 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 性质10<<MK159>>
 
-若 $g_1,...,g_k$ 均为 $n$ 元[[MK81][递归函数]] $R_1,...,R_k$ 均为 $n$ 元[[MK81][递归关系]]并且形成 $\mathbb{N}^n$ 上的[[~/文档/note/离散数学/lssx.org::MK136][划分]]
+若 $g_1,...,g_k$ 均为 $n$ 元[[MK81][递归函数]] $R_1,...,R_k$ 均为 $n$ 元[[MK81][递归关系]]并且形成 $\mathbb{N}^n$ 上的[[~/文档/note/离散数学/Disc_Math.org::MK179][划分]]
 
-对于任意 $\vec{a}\in\mathbb{N}^n$ 则[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f(\vec{a})=\begin{cases}g_1(\vec{a})&\vec{a}\in R_1\\...\\g_k(\vec{a})&\vec{a}\in R_k\end{cases}$ 亦为 $n$ 元[[MK81][递归函数]]
+对于任意 $\vec{a}\in\mathbb{N}^n$ 则[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f(\vec{a})=\begin{cases}g_1(\vec{a})&\vec{a}\in R_1\\...\\g_k(\vec{a})&\vec{a}\in R_k\end{cases}$ 亦为 $n$ 元[[MK81][递归函数]]
 
 ***** 证明
 
-显然 $\chi_{R_i}\in\mathscr{R}$ 且根据[[MK81][定义]]可得 $\{\mathfrak{J}(f_+),\mathfrak{J}(f_\times)\}\subset\mathscr{R}$ ，则[[~/文档/note/离散数学/lssx.org::MK515][复合函数]] $g'_i=\mathfrak{J}(f_\times)\cdot(\chi_{R_i},g_i)\in\mathscr{R}$
+显然 $\chi_{R_i}\in\mathscr{R}$ 且根据[[MK81][定义]]可得 $\{\mathfrak{J}(f_+),\mathfrak{J}(f_\times)\}\subset\mathscr{R}$ ，则[[~/文档/note/离散数学/Disc_Math.org::MK737][复合函数]] $g'_i=\mathfrak{J}(f_\times)\cdot(\chi_{R_i},g_i)\in\mathscr{R}$
 
 定义 $f_1=g'_1$ 以及 $f_i=\mathfrak{J}(f_+)(f_{i-1},g'_i)$ 根据数学归纳法易证 $f_k=\mathfrak{J}(f_+)\cdot(f_{k-1},g'_k)\in\mathscr{R}$
 
@@ -3169,7 +3170,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 **** 性质11
 
-若 $Q_1,...,Q_k$ 均为 $n$ 元[[MK81][递归关系]] $R_1,...,R_k$ 均为 $n$ 元[[MK81][递归关系]]并且形成 $\mathbb{N}^n$ 上的[[~/文档/note/离散数学/lssx.org::MK136][划分]]
+若 $Q_1,...,Q_k$ 均为 $n$ 元[[MK81][递归关系]] $R_1,...,R_k$ 均为 $n$ 元[[MK81][递归关系]]并且形成 $\mathbb{N}^n$ 上的[[~/文档/note/离散数学/Disc_Math.org::MK179][划分]]
 
 则 $P=(Q_1\land R_1)\lor...\lor(Q_k\land R_k)$ 亦是 $n$ 元[[MK81][递归关系]]
 
@@ -3261,7 +3262,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 定义 $\text{Seq}=\left\{\prec a_1,...,a_n\succ\big|\left<a_1,...,a_n\right>\in\mathbb{N}^n\land n\in\mathbb{N}\right\}$ 是[[MK38][自然数哥德尔数]]集合
 
-由于 $\text{Seq}\subset\mathbb{N}$ 显然 $\text{Seq}$ 是 $1$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]]。则有 $\text{Seq}$ 是 $1$ 元[[MK81][递归关系]]
+由于 $\text{Seq}\subset\mathbb{N}$ 显然 $\text{Seq}$ 是 $1$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]。则有 $\text{Seq}$ 是 $1$ 元[[MK81][递归关系]]
 
 ***** 证明
 
@@ -3273,7 +3274,7 @@ $SN$ 是[[~/文档/note/离散数学/lssx.org::MK176][单射函数]]
 
 综上所述，对于任意 $a\in\mathbb{N}$ 易证 $a\in\text{Seq}$ 的充要条件是 $a\in Q$
 
-**** 性质15（ $\text{In}$ [[~/文档/note/离散数学/lssx.org::MK175][函数]]）<<MK153>>
+**** 性质15（ $\text{In}$ [[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]）<<MK153>>
 
 定义 $\text{In}(a,i)=\mu_x\left(\chi_{(\beta(\mathfrak{N},x,0)=i)\land(\forall j((j<i)\to((i\ne0)\to(\beta(\mathfrak{N},x,i)=\beta(\mathfrak{N},a,i)))))}(a,i,x)=1\right)$
 
@@ -3337,9 +3338,9 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 ****** 基本函数<<MK78>>
 
-（1） 显然[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $(f_+(x_1,x_2)\hat{=}x_3),(f_\times(x_1,x_2)\hat{=}x_3),(f_s(x_1)\hat{=}x_2)$ 分别是[[~/文档/note/离散数学/lssx.org::MK175][函数]] $\mathfrak{J}(f_+),\mathfrak{J}(f_\times),\mathfrak{J}(f_s)$ 的对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
+（1） 显然[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $(f_+(x_1,x_2)\hat{=}x_3),(f_\times(x_1,x_2)\hat{=}x_3),(f_s(x_1)\hat{=}x_2)$ 分别是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $\mathfrak{J}(f_+),\mathfrak{J}(f_\times),\mathfrak{J}(f_s)$ 的对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
-（2） 显然[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $((p_<(x_1,x_2)\land(x_3\hat{=}f_s(c_0)))\lor((\lnot p_<(x_1,x_2))\land(x_3\hat{=}c_0)))$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]] $\chi_{\mathfrak{J}(p_<)}$ 的对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
+（2） 显然[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $((p_<(x_1,x_2)\land(x_3\hat{=}f_s(c_0)))\lor((\lnot p_<(x_1,x_2))\land(x_3\hat{=}c_0)))$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $\chi_{\mathfrak{J}(p_<)}$ 的对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
 （3） 显然[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $(x_{n+1}\hat{=}x_i)$ 是[[MK75][投影函数]] $\pi_i^n$ 对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
@@ -3477,7 +3478,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 有 $\left<\mathfrak{N},v\right>\vDash\phi$ 的充要条件是 $\left<v(x_1),...,v(x_n)\right>\in R$
 
-为方便，称 $\phi$ 为[[~/文档/note/离散数学/lssx.org::MK175][函数]] $f$ 的对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
+为方便，称 $\phi$ 为[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]] $f$ 的对应[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]]
 
 ****** 证明
 
@@ -3805,7 +3806,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 （6） $R_{\phi,\forall}=\left\{a\big|\{a_1,a_2\}\subset\mathbb{N}\land a=\prec SN((),SN(\forall),a_1,SN((),a_2,SN()),SN())\succ\right\}$
 
-推导[[~/文档/note/离散数学/lssx.org::MK514][关系]]：
+推导[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]：
 
 （1） 逻辑与 $R_{\phi,\land}=\left\{a\big|a\in R_{\phi,\lnot}\land(a)_3\in R_{\phi,\to}\land((a)_3)_4\in R_{\phi,\lnot}\right\}$ 并定义 $f_{\land,1}(a)=((a)_3)_2,f_{\land,2}(a)=(((a)_3)_4)_3$
 
@@ -3873,7 +3874,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{Vrble}$ <<MK95>>
 
-定义 $1$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $a\in\text{Vrble}$ 的充要条件是存在 $i$ 满足 $a=\prec J(7,i)\succ$ 其中
+定义 $1$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $a\in\text{Vrble}$ 的充要条件是存在 $i$ 满足 $a=\prec J(7,i)\succ$ 其中
 
 （1） $J$ 为[[MK73][ $J$ 函数]]
 
@@ -3883,7 +3884,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{Cnst}$ <<MK128>>
 
-定义 $1$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $a\in\text{Cnst}$ 的充要条件是存在 $i$ 满足 $a=\prec J(7,i)\succ$ 其中
+定义 $1$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $a\in\text{Cnst}$ 的充要条件是存在 $i$ 满足 $a=\prec J(7,i)\succ$ 其中
 
 （1） $J$ 为[[MK73][ $J$ 函数]]
 
@@ -3893,7 +3894,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{Term}$ <<MK93>>
 
-递归定义 $1$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{Term}$ 满足 $a\in\text{Term}$ 的充要条件是满足以下一条
+递归定义 $1$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{Term}$ 满足 $a\in\text{Term}$ 的充要条件是满足以下一条
 
 （1） $a\in\text{Vrble}\lor\text{Cnst}$ 即第 $i$ 个[[~/文档/note/数理逻辑/sllj.org::MK108][常元符号]]
 
@@ -3915,7 +3916,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{AFrml}$ <<MK94>>
 
-递归定义 $1$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{AFrml}$ 满足 $a\in\text{AFrml}$ 的充要条件是满足以下一条
+递归定义 $1$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{AFrml}$ 满足 $a\in\text{AFrml}$ 的充要条件是满足以下一条
 
 （1） 存在 $\{a_1,a_2\}\subset\mathbb{N}$ 满足 $a=\prec SN(p_<),SN((),a_1,SN(,),a_2,SN())\succ$ 且 $\{a_1,a_2\}\subset\text{Term}$
 
@@ -3941,7 +3942,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{Frml}$ <<MK120>>
 
-递归定义 $1$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{Frml}$ 满足 $a\in\text{Frml}$ 的充要条件是满足以下一条
+递归定义 $1$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{Frml}$ 满足 $a\in\text{Frml}$ 的充要条件是满足以下一条
 
 （1） $a\in\text{AFrml}$
 
@@ -3967,7 +3968,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{Free}$ <<MK169>>
 
-递归定义 $2$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{Free}$ 满足 $\left<a,b\right>\in\text{Free}$ 的充要条件为满足以下一条：
+递归定义 $2$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{Free}$ 满足 $\left<a,b\right>\in\text{Free}$ 的充要条件为满足以下一条：
 
 （1） $a\in\text{Vrble}$ 且 $a=b$
 
@@ -4003,7 +4004,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{Stbl}$
 
-递归定义 $3$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{Stbl}$ 满足 $\left<a,b,c\right>\in\text{Stbl}$ 的充要条件为满足以下一条：
+递归定义 $3$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{Stbl}$ 满足 $\left<a,b,c\right>\in\text{Stbl}$ 的充要条件为满足以下一条：
 
 （1） 存在 $\{a_1,a_2\}\subset\mathbb{N}$ 满足 $a=\prec SN((),SN(\forall),a_1,SN((),a_2,SN())\succ$ 且 $\left<a_2,b\right>\in\text{Free}\to((\lnot(\left<c,a_1\right>\in\text{Free}))\land\left<a_2,b,c\right>\in\text{Stbl})$
 
@@ -4017,11 +4018,11 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 **** $\text{MP}$ <<MK126>>
 
-递归定义 $3$ 元[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{MP}$ 满足 $\left<a,b,c\right>\in\text{MP}$ 的充要条件是 $b=\prec SN((),a,SN(\to),b,SN())\succ$
+递归定义 $3$ 元[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{MP}$ 满足 $\left<a,b,c\right>\in\text{MP}$ 的充要条件是 $b=\prec SN((),a,SN(\to),b,SN())\succ$
 
 *** [[~/文档/note/数理逻辑/sllj.org::MK197][逻辑公理]]关系<<MK118>>
 
-定义以下[[~/文档/note/离散数学/lssx.org::MK514][关系]]：
+定义以下[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]：
 
 （1） 蕴含分配 $\text{PrpIA}$
 
@@ -4047,7 +4048,7 @@ $\max(a,b)$ 是[[MK81][递归函数]]
 
 （12） 等同律 $\text{EQQ}$
 
-满足对于任一上述[[~/文档/note/离散数学/lssx.org::MK514][关系]] $R_\mathbb{L}$ 任意 $a\in\mathbb{N}$ 有 $a\in R_{\mathbb{L}}$ 的充要条件是存在[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi\in\mathcal{L}_{\mathcal{A}_N}$ 满足：
+满足对于任一上述[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $R_\mathbb{L}$ 任意 $a\in\mathbb{N}$ 有 $a\in R_{\mathbb{L}}$ 的充要条件是存在[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi\in\mathcal{L}_{\mathcal{A}_N}$ 满足：
 
 （1） $\lceil\phi\rceil=a$ 即 $\phi$ 的[[MK46][哥德尔数]]是 $a$
 
@@ -4100,7 +4101,7 @@ a&else
 
 ***** 性质1
 
-$\text{Subst}(a,b,c)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+$\text{Subst}(a,b,c)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ****** 证明
 
@@ -4108,7 +4109,7 @@ $\text{Subst}(a,b,c)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
 
 根据[[MK98][性质2]]可得有且仅有一个[[MK96][拆分关系]] $R$ 满足 $a\in R$ ，故易证 $$\text{Subst}(a,b,c)$$ 中列举的条件有且仅有一个满足
 
-又根据[[MK38][定义]]可得 $a_1<a,a_2<a$ 结合 $a<\infty$ 以及数学归纳法易证 $\text{Subst}(a,b,c)$ 是[[~/文档/note/离散数学/lssx.org::MK175][函数]]
+又根据[[MK38][定义]]可得 $a_1<a,a_2<a$ 结合 $a<\infty$ 以及数学归纳法易证 $\text{Subst}(a,b,c)$ 是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]
 
 ***** 性质2<<MK167>>
 
@@ -4255,7 +4256,7 @@ $\text{t}$ 是[[MK81][递归函数]]
 
 **** [[MK2][初等算数公理]]关系
 
-定义[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{NLAX}_N\subset\mathbb{N}$ 满足对于任意 $a\in\mathbb{N}$ 有 $a\in\text{NLAX}_N$ 的充要条件是：
+定义[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{NLAX}_N\subset\mathbb{N}$ 满足对于任意 $a\in\mathbb{N}$ 有 $a\in\text{NLAX}_N$ 的充要条件是：
 
 （1） 存在 $\mathcal{L}_{\mathcal{A}_N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi$ 满足 $a=\lceil\phi\rceil$
 
@@ -4271,7 +4272,7 @@ $\text{t}$ 是[[MK81][递归函数]]
 
 **** [[MK3][皮亚诺算数公理]]
 
-定义[[~/文档/note/离散数学/lssx.org::MK514][关系]] $\text{NLAX}_{PA}\subset\mathbb{N}$ 满足对于任意 $a\in\mathbb{N}$ 有 $a\in\text{NLAX}_{PA}$ 的充要条件是：
+定义[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]] $\text{NLAX}_{PA}\subset\mathbb{N}$ 满足对于任意 $a\in\mathbb{N}$ 有 $a\in\text{NLAX}_{PA}$ 的充要条件是：
 
 （1） 存在 $\mathcal{L}_{\mathcal{A}_N}$ 的[[~/文档/note/数理逻辑/sllj.org::MK129][表达式]] $\phi$ 满足 $a=\lceil\phi\rceil$
 
@@ -4311,7 +4312,7 @@ $\text{NLAX}_{PA}$ 是[[MK141][有效表达式集]]
 
 （4） $\land$ 是[[MK108][关系的布尔组合]]
 
-根据[[MK97][性质1]]、[[MK166][性质3]]、[[MK142][性质4]]、[[MK167][性质2]]以及 $\mathcal{L}_{\mathcal{A}_{PA}}$ 中[[~/文档/note/数理逻辑/sllj.org::MK110][谓词符号]]于[[~/文档/note/数理逻辑/sllj.org::MK109][函数符号]]均有限易证上述用到的[[~/文档/note/离散数学/lssx.org::MK514][关系]]均为[[MK81][递归关系]]、[[~/文档/note/离散数学/lssx.org::MK175][函数]]均为[[MK81][递归函数]]
+根据[[MK97][性质1]]、[[MK166][性质3]]、[[MK142][性质4]]、[[MK167][性质2]]以及 $\mathcal{L}_{\mathcal{A}_{PA}}$ 中[[~/文档/note/数理逻辑/sllj.org::MK110][谓词符号]]于[[~/文档/note/数理逻辑/sllj.org::MK109][函数符号]]均有限易证上述用到的[[~/文档/note/离散数学/Disc_Math.org::MK736][关系]]均为[[MK81][递归关系]]、[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]均为[[MK81][递归函数]]
 
 根据[[MK153][性质1]]、[[MK84][性质6]]以及[[MK152][性质]]易证 $R_1$ 到 $R_6$ 均为[[MK81][递归关系]]，则又根据[[MK152][性质]]可得 $R=\bigwedge_{i=1}^6R_i$ 亦为[[MK81][递归关系]]
 
