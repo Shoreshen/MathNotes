@@ -2,7 +2,7 @@
 
 #+TITLE: 多项式
 
-current mark: 86
+current mark: 87
 
 * 环<<MK10>>
 
@@ -12,9 +12,9 @@ current mark: 86
 
 （2） 加法交换律： $\forall\{a,b\}\subset U\rightarrow a+b=b+a$ 
 
-（3） 存在加法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]： $\exists 0\in U\rightarrow\left((\forall a\in U)\rightarrow(a+0=0+a=a)\right)$ 记作零元
+（3） 存在加法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]： $\exists 0\in U\rightarrow\left((\forall a\in U)\rightarrow(a+0=0+a=a)\right)$ 记作零元
 
-（4） 存在加法[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]： $\forall a\in U(\exists b\in U\rightarrow a+b=b+a=0)$ 其中 $0$ 是加法幺元 
+（4） 存在加法[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]： $\forall a\in U(\exists b\in U\rightarrow a+b=b+a=0)$ 其中 $0$ 是加法幺元 
 
 （5） 乘法结合律： $\forall \{a,b,c\}\subset U\rightarrow (ab)c=a(bc)$ 
 
@@ -32,13 +32,13 @@ current mark: 86
 
 *** 单位元<<MK11>>
 
-若 $U$ 是环，存在元素 $e\in U$ 与环中的乘法满足[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]定义，则称 $e$ 为单位元
+若 $U$ 是环，存在元素 $e\in U$ 与环中的乘法满足[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]定义，则称 $e$ 为单位元
 
-且根据[[~/文档/note/离散数学/Disc_Math.org::MK312][性质]]可得 $e$ 唯一
+且根据[[~/文档/note/抽象代数/cxds.org::MK300][性质]]可得 $e$ 唯一
 
 ** 零元定理<<MK9>>
 
-任意[[MK12][交换环]] $\mathcal{U}=\left<U,+,\cdot\right>$ 存在乘法[[~/文档/note/离散数学/Disc_Math.org::MK313][零元]]，且等于[[MK10][环定义]]中加法幺元
+任意[[MK12][交换环]] $\mathcal{U}=\left<U,+,\cdot\right>$ 存在乘法[[~/文档/note/抽象代数/cxds.org::MK301][零元]]，且等于[[MK10][环定义]]中加法幺元
 
 *** 证明
 
@@ -1348,7 +1348,7 @@ $0(x)$ 可约
 
 故有 $x-c\in K[x]\land \sum_{i=1}^{s-1}g_i(x)\in K[x]$ 则根据[[MK19][定义]]可得 $x-c\mid f(x)$
 
-*** 根的个数
+*** 根的个数<<MK87>>
 
 对于 $f(x)\in K[x]\land \deg(f(x))\geq 0$ 而言，其跟的个数 $n$ 一定满足 $n\leq\deg(f(x))$
 
@@ -1492,7 +1492,7 @@ $0(x)$ 可约
 
 若 $K=\mathbb{C}$ 是复数域，若 $f(x)$ 无根，则根据[[MK72][结论]] $f(\tau)$ 在 $\tau\in\mathbb{C}$ 上恒不等于零
 
-则定义函数 $\Phi(\tau)=\frac{1}{f(\tau)}$ 则根据[[~/文档/note/复变函数/Cplx_fc.org][基本公式]]可得 $$\Phi'(\tau)=-\frac{f'(\tau)}{(f(\tau))^2}$$
+则定义函数 $\Phi(\tau)=\frac{1}{f(\tau)}$ 则根据[[~/文档/note/复变函数/Cplx_fc.org::MK94][基本公式]]可得 $$\Phi'(\tau)=-\frac{f'(\tau)}{(f(\tau))^2}$$
 
 且根据导数公式在复数域上多项式函数 $f'(\tau)$ 导数存，结合 $f(\tau)\ne0$ 可得在复数域上 $\Phi'(\tau)$ 存在
 
@@ -1506,7 +1506,7 @@ $0(x)$ 可约
 
 又由于 $|\tau|\leq M$ 有界闭区间，故根据[[~/文档/note/数学分析/Chap11Note.org::MK4][有界性定理]]可得有界，最终得 $\Phi(\tau)$ 有界且解析。
 
-故根据[[~/文档/note/复变函数/Cplx_fc.org][刘维尔定理]]可得 $\Phi(\tau)$ 必为常值函数。即 $\Phi(\tau)=A$
+故根据[[~/文档/note/复变函数/Cplx_fc.org::MK95][刘维尔定理]]可得 $\Phi(\tau)$ 必为常值函数。即 $\Phi(\tau)=A$
 
 则有 $f(\tau)=\frac{1}{A}$ 为零[[MK17][次]]多项式函数。根据[[MK68][定义]]为零次多项式诱导的函数。
 
@@ -1542,7 +1542,7 @@ $0(x)$ 可约
 
 **** 证明
 
-对于函数 $\sum_{i=0}^na_ic^i=0$ 两边取共轭复数，则根据[[~/文档/note/复变函数/Cplx_fc.org][性质]]中加法乘法保持可得
+对于函数 $\sum_{i=0}^na_ic^i=0$ 两边取共轭复数，则根据[[~/文档/note/复变函数/Cplx_fc.org::MK96][性质]]中加法乘法保持可得
 
 \begin{aligned}
 \overline{\sum_{i=0}^na_ic^i}&=\sum_{i=1}^n\overline{a_ic^i}\\
@@ -1790,7 +1790,7 @@ $0(x)$ 可约
 
 由于 $\overline{x},\overline{y}$ 亦可表述为 $\overline{a},\overline{b}$ ，对于任意 $a\in[x]_R\land b\in[y]_R$ ，同样有 $\overline{a}+\overline{b}=\overline{a+b}$
 
-根据[[~/文档/note/离散数学/Disc_Math.org][运算]]可知运算是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，必须满足唯一性。
+根据[[~/文档/note/抽象代数/cxds.org::MK292][运算]]可知运算是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，必须满足唯一性。
 
 对于任意 $a\in[x]_R\land b\in[y]_R$ 均可表示为 $a=a'm+x'\land b=b'm+y'$ 其中 $\{a',b'\}\subset\mathbb{Z}$ 且 $\{x',y'\}\subset\left\{z\big|z\in\mathbb{Z}\land z<m\right\}$
 
@@ -1806,7 +1806,7 @@ $0(x)$ 可约
 
 由于 $\overline{x},\overline{y}$ 亦可表述为 $\overline{a},\overline{b}$ ，对于任意 $a\in[x]_R\land b\in[y]_R$ ，同样有 $\overline{a}\times\overline{b}=\overline{ab}$
 
-根据[[~/文档/note/离散数学/Disc_Math.org][运算]]可知运算是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，必须满足唯一性。
+根据[[~/文档/note/抽象代数/cxds.org::MK292][运算]]可知运算是[[~/文档/note/离散数学/Disc_Math.org::MK194][函数]]，必须满足唯一性。
 
 对于任意 $a\in[x]_R\land b\in[y]_R$ 均可表示为 $a=a'm+x'\land b=b'm+y'$ 其中 $\{a',b'\}\subset\mathbb{Z}$ 且 $\{x',y'\}\subset\left\{z\big|z\in\mathbb{Z}\land z<m\right\}$
 
@@ -1905,4 +1905,4 @@ $0(x)$ 可约
 
 由于 $a>1$ 故有 $\frac{1}{a}\not\in\mathbb{Z}$ 故 $x=pb+\frac{1}{a}\not\in\mathbb{Z}$ 即 $\overline{x}\not\in\mathbb{Z}_m$ ，即矛盾。
 
-故对于 $\overline{a}\in\mathbb{Z}_m\land\overline{a}\ne\overline{0}$ 不存在乘法[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]，故不是[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK24][域]]
+故对于 $\overline{a}\in\mathbb{Z}_m\land\overline{a}\ne\overline{0}$ 不存在乘法[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]，故不是[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK24][域]]

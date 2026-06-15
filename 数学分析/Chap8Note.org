@@ -35,7 +35,7 @@ $g(x)$ 在 $(a,b)$ 上不变号，且在 $[a,b]$ 上可导
 
 由于 $&m< \frac{\int_a^b f(x)g(x) dx}{\int_a^b g(x) dx} < M$ 且 $m\leq f(x)\leq M$ 及 $f(x)$ 闭区间连续
 
-根据[[~/文档/note/大学物理/Note/DiffEq.org][介值定理]]，必存在 $\eta\in(a,b)\Rightarrow f(\eta)=\frac{\int_a^b f(x)g(x) dx}{\int_a^b g(x) dx}\Rightarrow f(\eta)\int_a^b g(x) dx=\int_a^b f(x)g(x) dx$
+根据[[~/文档/note/大学物理/Note/DiffEq.org::MK21][介值定理]]，必存在 $\eta\in(a,b)\Rightarrow f(\eta)=\frac{\int_a^b f(x)g(x) dx}{\int_a^b g(x) dx}\Rightarrow f(\eta)\int_a^b g(x) dx=\int_a^b f(x)g(x) dx$
 
 ** <<MK1>>第二积分中值定理：
 

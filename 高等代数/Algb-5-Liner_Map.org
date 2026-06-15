@@ -470,7 +470,7 @@ $\forall\{l,k\}\subset K$ 均有 $(lk)\sigma=(kl)\sigma$
 
 易证，略
 
-***** 乘法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]（线性变换下）<<MK19>>
+***** 乘法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]（线性变换下）<<MK19>>
 
 设 $\mathcal{V}=<V,K,+,\cdot>$ 是[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK24][数域]] $K$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]] $\text{Hom}(\mathcal{V},\mathcal{V})$ 是所有 $\mathcal{V}$ 上的[[MK4][线性变换]]
 
@@ -580,7 +580,7 @@ $\forall\{l,k\}\subset K$ 均有 $(lk)\sigma=(kl)\sigma$
 
 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK89][性质3]]可得 $a$ 表述唯一，即得[[MK59][投影]] $\sigma(a)=\vec{0}$
 
-显然 $\vec{0}\in\text{span}(S_1)$ 是 $\mathcal{V}_1=<\text{span}(S_1),K,+,\cdot>$ 的加法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]，即 $a\in \ker(\sigma)$
+显然 $\vec{0}\in\text{span}(S_1)$ 是 $\mathcal{V}_1=<\text{span}(S_1),K,+,\cdot>$ 的加法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]，即 $a\in \ker(\sigma)$
 
 即有 $\text{span}(S_2)\subset \ker(\sigma)$
 
@@ -1497,7 +1497,7 @@ $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 是 $\mathcal{V}$ 的[[~/文
 
      则对于任意 $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V}')$ 有 $\forall a\in V\rightarrow (\sigma+\sigma_0)(a)=\sigma(a)+0=\sigma(a)$ 即有 $\sigma+\sigma_0=\sigma$
 
-（4） 对于任意 $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V}')$ 定义其负元为 $-1\sigma$ 其中 $-1$ 是 $K$ 中乘法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]的加法[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]
+（4） 对于任意 $\sigma\in\text{Hom}(\mathcal{V},\mathcal{V}')$ 定义其负元为 $-1\sigma$ 其中 $-1$ 是 $K$ 中乘法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]的加法[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]
 
      则 $\forall a\in V\rightarrow (-1\sigma)(a)=-1\sigma(a)=-\sigma(a)$ 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK6][负元]]可得 $\sigma(a)-\sigma(a)=0$
 
@@ -1653,11 +1653,11 @@ e(a)(f)=&\left(\sum_{i=1}^nk_ig_i\right)\left(f\right)=\sum_{i=1}^nk_ig_i(f)\\
 
 设 $\mathcal{V}=\left<V,K,+,\cdot\right>,\mathcal{V}'=\left<V',K,\bar{+},\bar{\cdot}\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，[[MK4][线性映射]] $\sigma:V\to V'$ 
 
-定义 $\ker(\sigma)=\left\{a\in V\big|\sigma(a)=\vec{0}'\right\}$ 为线性映射 $\sigma$ 的核，其中 $\vec{0}'$ 是 $\mathcal{V}'$ 的加法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]
+定义 $\ker(\sigma)=\left\{a\in V\big|\sigma(a)=\vec{0}'\right\}$ 为线性映射 $\sigma$ 的核，其中 $\vec{0}'$ 是 $\mathcal{V}'$ 的加法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]
 
 *** 性质<<MK26>>
 
-$\sigma$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]的充要条件为 $\ker(\sigma)=\{\vec{0}\}$ 其中 $\vec{0}$ 是 $\mathcal{V}$ 的加法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]
+$\sigma$ 是[[~/文档/note/离散数学/Disc_Math.org::MK195][单射]]的充要条件为 $\ker(\sigma)=\{\vec{0}\}$ 其中 $\vec{0}$ 是 $\mathcal{V}$ 的加法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]
 
 **** 证明
 

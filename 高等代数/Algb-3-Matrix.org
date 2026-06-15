@@ -1292,7 +1292,7 @@ B^TA^T&=\left[b'_{ij}=b_{ji}\right]_{m\times n}\left[a'_{ij}=a_{ji}\right]_{n\ti
 
 根据[[MK32][初等变换]]可得上述乘法可定义为对矩阵 $A$ 做初等变换，
 
-故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org][推论3]]可得初等变换不改变矩阵的秩。
+故根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK141][推论3]]可得初等变换不改变矩阵的秩。
 
 故有 $\dim(A)=\dim(AC_n)$ 同理可证 $\dim(A)=\dim(B_sA)$
 

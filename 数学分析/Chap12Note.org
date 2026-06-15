@@ -2,7 +2,7 @@
 
 #+TITLE: 多元函数微分
 
-current mark: MK32
+current mark: MK34
 
 * 正定矩阵
 
@@ -341,7 +341,7 @@ a_{1n}&...&a_{n(j-1)}&b_n&a_{n(j+1)}&...&a_{nn}\\
 
 注2： $\lim_{|\Delta\vec{x}|\to 0}\frac{o(|\Delta\vec{x}|)}{|\Delta\vec{x}|}=0$ 隐含条件 $\lim_{|\Delta\vec{x}|\to 0}o(|\Delta\vec{x}|)=0$
 
-** 欧几里得空间连续，可导，可微及方向导数关系
+** 欧几里得空间连续，可导，可微及方向导数关系<<MK33>>
 
 *** 可导与方向导数<<MK31>>
 
@@ -1062,7 +1062,7 @@ R_n(x)&=\frac{1}{(k+1)!}\left(\sum_{j=1}^n \Delta x_j\frac{\partial}{\partial x_
 
 * 隐函数
 
-** 一元隐函数存在定理
+** 一元隐函数存在定理<<MK34>>
 
 若二元函数 $F(x,y)$ 满足下列条件：
 

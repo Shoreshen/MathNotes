@@ -2,7 +2,7 @@
 
 #+TITLE: 复变函数
 
-current mark: 93
+current mark: 96
 
 * 其他定理
 
@@ -70,7 +70,7 @@ current mark: 93
 
 若存在复数 $z=a+ib$ 则其共轭复数为 $\overline{z}=a-ib$
 
-*** 性质
+*** 性质<<MK96>>
 
 **** 保持加法
 
@@ -340,7 +340,7 @@ f'(z_0)\Delta z+o(\Delta z)=&(a+ib)(\Delta x+i\Delta y)+o_1(\Delta z)+io_2(\Delt
 
 且 $\lim_{z\to z_0}\left\{\frac{o_1\left(\sqrt{\Delta x^2+\Delta y^2}\right)+io_2\left(\sqrt{\Delta x^2+\Delta y^2}\right)}{\sqrt{\Delta x+\Delta y}}\right\}=0$ 则有 $\lim_{z\to z_0}\frac{f(z)-f(z_0)}{z-z_0}=a-ib$
 
-*** 基本公式
+*** 基本公式<<MK94>>
 
 **** 幂函数
 
@@ -432,7 +432,7 @@ $\left(g(f(z))\right)'=g'(f(z))f'(z)$
 
 或微分形式 $$\int_Lf(z)dz=\int_L u\big(x,y\big)dx-v\big(x,y\big)dy+i\int_L v\big(x,y\big)dx+u\big(x,y\big)dy$$
 
-即转化为两个[[~/文档/note/数学分析/Chap14Note.org][第二类曲线积分]]，其中 $u(x,y)+iv(x,y)=f(x+iy)$ 根据[[MK61][定理]]所得
+即转化为两个[[~/文档/note/数学分析/Chap14Note.org::MK57][第二类曲线积分]]，其中 $u(x,y)+iv(x,y)=f(x+iy)$ 根据[[MK61][定理]]所得
 
 **** 证明
 
@@ -462,7 +462,7 @@ $\left(g(f(z))\right)'=g'(f(z))f'(z)$
 
 ***** 引入第二类曲线积分<<MK75>>
 
-根据[[~/文档/note/数学分析/Chap14Note.org][推论]] $\lim_{\lambda\to0}\left\{\sum_{i=1}^{n-1}(u(\alpha_i,\beta_i),-v(\alpha_i,\beta_i))\cdot(\Delta a_i,\Delta b_i)\right\}$ 为微分形式的黎曼和
+根据[[~/文档/note/数学分析/Chap14Note.org::MK59][推论]] $\lim_{\lambda\to0}\left\{\sum_{i=1}^{n-1}(u(\alpha_i,\beta_i),-v(\alpha_i,\beta_i))\cdot(\Delta a_i,\Delta b_i)\right\}$ 为微分形式的黎曼和
 
 由于满足
 
@@ -518,7 +518,7 @@ $\left(g(f(z))\right)'=g'(f(z))f'(z)$
 
 由于连续，故实部虚部均连续，故 $\vec{F}(x,y)=\left(u(x,y),-v(x,y)\right)$ 亦连续
 
-根据[[~/文档/note/数学分析/Chap14Note.org][连续函数可积]]可得 $\vec{F}(x,y)$ 可积
+根据[[~/文档/note/数学分析/Chap14Note.org::MK58][连续函数可积]]可得 $\vec{F}(x,y)$ 可积
 
 同理可证虚部可积，则函数可积。
 
@@ -632,7 +632,7 @@ $$\int_Ldz=\lim_{\lambda\to0}\sum_{i=1}^n\Delta z_i=\lim_{\lambda\to0}\sum_{i=1}
 
 根据[[MK61][定理]]函数可有等价映射 $u(x,y)+iv(x,y)$ 根据[[MK62][连续]]定义可得 $u(x,y),v(x,y)$ 亦连续
 
-定义 $L$ 长度为 $l$ ，由于 $L$ 为有界闭集，故根据[[~/文档/note/数学分析/Chap11Note.org][康托定理]]可得 $u(x,y),v(x,y)$ 一致连续。
+定义 $L$ 长度为 $l$ ，由于 $L$ 为有界闭集，故根据[[~/文档/note/数学分析/Chap11Note.org::MK40][康托定理]]可得 $u(x,y),v(x,y)$ 一致连续。
 
 则可证 $f(z)$ [[MK66][一致连续]]，即 $\forall\epsilon>0,\exists\delta'>0,\forall|z'-z''|<\delta\Rightarrow|f(z')-f(z'')|<\frac{\epsilon}{2l}$
 
@@ -975,7 +975,7 @@ V=&\left|(k+1)U+\sum_{j=2}^{k+1}\binom{k+1}{j}\left(\frac{\xi-z_0}{z-z_0}+U\righ
 
 证毕。
 
-*** 刘维尔定理
+*** 刘维尔定理<<MK95>>
 
 若函数 $f(z)$ 在复平面 $z\in\mathbb{C}$ 上[[MK65][解析]]且有界，则 $f(z)$ 必定为常数函数，即 $f(z)=K$ 其中 $K\in\mathbb{C}$ 为常数
 

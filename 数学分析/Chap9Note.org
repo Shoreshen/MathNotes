@@ -2,7 +2,7 @@
 
 #+TITLE: 数项级数
 
-current mark: 11
+current mark: 15
 
 * Bolzano-Weiserstrass定理
 
@@ -82,7 +82,7 @@ current mark: 11
 
 若 $0<l<\infty$ ，则 $S^y$ ， $S^x$ 同时敛散
 
-*** 柯西判别：
+*** 柯西判别：<<MK12>>
 
 $\overline{\lim_{n \to \infty}} \sqrt[n]x_n = r$
 
@@ -156,7 +156,7 @@ $\overline{\lim_{n \to \infty}}\frac{x_{n+1}}{x_n} \geq 1$ 或者 $\overline{\li
 \overline{\lim_{n\to \infty}}\sqrt[n]{x_n} \leq  \overline{\lim_{n \to \infty}}\frac{x_{n+1}}{x_n}
 \end{aligned}
 
-*** 拉得判别法：
+*** 拉得判别法：<<MK13>>
 
 定义$\lim_{n \to \infty} n\left(\frac{x_n}{x_{n+1}}-1\right)=r$ ，则：
 
@@ -282,14 +282,14 @@ $r=1$ 判别失效。
 
 即有 $\left|\sum_{i=n}^m x_i\right|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon$
 
-**** 推论1：$\sum_{n=1}^\infty |x_n|$ 收敛，则 $\sum_{n=1}^\infty x_n$ 也收敛，根据三角不等式证明如下：
+**** 推论1：$\sum_{n=1}^\infty |x_n|$ 收敛，则 $\sum_{n=1}^\infty x_n$ 也收敛，根据三角不等式证明如下：<<MK14>>
 
 \begin{aligned}
 &\because \sum_{i=n+1}^m |x_i| \geq \left|\sum_{i=n+1}^m x_i\right|\\
 &\therefore \forall \epsilon>0,\ \ \exists N,\ \ \forall m>n>N\Rightarrow \left|\sum_{i=n+1}^m x_i\right| \leq \sum_{i=n+1}^m |x_i| \leq \epsilon
 \end{aligned}
 
-**** 推论2：级数收敛，通项数列极限为0
+**** 推论2：级数收敛，通项数列极限为0<<MK15>>
 
 \begin{aligned}
 &\because \forall \epsilon>0,\ \ \exists N,\ \ \forall m>n>N\Rightarrow \left|\sum_{i=n+1}^m x_i\right|<\epsilon\\

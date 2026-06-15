@@ -2,7 +2,7 @@
 
 #+TITLE: 重积分
 
-current mark: MK47
+current mark: MK53
 
 * 有理函数不定积分
 
@@ -151,7 +151,7 @@ I_1&=\int\frac{1}{(x^2+a^2)^n}dx\\
 
 其中 $\int\frac{1}{\left[v^2+\gamma_k^2\right]^r}dv$ 可根据[[MK23][引理3]]迭代求得并带入 $v=x-\beta_k$
 
-* 光滑曲线（面）的面（体）积为零
+* 光滑曲线（面）的面（体）积为零<<MK48>>
 
 定义曲面 $\vec{f}(\vec{t})=\begin{cases}f_1(t_1,t_2,...,t_{n-1})\\f_2(t_1,t_2,...,t_{n-1})\\...\\f_n(t_1,t_2,...,t_{n-1})\\\end{cases}$ 是 $\vec{t}\in D_{n-1}$ 到 $R^n$ 的映射，其中
 
@@ -169,7 +169,7 @@ I_1&=\int\frac{1}{(x^2+a^2)^n}dx\\
 
 因为 $\vec{f}(\vec{t})$ 在 $D_{n-1}$ 上存在偏导且连续，故偏导数 $\frac{\partial f_i(\vec{t})}{\partial t_j},1\leq i\leq n, 1\leq j\leq n-1$ 亦为 $\vec{t}$ 的连续映射
 
-由于 $D_{n-1}$ 有界闭集，故根据[[~/文档/note/数学分析/Chap11Note.org][Heine-Borel定理]] $D_{n-1}$ 为紧集
+由于 $D_{n-1}$ 有界闭集，故根据[[~/文档/note/数学分析/Chap11Note.org::MK38][Heine-Borel定理]] $D_{n-1}$ 为紧集
 
 根据[[~/文档/note/数学分析/Chap11Note.org::MK3][紧集的连续映射（连续函数）也是紧集]]得出 $\frac{\partial f_i(\vec{t})}{\partial t_j}$ 亦为紧集，同理为有界闭集，则存在 $m_{ij}\leq\frac{\partial f_i(\vec{t})}{\partial t_j}\leq M_{ij}$ 
 
@@ -259,13 +259,13 @@ I_1&=\int\frac{1}{(x^2+a^2)^n}dx\\
 
 则定义 $f(x,y)$ 在 $D$ 上可积，极限 $V$ 为 $f(x,y)$ 在 $D$ 上的二重积分，记为 $\iint_D f(x,y)d\sigma=\lim_{\lambda\to0}\sum_{i=1}^n f(\xi_i,\eta_i)\sigma_i=V$
 
-*** 推论
+*** 推论<<MK51>>
 
 若 $D$ 是有界闭集，且 $f(x,y)$ 在 $D$ 上连续，则可积
 
 **** <<MK1>>证明
 
-由于有界闭集，则根据[[~/文档/note/数学分析/Chap11Note.org][Heine-Borel定理]]得 $D$ 是紧集，又由于 $f(x,y)$ 连续，根据[[~/文档/note/数学分析/Chap11Note.org][康托定理]]得函数一直连续，
+由于有界闭集，则根据[[~/文档/note/数学分析/Chap11Note.org::MK38][Heine-Borel定理]]得 $D$ 是紧集，又由于 $f(x,y)$ 连续，根据[[~/文档/note/数学分析/Chap11Note.org::MK40][康托定理]]得函数一直连续，
 
 定义 $S=\sum_{i=1}^n \sigma_i$ 为 $D$ 的面积，故有 $\forall \epsilon>0, \exists \delta, \forall \vec{x}',\vec{x}''\in K, |\vec{x}'-\vec{x}''|<\delta \Rightarrow \left|\vec{f}(\vec{x}')-\vec{f}(\vec{x}'')\right|<\frac{\epsilon}{S}$
 
@@ -321,7 +321,7 @@ I_1&=\int\frac{1}{(x^2+a^2)^n}dx\\
 
 *** 证明面积
 
-定义 $S=\left\{\vec{f}(t)\big|t\in[0,1]\right\}$ 由于 $[0,1]$ 有界闭集，根据[[~/文档/note/数学分析/Chap11Note.org][Heine-Borel定理]]得出是紧集。
+定义 $S=\left\{\vec{f}(t)\big|t\in[0,1]\right\}$ 由于 $[0,1]$ 有界闭集，根据[[~/文档/note/数学分析/Chap11Note.org::MK38][Heine-Borel定理]]得出是紧集。
 
 又根据据[[~/文档/note/数学分析/Chap11Note.org::MK3][紧集的连续映射（连续函数）也是紧集]]得出 $S$ 也为紧集，同理 $S$ 有界闭集。 
 
@@ -519,7 +519,7 @@ $\int_D f(\vec{x})dv=\int_D dv$ 为被积区域的体积（被积区域为平面
 
 由于 $m\leq f(x)\leq M$ 根据[[MK4][保序性]] $mV\leq\int_D f(\vec{x})dv\leq MV$
 
-*** 绝对可积性
+*** 绝对可积性<<MK49>>
 
 若 $f(\vec{x})$ 在有界区域 $D$ 上可积，则 $|f(\vec{x})|$ 在区域 $D$ 上也可积，且有 $\left|\int_D f(\vec{x})dv\right|\leq \int_D |f(\vec{x})|dv$
 
@@ -881,7 +881,7 @@ $R(x,y)=R_1(x,y)+R_2(x,y)$ 由于 $\int_DR_1(x,y)d\sigma=\int_DR_2(x,y)d\sigma=0
 
 故对于任意划分，均有 $\sum_{i=1}^n \omega_i\Delta x_i>\frac{n}{2}$ 推出积分 $\int_0^1 R\left(x,\frac{1}{2}\right)dx$ 不存在，即不可积。
 
-* 重积分变量代还
+* 重积分变量代还<<MK52>>
 
 假设 $T$ 为区域 $D\subset R^n$ 上的映射，即对于 $\vec{x}\in D$ 有函数 $\vec{t}=\vec{T}(\vec{x})=\begin{cases}t_1=T_1(x_1,x_2,...,x_n)\\t_2=T_2(x_1,x_2,...,x_n)\\...\\t_n=T_n(x_1,x_2,...,x_n)\\\end{cases}$ 定义为 $\vec{t}\in T(D)\in R^n$ 若
 
@@ -955,7 +955,7 @@ T_{kx_1}&T_{kx_2}&...&T_{kx_n}\\
 
 （4） 由于连续映射，且 $A^k$ 为有界集闭集，
 
-      根据[[~/文档/note/数学分析/Chap11Note.org][Heine-Borel定理]]及[[~/文档/note/数学分析/Chap11Note.org::MK3][紧集的连续映射（连续函数）也是紧集]]得出 $[T_k(\vec{x}_u)-T_k(\vec{x}_l)]$ 有界
+      根据[[~/文档/note/数学分析/Chap11Note.org::MK38][Heine-Borel定理]]及[[~/文档/note/数学分析/Chap11Note.org::MK3][紧集的连续映射（连续函数）也是紧集]]得出 $[T_k(\vec{x}_u)-T_k(\vec{x}_l)]$ 有界
 
 定义  则根据[[MK9][积分中值定理]]有
 
@@ -1046,11 +1046,11 @@ T_{kx_1}&T_{kx_2}&...&T_{kx_n}\\
 **** 证明结论
 
 
-根据条件（4）有 $D$ 为有界闭集，根据[[~/文档/note/数学分析/Chap11Note.org][Heine-Borel定理]] $D$ 紧集
+根据条件（4）有 $D$ 为有界闭集，根据[[~/文档/note/数学分析/Chap11Note.org::MK38][Heine-Borel定理]] $D$ 紧集
 
 根据[[~/文档/note/数学分析/Chap11Note.org::MK3][紧集的连续映射（连续函数）也是紧集]]得 $T(D)$ 紧集，同理 $T(D)$ 有界闭集 
 
-故 $f(\vec{t})$ 为有界闭集上的连续函数，根据[[~/文档/note/数学分析/Chap11Note.org][最大值定理]]存在 $m'\leq f(\vec{t})\leq M',\vec{t}\in T(D)$ 同理存在 $m''\leq f\left(\vec{T}(\vec{x})\right)\left|\det\left(\frac{\partial \vec{T}(\vec{x})}{\partial\vec{x}}\right)\right|\leq M''$
+故 $f(\vec{t})$ 为有界闭集上的连续函数，根据[[~/文档/note/数学分析/Chap11Note.org::MK39][最大值定理]]存在 $m'\leq f(\vec{t})\leq M',\vec{t}\in T(D)$ 同理存在 $m''\leq f\left(\vec{T}(\vec{x})\right)\left|\det\left(\frac{\partial \vec{T}(\vec{x})}{\partial\vec{x}}\right)\right|\leq M''$
 
 定义 $M=\max(M',M''),m=\min(m',m'')$ ，定义包含边界点的区域为 $D'_{i'}$ 不包含边界点的矩形为 $D''_{i''}$ 
 
@@ -1304,7 +1304,7 @@ T_n\left(F_{1_{n-1}}(\vec{t}^{n-1}),F_{2_{n-1}}(\vec{t}^{n-1}),...,F_{(n-1)_{n-1
 
 定义 $D$ 的无限开覆盖 $\left\{U\big|O\left(\vec{x},\frac{\delta}{2}\right),\vec{x}\in D\right\}$ 其中 $\delta$ 是根据[[MK18][引理4]]导出的在 $\vec{x}$ 点周围可将映射分解为 $n$ 个本源映射的领域半径
 
-根据[[~/文档/note/数学分析/Chap11Note.org][Heine-Borel定理]] $D$ 为紧集，
+根据[[~/文档/note/数学分析/Chap11Note.org::MK38][Heine-Borel定理]] $D$ 为紧集，
 
 根据[[~/文档/note/数学分析/Chap11Note.org::MK5][紧集]]给出的定义，任意无限开覆盖必有有限子覆盖。
 
@@ -1751,7 +1751,7 @@ F&=G\rho\int_0^{2\pi}d\theta\int_0^a r^2 \frac{1}{2rs^2} dr\int_{|r-s|}^{r+s} \f
 
 （3） $f_n(x),f(x)$ 在 $[a,b]$ 上均可积，故根据[[~/文档/note/数学分析/Chap7Note.org::MK5][线性]] $\int_a^bf_n(x)-f(x)dx$ 也可积，
   
-     又根据[[~/文档/note/数学分析/Chap7Note.org][绝对可积]] $\int_a^b|f_n(x)-f(x)|dx$ 也可积 
+     又根据[[~/文档/note/数学分析/Chap7Note.org::MK27][绝对可积]] $\int_a^b|f_n(x)-f(x)|dx$ 也可积 
 
 定义函数 $\psi_n(x)=sup_{k\geq0}\{\phi_{n+k}(x)\}$ 同理函数有：
 
@@ -2282,7 +2282,7 @@ $D$ 为 $R^n$ 上的零边界无界区域，若 $0\leq f(\vec{x})\leq g(\vec{x})
 
 （2） 累次积分 $\int_0^\infty\int_0^\infty e^{-(x^2+y^2)}dydx=\int_0^\infty e^{-x^2}dx\int_0^\infty e^{-y^2}dy=\left(\int_0^\infty e^{-x^2}dx\right)^2$
 
-      由于 $0<e^{-x^2}<e^{-x},x\in[1,\infty]$ 且根据[[~/文档/note/数学分析/Chap7Note.org][牛顿莱布尼茨公式]] $\int_1^\infty e^{-x} dx=-\frac{1}{e^\infty}-\left(-\frac{1}{e}\right)<\infty$
+      由于 $0<e^{-x^2}<e^{-x},x\in[1,\infty]$ 且根据[[~/文档/note/数学分析/Chap7Note.org::MK28][牛顿莱布尼茨公式]] $\int_1^\infty e^{-x} dx=-\frac{1}{e^\infty}-\left(-\frac{1}{e}\right)<\infty$
 
       故根据保序性 $\int_1^\infty e^{-x^2}dx<\int_1^\infty e^{-x}dx<\frac{1}{e}$ 有界，且函数 $f(A)=\int_0^A e^{-x^2}dx,A>0$ 为单调递增函数
 
@@ -2324,7 +2324,7 @@ $D$ 为 $R^n$ 上的零边界无界区域，若 $0\leq f(\vec{x})\leq g(\vec{x})
 &=\int_a^R\frac{1}{r^{p-n+1}}dr\int_0^{2\pi}d\phi_{n-1}\prod_{i=1}^{n-2}\int_0^\pi \sin^{n-i-1}(\phi_i)d\phi_i
 \end{aligned} 
 
-显然其敛散性取决于 $\int_a^R\frac{1}{r^{p-n+1}}dr$ 根据[[~/文档/note/数学分析/Chap7Note.org][牛顿莱布尼茨公式]]
+显然其敛散性取决于 $\int_a^R\frac{1}{r^{p-n+1}}dr$ 根据[[~/文档/note/数学分析/Chap7Note.org::MK28][牛顿莱布尼茨公式]]
 
 \begin{aligned}
 \int_a^R\frac{1}{r^{p-n+1}}dr&=
@@ -2362,7 +2362,7 @@ $D$ 为 $R^n$ 上的零边界无界区域，若 $0\leq f(\vec{x})\leq g(\vec{x})
 
 *** 敛散性
 
-**** 引理1
+**** 引理1<<MK53>>
 
 定义有界区域 $D$ 及面积为零的点集 $S$ ，定义函数 $f(\vec{x})\geq0$ 在 $\vec{x}\in D,\vec{x}\not\in S$ 有定义
 
@@ -2422,7 +2422,7 @@ $D$ 为 $R^n$ 上的零边界无界区域，若 $0\leq f(\vec{x})\leq g(\vec{x})
 
 同[[MK47][区间无限证明]]
 
-*** 无界反常重积分计算
+*** 无界反常重积分计算<<MK50>>
 
 定义区域 $D=[a_1,b_1)\times[a_2,b_2)\times...\times[a_n,b_n)$ 其中 $S$ 为奇点集合，即边界 $\vec{b}$ 上的点
 

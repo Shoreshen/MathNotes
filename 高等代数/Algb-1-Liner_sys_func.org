@@ -8,11 +8,11 @@ currnet mark: 37
 
 设[[~/文档/note/高等代数/Algb-4-Multi-equ.org::MK12][交换环]] $<U,+,\cdot>$ 满足：
 
-（1） 存在乘法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]，定义为 $1$ （根据[[~/文档/note/高等代数/Algb-4-Multi-equ.org::MK9][定理]]存在乘法零元，等于加法幺元，记作 $0$ ）
+（1） 存在乘法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]，定义为 $1$ （根据[[~/文档/note/高等代数/Algb-4-Multi-equ.org::MK9][定理]]存在乘法零元，等于加法幺元，记作 $0$ ）
 
-（2） $1$ 不等于加法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]（定义为 $0$ ）
+（2） $1$ 不等于加法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]（定义为 $0$ ）
 
-（3） $\forall a\left(a\in U\land a\ne0\rightarrow\exists y(y\in U\land a\cdot y=1)\right)$ 即任意不等于加法幺元的元素存在乘乘法[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]
+（3） $\forall a\left(a\in U\land a\ne0\rightarrow\exists y(y\in U\land a\cdot y=1)\right)$ 即任意不等于加法幺元的元素存在乘乘法[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]
 
 则该代数结构定义为域
 

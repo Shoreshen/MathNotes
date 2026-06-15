@@ -2,9 +2,9 @@
 #+OPTIONS: ^:nil
 #+TITLE: 定积分
 
-currnet mark: 24
+currnet mark: 30
 
-* 定积分定义
+* 定积分定义<<MK25>>
 
 ** 定义: 
 
@@ -348,7 +348,7 @@ $\forall P\ (\lambda<\delta)\text{,\ } P: a=x_1<x_2<...<x_n$
 
 且因为 $\omega_i\geq0$ 则有 $\forall\epsilon>0 \exists P(\lambda<\delta)\Righarrow \sum_{i=1}^n \omega_i \Delta x_i<\epsilon$
 
-*** 推论1
+*** 推论1<<MK30>>
 
 函数 $f(x)$ 在闭区间 $[a,b]$ 上只有 $k<\infty$ 个不连续点，则 $f(x)$ 必可积
 
@@ -501,7 +501,7 @@ $\forall (P,\ \xi_i)$ 写出黎曼和为 $\lim_{\lambda \to 0}\sum_{i=1}^n [Af(\
 
 且 $\int_a^b f(x)+g(x)-f(x)dx=\int_a^b g(x)dx=\int_a^b f(x)dx+\int_a^b f(x)-g(x)dx=\int_a^b f(x)dx$
 
-** 乘积可积
+** 乘积可积<<MK26>>
 
 若 $f(x),g(x)$ 在 $[a,b]$ 上可积，则 $f(x)g(x)$ 在 $[a,b]$ 上也可积
 
@@ -549,7 +549,7 @@ $0\leq\lim_{\lambda \to 0} \sum_{i=1}^n \omega_i \Delta x_i\leq M\left\{ \lim_{\
 
 根据[[MK5][线性性质]] $\int_a^b f(x) dx-\int_a^b g(x) dx=\int_a^b [f(x)-g(x)] dx$ 且 $f(x)-g(x)\geq 0$ 故推出 $\int_a^b f(x) dx-\int_a^b g(x) dx=\int_a^b [f(x)-g(x)] dx\geq 0\Rightarrow \int_a^b f(x) dx\geq \int_a^b g(x) dx$
 
-** 绝对可积
+** 绝对可积<<MK27>>
 
 若 $f(x)$ 在 $[a,b]$ 上可积则 $|f(x)|$ 在 $[a,b]$ 上也可积，且有 $\left|\int_a^b f(x)dx\right|\leq\int_a^b|f(x)|dx$
 
@@ -668,7 +668,7 @@ $F(x)=\int_a^x f(t) dt$
 &\Rightarrow F'(x)=f(x)
 \end{aligned}
 
-** 牛顿莱布尼茨公式：
+** 牛顿莱布尼茨公式<<MK28>>
 
 若 $F(x)$ 是 $f(x)$ 的一个原函数，$f(x)$ 连续则：
 
@@ -857,7 +857,7 @@ f(x_0)=\lim_{x\to x_0}f(x)
 
 注意 $x,y$ 必须在定义域内
 
-** 有界性定理
+** 有界性定理<<MK29>>
 
 若函数 $f(x)$ 在闭区间 $[a,b]$ 上连续，则他在 $[a,b]$ 上有界。
 
@@ -887,7 +887,7 @@ f(x_0)=\lim_{x\to x_0}f(x)
 
 当 $\delta=\frac{1}{n},\ n\in N^+$ 时，存在点列 $x_n,y_n\in E:|x_n-y_n|<\frac{1}{n},\ |f(x_n)-f(y_n)|>\epsilon$
 
-由于有界，根据[[~/文档/note\Series.org][Bolzano-Weierstrass定理]]，有界数列 $x_n$ 必有收敛子列
+由于有界，根据[[~/文档/note/数学分析/Chap11Note.org::MK29][Bolzano-Weierstrass定理]]，有界数列 $x_n$ 必有收敛子列
 
 得出 $\lim_{n_k\to\infty}x_{n_k}=\xi,\ \xi\in E$ ，与之对应 $y_{n_k}$ 使得 $|f(x_{n_k})-f(y_{n_k})|>\epsilon$
 

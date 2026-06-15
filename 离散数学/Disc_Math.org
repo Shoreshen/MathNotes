@@ -2,7 +2,7 @@
 
 #+TITLE: 离散数学概论
 
-currnet mark: 740
+currnet mark: 741
 
 free mark:120 739
  
@@ -1758,7 +1758,7 @@ A=B{|\!\!\!=}\cap A=\cap B\\
 
 故有 $x\in\cup A{|\!\!\!=\!\!\!|}\exists S(x\in S\land S\in A){|\!\!\!=\!\!\!|}\exists S(x\in S\land S\in B){|\!\!\!=\!\!\!|}x\in\cup B$ 根据[[MK5][外延公理]] $\cup A=\cup B$
 
-**** 集合族运算与交并
+**** 集合族运算与交并<<MK741>>
 
 \begin{aligned}
 A\cap\left(\bigcup_{\lambda\in\Lambda} C_\lambda\right)&=\bigcup_{\lambda\in\Lambda}\left(A\cap C_\lambda\right)\\
@@ -2724,7 +2724,7 @@ $|A\times B|=\max(|A|,|B|)$
 
 代数数的全体是可数集
 
-代数数为整系数多项式的[[~/OneDrive/高等代数/Algb-4-Multi-equ.org::MK52][根]]，若不是，则定义为超越数（例如 $\pi$ ）
+代数数为整系数多项式的[[~/文档/note/高等代数/Algb-4-Multi-equ.org::MK52][根]]，若不是，则定义为超越数（例如 $\pi$ ）
 
 ****** 证明
 
@@ -2734,7 +2734,7 @@ $|A\times B|=\max(|A|,|B|)$
 
 定义 $\sigma:A_n\to\mathbb{N}^n$ 规则为 $\sigma(f(x))=<a_1,...,a_n>$ 
 
-定义 $g(x)=\sum_{i=0}^nb_ix^i$ 根据[[~/OneDrive/高等代数/Algb-4-Multi-equ.org::MK5][相等]]可得若 $f(x)\ne g(x)$ 则至少有一组 $b_k\ne a_k$
+定义 $g(x)=\sum_{i=0}^nb_ix^i$ 根据[[~/文档/note/高等代数/Algb-4-Multi-equ.org::MK5][相等]]可得若 $f(x)\ne g(x)$ 则至少有一组 $b_k\ne a_k$
 
 根据[[MK151][有序组]]定义可得 $<a_1,...,a_{k-1},a_k,a_{k+1},...,a_n>\ne<a_1,...,a_{k-1},b_k,a_{k+1},...,a_n>$ 故[[MK195][单射]]
 
@@ -2752,7 +2752,7 @@ $|A\times B|=\max(|A|,|B|)$
 
 则有映射 $\sigma:A_n\times\{1,2,...,n\}\to B_n$ 显然根据定义 $B_n$ 中的元素必为某个 $f(x)\in A_n$ 的根
 
-进一步根据[[~/OneDrive/高等代数/Algb-4-Multi-equ.org][根的个数]]可知 $f(x)$ 至多有 $n$ 个根，故 $\sigma$ 是[[MK198][满射]]
+进一步根据[[~/文档/note/高等代数/Algb-4-Multi-equ.org::MK87][根的个数]]可知 $f(x)$ 至多有 $n$ 个根，故 $\sigma$ 是[[MK198][满射]]
 
 定义[[MK12][集合族]] $K=\left\{K_b\big|b\in B_n\right\}$ 其中 $K_b=\left\{a\big|\sigma(a)=b\right\}$
 
@@ -4082,7 +4082,7 @@ $B$ 的下确界： $b$ 下界的最大元
 
 ****** 定理3<<MK338>>
 
-若 $A\subset\mathbb{R}_e\land B\subset\mathbb{R}_e$ 其中 $\mathbb{R}_e$ 是[[~/OneDrive/实变函数/SBHS.org::MK143][广义实数]]，定义 $C=\left\{a+b\big|a\in A\land b\in B\right\}$
+若 $A\subset\mathbb{R}_e\land B\subset\mathbb{R}_e$ 其中 $\mathbb{R}_e$ 是[[~/文档/note/实变函数/SBHS.org::MK143][广义实数]]，定义 $C=\left\{a+b\big|a\in A\land b\in B\right\}$
 
 则有 $\sup\{C\}=\sup\{A\}+\sup\{B\}$
 
@@ -4104,7 +4104,7 @@ $B$ 的下确界： $b$ 下界的最大元
 
 ******** 否则
 
-由于 $A\subset\mathbb{R}_e\land B\subset\mathbb{R}_e$ 根据[[~/OneDrive/实变函数/SBHS.org::MK224][运算性质]]不能出现 $+\infty+(-\infty)$
+由于 $A\subset\mathbb{R}_e\land B\subset\mathbb{R}_e$ 根据[[~/文档/note/实变函数/SBHS.org::MK224][运算性质]]不能出现 $+\infty+(-\infty)$
 
 则当 $\pm\infty+r$ 或者 $\pm(\infty+\infty)$ 时，显然 $\sup\{A\}+\sup\{B\}=\pm\infty$
 
@@ -4112,7 +4112,7 @@ $B$ 的下确界： $b$ 下界的最大元
 
 ****** 定理4<<MK340>>
 
-若 $A\subset\mathbb{R}_e$ 其中 $\mathbb{R}_e$ 是[[~/OneDrive/实变函数/SBHS.org::MK143][广义实数]]，则定义 $B=\left\{c\cdot a\big|a\in A\right\}$ 其中 $c\in\mathbb{R}^+$
+若 $A\subset\mathbb{R}_e$ 其中 $\mathbb{R}_e$ 是[[~/文档/note/实变函数/SBHS.org::MK143][广义实数]]，则定义 $B=\left\{c\cdot a\big|a\in A\right\}$ 其中 $c\in\mathbb{R}^+$
 
 则有 $\sup\{B\}=c\cdot\sup\{A\}$ 以及 $\inf\{B\}=c\cdot\inf\{A\}$ 
 
@@ -4144,7 +4144,7 @@ $B$ 的下确界： $b$ 下界的最大元
 
 ****** 定理6<<MK343>>
 
-若 $A\subset\mathbb{R}_e$ 其中 $\mathbb{R}_e$ 是[[~/OneDrive/实变函数/SBHS.org::MK143][广义实数]]，则定义 $-A=\left\{-a\big|a\in A\right\}$ 其中 $c\in\mathbb{R}^-$
+若 $A\subset\mathbb{R}_e$ 其中 $\mathbb{R}_e$ 是[[~/文档/note/实变函数/SBHS.org::MK143][广义实数]]，则定义 $-A=\left\{-a\big|a\in A\right\}$ 其中 $c\in\mathbb{R}^-$
 
 则有 $\sup\{-A\}=-\inf\{A\}$
 
@@ -4152,7 +4152,7 @@ $B$ 的下确界： $b$ 下界的最大元
 
 定义 $\alpha=\sup\{-A\}$ 则有 $\forall a'\in-A\rightarrow a'\leq\alpha$ 且 $\forall\epsilon>0\rightarrow\left((\exists -a'\in-A)\rightarrow(\alpha-\epsilon<-a')\right)$
 
-则根据[[~/OneDrive/实变函数/SBHS.org::MK265][推论3]]可得 $-\alpha\leq-a'$ 根据 $-A$ 定~/OneDrive/离散数学/Disc_Math.org义可得 $\forall a\in A\rightarrow -\alpha\leq a$
+则根据[[~/文档/note/实变函数/SBHS.org::MK265][推论3]]可得 $-\alpha\leq-a'$ 根据 $-A$ 定~/文档/note/离散数学/Disc_Math.org义可得 $\forall a\in A\rightarrow -\alpha\leq a$
 
 类似可证 $\forall\epsilon>0\rightarrow\left((\exists a'\in A)\rightarrow(a<-\alpha+\epsilon)\right)$
 
@@ -4174,7 +4174,7 @@ $B$ 的下确界： $b$ 下界的最大元
 
 即对于任意 $\epsilon>0$ 均有 $\sup(A)+\sup(B)<c+\epsilon$ 假设 $\sup(A)+\sup(B)>c$
 
-则取 $\epsilon=\sup(A)+\sup(B)-c$ 则有 $0<0$ 显然与[[~/OneDrive/实变函数/SBHS.org::MK5][三岐性]]矛盾
+则取 $\epsilon=\sup(A)+\sup(B)-c$ 则有 $0<0$ 显然与[[~/文档/note/实变函数/SBHS.org::MK5][三岐性]]矛盾
 
 故假设不成立，即有 $\sup(A)+\sup(C)\leq c$
 
@@ -6913,247 +6913,6 @@ $G$ 或者 $G$ 的[[MK229][子图]]作任何同胚操作后得到的图均不能
 
 其本身将一条边分解为一个节点两条边，或做相反操作。不改变图的平面性质。
 
-* 抽象代数
-
-** 代数的构建
-
-*** 运算
-
-**** 定义<<MK304>>
-
-运算是集合 $S^n=S\times ...\times S$（即 $n$ 个 $S$ 的[[MK153][笛卡尔积]]）到 $S$ 的[[MK194][函数]] 
-
-通常用 $*$ 表示二元运算，如 $*(x,y)=x*y$
-
-通常用 $\Delta$ 表示一元运算，如 $\Delta x$
-
-**** 基本性质<<MK305>>
-
-所有二元运算均满足：
-
-普遍性： $S$ 中的所有元素均可参与运算
-
-单值性<<MK306>>： $\forall x\forall y\forall x'\forall y'(x=x'\land y=y'\rightarrow x*y=x'*y')$
-
-封闭性： $\forall x\forall y(x\in S\land y\in S\rightarrow x*y\in S)$
-
-**** 一般性质
-
-二元运算可以满足：
-
-结合律<<MK307>>： $\forall x\forall y\forall z\left(\{x,y,z\}\subset S\rightarrow (x*y)*z=x*(y*z)\right)$
-
-交换律<<MK308>>： $\forall x\forall y(\{x,y\}\subset S\rightarrow x*y=y*x)$
-
-分配率<<MK309>>： 对于运算 $*,\#$ 有 $\forall x\forall y\forall z\left(\{x,y,z\}\subset S\rightarrow x*(y\#z)=x*y\#x*z)\right)$ 则称运算 $*$ 对 $\#$ 可分配
-
-*** 代数结构定义<<MK310>>
-
-非空集合 $S$ 上存在若干满足[[MK305][基本性质]]的运算，通常记作 $<S,*,\#,...>$
-
-** 特殊元素
-
-*** 幺元<<MK311>>
-
-[[MK310][代数结构]] $<S,*>$ 上存在元素 $e$ 对于任意 $x\in S$ 均满足 $e*x=x*e=x$ 则 $e$ 为幺元
-
-若仅满足 $x*e=x$ 则为左幺元
-
-若仅满足 $e*x=x$ 则为右幺元
-
-**** 性质<<MK312>>
-
-若存在左右幺元，则左幺元等于右幺元，且幺元唯一
-
-***** 证明
-
-若 $e_1,e_2$ 分别为左，右幺元，则有 $e_1=e_1*e_2=e_2$ 故左右幺元相等。
-
-若存在其他幺元 $e_3$ 同理可证 $e_1=e_3$
-
-*** 零元<<MK313>>
-
-[[MK310][代数结构]] $<S,*>$ 上存在元素 $o$ 对于任意 $x\in S$ 均满足 $o*x=x*o=o$ 则 $o$ 为零元
-
-若仅满足 $x*o=o$ 则为左零元
-
-若仅满足 $o*x=o$ 则为右零元
-
-**** 性质
-
-若存在左右零元，则左零元等于右零元，且零元唯一
-
-***** 证明
-
-同[[MK312][之前证明]]
-
-*** 逆元<<MK314>>
-
-[[MK310][代数结构]] $<S,*>$ 上存在[[MK311][幺元]] $e$ ，若 $x*y=e$ 则：
-
-$x$ 是 $y$ 的左逆元
-
-$y$ 是 $x$ 的右逆元
-
-若[[MK304][运算]]满足[[MK308][交换律]]，则称互为逆元
-
-**** 性质1<<MK315>>
-
-若[[MK310][代数结构]] $<S,*>$ 上 $|S|>1$ 且有幺元 $e$ 零元 $o$ ，则零元没有逆元
-
-***** 证明
-
-若 $o=e$ 则对于任意 $a\in S\land a\ne o$ 均有 $a=a*e=a*o=o$ ，与条件矛盾。由于 $|S|>1$ 故必存在 $a\ne o\land a\in S$ 故 $o\ne e$ 。
-
-假设存在左逆元 $x$ ，则有 $o=x*o=e$ 与 $o\ne e$ 矛盾
-
-**** 性质2<<MK316>>
-
-满足[[MK307][结合律]]的[[MK310][代数结构]]中，逆元唯一
-
-***** 证明
-
-若 $x$ 分别有左右逆元 $l,r$ 则 $r=e*r=(l*x)*r=l*(x*r)=l*e=l$
-
-**** 性质3
-
-满足[[MK307][结合律]]的[[MK310][代数结构]]中，逆元的逆元一定是本身
-
-***** 证明
-
-根据定义若满足 $x*y=y*x=e$ 则 $x$ 的逆元是 $y$
-
-则同理对于 $y$ 来说 $x$ 满足 $y*x=x*y=e$ 即 $x$ 是 $y$ 的逆元
-
-且根据[[MK316][性质2]]可得逆元唯一，故 $x$ 的逆元只能是 $y$ 且 $y$ 的逆元只能是 $x$
-
-故 $x$ 逆元的逆元一定是 $x$
-
-*** 可约元素<<MK317>>
-
-[[MK310][代数结构]] $<S,*>$ 中存在 $a\in S$ 满足：
-
-（1） $\forall x\forall y(a*x=a*y\land x\in S\land y\in S\rightarrow x=y)$ 称为左可约
-
-（2） $\forall x\forall y(x*a=y*a\land x\in S\land y\in S\rightarrow x=y)$ 称为左可约
-
-若同时满足（1）和（2），则 $a$ 称为可约
-
-**** 性质1
-
-满足[[MK307][结合律]]的[[MK310][代数结构]]中，有[[MK314][逆元]]的元素[[MK317][可约]]
-
-***** 证明
-
-根据条件有：
-
-（1） $a$ 存在逆元 $-a$ 
-
-（2） $x*a=y*a$
-
-则根据[[MK306][单值性]]有 $x*a=y*a\land -a=-a\rightarrow x*a*-a=y*a*-a$
-
-又因为满足结合律，则有: 
-
-\begin{aligned}
-x*a*-a&=y*a*-a\\
-x*(a*-a)&=y*(a*-a)\\
-x*e&=y*e\\
-x&=y\\
-\end{aligned}
-
-同理可证左可约，故 $a$ 可约
-
-** 代数结构的关系
-
-*** 同类型定义
-
-两个[[MK310][代数结构]] $<S,*>,<\bar{S},\bar{*}>$ 若满足 $|S|=|\bar{S}|$ 即集合[[MK3][基数]]相等
-
-*** 同态映射<<MK318>>
-
-两个[[MK310][代数结构]] $<S,\Delta,*>,<\bar{S},\bar{\Delta},\bar{*}>$ 若存在[[MK194][函数]] $f:S\rightarrow\bar{S}$ ，对于任意 $\{a,b\}\subset S$ 满足 $h(\Delta a)=\bar{\Delta}h(a)\land h(a*b)=h(a)\bar{ *}h(b)$
-
-则称 $f$ 是 $S$ 到 $S'$ 的同态映射，特别的：
-
-（1） 当 $f$ [[MK195][单射]]时称为单一同态
-
-（2） 当 $f$ [[MK198][满射]]时称为满同态
-
-（3） 当 $f$ [[MK200][双射]]时称为同构映射
-
-*** 同构定义
-
-两个[[MK310][代数结构]] $<S,*>,<\bar{S},\bar{*}>$ 若存[[MK318][同构映射]] $f$ ，则称两个[[MK310][代数结构]]同构。
-
-** 代数结构的类型
-
-*** 半群<<MK319>>
-
-对于[[MK310][代数结构]] $<S,*>$ 来说，若：
-
-（1） 满足[[MK307][结合律]]
-
-则称为半群
-
-*** 独异点
-
-对于[[MK310][代数结构]] $<S,*>$ 来说，若：
-
-（1） 满足[[MK307][结合律]]
-
-（2） 存在[[MK311][幺元]]
-
-则称为独异点
-
-*** 群
-
-对于[[MK310][代数结构]] $<S,*>$ 来说，若：
-
-（1） 满足[[MK307][结合律]]
-
-（2） 存在[[MK311][幺元]]
-
-（3） 每个元素存在[[MK314][逆元]]
-
-则称为群（因为结合律故 $|S|>1$ ，又根据[[MK315][性质1]]可知群没有[[MK313][零元]]）
-
-*** 交换群<<MK320>>
-
-对于[[MK310][代数结构]] $<S,*>$ 来说，若：
-
-（1） 满足[[MK307][结合律]]
-
-（2） 存在[[MK311][幺元]]
-
-（3） 每个元素存在[[MK314][逆元]]
-
-（4） 满足[[MK308][交换律]]
-
-则称为交换群（同上没有零元）
-
-*** 环<<MK321>>
-
-对于[[MK310][代数结构]] $<S,+,*>$ 来说，若：
-
-（1） $<S,+>$ 是[[MK320][交换群]]
-
-（2） $<S,*>$ 是[[MK319][半群]]
-
-（3） 运算 $*$ 对 $+$ [[MK309][可分配]]
-
-则称为环
-
-*** 域
-
-对于[[MK310][代数结构]] $<S,+,*>$ 来说，若：
-
-（1） $<S,+,*>$ 是[[MK321][环]]
-
-（2） $<S-\{0\},*>$ 是[[MK320][交换群]]（ $S-\{0\}$ 表示 $S$ 中去掉[[MK313][零元]]）
-
-则称为域
-
 * 电路设计
 
 ** DFG（数据流图）
@@ -7352,7 +7111,7 @@ x&=y\\
 
 结合 $y=\frac{l^k_{ii}}{k}$ 以及 $\frac{l^m_{ii}}{m}>\frac{l^z_{ii}}{z}$ 可得 $y=\frac{l^k_{ii}}{k}>\frac{l^z_{ii}}{z}$ 
 
-总上所述，由于 $\forall j\leq k\rightarrow \frac{l^m_{ii}}{m}>\frac{l^j_{ii}}{j}$ 故有 $\frac{l^k_{ii}}{k}>\frac{l^z_{ii}}{z}\land \frac{l^z_{ii}}{z}>\frac{l^k_{ii}}{k}$ 与[[~/OneDrive/离散数学/Disc_Math.org::MK5][三岐性]]矛盾
+总上所述，由于 $\forall j\leq k\rightarrow \frac{l^m_{ii}}{m}>\frac{l^j_{ii}}{j}$ 故有 $\frac{l^k_{ii}}{k}>\frac{l^z_{ii}}{z}\land \frac{l^z_{ii}}{z}>\frac{l^k_{ii}}{k}$ 与[[~/文档/note/离散数学/Disc_Math.org::MK5][三岐性]]矛盾
 
 故假设不成立，则不存在 $m>k$ 满足 $\forall j\leq k\rightarrow \frac{l^m_{ii}}{m}>\frac{l^j_{ii}}{j}$ 
 

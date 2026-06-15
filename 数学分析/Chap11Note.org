@@ -2,7 +2,7 @@
 
 #+TITLE: Euclid空间上的极限与连续
 
-current mark: MK37
+current mark: MK40
 
 * 笛卡尔乘积
 
@@ -630,7 +630,7 @@ $R^n$ 上点列 $\{\vec{x}_n\}$ 收敛的充要条件是 $\forall \epsilon>0,\ex
 
 根据实数系柯西收敛原理可得 $\lim_{k\to\infty}a_{ik}=A_i$ 所有维度都收敛，故 $\lim_{k\to\infty}\vec{x}=\vec{A}$
 
-*** Heine-Borel定理
+*** Heine-Borel定理<<MK38>>
 
 在 $R^n$ 中 $S$ 为紧集的充要条件是 $S$ 是有界闭集
 
@@ -1068,7 +1068,7 @@ $D\in R^n$ 映射 $\vec{f}:D\to R^m\Rightarrow \vec{x}=(x_1,...,x_n)\to\vec{z}=(
 
 根据[[MK3][紧集映射]]可得 $S$ 亦为紧集，根据[[MK2][Heine-Borel定理推论]]可得 $S$ 为有界闭集，故 $\vec{y}\in S$ 有界
 
-** 最大值定理
+** 最大值定理<<MK39>>
 
 若连续函数 $\vec{f}(\vec{x})=\vec{y}, \vec{x}\in K\subset R^n, S=\{\vec{y}\}\subset R^m$ 若 $K$ 是紧集，
 
@@ -1092,7 +1092,7 @@ $D\in R^n$ 映射 $\vec{f}:D\to R^m\Rightarrow \vec{x}=(x_1,...,x_n)\to\vec{z}=(
 
 下确界同理，故 $\exists \vec{\eta}_i,\vec{\xi}_i\in S, f_i(\vec{\eta}_i) \leq f_i(\vec{x})\leq f_i(\vec{\xi}_i),i=1,2,...,m$
 
-** 康托定理
+** 康托定理<<MK40>>
 
 若连续函数 $\vec{f}(\vec{x})=\vec{y}, \vec{x}\in K\subset R^n, S=\{\vec{y}\}\subset R^m$ 若 $K$ 是紧集，
 

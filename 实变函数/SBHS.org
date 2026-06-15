@@ -451,7 +451,7 @@ $\underline{\lim_{n\to\infty}}A_n\subset\overline{\lim_{n\to\infty}}A_n$
 
 ** 度量空间<<MK38>>
 
-定义[[~/文档/note/离散数学/Disc_Math.org::MK310][代数结构]] $<X,d>$ 运算 $d:X\times X\to\mathbb{R}$ 满足：
+定义[[~/文档/note/抽象代数/cxds.org::MK298][代数结构]] $<X,d>$ 运算 $d:X\times X\to\mathbb{R}$ 满足：
 
 （1） 非负性： $\forall\{x,y\}\subset X\rightarrow d(x,y)\geq0$
 
@@ -589,7 +589,7 @@ $\underline{\lim_{n\to\infty}}A_n\subset\overline{\lim_{n\to\infty}}A_n$
 
 ***** 证明
 
-根据[[~/文档/note/离散数学/Disc_Math.org][性质]]中德摩根率可得 $\bigcap_{i=1}^\infty S_i=((\bigcap_{i=1}^\infty S_i)^c)^c=\left(\bigcup_{i=1}^\infty S_i^c\right)^c$
+根据[[~/文档/note/离散数学/Disc_Math.org::MK328][德摩根率]]可得 $\bigcap_{i=1}^\infty S_i=((\bigcap_{i=1}^\infty S_i)^c)^c=\left(\bigcup_{i=1}^\infty S_i^c\right)^c$
 
 由于 $S_i\in\sigma(X)$ 则有 $S^c_i\in\sigma(X)$ 则根据可数并封闭 $\bigcup_{i=1}^\infty S_i^c\subset\sigma(X)$
 
@@ -1049,7 +1049,7 @@ e\in g^{c_F}&\leftrightarrow\left(e\not\in g\land e\in F\right)\\
 
 假设 $S_1,S_2$ 均是外测度可测集，取任意 $A\subset X$ 根据[[MK61][次可加性]] $\varphi(A)\leq\varphi(A\cap(S_1\cup S_2))+\varphi(A/(S_1\cup S_2))$
 
-则根据可测集定义，[[MK61][次可加性]]以及[[~/文档/note/离散数学/Disc_Math.org][性质]]中分配率、结合律、补与减有：
+则根据可测集定义，[[MK61][次可加性]]以及[[MK327][分配率]]、[[MK40][结合律]]、[[MK334][补与减]]有：
 
 \begin{aligned}
 \varphi(A)=&\varphi(A\cap S_1)+\varphi(A/S_1)\\
@@ -1464,7 +1464,7 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 *** 域公理<<MK4>>
 
-对于任意 $\{a,b\}\subset\mathbb{R}$ 有二元[[~/文档/note/离散数学/Disc_Math.org::MK304][运算]] $a+b$ 与 $a\cdot b$ 定义为加法，乘法，满足：
+对于任意 $\{a,b\}\subset\mathbb{R}$ 有二元[[~/文档/note/抽象代数/cxds.org::MK292][运算]] $a+b$ 与 $a\cdot b$ 定义为加法，乘法，满足：
 
 （0） 封闭性： $\forall a\in\mathbb{R}\forall b\in\mathbb{R}\left(a+b\in\mathbb{R}\land a\cdot b\in\mathbb{R}\right)$
 
@@ -1474,9 +1474,9 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 （3） 分配率： $\forall a\in\mathbb{R}\forall b\in\mathbb{R}\forall c\in\mathbb{R}\left((a+b)\cdot c=a\cdot c+b\cdot c\right)$
 
-（4） 存在加/乘法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]： $\exists 0\in\mathbb{R}\forall a\in\mathbb{R}\left(0+a=a\right)\land\exists1\in\mathbb{R}\forall a\in\mathbb{R}\left(1\cdot a=a\right)$
+（4） 存在加/乘法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]： $\exists 0\in\mathbb{R}\forall a\in\mathbb{R}\left(0+a=a\right)\land\exists1\in\mathbb{R}\forall a\in\mathbb{R}\left(1\cdot a=a\right)$
 
-（5） 存在加/乘法[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]： $\forall a\in\mathbb{R}\rightarrow\exists (-a)\in\mathbb{R}\left(-a+a=0\right)\land\forall (a\in\mathbb{R}\land a\ne0)\rightarrow\exists a^{-1}\in\mathbb{R}\left(a^{-1}\cdot a=1\right)$
+（5） 存在加/乘法[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]： $\forall a\in\mathbb{R}\rightarrow\exists (-a)\in\mathbb{R}\left(-a+a=0\right)\land\forall (a\in\mathbb{R}\land a\ne0)\rightarrow\exists a^{-1}\in\mathbb{R}\left(a^{-1}\cdot a=1\right)$
 
 **** 不可数加法<<MK53>>
 
@@ -1506,7 +1506,7 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 **** 加法幺元的逆元是其本身<<MK211>>
 
-即 $-0=0$ 因为 $0+0=0$ 且根据[[~/文档/note/离散数学/Disc_Math.org::MK316][性质2]]可得逆元唯一
+即 $-0=0$ 因为 $0+0=0$ 且根据[[~/文档/note/抽象代数/cxds.org::MK304][性质2]]可得逆元唯一
 
 **** 减法定义<<MK6>>
 
@@ -1518,7 +1518,7 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 **** 零元<<MK16>>
 
-加法幺元 $0$ 是乘法[[~/文档/note/离散数学/Disc_Math.org::MK313][零元]]
+加法幺元 $0$ 是乘法[[~/文档/note/抽象代数/cxds.org::MK301][零元]]
 
 ***** 证明
 
@@ -1542,7 +1542,7 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 故有 $a+(-1)\cdot a=0$ 即 $(-1)\cdot a$ 是逆元
 
-根据[[~/文档/note/离散数学/Disc_Math.org::MK316][性质2]]可得逆元唯一，故有 $(-1)\cdot a=a$
+根据[[~/文档/note/抽象代数/cxds.org::MK304][性质2]]可得逆元唯一，故有 $(-1)\cdot a=a$
 
 **** 相等充要条件<<MK8>>
 
@@ -1558,11 +1558,11 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 若 $a-b=0$ 则根据[[MK6][减法]]可得 $a+(-b)=0$
 
-则 $(-b)$ 是 $a$ 的[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]，且有 $-b$ 亦定义为 $b$ 的逆元
+则 $(-b)$ 是 $a$ 的[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]，且有 $-b$ 亦定义为 $b$ 的逆元
 
-由于加法满足结合律，故根据[[~/文档/note/离散数学/Disc_Math.org][性质3]]可得 $a,b$ 逆元的逆元均为 $a,b$ 本身 
+由于加法满足结合律，故根据[[~/文档/note/抽象代数/cxds.org::MK533][性质3]]可得 $a,b$ 逆元的逆元均为 $a,b$ 本身 
 
-由于 $a,b$ 的逆元均为 $-b$ 根据[[~/文档/note/离散数学/Disc_Math.org::MK316][性质2]]可得 $-b$ 的逆元唯一，故有 $a=b$
+由于 $a,b$ 的逆元均为 $-b$ 根据[[~/文档/note/抽象代数/cxds.org::MK304][性质2]]可得 $-b$ 的逆元唯一，故有 $a=b$
 
 **** 相等是等价关系<<MK11>>
 
@@ -1584,7 +1584,7 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 若 $a=b\land b=c$ 则有等价条件 $a-b=0\land b-c=0$
 
-由于加法是[[~/文档/note/离散数学/Disc_Math.org][运算]]故满足单值性，则有 $a-b+b-c=0+0$
+由于加法是[[~/文档/note/抽象代数/cxds.org::MK293][运算]]故满足单值性，则有 $a-b+b-c=0+0$
 
 根据域公理结合律，分配率可得 $a-b+b-c=a-c=0+0=0$ 即 $a-c=0$
 
@@ -1640,7 +1640,7 @@ $E'_n=E'_0-\bigcup_{i=1}^{n-1} E_i$
 
 仅证加法相容，乘法同理。若 $a\geq b$ 则等价于 $a>b\lor a=b$ 故：
 
-（1） $a=b$ 根据[[~/文档/note/离散数学/Disc_Math.org][运算]]单值性有 $a+c=b+c$
+（1） $a=b$ 根据[[~/文档/note/抽象代数/cxds.org::MK293][运算]]单值性有 $a+c=b+c$
 
 （2） $a>b$ 根据序公理计算相容可得 $a+c>b+c$
 
@@ -1687,7 +1687,7 @@ a\leq b\land c\leq d&\rightarrow a+c\leq b+d\\
 
 ***** 证明
 
-由于 $c<0$ 则根据[[MK4][域公理5]]可得存在[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]] $c'$ 且根据[[MK17][逆元等价]]可得 $(-1)c'=c$
+由于 $c<0$ 则根据[[MK4][域公理5]]可得存在[[~/文档/note/抽象代数/cxds.org::MK302][逆元]] $c'$ 且根据[[MK17][逆元等价]]可得 $(-1)c'=c$
 
 由于 $c=(-1)c'<0$ 则根据[[MK29][加法逆元]]可得 $(-1)\cdot 0<(-1)\cdot(-1)\cdot c'$
 
@@ -1727,9 +1727,9 @@ $a>b\land 0>c\rightarrow a\cdot c<b\cdot c$
 
 进一步根据运算相容可得 $(-1)(-1)bc>(-1)(-1)ac$
 
-由于 $-1$ 是 $1$ 的加法[[~/文档/note/离散数学/Disc_Math.org::MK314][逆元]]，进一步根据[[MK17][逆元等价]]可得 $(-1)(-1)=1$
+由于 $-1$ 是 $1$ 的加法[[~/文档/note/抽象代数/cxds.org::MK302][逆元]]，进一步根据[[MK17][逆元等价]]可得 $(-1)(-1)=1$
 
-且 $1$ 是乘法[[~/文档/note/离散数学/Disc_Math.org::MK311][幺元]]，故有 $bc>ac$
+且 $1$ 是乘法[[~/文档/note/抽象代数/cxds.org::MK299][幺元]]，故有 $bc>ac$
 
 **** 乘法逆元1<<MK139>>
 
@@ -4066,7 +4066,7 @@ Borel集中元素均为可测集
 
 由于 $E\subset\mathbb{R}$ 故有 $E\cap \bigcup_{i=1}^\infty V_i=E$ 
 
-根据的[[~/文档/note/离散数学/Disc_Math.org][集合族运算与交并]]可得 $\bigcup_{i=1}^\infty(E\cap V_i)=E\cap\bigcup_{i=1}^\infty V_i$
+根据的[[~/文档/note/离散数学/Disc_Math.org::MK741][集合族运算与交并]]可得 $\bigcup_{i=1}^\infty(E\cap V_i)=E\cap\bigcup_{i=1}^\infty V_i$
 
 继而有 $E=\bigcup_{i=1}^\infty(E\cap V_i)$ 故根据[[MK57][次可加性]]有 $m^*(E)\leq\sum_{i=1}^\infty m^*(E\cap V_i)$ 
 

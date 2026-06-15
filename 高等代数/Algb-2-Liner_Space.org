@@ -2,7 +2,7 @@
 
 #+TITLE: 线性空间
 
-current mark: 140
+current mark: 141
 
 * 映射
 
@@ -2334,7 +2334,7 @@ $[v]_W=[u]_W$ 的充要条件为 $v-u\in W$
 
 $rank(A)=rank(A')$
 
-*** 推论3
+*** 推论3<<MK141>>
 
 若矩阵 $A$ 经过初等列变换得 $B$ ，可得 $A,B$ 列秩相等，故有 $rank(A)=rank(B)$
 

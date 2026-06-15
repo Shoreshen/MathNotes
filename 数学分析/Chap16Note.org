@@ -29,9 +29,9 @@ $\left(\sum_{i=1}^n a_ib_i\right)^2\leq \sum_{i=1}^na_i^2\sum_{i=1}^nb_i^2$
 
 *** 证明
 
-根据[[~/文档/note/数学分析/Chap7Note.org][乘积可积]]可得 $f(x)^2,g(x)^2,f(x)g(x)$ 均在 $[a,b]$ 上可积
+根据[[~/文档/note/数学分析/Chap7Note.org::MK26][乘积可积]]可得 $f(x)^2,g(x)^2,f(x)g(x)$ 均在 $[a,b]$ 上可积
 
-根据[[~/文档/note/数学分析/Chap7Note.org][定积分定义]]，对于任意可积函数在任意划分与取点下，只要满足 $\lambda\to0$ 黎曼和均收敛于定积分，故有：
+根据[[~/文档/note/数学分析/Chap7Note.org::MK25][定积分定义]]，对于任意可积函数在任意划分与取点下，只要满足 $\lambda\to0$ 黎曼和均收敛于定积分，故有：
 
  $\int_a^bf(x)^2dx=\lim_{n\to\infty}\sum_{i=1}^nf(\xi_i)^2\frac{b-a}{n},\xi\in[x_i,x_{i+1}]$
 
@@ -148,13 +148,13 @@ $\forall 0\leq a<b<\infty,\exists 0<K<\infty\Rightarrow\left|\int_a^b\frac{\sin(
 
 由于可积，则根据[[~/文档/note/数学分析/Chap7Note.org::MK1][定积分可积充要条件2:]]有 $\forall\epsilon>0,\exists\delta,\forall\lambda<\delta,\forall P\Rightarrow\left|\sum_{i=1}^\infty\omega_i\Delta x_i\right|<\frac{\epsilon}{2}$
 
-且根据[[~/文档/note/数学分析/Chap7Note.org][乘积可积]]得 $\phi(x)\sin(px)$ 亦可积
+且根据[[~/文档/note/数学分析/Chap7Note.org::MK26][乘积可积]]得 $\phi(x)\sin(px)$ 亦可积
 
 其中 $P:a=x_1<x_2<...<x_n=b$ 为黎曼和划分 $\Delta x_i=x_i-x_{i-1},\omega_i=sup(x)-inf(x),x\in[x_{i-1},x_i]$
 
 且定义 $m_i=inf(x),x\in[x_{i-1},x_i]$ ，并取一种满足上述条件的划分 $P$
 
-则根据[[~/文档/note/数学分析/Chap7Note.org::MK5][线性]]，[[~/文档/note/数学分析/Chap7Note.org][绝对可积]]，[[~/文档/note/数学分析/Chap7Note.org][乘积可积]]以及[[~/文档/note/数学分析/Chap7Note.org::MK7][区间可加]]可得
+则根据[[~/文档/note/数学分析/Chap7Note.org::MK5][线性]]，[[~/文档/note/数学分析/Chap7Note.org::MK27][绝对可积]]，[[~/文档/note/数学分析/Chap7Note.org::MK26][乘积可积]]以及[[~/文档/note/数学分析/Chap7Note.org::MK7][区间可加]]可得
 
 \begin{aligned}
 \left|\int_a^b\phi(x)\sin(px)dx\right|=&\left|\sum_{i=1}^n\int_{x_{i-1}}^{x_i}\phi(x)\sin(px)dx-\sum_{i=1}^n\int_{x_{i-1}}^{x_i}m_i\sin(px)dx+\sum_{i=1}^n\int_{x_{i-1}}^{x_i}m_i\sin(px)dx\right|\\
@@ -180,7 +180,7 @@ $\forall 0\leq a<b<\infty,\exists 0<K<\infty\Rightarrow\left|\int_a^b\frac{\sin(
 
 且根据[[MK1][可积条件下证明]]有 $\lim_{p\to\infty}\int_a^{b-\eta}\phi(x)\sin(px)dx=0$ 故 $\forall\epsilon>0,\eixsts P,\forall p>P\Rightarrow\left|\int_a^{b-\eta}\phi(x)\sin(px)dx\right|<\frac{\epsilon}{2}$
 
-故根据[[~/文档/note/数学分析/Chap7Note.org][绝对可积]]以及根据[[~/文档/note/数学分析/Chap8Note.org::MK9][反常积分绝对收敛:]]得
+故根据[[~/文档/note/数学分析/Chap7Note.org::MK27][绝对可积]]以及根据[[~/文档/note/数学分析/Chap8Note.org::MK9][反常积分绝对收敛:]]得
 
 \begin{aligned}
 \left|\int_a^b\phi(x)\sin(px)dx\right|=&\left|\int_a^{b-\eta}\phi(x)\sin(px)dx+\int_a^b\phi(x)\sin(px)dx\right|\\
@@ -202,7 +202,7 @@ $\lim_{m\to\infty}\int_{0}^{\delta}\left\{\frac{\phi(u)}{2\sin\left(\frac{u}{2}\
 
 故根据[[~/文档/note/数学分析/Chap7Note.org::MK3][推论1]]得出 $g(u)$ 在 $[0,\pi]$ 上可积
 
-故根据[[~/文档/note/数学分析/Chap7Note.org][乘积可积]]有 $g(u)\phi(u)$ 在 $u\in[0,\delta]$ 上亦可积或绝对可积 则有
+故根据[[~/文档/note/数学分析/Chap7Note.org::MK26][乘积可积]]有 $g(u)\phi(u)$ 在 $u\in[0,\delta]$ 上亦可积或绝对可积 则有
 
 \begin{aligned}
 &\lim_{m\to\infty}\int_{0}^{\delta}\left\{\frac{\phi(u)}{2\sin\left(\frac{u}{2}\right)}\sin\left(\frac{2m+1}{2}u\right)\right\}du-\lim_{m\to\infty}\int_{0}^{\delta}\left\{\frac{\phi(u)}{u}\sin\left(\frac{2m+1}{2}u\right)\right\}du\\
@@ -233,7 +233,7 @@ $\lim_{m\to\infty}\int_{0}^{\delta}\left\{\frac{\phi(u)}{2\sin\left(\frac{u}{2}\
 
 由于 $\phi(u)$ 单调，则 $\phi(u)-\phi(0^+)$ 亦单调，根据[[~/文档/note/数学分析/Chap7Note.org::MK21][推论2]]得出可积
 
-由于 $\frac{1}{u}$ 在 $[\eta,\delta]$ 上亦可积，则根据[[~/文档/note/数学分析/Chap7Note.org][乘积可积]] $\frac{\phi(u)-\phi(0^+)}{u}$ 可积
+由于 $\frac{1}{u}$ 在 $[\eta,\delta]$ 上亦可积，则根据[[~/文档/note/数学分析/Chap7Note.org::MK26][乘积可积]] $\frac{\phi(u)-\phi(0^+)}{u}$ 可积
 
 故根据[[MK2][黎曼引理]]得 $\lim_{p\to\infty}\int_\eta^\delta\frac{\phi(u)-\phi(0^+)}{u}\sin(pu)du=0$ 即 $\forall\epsilon>0\exists P,\forall p>P\Rightarrow\left|\int_\eta^\delta\frac{\phi(u)-\phi(0^+)}{u}\sin(pu)du\right|<\frac{\epsilon}{K+1}$
 
@@ -245,7 +245,7 @@ $\lim_{m\to\infty}\int_{0}^{\delta}\left\{\frac{\phi(u)}{2\sin\left(\frac{u}{2}\
 
 同理定义积分区间在 $(0,\eta]$ 的反常积分，可以理解为积分区域在 $[0,\eta]$ 但当 $u=0$ 时函数值为 $0$ 的积分
 
-故根据[[~/文档/note/数学分析/Chap7Note.org][推论]]有在 $(0,\eta]$ 上的反常积分等于在 $[0,\eta]$ 上的常义积分
+故根据[[~/文档/note/数学分析/Chap7Note.org::MK30][推论]]有在 $(0,\eta]$ 上的反常积分等于在 $[0,\eta]$ 上的常义积分
 
 故有 $\left|\int_0^\eta[\phi(u)-\phi(0^+)]\frac{\sin(pu)}{u}du\right|=\lim_{a\to0}\left|\int_a^\eta[\phi(u)-\phi(0^+)]\frac{\sin(pu)}{u}du\right|$ 左边为常义积分，右边为反常积分
 
@@ -329,7 +329,7 @@ S_m(x)=&\frac{a_0}{2}+\sum_{i=1}^m\left(a_i\cos(ix)+b_i\sin(ix)\right)\\
 
 同理定义积分区间在 $(0,\pi]$ 的反常积分，可以理解为积分区域在 $[0,\pi]$ 但当 $u=0$ 时函数值为 $0$ 的积分
 
-故根据[[~/文档/note/数学分析/Chap7Note.org][推论]]有在 $(0,\pi]$ 上的反常积分等于在 $[0,\pi]$ 上的常义积分
+故根据[[~/文档/note/数学分析/Chap7Note.org::MK30][推论]]有在 $(0,\pi]$ 上的反常积分等于在 $[0,\pi]$ 上的常义积分
 
 故 $S_m(x)=\frac{1}{\pi}\int_{0}^{\pi}\left\{[f(x-u)+f(x+u)]\frac{\sin\left(\frac{2m+1}{2}u\right)}{2\sin\left(\frac{u}{2}\right)}\right\}du=\lim_{a\to0}\frac{1}{\pi}\int_{a}^{\pi}\left\{[f(x-u)+f(x+u)]\frac{\sin\left(\frac{2m+1}{2}u\right)}{2\sin\left(\frac{u}{2}\right)}\right\}du$
 
@@ -368,7 +368,7 @@ S_m(x)=&\frac{a_0}{2}+\sum_{i=1}^m\left(a_i\cos(ix)+b_i\sin(ix)\right)\\
 
 由于当 $u\in[a,\pi],0<a<\pi$ 时 $f(x+u)$ 为周期拓展可积或绝对可积，故 $\phi(u,x)$ 可积或绝对可积
 
-同理 $\frac{1}{\sin\left(\frac{u}{2}\right)}$ 可积，故根据[[~/文档/note/数学分析/Chap7Note.org][乘积可积]] $\frac{\phi(u,x)}{\sin\left(\frac{u}{2}\right)}$ 在 $u\in[a,\pi],0<a<\pi$ 可积或绝对可积
+同理 $\frac{1}{\sin\left(\frac{u}{2}\right)}$ 可积，故根据[[~/文档/note/数学分析/Chap7Note.org::MK26][乘积可积]] $\frac{\phi(u,x)}{\sin\left(\frac{u}{2}\right)}$ 在 $u\in[a,\pi],0<a<\pi$ 可积或绝对可积
 
 故满足[[MK2][黎曼引理]]条件，则有 $\lim_{m\to\infty}\int_{\delta}^{\pi}\left\{\frac{\phi(u,x)}{2\sin\left(\frac{u}{2}\right)}\sin\left(\frac{2m+1}{2}u\right)\right\}du=0$
 
