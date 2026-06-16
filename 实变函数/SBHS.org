@@ -3854,7 +3854,7 @@ Borel集中元素均为可测集
 
 ****** 子空间及连续映射<<MK132>>
 
-定义 $\mathbb{R}$ 上所有开集的集合 $\mathcal{O}$ 以及 $\mathcal{M}=\left\{x\cap(0,1)\big|x\in\mathcal{O}\righb\}$
+定义 $\mathbb{R}$ 上所有开集的集合 $\mathcal{O}$ 以及 $\mathcal{M}=\left\{x\cap(0,1)\big|x\in\mathcal{O}\right\}$
 
 由于 $<\mathbb{R},\mathcal{O}>$ 是[[MK39][拓扑空间]]，故根据[[MK130][子空间]]可得 $<(0,1),\mathcal{M}>$ 是其子拓扑空间
 

@@ -230,7 +230,7 @@ $A=\sum_{l=1}^s\left\{\sum_{k=1}^n[D(i,j,l,k)]_{s\times n}\right\}$ 其中 $D(i,
 
 显然根据[[MK5][矩阵乘法]]，[[MK2][矩阵加法]]易证对于任意 $\{A_1,A_2\}\subset M_E$ 有 $I_E(f_+)(A_1,A_2)\in M_E,I_E(f_\times)(A_1,A_2)\in M_E,I_E(f_-)(A_1)\in M_E$
 
-故可得 $\mathcal{M}_E$ 是[[~/文档/note/抽象代数/cxds.org::MK335][域语言]] $\mathcal{L}_{\mathcal{A}_\mathcbb{F}}$ 上的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]]。[[MK75][同理可证]] $\mathcal{M}_E$ 为[[~/文档/note/抽象代数/cxds.org::MK362][非零幺元]]且 $\mathcal{M}_E\vDash(\forall x_1(\forall x_2(f_\times(x_1,x_2)\hat{=}f_\times(x_2,x_1))))$
+故可得 $\mathcal{M}_E$ 是[[~/文档/note/抽象代数/cxds.org::MK335][域语言]] $\mathcal{L}_{\mathcal{A}_\mathbb{F}}$ 上的[[~/文档/note/数理逻辑/sllj.org::MK153][结构]]。[[MK75][同理可证]] $\mathcal{M}_E$ 为[[~/文档/note/抽象代数/cxds.org::MK362][非零幺元]]且 $\mathcal{M}_E\vDash(\forall x_1(\forall x_2(f_\times(x_1,x_2)\hat{=}f_\times(x_2,x_1))))$
 
 显然对于任意 $E(k)$ 由于 $k\in K$ 故存在 $k^{-1}\in K$ 使得 $\mathfrak{g}(f_\times)(k,k^{-1})=\mathfrak{g}(c_1)$
 
@@ -1703,7 +1703,7 @@ $|I\lambda-A|=(-1)^n|A|+\sum_{k=1}^{n-1}\left((-1)^k\sum_{i=1}^{C_n^k}\lambda^k\
 
 **** 证明
 
-对于 $Ix-A$ 定义[[MK73][伴随矩阵]]为 $\text{adj}(Ix-A)=[b_{ij}]_{n\times n}$ 显然 $b_{ij}=\sum_{z=0}^{m_{ij}}k_{ij,z}x^z\in K[x]$ 为 $\mathcak{K}$ 上的[[~/文档/note/抽象代数/cxds.org::MK436][多项式]]
+对于 $Ix-A$ 定义[[MK73][伴随矩阵]]为 $\text{adj}(Ix-A)=[b_{ij}]_{n\times n}$ 显然 $b_{ij}=\sum_{z=0}^{m_{ij}}k_{ij,z}x^z\in K[x]$ 为 $\mathcal{K}$ 上的[[~/文档/note/抽象代数/cxds.org::MK436][多项式]]
 
 则定义 $B_z=\left[k_{ij,z}\right]$ 则有 $\adj(I\lambda-x)=\sum_{z=0}^{\max\left(\left\{m_{ij}\big|1\leq i\leq n,1\leq j\leq n\right\}\right)}B_zx^z$ ，根据[[MK78][引理]]易证 $\max\left(\left\{m_{ij}\big|1\leq i\leq n,1\leq j\leq n\right\}\right)=n-1$
 

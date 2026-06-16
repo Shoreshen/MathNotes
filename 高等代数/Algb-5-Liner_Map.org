@@ -1345,7 +1345,7 @@ $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 是 $\mathcal{V}$ 的[[~/文
 
 根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK46][定义]]可得 $\text{span}(a)=\left\{k\cdot a\big|k\in K\right\}$ 由于 $\sigma$ 是[[MK4][线性变换]]，故根据[[MK41][特征向量]]定义有 $\sigma(k\cdot a)=k\cdot\sigma(a)=k\cdot(\lambda\cdot a)=\mathfrak{g}(f_\times)(k,\lambda)\cdot a$
 
-显然 $\lambda\in K$ 则有 $\mathkal{K}$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]]，故 $\mathfrak{g}(f_\times)(k,\lambda)\in K$ 即有 $\mathfrak{g}(f_\times)(k,\lambda)\cdot a\in\text{span}(a)$
+显然 $\lambda\in K$ 则有 $\mathcal{K}$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]]，故 $\mathfrak{g}(f_\times)(k,\lambda)\in K$ 即有 $\mathfrak{g}(f_\times)(k,\lambda)\cdot a\in\text{span}(a)$
 
 即 $\mathcal{V}'$ 是 $\mathcal{V}$ 的[[MK57][不变子空间]]
 
@@ -1529,7 +1529,7 @@ $\mathcal{V}_k=\left<\ker(\sigma),K,+,\cdot\right>$ 是 $\mathcal{V}$ 的[[~/文
 
 设 $\mathcal{V}=\left<V,\mathcal{K},+,\cdot\right>$ 是[[~/文档/note/抽象代数/cxds.org::MK338][域]] $\mathcal{K} =\left<K,\mathfrak{g}\right>$ 上的[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，定义 $\text{Hom}(\mathcal{V},\mathcal{V}_K)$ 是所有 $\mathcal{V}$ 上的[[MK153][线性函数]]
 
-则 $\mathcal{V}^*=\left<\text{Hom}(\mathcal{V},\mathcal{V}_K),\mathcak{K},+,\cdot\right>$ 是[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，其中 $+$ 是[[MK5][加法]]， $\cdot$ 是[[MK6][数乘]]
+则 $\mathcal{V}^*=\left<\text{Hom}(\mathcal{V},\mathcal{V}_K),\mathcal{K},+,\cdot\right>$ 是[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK1][线性空间]]，其中 $+$ 是[[MK5][加法]]， $\cdot$ 是[[MK6][数乘]]
 
 若 $\dim(\mathcal{V})=n<\infty$ 则称 $\mathcal{V}^*$ 为 $\mathcal{V}$ 的对偶空间
 

@@ -195,7 +195,7 @@ $\mathcal{L}_0$ 是 $\Sigma$ 上最小的[[MK12][准语言]]，即 $\mathcal{L}_
 
 （2） $\forall s\in\mathcal{L}$ 有 $s\in L$ ，进一步有 $(\lnot s)\in L$ ，最终有 $(\lnot s)\in\mathcal{L}$
 
-（3） $\forall \{s_1,s_2\}\subset\mathcal{L}$ 有 $\{s_1,s_2\}\subset L$ ，则有 $(s_1\to s_2)\in L$ 即 $(s_1\to s_2)\in\mathcal{L{$   
+（3） $\forall \{s_1,s_2\}\subset\mathcal{L}$ 有 $\{s_1,s_2\}\subset L$ ，则有 $(s_1\to s_2)\in L$ 即 $(s_1\to s_2)\in\mathcal{L}$   
 
 综上所述 $\mathcal{L}$ 是准语言
 
@@ -7940,7 +7940,7 @@ $<\mathcal{M},v>\vDash\phi$ 的充要条件是 $<\mathcal{N},u>\vDash\phi$
 
 若 $\mathcal{M}$ 是 $\mathcal{N}$ 的[[MK287][同质子结构]]，则有 $\mathcal{M}$ 是 $\mathcal{N}$ 的[[MK282][子结构]]，进一步有 $M\subset N$
 
-对于任意[[MK144][语句]] $\phi\in\mathcal{L}_{\matthcal{A}_M}$ 定义 $\phi$ 中所有[[MK107][变元符号]]的最大下标 $n$ 所有满足 $c\in\left\{c_a\big|a\in M\right\}$ 的[[MK108][常元符号]]个数为 $m$
+对于任意[[MK144][语句]] $\phi\in\mathcal{L}_{\mathcal{A}_M}$ 定义 $\phi$ 中所有[[MK107][变元符号]]的最大下标 $n$ 所有满足 $c\in\left\{c_a\big|a\in M\right\}$ 的[[MK108][常元符号]]个数为 $m$
 
 则标注 $a_1,...,a_m$ 满足 $a_j\in M$ 且 $c_{a_j}$ 在 $\phi$ 中出现，进一步定义 $\psi[i]=\begin{cases}\phi[i]&\phi[i]\ne c_{a_j}\\x_{n+j}&\phi[i]=c_{a_j}\end{cases}$
 
@@ -7962,7 +7962,7 @@ $<\mathcal{M},v>\vDash\phi$ 的充要条件是 $<\mathcal{N},u>\vDash\phi$
 
 进一步根据 $\psi$ 定义以及[[MK163][引理3]]可得 $\left<\mathcal{M}^*,v\right>\vDash\phi$ 由于 $\phi$ 是[[MK144][语句]]，则根据[[MK169][推论]]有 $\mathcal{M}^*\vDash\phi$
 
-综上所述，对于任意[[MK144][语句]] $\phi\in\mathcal{L}_{\matthcal{A}_M}$ 若有 $\mathcal{N}^*\vDash\phi$ 则有 $\mathcal{M}^*\vDash\phi$
+综上所述，对于任意[[MK144][语句]] $\phi\in\mathcal{L}_{\mathcal{A}_M}$ 若有 $\mathcal{N}^*\vDash\phi$ 则有 $\mathcal{M}^*\vDash\phi$
 
 同理可证若有 $\mathcal{M}^*\vDash\phi$ 则有 $\mathcal{N}^*\vDash\phi$ 则根据[[MK281][定义]]可得 $\mathcal{M}^*$ 与 $\mathcal{N}^*$ [[MK281][同样]] 
 
@@ -9987,7 +9987,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 若存在[[MK129][表达式]] $\phi(x_1,...,x_n)$ 满足：
 
-（1） $T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$ [[MK222][一致]]
+（1） $T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$ [[MK222][一致]]
 
 （2） 对于任意 $\gamma\in\Gamma$ 均有 $T\vdash(\phi\to\gamma)$
 
@@ -9997,7 +9997,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 [[MK220][一阶理论]] $\mathcal{T}=\left<\mathcal{L}_\mathcal{A},\mathbb{L}_\mathcal{A},T,T^*\right>$ 是[[MK264][完全的]]，有[[MK129][表达式]] $\phi(x_1,...,x_n)$ 满足
 
-（1） $T\cup\left{(\exists x_1(...(\exists x_n\phi)...))\right}$ [[MK222][一致]]
+（1） $T\cup\left\{(\exists x_1(...(\exists x_n\phi)...))\right\}$ [[MK222][一致]]
 
 （2） 对于任意 $\psi(x_1,...,x_n)\in\mathcal{L}_\mathcal{A}$ ， $T\vdash(\phi\to\psi),T\vdash(\phi\to(\lnot\psi))$ 有且仅有一个成立
 
@@ -10205,7 +10205,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 ****** （2）推出（3）
 
-不[[MK327][肯定]]则对于任意 $\phi(x_1,...,x_n)\in\mathcal{L}_\mathcal{A}$ 若满足 $T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$ [[MK222][一致]]，则存在 $\gamma\in\Gamma$ 有 $T\not\vdash(\phi\to\gamma)$
+不[[MK327][肯定]]则对于任意 $\phi(x_1,...,x_n)\in\mathcal{L}_\mathcal{A}$ 若满足 $T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$ [[MK222][一致]]，则存在 $\gamma\in\Gamma$ 有 $T\not\vdash(\phi\to\gamma)$
 
 即不存在 $\phi\in\Gamma$ 满足 $\Gamma=\left\{\psi\big|((\psi\in\mathcal{L}_\mathcal{A})\to(T\vdash(\phi\to\psi)))\right\}$ ，即 $\Gamma$ 不是 $\mathcal{T}$ 的[[MK329][根本型]]
 
@@ -11497,7 +11497,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 （3） 任意 $\Gamma$ 的有限子集 $\Gamma'\subset\Gamma$ ，均存在 $\mathcal{T}$ 的[[MK221][模型]] $\mathcal{M}$ 满足 $\mathcal{M}$ [[MK323][实现]] $\Gamma'$
 
-（4） $T\cup\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\}\subset\Gamma\}\right}$ [[MK222][一致]]
+（4） $T\cup\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\}\subset\Gamma\}\right\}$ [[MK222][一致]]
 
 ***** 证明
 
@@ -11517,9 +11517,9 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 ****** （3）推出（4）
 
-任取 $K\subset T\cup\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right}$ 满足 $|K|<\infty$
+任取 $K\subset T\cup\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right\}$ 满足 $|K|<\infty$
 
-设 $\{\psi_1,...,\psi_z\}=K\cap\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right}$
+设 $\{\psi_1,...,\psi_z\}=K\cap\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right\}$
 
 且 $\psi_i=\exists x_1(...(\exists x_n(\phi_{i_1}\land...\land\phi_{i_{m_i}}))))$ 进一步定义 $\Phi=\left\{\phi_{i_j}\big|1\leq i\leq z\land 1\leq j\leq m_i\right\}$
 
@@ -11533,7 +11533,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 又根据[[MK172][存在量词]]可得于任意 $\psi_i$ 均有 $\left<\mathcal{M},v\right>\vDash\psi_i$
 
-即 $\left<\mathcal{M},v\right>\vDash K\cap\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right}$
+即 $\left<\mathcal{M},v\right>\vDash K\cap\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right\}$
 
 又由于 $\mathcal{M}$ 是 $\mathcal{T}$ 的[[MK221][模型]]，故有 $\mathcal{M}\vDash T$ 进而有 $\mathcal{M}\vDash K\cap T$ 故有 $\left<\mathcal{M},v\right>\vDash K\cap T$
 
@@ -11541,7 +11541,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 根据[[MK254][完备性]]可得 $K$ [[MK222][一致]]，则根据[[MK271][紧致性定理]]
 
-可得 $T\cup\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right}$ [[MK222][一致]]
+可得 $T\cup\left\{(\exists x_1(...(\exists x_n(\phi_1\land...\land\phi_m))))\big|1\leq m<\infty\land \{\phi_1,...,\phi_m\subset\Gamma\}\right\}$ [[MK222][一致]]
 
 ****** （3）推出（1）
 
@@ -11569,11 +11569,11 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 ****** 证明（1）<<MK336>>
 
-根据[[MK344][肯定]]可得 $T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$ [[MK222][一致]]，则根据[[MK254][完备性]]可得存在 $\mathcal{T}$ 的[[MK221][模型]] $\mathcal{M}$ 及其[[MK154][赋值]] $v$
+根据[[MK344][肯定]]可得 $T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$ [[MK222][一致]]，则根据[[MK254][完备性]]可得存在 $\mathcal{T}$ 的[[MK221][模型]] $\mathcal{M}$ 及其[[MK154][赋值]] $v$
 
-有 $\left<\mathcal{M},v\right>\vDash T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$ 显然 $T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$ 是[[MK144][语句]]集合
+有 $\left<\mathcal{M},v\right>\vDash T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$ 显然 $T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$ 是[[MK144][语句]]集合
 
-故根据[[MK169][推论]]易证 $\mathcal{M}\vDash T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$
+故根据[[MK169][推论]]易证 $\mathcal{M}\vDash T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$
 
 根据[[MK172][存在量词]]以及 $n<\infty$ 易证存在 $\mathcal{M}$ 的[[MK154][赋值]] $v$ 满足 $\left<\mathcal{M},v\right>\vDash T,\left<\mathcal{M},v\right>\vDash\phi$
 
@@ -11587,7 +11587,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 ****** 证明（2）
 
-由于 $T\cup\left{(\exists x_1(...(\exists x_n\phi)))\right}$ [[MK222][一致]]且 $\mathcal{T}$ 是[[MK264][完全]]理论，根据[[MK270][引理6]]可得 $T\vdash(\exists x_1(...(\exists x_n\phi)))$
+由于 $T\cup\left\{(\exists x_1(...(\exists x_n\phi)))\right\}$ [[MK222][一致]]且 $\mathcal{T}$ 是[[MK264][完全]]理论，根据[[MK270][引理6]]可得 $T\vdash(\exists x_1(...(\exists x_n\phi)))$
 
 则对于任意 $\mathcal{T}$ 的[[MK221][模型]] $\mathcal{M}$ 及其[[MK154][赋值]] $v$ 均有 $\left<\mathcal{M},v\right>\vDash (\exists x_1(...(\exists x_n\phi)))$
 
@@ -12099,7 +12099,7 @@ $\mathcal{N}=\left<N,I\right>$ 是 $\left\{\mathcal{M}_a=\left<M_a,I_a\right>\bi
 
 ******* 充分
 
-若存在 $\mathcal{T}$ 的[[MK221][模型]] $\mathcal{M}=\left<M,I\right>$ [[MK326][排斥]] $\Gamma$ ，假设 $\mathcal{T}$ 非[[MK325][局部排斥]] $\Gamma$ 则存在 $\phi(x_1,...,x_n)\in\mathal{L}_\mathcal{A}$
+若存在 $\mathcal{T}$ 的[[MK221][模型]] $\mathcal{M}=\left<M,I\right>$ [[MK326][排斥]] $\Gamma$ ，假设 $\mathcal{T}$ 非[[MK325][局部排斥]] $\Gamma$ 则存在 $\phi(x_1,...,x_n)\in\mathcal{L}_\mathcal{A}$
 
 满足 $T\cup\{\phi\}$ [[MK222][一致]]且对于任意 $\sigma\in\Gamma$ 均有 $T\cup\left\{(\exists x_1(...(\exists x_n(\phi\land(\lnot\sigma)))))\right\}$ 不[[MK222][一致]]
 

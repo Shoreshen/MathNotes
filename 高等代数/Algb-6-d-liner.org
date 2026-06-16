@@ -534,9 +534,9 @@ M_A=&\left[\begin{matrix}f(a_1,a_1)&...&f(a_1,a_n)\\...&...&...\\f(a_n,a_1)&...&
 
 显然 $M_d\left[\begin{matrix}y_1\\y_2\\...\\y_n\end{matrix}\right]=\left[\begin{matrix}\mathfrak{g}(c_0)\\\mathfrak{g}(c_0)\\...\\\mathfrak{g}(c_0)\end{matrix}\right]$ 构成[[~/文档/note/高等代数/Algb-1-Liner_sys_func.org::MK28][其次线性方程组]]，根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK113][解空间]]定义 $\mathcal{W}=\left<W,K,+,\cdot\right>,W\subset K^n$ 为其[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK113][解空间]]
 
-根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK120][性质]]以及[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK103][定理1]]易证 $\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>$ 为 $\mathcal{W}$ 的零向量，即 $\beta$ 是 $f$ 唯一[[MK5][右根]]的充要条件为 $W=\left{\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>\right\}$ 
+根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK120][性质]]以及[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK103][定理1]]易证 $\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>$ 为 $\mathcal{W}$ 的零向量，即 $\beta$ 是 $f$ 唯一[[MK5][右根]]的充要条件为 $W=\left\{\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>\right\}$ 
 
-又根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维数]]可得 $W=\left{\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>\right\}$ 的充要条件是 $\dim(\mathcal{W})=0$ 结合[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK110][解空间维数]]可得 $\dim(\mathcal{W})=n-rank(M_d)$
+又根据[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK51][维数]]可得 $W=\left\{\left<\mathfrak{g}(c_0),...,\mathfrak{g}(c_0)\right>\right\}$ 的充要条件是 $\dim(\mathcal{W})=0$ 结合[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK110][解空间维数]]可得 $\dim(\mathcal{W})=n-rank(M_d)$
 
 即有 $\dim(\mathcal{W})=0$ 的充要条件是 $rank(M_d)=n$ 即满[[~/文档/note/高等代数/Algb-2-Liner_Space.org::MK87][秩]]
 
